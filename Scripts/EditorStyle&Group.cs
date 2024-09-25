@@ -10,13 +10,13 @@ namespace Emp37.ET
       internal struct EditorStyle
       {
             [Flags]
-            public enum PseudoState : int
+            public enum PseudoStates : int
             {
                   Active = 1, Hover = 2, Focus = 4, Selected = 8, Checked = 16, Enabled = 32, Disabled = 64
             }
 
             public string[] Types;
-            public PseudoState[] States;
+            public PseudoStates[] States;
             public int Flags;
 
             private static readonly string[] _propertyNames =

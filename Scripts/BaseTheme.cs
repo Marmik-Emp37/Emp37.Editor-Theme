@@ -52,7 +52,7 @@ namespace Emp37.ET
                   {
                         foreach (var context in style.States)
                         {
-                              var pseudoChain = context is 0 ? string.Empty : ':' + string.Join(':', from state in Enum.GetValues(typeof(PseudoState)).Cast<PseudoState>() where context.HasFlag(state) select state.ToString().ToLower());
+                              var pseudoChain = context is 0 ? string.Empty : ':' + string.Join(':', from state in Enum.GetValues(typeof(PseudoStates)).Cast<PseudoStates>() where context.HasFlag(state) select state.ToString().ToLower());
 
                               output.Append($"\n.{type + pseudoChain},");
                         }
