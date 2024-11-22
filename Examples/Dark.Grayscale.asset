@@ -1251,6 +1251,54 @@ MonoBehaviour:
       - DropDownToggleButton
       - PreDropDown
       - EditModeSingleButton
+      States: 12000000
+      Flags: 2
+      background_image: {fileID: 0}
+      background_color:
+        serializedVersion: 2
+        rgba: 4280690214
+      border_color:
+        serializedVersion: 2
+        rgba: 4279308561
+      border_top_color:
+        serializedVersion: 2
+        rgba: 4279308561
+      border_right_color:
+        serializedVersion: 2
+        rgba: 0
+      border_bottom_color:
+        serializedVersion: 2
+        rgba: 4279308561
+      border_left_color:
+        serializedVersion: 2
+        rgba: 0
+      color:
+        serializedVersion: 2
+        rgba: 0
+      border_radius:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      border_width:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+    - Types:
+      - Button
+      - minibutton
+      - AC-Button
+      - LargeButton
+      - AppCommand
+      - MiniToolbarButton
+      - RL-FooterButton
+      - ObjectFieldButton
+      - TimeScrubberButton
+      - DropDownButton
+      - DropDownToggleButton
+      - PreDropDown
+      - EditModeSingleButton
       States: 010000001000000011000000
       Flags: 46
       background_image: {fileID: 0}

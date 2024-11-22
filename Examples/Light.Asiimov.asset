@@ -1279,6 +1279,48 @@ MonoBehaviour:
       - minibutton
       - DropDownToggleButton
       - DropDownButton
+      States: 12000000
+      Flags: 2
+      background_image: {fileID: 0}
+      background_color:
+        serializedVersion: 2
+        rgba: 4281566718
+      border_color:
+        serializedVersion: 2
+        rgba: 4279176975
+      border_top_color:
+        serializedVersion: 2
+        rgba: 4279176975
+      border_right_color:
+        serializedVersion: 2
+        rgba: 0
+      border_bottom_color:
+        serializedVersion: 2
+        rgba: 4279176975
+      border_left_color:
+        serializedVersion: 2
+        rgba: 0
+      color:
+        serializedVersion: 2
+        rgba: 4281545523
+      border_radius:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      border_width:
+        m_Left: 1
+        m_Right: 1
+        m_Top: 1
+        m_Bottom: 1
+    - Types:
+      - Button
+      - AC-Button
+      - LargeButton
+      - MiniToolbarButton
+      - minibutton
+      - DropDownToggleButton
+      - DropDownButton
       States: 010000001000000011000000
       Flags: 302
       background_image: {fileID: 0}
@@ -5991,4 +6033,4 @@ MonoBehaviour:
         m_Bottom: 1
   - Description: 
     Styles: []
-  _quickApply: 0
+  _quickApply: 1

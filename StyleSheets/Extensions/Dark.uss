@@ -197,6 +197,22 @@
 	background-color: rgba(102, 102, 102, 1);
 }
 
+.Button:hover:checked,
+.minibutton:hover:checked,
+.AC-Button:hover:checked,
+.LargeButton:hover:checked,
+.AppCommand:hover:checked,
+.MiniToolbarButton:hover:checked,
+.RL-FooterButton:hover:checked,
+.ObjectFieldButton:hover:checked,
+.TimeScrubberButton:hover:checked,
+.DropDownButton:hover:checked,
+.DropDownToggleButton:hover:checked,
+.PreDropDown:hover:checked,
+.EditModeSingleButton:hover:checked, {
+	background-color: rgba(038, 038, 038, 1);
+}
+
 .Button:active,
 .Button:checked,
 .Button:active:checked,

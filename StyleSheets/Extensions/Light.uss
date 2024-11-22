@@ -203,6 +203,16 @@
 	color: rgba(051, 051, 051, 1);
 }
 
+.Button:hover:checked,
+.AC-Button:hover:checked,
+.LargeButton:hover:checked,
+.MiniToolbarButton:hover:checked,
+.minibutton:hover:checked,
+.DropDownToggleButton:hover:checked,
+.DropDownButton:hover:checked, {
+	background-color: rgba(254, 133, 051, 1);
+}
+
 .Button:active,
 .Button:checked,
 .Button:active:checked,
