@@ -31,9 +31,10 @@ namespace Emp37.ET
                         position.height = headerHeight;
                         var width = position.width; // storing original width
                         position.width = toggleButtonWidth;
-                        if (GUI.Button(position, property.isExpanded ? "-" : "+")) // - [ c : 1 ]
+                        if (GUI.Button(position, IconContent(property.isExpanded ? "d_Toolbar Plus" : "d_Toolbar Minus"))) // - [ c : 1 ]
                         {
                               property.isExpanded = !property.isExpanded;
+                              GUIUtility.keyboardControl = default;
                         }
                         _ = PropertyField(new(position) { x = position.x + position.width, width = width - position.width }, property.FindPropertyRelative(p_description), GUIContent.none);
                         position.width = width; // restoring original width
