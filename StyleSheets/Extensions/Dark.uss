@@ -1,4 +1,4 @@
-/*Theme: Dark.Grayscale U6*/
+/*Theme: Dark.Grayscale*/
 
 .HelpBox,
 .FrameBox, {
@@ -831,6 +831,10 @@
 	background-color: rgba(051, 051, 051, 1);
 }
 
+.ObjectField, {
+	color: rgba(166, 166, 166, 1);
+}
+
 .ToggleMixed, {
 	background-image: resource("Assets/Emp37.Editor-Theme/StyleSheets/Icons/Grayscale/toggle.mixed.psd");
 }
@@ -957,8 +961,12 @@
 	border-width: 0px 0px 0px 1px;
 }
 
-.OL-ResultLabel:checked, {
+.OL-ResultLabel:focus:checked, {
 	background-color: rgba(038, 038, 038, 1);
+}
+
+.OL-ResultLabel:checked, {
+	background-color: rgba(102, 102, 102, 0.2509804);
 }
 
 .TV-Ping,
