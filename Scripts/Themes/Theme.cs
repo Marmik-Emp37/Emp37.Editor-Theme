@@ -6,8 +6,6 @@ using System.Linq;
 using UnityEngine;
 
 using UnityEditor;
-using UnityEditor.Compilation;
-using UnityEditorInternal;
 
 namespace Emp37.ET
 {
@@ -18,14 +16,16 @@ namespace Emp37.ET
       {
             public const string DIRECTORY = "Assets/Editor/StyleSheets/Extensions";
 
-
             public StyleRuleGroup[] StyleRules;
 
             [Tooltip("Enables immediate preview of changes applied.\n\n<b>NOTE:</b> some changed may only take effect after the next domain reload.")]
-            [SerializeField] private bool _quickApply;
+            [SerializeField] private bool refresh;
+            public bool RefreshOnApply => refresh;
+
+
 
             public abstract string FileName { get; }
-            protected abstract bool IsSkinInvalid { get; }
+            public abstract bool IsSkinInvalid { get; }
             private string Content
             {
                   get
@@ -85,16 +85,6 @@ namespace Emp37.ET
                   #endregion
 
                   return output.Append(string.Concat(" {\n", string.Join("\n", scope), "\n}")).ToString();
-            }
-            public void Refresh()
-            {
-                  if (IsSkinInvalid)
-                  {
-                        InternalEditorUtility.SwitchSkinAndRepaintAllViews();
-                        return;
-                  }
-                  InternalEditorUtility.RepaintAllViews();
-                  if (!_quickApply) CompilationPipeline.RequestScriptCompilation();
             }
 
             /// <summary>

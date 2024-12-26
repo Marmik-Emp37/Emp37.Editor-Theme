@@ -1,6 +1,9 @@
 using System.IO;
 
 using UnityEditor;
+using UnityEditor.Compilation;
+
+using UnityEditorInternal;
 
 using UnityEngine;
 
@@ -14,7 +17,7 @@ namespace Emp37.ET
             private void OnEnable()
             {
                   arr_editorStyleGroup = serializedObject.FindProperty("StyleRules");
-                  bool_quickApply = serializedObject.FindProperty("_quickApply");
+                  bool_quickApply = serializedObject.FindProperty("refresh");
             }
             public override void OnInspectorGUI()
             {
@@ -34,7 +37,14 @@ namespace Emp37.ET
                         var path = Path.Combine(Theme.DIRECTORY, target.FileName);
                         File.WriteAllText(path, target.ToString());
                         AssetDatabase.Refresh();
-                        target.Refresh();
+
+                        if (target.IsSkinInvalid)
+                        {
+                              InternalEditorUtility.SwitchSkinAndRepaintAllViews();
+                              return;
+                        }
+                        InternalEditorUtility.RepaintAllViews();
+                        if (target.RefreshOnApply) CompilationPipeline.RequestScriptCompilation();
                   }
                   #endregion
 

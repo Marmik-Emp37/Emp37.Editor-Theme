@@ -4,6 +4,6 @@ namespace Emp37.ET
       internal class Light : Theme
       {
             public override string FileName => "Light.uss";
-            protected override bool IsSkinInvalid => UnityEditor.EditorGUIUtility.isProSkin;
+            public override bool IsSkinInvalid => UnityEditor.EditorGUIUtility.isProSkin;
       }
 }
