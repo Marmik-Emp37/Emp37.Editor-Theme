@@ -50,11 +50,4 @@ namespace Emp37.ET
                   border_width;
             #endregion
       }
-      [Serializable]
-      internal struct EditorStyleGroup
-      {
-            public string Description;
-
-            public EditorStyle[] Styles;
-      }
 }

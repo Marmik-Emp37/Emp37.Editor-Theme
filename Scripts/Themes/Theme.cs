@@ -14,7 +14,7 @@ namespace Emp37.ET
       using static EditorStyle;
 
 
-      internal abstract class BaseTheme : ScriptableObject
+      internal abstract class Theme : ScriptableObject
       {
             public const string DIRECTORY = "Assets/Emp37.Editor-Theme/StyleSheets/Extensions";
 

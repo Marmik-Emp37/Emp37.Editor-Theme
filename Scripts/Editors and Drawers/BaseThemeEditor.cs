@@ -6,7 +6,7 @@ using UnityEngine;
 
 namespace Emp37.ET
 {
-      [CustomEditor(typeof(BaseTheme), true)]
+      [CustomEditor(typeof(Theme), true)]
       internal class BaseThemeEditor : Editor
       {
             private SerializedProperty arr_editorStyleGroup, bool_quickApply;
@@ -28,10 +28,10 @@ namespace Emp37.ET
                   #region W R I T E   O R   C R E A T E   C O M M O N   T H E M E
                   if (GUILayout.Button("Apply", GUILayout.Height(30F)))
                   {
-                        if (!Directory.Exists(BaseTheme.DIRECTORY)) /*>>*/ Directory.CreateDirectory(BaseTheme.DIRECTORY);
+                        if (!Directory.Exists(Theme.DIRECTORY)) /*>>*/ Directory.CreateDirectory(Theme.DIRECTORY);
 
-                        var target = base.target as BaseTheme;
-                        var path = Path.Combine(BaseTheme.DIRECTORY, target.FileName);
+                        var target = base.target as Theme;
+                        var path = Path.Combine(Theme.DIRECTORY, target.FileName);
                         File.WriteAllText(path, target.ToString());
                         AssetDatabase.Refresh();
                         target.Refresh();
