@@ -7,19 +7,9 @@ using UnityEngine;
 namespace Emp37.ET
 {
       [Serializable]
-      internal struct EditorStyle
+      internal struct StyleRule
       {
-            [Flags]
-            public enum PseudoStates : int
-            {
-                  Active = 1, Hover = 2, Focus = 4, Selected = 8, Checked = 16, Enabled = 32, Disabled = 64
-            }
-
-            public string[] Types;
-            public PseudoStates[] States;
-            public int Flags;
-
-            private static readonly string[] _propertyNames =
+            private static readonly string[] properties =
             {
                   nameof(background_image),
                   nameof(background_color),
@@ -32,9 +22,13 @@ namespace Emp37.ET
                   nameof(border_width),
                   nameof(color)
             };
-            public static readonly Dictionary<int, string> Properties = Enumerable.Range(0, _propertyNames.Length).ToDictionary(indexKey => 1 << indexKey, indexElement => _propertyNames[indexElement]);
+            public static readonly Dictionary<int, string> PropertyMap = properties.Select((name, index) => (Key: 1 << index, Value: name)).ToDictionary(entry => entry.Key, entry => entry.Value);
 
-            #region A P P L I C A B L E   P R O P E R T I E S
+            public string[] ClassTypes;
+            public PseudoStates[] PseudoStates;
+            public int PropertyBitmask;
+
+
             public Texture2D
                   background_image;
             public Color32
@@ -48,6 +42,5 @@ namespace Emp37.ET
             public RectOffset
                   border_radius,
                   border_width;
-            #endregion
       }
 }

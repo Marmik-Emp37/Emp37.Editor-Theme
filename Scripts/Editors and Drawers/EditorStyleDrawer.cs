@@ -12,12 +12,12 @@ namespace Emp37.ET
       using static EditorStyles;
 
 
-      [CustomPropertyDrawer(typeof(EditorStyle))]
+      [CustomPropertyDrawer(typeof(StyleRule))]
       internal class EditorStyleDrawer : PropertyDrawer
       {
-            private const string p_classTypes = "Types";
-            private const string p_pseudoStates = "States";
-            private const string p_flags = "Flags";
+            private const string p_classTypes = "ClassTypes";
+            private const string p_pseudoStates = "PseudoStates";
+            private const string p_flags = "PropertyBitmask";
 
             private const float propertyDropdownMenuWidth = 25F;
             private const float emptyStyleWarningHeight = 32F;
@@ -55,7 +55,7 @@ namespace Emp37.ET
                                     HelpBox(position, "Style rule is empty.", MessageType.Warning);
                                     position.y += emptyStyleWarningHeight + standardVerticalSpacing; // - [ 4 ]
                               }
-                              else EditorStyle.Properties.Where(option => (mask.intValue & option.Key) is not 0).ToList().ForEach(option =>
+                              else StyleRule.PropertyMap.Where(option => (mask.intValue & option.Key) is not 0).ToList().ForEach(option =>
                               {
                                     var context = property.FindPropertyRelative(option.Value);
                                     position.height = EditorGUI.GetPropertyHeight(context);
@@ -75,7 +75,7 @@ namespace Emp37.ET
                         if (DropdownButton(headerRect, GUIContent.none, FocusType.Passive, foldoutHeader))
                         {
                               var menu = new GenericMenu();
-                              foreach (var option in EditorStyle.Properties)
+                              foreach (var option in StyleRule.PropertyMap)
                               {
                                     bool selected = (mask.intValue & option.Key) != 0;
                                     menu.AddItem(new GUIContent(option.Value.Replace('_', '-')), on: selected, func: () =>
@@ -106,7 +106,7 @@ namespace Emp37.ET
                         value += maskValue is 0 ?
                               emptyStyleWarningHeight + standardVerticalSpacing // - [ 4 ]
                               :
-                              EditorStyle.Properties.Where(option => (maskValue & option.Key) != 0).Sum(option => EditorGUI.GetPropertyHeight(property.FindPropertyRelative(option.Value)) + standardVerticalSpacing); // - [ 5 ]
+                              StyleRule.PropertyMap.Where(option => (maskValue & option.Key) != 0).Sum(option => EditorGUI.GetPropertyHeight(property.FindPropertyRelative(option.Value)) + standardVerticalSpacing); // - [ 5 ]
                   }
                   return value;
             }

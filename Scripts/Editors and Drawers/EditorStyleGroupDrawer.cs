@@ -8,7 +8,7 @@ namespace Emp37.ET
       using static EditorGUIUtility;
 
 
-      [CustomPropertyDrawer(typeof(EditorStyleGroup))]
+      [CustomPropertyDrawer(typeof(StyleRuleGroup))]
       internal class EditorStyleGroupDrawer : PropertyDrawer
       {
             private const string p_description = "Description";

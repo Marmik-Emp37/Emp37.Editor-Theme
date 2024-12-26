@@ -11,7 +11,7 @@ using UnityEditorInternal;
 
 namespace Emp37.ET
 {
-      using static EditorStyle;
+      using static StyleRule;
 
 
       internal abstract class Theme : ScriptableObject
@@ -19,7 +19,7 @@ namespace Emp37.ET
             public const string DIRECTORY = "Assets/Emp37.Editor-Theme/StyleSheets/Extensions";
 
 
-            public EditorStyleGroup[] Rules;
+            public StyleRuleGroup[] Rules;
 
             [Tooltip("Enables immediate preview of changes applied.\n\n<b>NOTE:</b> some changed may only take effect after the next domain reload.")]
             [SerializeField] private bool _quickApply;
@@ -43,14 +43,14 @@ namespace Emp37.ET
                   }
             }
 
-            private string SubContent(in EditorStyle style)
+            private string SubContent(in StyleRule style)
             {
                   var output = new StringBuilder();
 
                   #region C L A S S   T Y P E S 
-                  foreach (var type in style.Types.Where(type => !string.IsNullOrEmpty(type)))
+                  foreach (var type in style.ClassTypes.Where(type => !string.IsNullOrEmpty(type)))
                   {
-                        foreach (var context in style.States)
+                        foreach (var context in style.PseudoStates)
                         {
                               var pseudoChain = context is 0 ? string.Empty : ':' + string.Join(':', from state in Enum.GetValues(typeof(PseudoStates)).Cast<PseudoStates>() where context.HasFlag(state) select state.ToString().ToLower());
 
@@ -61,9 +61,9 @@ namespace Emp37.ET
 
                   #region S C O P E
                   var scope = new Queue<string>();
-                  foreach (var option in Properties)
+                  foreach (var option in PropertyMap)
                   {
-                        if ((style.Flags & option.Key) == 0) continue;
+                        if ((style.PropertyBitmask & option.Key) == 0) continue;
                         var expression = option.Key switch
                         {
                               1 << 0 => $"{(style.background_image == null ? "none" : $"resource(\"{AssetDatabase.GetAssetPath(style.background_image)}\")")}",
