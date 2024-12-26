@@ -16,10 +16,10 @@ namespace Emp37.ET
 
       internal abstract class Theme : ScriptableObject
       {
-            public const string DIRECTORY = "Assets/Emp37.Editor-Theme/StyleSheets/Extensions";
+            public const string DIRECTORY = "Assets/Editor/StyleSheets/Extensions";
 
 
-            public StyleRuleGroup[] Rules;
+            public StyleRuleGroup[] StyleRules;
 
             [Tooltip("Enables immediate preview of changes applied.\n\n<b>NOTE:</b> some changed may only take effect after the next domain reload.")]
             [SerializeField] private bool _quickApply;
@@ -32,8 +32,8 @@ namespace Emp37.ET
                   {
                         try // averts newly created theme asset from causing exceptions until a repaint request is made.
                         {
-                              var output = new StringBuilder("/*Theme: " + name + "*/\n");
-                              Array.ForEach(Rules, rule => Array.ForEach(rule.Styles, style => output.Append(value: SubContent(in style) + '\n')));
+                              StringBuilder output = new("/*Theme: " + name + "*/\n");
+                              Array.ForEach(StyleRules, rule => Array.ForEach(rule.Styles, style => output.Append(value: SubContent(in style) + '\n')));
                               return output.ToString();
                         }
                         catch (NullReferenceException)

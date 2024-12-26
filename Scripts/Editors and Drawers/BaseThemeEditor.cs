@@ -13,7 +13,7 @@ namespace Emp37.ET
 
             private void OnEnable()
             {
-                  arr_editorStyleGroup = serializedObject.FindProperty("Rules");
+                  arr_editorStyleGroup = serializedObject.FindProperty("StyleRules");
                   bool_quickApply = serializedObject.FindProperty("_quickApply");
             }
             public override void OnInspectorGUI()
