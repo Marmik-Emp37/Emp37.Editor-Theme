@@ -79,7 +79,7 @@ namespace Emp37.ET
                               #region A R R A Y   E L E M E N T S
                               SerializedProperty group = property.FindPropertyRelative(p_StyleRules);
                               int size = group.arraySize;
-                              for (byte i = 0; i < size; i++)
+                              for (int i = 0; i < size; i++)
                               {
                                     SerializedProperty context = group.GetArrayElementAtIndex(i);
                                     contentRect.height = EditorGUI.GetPropertyHeight(context);

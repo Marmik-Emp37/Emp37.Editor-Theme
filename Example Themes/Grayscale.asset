@@ -14,23 +14,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   StyleRuleGroups:
   - Enabled: 0
-    Title: 
+    Title: --- [ G U I ] ---
     StyleRules: []
   - Enabled: 1
-    Title: 
+    Title: Box
     StyleRules:
     - Selectors:
       - HelpBox
       - FrameBox
       PseudoStates: 00000000
-      PropertyMask: 0
+      PropertyMask: 390
       BackgroundTexture: {fileID: 0}
       BackgroundColor:
         serializedVersion: 2
         rgba: 1080452710
       BorderColor:
         serializedVersion: 2
-        rgba: 0
+        rgba: 4279900698
       BorderTopColor:
         serializedVersion: 2
         rgba: 0
@@ -95,7 +95,629 @@ MonoBehaviour:
     - Selectors:
       - CN-Box
       PseudoStates: 00000000
-      PropertyMask: 0
+      PropertyMask: 2
+      BackgroundTexture: {fileID: 0}
+      BackgroundColor:
+        serializedVersion: 2
+        rgba: 2147483648
+      BorderColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderTopColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRightColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderBottomColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderLeftColor:
+        serializedVersion: 2
+        rgba: 0
+      TextColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRadius:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      BorderWidth:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 1
+        m_Bottom: 0
+  - Enabled: 1
+    Title: Foldout Header
+    StyleRules:
+    - Selectors:
+      - FoldoutHeader
+      PseudoStates: 000000000400000010000000
+      PropertyMask: 514
+      BackgroundTexture: {fileID: 0}
+      BackgroundColor:
+        serializedVersion: 2
+        rgba: 4279900698
+      BorderColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderTopColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRightColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderBottomColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderLeftColor:
+        serializedVersion: 2
+        rgba: 0
+      TextColor:
+        serializedVersion: 2
+        rgba: 4291611852
+      BorderRadius:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      BorderWidth:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+    - Selectors:
+      - FoldoutHeader
+      PseudoStates: 020000001200000006000000
+      PropertyMask: 2
+      BackgroundTexture: {fileID: 0}
+      BackgroundColor:
+        serializedVersion: 2
+        rgba: 4280690214
+      BorderColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderTopColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRightColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderBottomColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderLeftColor:
+        serializedVersion: 2
+        rgba: 0
+      TextColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRadius:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      BorderWidth:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+    - Selectors:
+      - FoldoutHeader
+      PseudoStates: 0100000005000000
+      PropertyMask: 294
+      BackgroundTexture: {fileID: 0}
+      BackgroundColor:
+        serializedVersion: 2
+        rgba: 4281545523
+      BorderColor:
+        serializedVersion: 2
+        rgba: 4279900698
+      BorderTopColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRightColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderBottomColor:
+        serializedVersion: 2
+        rgba: 4279900698
+      BorderLeftColor:
+        serializedVersion: 2
+        rgba: 0
+      TextColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRadius:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      BorderWidth:
+        m_Left: 1
+        m_Right: 1
+        m_Top: 1
+        m_Bottom: 1
+  - Enabled: 1
+    Title: Prefab Label
+    StyleRules:
+    - Selectors:
+      - PR-PrefabLabel
+      PseudoStates: 0000000004000000
+      PropertyMask: 512
+      BackgroundTexture: {fileID: 0}
+      BackgroundColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderTopColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRightColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderBottomColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderLeftColor:
+        serializedVersion: 2
+        rgba: 0
+      TextColor:
+        serializedVersion: 2
+        rgba: 4294967295
+      BorderRadius:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      BorderWidth:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+  - Enabled: 1
+    Title: Button Group
+    StyleRules:
+    - Selectors:
+      - Tab-first
+      - Tab-middle
+      - Tab-last
+      - minibuttonleft
+      - minibuttonmid
+      - minibuttonright
+      - LargeButtonLeft
+      - LargeButtonMid
+      - LargeButtonRight
+      - CommandLeft
+      - CommandMid
+      - CommandRight
+      - ButtonLeft
+      - ButtonMid
+      - ButtonRight
+      - AppCommandLeft
+      - AppCommandMid
+      - AppCommandRight
+      - SearchModeFilter
+      PseudoStates: 0000000004000000
+      PropertyMask: 486
+      BackgroundTexture: {fileID: 0}
+      BackgroundColor:
+        serializedVersion: 2
+        rgba: 4284900966
+      BorderColor:
+        serializedVersion: 2
+        rgba: 4279900698
+      BorderTopColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRightColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderBottomColor:
+        serializedVersion: 2
+        rgba: 4279900698
+      BorderLeftColor:
+        serializedVersion: 2
+        rgba: 4279900698
+      TextColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRadius:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      BorderWidth:
+        m_Left: 1
+        m_Right: 1
+        m_Top: 1
+        m_Bottom: 1
+    - Selectors:
+      - Tab-first
+      - Tab-middle
+      - Tab-last
+      - minibuttonleft
+      - minibuttonmid
+      - minibuttonright
+      - LargeButtonLeft
+      - LargeButtonMid
+      - LargeButtonRight
+      - CommandLeft
+      - CommandMid
+      - CommandRight
+      - ButtonLeft
+      - ButtonMid
+      - ButtonRight
+      - AppCommandLeft
+      - AppCommandMid
+      - AppCommandRight
+      - SearchModeFilter
+      PseudoStates: 02000000
+      PropertyMask: 258
+      BackgroundTexture: {fileID: 0}
+      BackgroundColor:
+        serializedVersion: 2
+        rgba: 4286611584
+      BorderColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderTopColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRightColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderBottomColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderLeftColor:
+        serializedVersion: 2
+        rgba: 0
+      TextColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRadius:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      BorderWidth:
+        m_Left: 1
+        m_Right: 1
+        m_Top: 1
+        m_Bottom: 1
+    - Selectors:
+      - Tab-first
+      - Tab-middle
+      - Tab-last
+      - minibuttonleft
+      - minibuttonmid
+      - minibuttonright
+      - LargeButtonLeft
+      - LargeButtonMid
+      - LargeButtonRight
+      - CommandLeft
+      - CommandMid
+      - CommandRight
+      - ButtonLeft
+      - ButtonMid
+      - ButtonRight
+      - AppCommandLeft
+      - AppCommandMid
+      - AppCommandRight
+      - SearchModeFilter
+      PseudoStates: 010000001000000005000000110000001400000015000000
+      PropertyMask: 302
+      BackgroundTexture: {fileID: 0}
+      BackgroundColor:
+        serializedVersion: 2
+        rgba: 4280690214
+      BorderColor:
+        serializedVersion: 2
+        rgba: 4279900698
+      BorderTopColor:
+        serializedVersion: 2
+        rgba: 4279900698
+      BorderRightColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderBottomColor:
+        serializedVersion: 2
+        rgba: 4279900698
+      BorderLeftColor:
+        serializedVersion: 2
+        rgba: 0
+      TextColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRadius:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      BorderWidth:
+        m_Left: 1
+        m_Right: 1
+        m_Top: 1
+        m_Bottom: 1
+    - Selectors:
+      - Tab-first
+      - Tab-middle
+      - Tab-last
+      - minibuttonleft
+      - minibuttonmid
+      - minibuttonright
+      - LargeButtonLeft
+      - LargeButtonMid
+      - LargeButtonRight
+      - CommandLeft
+      - CommandMid
+      - CommandRight
+      - ButtonLeft
+      - ButtonMid
+      - ButtonRight
+      - AppCommandLeft
+      - AppCommandMid
+      - AppCommandRight
+      - SearchModeFilter
+      PseudoStates: 010000001000000005000000110000001400000015000000
+      PropertyMask: 302
+      BackgroundTexture: {fileID: 0}
+      BackgroundColor:
+        serializedVersion: 2
+        rgba: 4280690214
+      BorderColor:
+        serializedVersion: 2
+        rgba: 4279900698
+      BorderTopColor:
+        serializedVersion: 2
+        rgba: 4279900698
+      BorderRightColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderBottomColor:
+        serializedVersion: 2
+        rgba: 4279900698
+      BorderLeftColor:
+        serializedVersion: 2
+        rgba: 0
+      TextColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRadius:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      BorderWidth:
+        m_Left: 1
+        m_Right: 1
+        m_Top: 1
+        m_Bottom: 1
+    - Selectors:
+      - Tab-first
+      - Tab-middle
+      - Tab-last
+      - minibuttonleft
+      - minibuttonmid
+      - minibuttonright
+      - LargeButtonLeft
+      - LargeButtonMid
+      - LargeButtonRight
+      - CommandLeft
+      - CommandMid
+      - CommandRight
+      - ButtonLeft
+      - ButtonMid
+      - ButtonRight
+      - AppCommandLeft
+      - AppCommandMid
+      - AppCommandRight
+      - SearchModeFilter
+      PseudoStates: 1200000016000000
+      PropertyMask: 302
+      BackgroundTexture: {fileID: 0}
+      BackgroundColor:
+        serializedVersion: 2
+        rgba: 4279900698
+      BorderColor:
+        serializedVersion: 2
+        rgba: 4279900698
+      BorderTopColor:
+        serializedVersion: 2
+        rgba: 4279900698
+      BorderRightColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderBottomColor:
+        serializedVersion: 2
+        rgba: 4279900698
+      BorderLeftColor:
+        serializedVersion: 2
+        rgba: 0
+      TextColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRadius:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      BorderWidth:
+        m_Left: 1
+        m_Right: 1
+        m_Top: 1
+        m_Bottom: 1
+  - Enabled: 1
+    Title: Scrollbar
+    StyleRules:
+    - Selectors:
+      - HorizontalScrollbar
+      - VerticalScrollbar
+      PseudoStates: 00000000
+      PropertyMask: 6
+      BackgroundTexture: {fileID: 0}
+      BackgroundColor:
+        serializedVersion: 2
+        rgba: 4280690214
+      BorderColor:
+        serializedVersion: 2
+        rgba: 4279900698
+      BorderTopColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRightColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderBottomColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderLeftColor:
+        serializedVersion: 2
+        rgba: 0
+      TextColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRadius:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      BorderWidth:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+  - Enabled: 1
+    Title: Scrollbar Button
+    StyleRules:
+    - Selectors:
+      - HorizontalScrollbarLeftButton
+      - HorizontalScrollbarRightButton
+      - VerticalScrollbarUpButton
+      - VerticalScrollbarDownButton
+      PseudoStates: 00000000
+      PropertyMask: 134
+      BackgroundTexture: {fileID: 0}
+      BackgroundColor:
+        serializedVersion: 2
+        rgba: 4284900966
+      BorderColor:
+        serializedVersion: 2
+        rgba: 4279900698
+      BorderTopColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRightColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderBottomColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderLeftColor:
+        serializedVersion: 2
+        rgba: 0
+      TextColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRadius:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      BorderWidth:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 1
+    - Selectors:
+      - HorizontalScrollbarLeftButton
+      - HorizontalScrollbarRightButton
+      - VerticalScrollbarUpButton
+      - VerticalScrollbarDownButton
+      PseudoStates: 0100000002000000
+      PropertyMask: 2
+      BackgroundTexture: {fileID: 0}
+      BackgroundColor:
+        serializedVersion: 2
+        rgba: 4286611584
+      BorderColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderTopColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRightColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderBottomColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderLeftColor:
+        serializedVersion: 2
+        rgba: 0
+      TextColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRadius:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      BorderWidth:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+  - Enabled: 1
+    Title: Scrollbar Thumb
+    StyleRules:
+    - Selectors:
+      - HorizontalScrollbarThumb
+      - VerticalScrollbarThumb
+      - HorizontalMinMaxScrollbarThumb
+      PseudoStates: 0000000002000000
+      PropertyMask: 134
+      BackgroundTexture: {fileID: 0}
+      BackgroundColor:
+        serializedVersion: 2
+        rgba: 4286611584
+      BorderColor:
+        serializedVersion: 2
+        rgba: 4279900698
+      BorderTopColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRightColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderBottomColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderLeftColor:
+        serializedVersion: 2
+        rgba: 0
+      TextColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRadius:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      BorderWidth:
+        m_Left: 0
+        m_Right: 1
+        m_Top: 0
+        m_Bottom: 0
+    - Selectors:
+      - HorizontalScrollbarThumb
+      - HorizontalMinMaxScrollbarThumb
+      PseudoStates: 0000000002000000
+      PropertyMask: 256
       BackgroundTexture: {fileID: 0}
       BackgroundColor:
         serializedVersion: 2
@@ -126,9 +748,4143 @@ MonoBehaviour:
       BorderWidth:
         m_Left: 0
         m_Right: 0
+        m_Top: 0
+        m_Bottom: 1
+    - Selectors:
+      - VerticalScrollbarThumb
+      PseudoStates: 0000000002000000
+      PropertyMask: 256
+      BackgroundTexture: {fileID: 0}
+      BackgroundColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderTopColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRightColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderBottomColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderLeftColor:
+        serializedVersion: 2
+        rgba: 0
+      TextColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRadius:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      BorderWidth:
+        m_Left: 0
+        m_Right: 1
+        m_Top: 0
+        m_Bottom: 0
+  - Enabled: 1
+    Title: Slider
+    StyleRules:
+    - Selectors:
+      - HorizontalSlider
+      - ToolbarSlider
+      - PreSlider
+      PseudoStates: 0000000040000000
+      PropertyMask: 2
+      BackgroundTexture: {fileID: 0}
+      BackgroundColor:
+        serializedVersion: 2
+        rgba: 4279900698
+      BorderColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderTopColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRightColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderBottomColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderLeftColor:
+        serializedVersion: 2
+        rgba: 0
+      TextColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRadius:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      BorderWidth:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+  - Enabled: 1
+    Title: Slider Thumb
+    StyleRules:
+    - Selectors:
+      - HorizontalSliderThumb
+      - PreSliderThumb
+      - MinMaxHorizontalSliderThumb
+      PseudoStates: 0000000040000000
+      PropertyMask: 390
+      BackgroundTexture: {fileID: 0}
+      BackgroundColor:
+        serializedVersion: 2
+        rgba: 4284900966
+      BorderColor:
+        serializedVersion: 2
+        rgba: 4279900698
+      BorderTopColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRightColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderBottomColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderLeftColor:
+        serializedVersion: 2
+        rgba: 0
+      TextColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRadius:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      BorderWidth:
+        m_Left: 1
+        m_Right: 1
+        m_Top: 1
+        m_Bottom: 1
+    - Selectors:
+      - HorizontalSliderThumb
+      - PreSliderThumb
+      - MinMaxHorizontalSliderThumb
+      PseudoStates: 02000000
+      PropertyMask: 2
+      BackgroundTexture: {fileID: 0}
+      BackgroundColor:
+        serializedVersion: 2
+        rgba: 4286611584
+      BorderColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderTopColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRightColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderBottomColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderLeftColor:
+        serializedVersion: 2
+        rgba: 0
+      TextColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRadius:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      BorderWidth:
+        m_Left: 1
+        m_Right: 1
+        m_Top: 1
+        m_Bottom: 1
+  - Enabled: 1
+    Title: Slider Thumb Extent
+    StyleRules:
+    - Selectors:
+      - HorizontalSliderThumbExtent
+      PseudoStates: 0100000004000000
+      PropertyMask: 2
+      BackgroundTexture: {fileID: 0}
+      BackgroundColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderTopColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRightColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderBottomColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderLeftColor:
+        serializedVersion: 2
+        rgba: 0
+      TextColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRadius:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      BorderWidth:
+        m_Left: 1
+        m_Right: 1
+        m_Top: 1
+        m_Bottom: 1
+  - Enabled: 0
+    Title: --- | --- [ T O O L B A R ] ---
+    StyleRules: []
+  - Enabled: 1
+    Title: Background
+    StyleRules:
+    - Selectors:
+      - Toolbar
+      - PreToolbar
+      - ToolbarBottom
+      - AnimPlayToolbar
+      - AnimClipToolbar
+      - TimeScrubber
+      PseudoStates: 00000000
+      PropertyMask: 6
+      BackgroundTexture: {fileID: 0}
+      BackgroundColor:
+        serializedVersion: 2
+        rgba: 4284900966
+      BorderColor:
+        serializedVersion: 2
+        rgba: 4279900698
+      BorderTopColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRightColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderBottomColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderLeftColor:
+        serializedVersion: 2
+        rgba: 0
+      TextColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRadius:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      BorderWidth:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 1
+  - Enabled: 1
+    Title: Button / Dropdown / Popup
+    StyleRules:
+    - Selectors:
+      - toolbarbutton
+      - ToolbarDropDown
+      - ToolbarDropDownToggle
+      - ToolbarDropDownToggleButton
+      - ToolbarPopup
+      - ToolbarPopupLeft
+      - toolbarbuttonRight
+      - ToolbarDropDownToggleRight
+      - ToolbarDropDownRight
+      - AnimClipToolbarPopup
+      - AnimClipToolbarButton
+      - ToolbarCreateAddNewDropDown
+      PseudoStates: 00000000
+      PropertyMask: 6
+      BackgroundTexture: {fileID: 0}
+      BackgroundColor:
+        serializedVersion: 2
+        rgba: 4284900966
+      BorderColor:
+        serializedVersion: 2
+        rgba: 4279900698
+      BorderTopColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRightColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderBottomColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderLeftColor:
+        serializedVersion: 2
+        rgba: 0
+      TextColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRadius:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      BorderWidth:
+        m_Left: 1
+        m_Right: 1
+        m_Top: 1
+        m_Bottom: 0
+    - Selectors:
+      - toolbarbutton
+      - ToolbarDropDown
+      - ToolbarDropDownToggle
+      - ToolbarDropDownToggleButton
+      - ToolbarPopup
+      - ToolbarPopupLeft
+      - toolbarbuttonRight
+      - ToolbarDropDownToggleRight
+      - ToolbarDropDownRight
+      - AnimClipToolbarPopup
+      - AnimClipToolbarButton
+      - ToolbarCreateAddNewDropDown
+      PseudoStates: 02000000
+      PropertyMask: 2
+      BackgroundTexture: {fileID: 0}
+      BackgroundColor:
+        serializedVersion: 2
+        rgba: 4286611584
+      BorderColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderTopColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRightColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderBottomColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderLeftColor:
+        serializedVersion: 2
+        rgba: 0
+      TextColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRadius:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      BorderWidth:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+    - Selectors:
+      - toolbarbutton
+      - ToolbarDropDown
+      - ToolbarDropDownToggle
+      - ToolbarDropDownToggleButton
+      - ToolbarPopup
+      - ToolbarPopupLeft
+      - toolbarbuttonRight
+      - ToolbarDropDownToggleRight
+      - ToolbarDropDownRight
+      - AnimClipToolbarPopup
+      - AnimClipToolbarButton
+      - ToolbarCreateAddNewDropDown
+      PseudoStates: 12000000
+      PropertyMask: 2
+      BackgroundTexture: {fileID: 0}
+      BackgroundColor:
+        serializedVersion: 2
+        rgba: 4281545523
+      BorderColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderTopColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRightColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderBottomColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderLeftColor:
+        serializedVersion: 2
+        rgba: 0
+      TextColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRadius:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      BorderWidth:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+    - Selectors:
+      - toolbarbutton
+      - ToolbarDropDown
+      - ToolbarDropDownToggle
+      - ToolbarDropDownToggleButton
+      - ToolbarPopup
+      - ToolbarPopupLeft
+      - toolbarbuttonRight
+      - ToolbarDropDownToggleRight
+      - ToolbarDropDownRight
+      - AnimClipToolbarPopup
+      - AnimClipToolbarButton
+      PseudoStates: 0100000010000000
+      PropertyMask: 6
+      BackgroundTexture: {fileID: 0}
+      BackgroundColor:
+        serializedVersion: 2
+        rgba: 4280690214
+      BorderColor:
+        serializedVersion: 2
+        rgba: 4279900698
+      BorderTopColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRightColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderBottomColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderLeftColor:
+        serializedVersion: 2
+        rgba: 0
+      TextColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRadius:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      BorderWidth:
+        m_Left: 0
+        m_Right: 1
         m_Top: 1
         m_Bottom: 0
   - Enabled: 1
+    Title: '[OVERRIDE: toolbarbuttonRight]'
+    StyleRules:
+    - Selectors:
+      - toolbarbuttonRight
+      PseudoStates: 000000000100000010000000
+      PropertyMask: 256
+      BackgroundTexture: {fileID: 0}
+      BackgroundColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderTopColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRightColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderBottomColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderLeftColor:
+        serializedVersion: 2
+        rgba: 0
+      TextColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRadius:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      BorderWidth:
+        m_Left: 1
+        m_Right: 1
+        m_Top: 0
+        m_Bottom: 0
+  - Enabled: 1
+    Title: Text Search Field
+    StyleRules:
+    - Selectors:
+      - ToolbarSeachTextField
+      - ToolbarSearchTextField
+      - ToolbarSeachTextFieldPopup
+      - ToolbarSearchTextFieldPopup
+      - ToolbarSearchTextFieldWithJump
+      - ToolbarSearchTextFieldWithJumpPopup
+      - SearchTextField
+      PseudoStates: 00000000
+      PropertyMask: 142
+      BackgroundTexture: {fileID: 0}
+      BackgroundColor:
+        serializedVersion: 2
+        rgba: 4280690214
+      BorderColor:
+        serializedVersion: 2
+        rgba: 4279900698
+      BorderTopColor:
+        serializedVersion: 2
+        rgba: 4279900698
+      BorderRightColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderBottomColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderLeftColor:
+        serializedVersion: 2
+        rgba: 0
+      TextColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRadius:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      BorderWidth:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+    - Selectors:
+      - ToolbarSeachTextField
+      - ToolbarSearchTextField
+      - ToolbarSeachTextFieldPopup
+      - ToolbarSearchTextFieldPopup
+      - ToolbarSearchTextFieldWithJump
+      - ToolbarSearchTextFieldWithJumpPopup
+      - SearchTextField
+      PseudoStates: 0200000004000000
+      PropertyMask: 12
+      BackgroundTexture: {fileID: 0}
+      BackgroundColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderColor:
+        serializedVersion: 2
+        rgba: 4286611584
+      BorderTopColor:
+        serializedVersion: 2
+        rgba: 4286611584
+      BorderRightColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderBottomColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderLeftColor:
+        serializedVersion: 2
+        rgba: 0
+      TextColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRadius:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      BorderWidth:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+    - Selectors:
+      - ToolbarSeachTextField
+      - ToolbarSearchTextField
+      - ToolbarSeachTextFieldPopup
+      - ToolbarSearchTextFieldPopup
+      - ToolbarSearchTextFieldWithJump
+      - ToolbarSearchTextFieldWithJumpPopup
+      - SearchTextField
+      PseudoStates: 010000000200000006000000
+      PropertyMask: 268
+      BackgroundTexture: {fileID: 0}
+      BackgroundColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderColor:
+        serializedVersion: 2
+        rgba: 4288256409
+      BorderTopColor:
+        serializedVersion: 2
+        rgba: 4288256409
+      BorderRightColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderBottomColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderLeftColor:
+        serializedVersion: 2
+        rgba: 0
+      TextColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRadius:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      BorderWidth:
+        m_Left: 1
+        m_Right: 1
+        m_Top: 1
+        m_Bottom: 1
+  - Enabled: 1
+    Title: Text Search Field Button
+    StyleRules:
+    - Selectors:
+      - ToolbarSearchTextFieldJumpButton
+      PseudoStates: 00000000
+      PropertyMask: 134
+      BackgroundTexture: {fileID: 0}
+      BackgroundColor:
+        serializedVersion: 2
+        rgba: 4284900966
+      BorderColor:
+        serializedVersion: 2
+        rgba: 4279900698
+      BorderTopColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRightColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderBottomColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderLeftColor:
+        serializedVersion: 2
+        rgba: 0
+      TextColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRadius:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      BorderWidth:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+    - Selectors:
+      - ToolbarSearchTextFieldJumpButton
+      PseudoStates: 02000000
+      PropertyMask: 2
+      BackgroundTexture: {fileID: 0}
+      BackgroundColor:
+        serializedVersion: 2
+        rgba: 4286611584
+      BorderColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderTopColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRightColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderBottomColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderLeftColor:
+        serializedVersion: 2
+        rgba: 0
+      TextColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRadius:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      BorderWidth:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+    - Selectors:
+      - ToolbarSearchTextFieldJumpButton
+      PseudoStates: 01000000
+      PropertyMask: 6
+      BackgroundTexture: {fileID: 0}
+      BackgroundColor:
+        serializedVersion: 2
+        rgba: 4281545523
+      BorderColor:
+        serializedVersion: 2
+        rgba: 4279900698
+      BorderTopColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRightColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderBottomColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderLeftColor:
+        serializedVersion: 2
+        rgba: 0
+      TextColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRadius:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      BorderWidth:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+  - Enabled: 0
+    Title: --- | --- [ F I E L D S ] ---
+    StyleRules: []
+  - Enabled: 1
+    Title: Button
+    StyleRules:
+    - Selectors:
+      - Button
+      - minibutton
+      - AC-Button
+      - LargeButton
+      - AppCommand
+      - MiniToolbarButton
+      - RL-FooterButton
+      - ObjectFieldButton
+      - TimeScrubberButton
+      - DropDownButton
+      - DropDownToggleButton
+      - PreDropDown
+      - EditModeSingleButton
+      PseudoStates: 00000000
+      PropertyMask: 166
+      BackgroundTexture: {fileID: 0}
+      BackgroundColor:
+        serializedVersion: 2
+        rgba: 4284900966
+      BorderColor:
+        serializedVersion: 2
+        rgba: 4279900698
+      BorderTopColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRightColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderBottomColor:
+        serializedVersion: 2
+        rgba: 4279900698
+      BorderLeftColor:
+        serializedVersion: 2
+        rgba: 0
+      TextColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRadius:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      BorderWidth:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+    - Selectors:
+      - Button
+      - minibutton
+      - AC-Button
+      - LargeButton
+      - AppCommand
+      - MiniToolbarButton
+      - RL-FooterButton
+      - ObjectFieldButton
+      - TimeScrubberButton
+      - DropDownButton
+      - DropDownToggleButton
+      - PreDropDown
+      - EditModeSingleButton
+      PseudoStates: 02000000
+      PropertyMask: 2
+      BackgroundTexture: {fileID: 0}
+      BackgroundColor:
+        serializedVersion: 2
+        rgba: 4286611584
+      BorderColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderTopColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRightColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderBottomColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderLeftColor:
+        serializedVersion: 2
+        rgba: 0
+      TextColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRadius:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      BorderWidth:
+        m_Left: 1
+        m_Right: 1
+        m_Top: 1
+        m_Bottom: 1
+    - Selectors:
+      - Button
+      - minibutton
+      - AC-Button
+      - LargeButton
+      - AppCommand
+      - MiniToolbarButton
+      - RL-FooterButton
+      - ObjectFieldButton
+      - TimeScrubberButton
+      - DropDownButton
+      - DropDownToggleButton
+      - PreDropDown
+      - EditModeSingleButton
+      PseudoStates: 12000000
+      PropertyMask: 2
+      BackgroundTexture: {fileID: 0}
+      BackgroundColor:
+        serializedVersion: 2
+        rgba: 4279900698
+      BorderColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderTopColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRightColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderBottomColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderLeftColor:
+        serializedVersion: 2
+        rgba: 0
+      TextColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRadius:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      BorderWidth:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+    - Selectors:
+      - Button
+      - minibutton
+      - AC-Button
+      - LargeButton
+      - AppCommand
+      - MiniToolbarButton
+      - RL-FooterButton
+      - ObjectFieldButton
+      - TimeScrubberButton
+      - DropDownButton
+      - DropDownToggleButton
+      - PreDropDown
+      - EditModeSingleButton
+      PseudoStates: 010000001000000011000000
+      PropertyMask: 46
+      BackgroundTexture: {fileID: 0}
+      BackgroundColor:
+        serializedVersion: 2
+        rgba: 4280690214
+      BorderColor:
+        serializedVersion: 2
+        rgba: 4279900698
+      BorderTopColor:
+        serializedVersion: 2
+        rgba: 4279900698
+      BorderRightColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderBottomColor:
+        serializedVersion: 2
+        rgba: 4279900698
+      BorderLeftColor:
+        serializedVersion: 2
+        rgba: 0
+      TextColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRadius:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      BorderWidth:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+  - Enabled: 1
+    Title: Color
+    StyleRules:
+    - Selectors:
+      - ColorField
+      PseudoStates: 00000000
+      PropertyMask: 132
+      BackgroundTexture: {fileID: 0}
+      BackgroundColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderColor:
+        serializedVersion: 2
+        rgba: 4279900698
+      BorderTopColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRightColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderBottomColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderLeftColor:
+        serializedVersion: 2
+        rgba: 0
+      TextColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRadius:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      BorderWidth:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+    - Selectors:
+      - ColorField
+      PseudoStates: 02000000
+      PropertyMask: 4
+      BackgroundTexture: {fileID: 0}
+      BackgroundColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderColor:
+        serializedVersion: 2
+        rgba: 4286611584
+      BorderTopColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRightColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderBottomColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderLeftColor:
+        serializedVersion: 2
+        rgba: 0
+      TextColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRadius:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      BorderWidth:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+    - Selectors:
+      - ColorField
+      PseudoStates: 0400000006000000
+      PropertyMask: 260
+      BackgroundTexture: {fileID: 0}
+      BackgroundColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderColor:
+        serializedVersion: 2
+        rgba: 4288256409
+      BorderTopColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRightColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderBottomColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderLeftColor:
+        serializedVersion: 2
+        rgba: 0
+      TextColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRadius:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      BorderWidth:
+        m_Left: 1
+        m_Right: 1
+        m_Top: 1
+        m_Bottom: 1
+  - Enabled: 1
+    Title: Gradient Field Box
+    StyleRules:
+    - Selectors:
+      - ColorPickerBox
+      PseudoStates: 00000000
+      PropertyMask: 4
+      BackgroundTexture: {fileID: 0}
+      BackgroundColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderColor:
+        serializedVersion: 2
+        rgba: 4279900698
+      BorderTopColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRightColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderBottomColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderLeftColor:
+        serializedVersion: 2
+        rgba: 0
+      TextColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRadius:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      BorderWidth:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+  - Enabled: 1
+    Title: Multi-Column Header
+    StyleRules:
+    - Selectors:
+      - MultiColumnTopBar
+      PseudoStates: 00000000
+      PropertyMask: 390
+      BackgroundTexture: {fileID: 0}
+      BackgroundColor:
+        serializedVersion: 2
+        rgba: 4280690214
+      BorderColor:
+        serializedVersion: 2
+        rgba: 4279900698
+      BorderTopColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRightColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderBottomColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderLeftColor:
+        serializedVersion: 2
+        rgba: 0
+      TextColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRadius:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      BorderWidth:
+        m_Left: 1
+        m_Right: 1
+        m_Top: 1
+        m_Bottom: 1
+  - Enabled: 1
+    Title: Label
+    StyleRules:
+    - Selectors:
+      - ControlLabel
+      - ShurikenLabel
+      PseudoStates: 01000000
+      PropertyMask: 512
+      BackgroundTexture: {fileID: 0}
+      BackgroundColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderTopColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRightColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderBottomColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderLeftColor:
+        serializedVersion: 2
+        rgba: 0
+      TextColor:
+        serializedVersion: 2
+        rgba: 4286611584
+      BorderRadius:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      BorderWidth:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+    - Selectors:
+      - ControlLabel
+      - ShurikenLabel
+      PseudoStates: 04000000
+      PropertyMask: 512
+      BackgroundTexture: {fileID: 0}
+      BackgroundColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderTopColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRightColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderBottomColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderLeftColor:
+        serializedVersion: 2
+        rgba: 0
+      TextColor:
+        serializedVersion: 2
+        rgba: 4294967295
+      BorderRadius:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      BorderWidth:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+  - Enabled: 1
+    Title: Popup
+    StyleRules:
+    - Selectors:
+      - MiniPopup
+      - MiniPullDown
+      - ShurikenPopup
+      PseudoStates: 00000000
+      PropertyMask: 166
+      BackgroundTexture: {fileID: 0}
+      BackgroundColor:
+        serializedVersion: 2
+        rgba: 4284900966
+      BorderColor:
+        serializedVersion: 2
+        rgba: 4279900698
+      BorderTopColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRightColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderBottomColor:
+        serializedVersion: 2
+        rgba: 4279900698
+      BorderLeftColor:
+        serializedVersion: 2
+        rgba: 0
+      TextColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRadius:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      BorderWidth:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+    - Selectors:
+      - MiniPopup
+      - MiniPullDown
+      - ShurikenPopup
+      PseudoStates: 02000000
+      PropertyMask: 2
+      BackgroundTexture: {fileID: 0}
+      BackgroundColor:
+        serializedVersion: 2
+        rgba: 4286611584
+      BorderColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderTopColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRightColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderBottomColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderLeftColor:
+        serializedVersion: 2
+        rgba: 0
+      TextColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRadius:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      BorderWidth:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+    - Selectors:
+      - MiniPopup
+      - MiniPullDown
+      - ShurikenPopup
+      PseudoStates: 06000000
+      PropertyMask: 294
+      BackgroundTexture: {fileID: 0}
+      BackgroundColor:
+        serializedVersion: 2
+        rgba: 4286611584
+      BorderColor:
+        serializedVersion: 2
+        rgba: 4288256409
+      BorderTopColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRightColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderBottomColor:
+        serializedVersion: 2
+        rgba: 4288256409
+      BorderLeftColor:
+        serializedVersion: 2
+        rgba: 0
+      TextColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRadius:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      BorderWidth:
+        m_Left: 1
+        m_Right: 1
+        m_Top: 1
+        m_Bottom: 1
+  - Enabled: 1
+    Title: Toggle
+    StyleRules:
+    - Selectors:
+      - Toggle
+      - ShurikenToggle
+      PseudoStates: 0000000040000000
+      PropertyMask: 1
+      BackgroundTexture: {fileID: 2800000, guid: d7c6c018506563c4cb0b44e9163a5e49, type: 3}
+      BackgroundColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderTopColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRightColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderBottomColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderLeftColor:
+        serializedVersion: 2
+        rgba: 0
+      TextColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRadius:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      BorderWidth:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+    - Selectors:
+      - Toggle
+      - ShurikenToggle
+      PseudoStates: 0200000006000000
+      PropertyMask: 1
+      BackgroundTexture: {fileID: 2800000, guid: 661b5c417be79694480d07fcb44b1a81, type: 3}
+      BackgroundColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderTopColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRightColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderBottomColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderLeftColor:
+        serializedVersion: 2
+        rgba: 0
+      TextColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRadius:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      BorderWidth:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+    - Selectors:
+      - Toggle
+      - ShurikenToggle
+      PseudoStates: 010000000400000005000000
+      PropertyMask: 1
+      BackgroundTexture: {fileID: 2800000, guid: 3892f089aff2e3048a4d111ec525765d, type: 3}
+      BackgroundColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderTopColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRightColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderBottomColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderLeftColor:
+        serializedVersion: 2
+        rgba: 0
+      TextColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRadius:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      BorderWidth:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+    - Selectors:
+      - Toggle
+      - ShurikenToggle
+      PseudoStates: 1000000050000000
+      PropertyMask: 1
+      BackgroundTexture: {fileID: 2800000, guid: 8de8ae56093e91c49ac04c78edaaaf24, type: 3}
+      BackgroundColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderTopColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRightColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderBottomColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderLeftColor:
+        serializedVersion: 2
+        rgba: 0
+      TextColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRadius:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      BorderWidth:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+    - Selectors:
+      - Toggle
+      - ShurikenToggle
+      PseudoStates: 1200000016000000
+      PropertyMask: 1
+      BackgroundTexture: {fileID: 2800000, guid: dad293ec9d63c1b4da591e2fbbc29d1f, type: 3}
+      BackgroundColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderTopColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRightColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderBottomColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderLeftColor:
+        serializedVersion: 2
+        rgba: 0
+      TextColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRadius:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      BorderWidth:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+    - Selectors:
+      - Toggle
+      - ShurikenToggle
+      PseudoStates: 110000001400000015000000
+      PropertyMask: 1
+      BackgroundTexture: {fileID: 2800000, guid: a2044d39f98d6e64cbb667f2258f3774, type: 3}
+      BackgroundColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderTopColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRightColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderBottomColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderLeftColor:
+        serializedVersion: 2
+        rgba: 0
+      TextColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRadius:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      BorderWidth:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+  - Enabled: 1
+    Title: Toggle Mixed
+    StyleRules:
+    - Selectors:
+      - ToggleMixed
+      PseudoStates: 00000000
+      PropertyMask: 1
+      BackgroundTexture: {fileID: 2800000, guid: f67313e976222064ba6cb42540b8ac12, type: 3}
+      BackgroundColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderTopColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRightColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderBottomColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderLeftColor:
+        serializedVersion: 2
+        rgba: 0
+      TextColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRadius:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      BorderWidth:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+    - Selectors:
+      - ToggleMixed
+      PseudoStates: 0200000006000000
+      PropertyMask: 1
+      BackgroundTexture: {fileID: 2800000, guid: c629d9932346b614bbe59699e7ca1cb7, type: 3}
+      BackgroundColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderTopColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRightColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderBottomColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderLeftColor:
+        serializedVersion: 2
+        rgba: 0
+      TextColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRadius:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      BorderWidth:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+    - Selectors:
+      - ToggleMixed
+      PseudoStates: 010000000400000005000000
+      PropertyMask: 1
+      BackgroundTexture: {fileID: 2800000, guid: c29864a8f63dc9845b82b64444f3ca61, type: 3}
+      BackgroundColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderTopColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRightColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderBottomColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderLeftColor:
+        serializedVersion: 2
+        rgba: 0
+      TextColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRadius:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      BorderWidth:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+  - Enabled: 1
+    Title: Text / Object
+    StyleRules:
+    - Selectors:
+      - TextField
+      - BoldTextField
+      - ToolbarTextField
+      - TextFieldDropDown
+      - TextFieldDropDownText
+      - ToolbarSliderTextField
+      - ShurikenValue
+      - ShurikenObjectField
+      - ObjectField
+      - AnimationSelectionTextField
+      PseudoStates: 00000000
+      PropertyMask: 142
+      BackgroundTexture: {fileID: 0}
+      BackgroundColor:
+        serializedVersion: 2
+        rgba: 4280690214
+      BorderColor:
+        serializedVersion: 2
+        rgba: 4279900698
+      BorderTopColor:
+        serializedVersion: 2
+        rgba: 4279900698
+      BorderRightColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderBottomColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderLeftColor:
+        serializedVersion: 2
+        rgba: 0
+      TextColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRadius:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      BorderWidth:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+    - Selectors:
+      - TextField
+      - BoldTextField
+      - ToolbarTextField
+      - TextFieldDropDown
+      - TextFieldDropDownText
+      - ToolbarSliderTextField
+      - ShurikenValue
+      - ShurikenObjectField
+      - ObjectField
+      - AnimationSelectionTextField
+      PseudoStates: 02000000
+      PropertyMask: 300
+      BackgroundTexture: {fileID: 0}
+      BackgroundColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderColor:
+        serializedVersion: 2
+        rgba: 4284900966
+      BorderTopColor:
+        serializedVersion: 2
+        rgba: 4284900966
+      BorderRightColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderBottomColor:
+        serializedVersion: 2
+        rgba: 4284900966
+      BorderLeftColor:
+        serializedVersion: 2
+        rgba: 0
+      TextColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRadius:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      BorderWidth:
+        m_Left: 1
+        m_Right: 1
+        m_Top: 1
+        m_Bottom: 1
+    - Selectors:
+      - TextField
+      - BoldTextField
+      - ToolbarTextField
+      - TextFieldDropDown
+      - TextFieldDropDownText
+      - ToolbarSliderTextField
+      - ShurikenValue
+      - ShurikenObjectField
+      - ObjectField
+      - AnimationSelectionTextField
+      PseudoStates: 0100000004000000050000000600000007000000
+      PropertyMask: 300
+      BackgroundTexture: {fileID: 0}
+      BackgroundColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderColor:
+        serializedVersion: 2
+        rgba: 4286611584
+      BorderTopColor:
+        serializedVersion: 2
+        rgba: 4286611584
+      BorderRightColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderBottomColor:
+        serializedVersion: 2
+        rgba: 4286611584
+      BorderLeftColor:
+        serializedVersion: 2
+        rgba: 0
+      TextColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRadius:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      BorderWidth:
+        m_Left: 1
+        m_Right: 1
+        m_Top: 1
+        m_Bottom: 1
+    - Selectors:
+      - ObjectField
+      PseudoStates: 10000000
+      PropertyMask: 2
+      BackgroundTexture: {fileID: 0}
+      BackgroundColor:
+        serializedVersion: 2
+        rgba: 4281545523
+      BorderColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderTopColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRightColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderBottomColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderLeftColor:
+        serializedVersion: 2
+        rgba: 0
+      TextColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRadius:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      BorderWidth:
+        m_Left: 1
+        m_Right: 1
+        m_Top: 1
+        m_Bottom: 1
+  - Enabled: 0
+    Title: --- | --- [ R E O R D E R E D   L I S T ] ---
+    StyleRules: []
+  - Enabled: 1
+    Title: Element
+    StyleRules:
+    - Selectors:
+      - RL-Element
+      PseudoStates: 11000000
+      PropertyMask: 2
+      BackgroundTexture: {fileID: 0}
+      BackgroundColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderTopColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRightColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderBottomColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderLeftColor:
+        serializedVersion: 2
+        rgba: 0
+      TextColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRadius:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      BorderWidth:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+    - Selectors:
+      - RL-Element
+      PseudoStates: 15000000
+      PropertyMask: 2
+      BackgroundTexture: {fileID: 0}
+      BackgroundColor:
+        serializedVersion: 2
+        rgba: 4286611584
+      BorderColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderTopColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRightColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderBottomColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderLeftColor:
+        serializedVersion: 2
+        rgba: 0
+      TextColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRadius:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      BorderWidth:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+  - Enabled: 1
+    Title: Header / Background
+    StyleRules:
+    - Selectors:
+      - RL-Header
+      PseudoStates: 00000000
+      PropertyMask: 134
+      BackgroundTexture: {fileID: 0}
+      BackgroundColor:
+        serializedVersion: 2
+        rgba: 4280690214
+      BorderColor:
+        serializedVersion: 2
+        rgba: 4279900698
+      BorderTopColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRightColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderBottomColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderLeftColor:
+        serializedVersion: 2
+        rgba: 0
+      TextColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRadius:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      BorderWidth:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+    - Selectors:
+      - RL-Background
+      - RL-Empty-Header
+      PseudoStates: 00000000
+      PropertyMask: 134
+      BackgroundTexture: {fileID: 0}
+      BackgroundColor:
+        serializedVersion: 2
+        rgba: 4283256141
+      BorderColor:
+        serializedVersion: 2
+        rgba: 4279900698
+      BorderTopColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRightColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderBottomColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderLeftColor:
+        serializedVersion: 2
+        rgba: 0
+      TextColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRadius:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      BorderWidth:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+  - Enabled: 1
+    Title: Footer
+    StyleRules:
+    - Selectors:
+      - RL-Footer
+      PseudoStates: 00000000
+      PropertyMask: 258
+      BackgroundTexture: {fileID: 0}
+      BackgroundColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderTopColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRightColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderBottomColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderLeftColor:
+        serializedVersion: 2
+        rgba: 0
+      TextColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRadius:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      BorderWidth:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+  - Enabled: 0
     Title: 
+    StyleRules: []
+  - Enabled: 0
+    Title: --- [ T A B ] ---
+    StyleRules: []
+  - Enabled: 0
+    Title: --- [ H I E R A R C H Y ] ---
+    StyleRules: []
+  - Enabled: 1
+    Title: Options Background
+    StyleRules:
+    - Selectors:
+      - WhiteBackground
+      PseudoStates: 00000000
+      PropertyMask: 2
+      BackgroundTexture: {fileID: 0}
+      BackgroundColor:
+        serializedVersion: 2
+        rgba: 1080452710
+      BorderColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderTopColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRightColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderBottomColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderLeftColor:
+        serializedVersion: 2
+        rgba: 0
+      TextColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRadius:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      BorderWidth:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+  - Enabled: 1
+    Title: Scene Name Bar
+    StyleRules:
+    - Selectors:
+      - SceneTopBarBg
+      PseudoStates: 00000000
+      PropertyMask: 258
+      BackgroundTexture: {fileID: 0}
+      BackgroundColor:
+        serializedVersion: 2
+        rgba: 4279900698
+      BorderColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderTopColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRightColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderBottomColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderLeftColor:
+        serializedVersion: 2
+        rgba: 0
+      TextColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRadius:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      BorderWidth:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+  - Enabled: 0
+    Title: --- [ A N I M A T I O N ] ---
+    StyleRules: []
+  - Enabled: 1
+    Title: Row
+    StyleRules:
+    - Selectors:
+      - AnimationRowOdd
+      PseudoStates: 00000000
+      PropertyMask: 2
+      BackgroundTexture: {fileID: 0}
+      BackgroundColor:
+        serializedVersion: 2
+        rgba: 639244826
+      BorderColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderTopColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRightColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderBottomColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderLeftColor:
+        serializedVersion: 2
+        rgba: 0
+      TextColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRadius:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      BorderWidth:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+    - Selectors:
+      - AnimationRowEven
+      PseudoStates: 00000000
+      PropertyMask: 2
+      BackgroundTexture: {fileID: 0}
+      BackgroundColor:
+        serializedVersion: 2
+        rgba: 1276779034
+      BorderColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderTopColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRightColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderBottomColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderLeftColor:
+        serializedVersion: 2
+        rgba: 0
+      TextColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRadius:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      BorderWidth:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+  - Enabled: 1
+    Title: Separator
+    StyleRules:
+    - Selectors:
+      - AnimLeftPaneSeparator
+      PseudoStates: 00000000
+      PropertyMask: 2
+      BackgroundTexture: {fileID: 0}
+      BackgroundColor:
+        serializedVersion: 2
+        rgba: 4279900698
+      BorderColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderTopColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRightColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderBottomColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderLeftColor:
+        serializedVersion: 2
+        rgba: 0
+      TextColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRadius:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      BorderWidth:
+        m_Left: 10
+        m_Right: 10
+        m_Top: 10
+        m_Bottom: 10
+  - Enabled: 1
+    Title: Transition
+    StyleRules:
+    - Selectors:
+      - MeTransitionHead
+      PseudoStates: 00000000
+      PropertyMask: 262
+      BackgroundTexture: {fileID: 0}
+      BackgroundColor:
+        serializedVersion: 2
+        rgba: 4280690214
+      BorderColor:
+        serializedVersion: 2
+        rgba: 4279900698
+      BorderTopColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRightColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderBottomColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderLeftColor:
+        serializedVersion: 2
+        rgba: 0
+      TextColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRadius:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      BorderWidth:
+        m_Left: 1
+        m_Right: 1
+        m_Top: 1
+        m_Bottom: 0
+    - Selectors:
+      - MeTransitionSelect
+      - MeTransitionSelectHead
+      PseudoStates: 00000000
+      PropertyMask: 2
+      BackgroundTexture: {fileID: 0}
+      BackgroundColor:
+        serializedVersion: 2
+        rgba: 1080452710
+      BorderColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderTopColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRightColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderBottomColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderLeftColor:
+        serializedVersion: 2
+        rgba: 0
+      TextColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRadius:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      BorderWidth:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 1
+        m_Bottom: 2
+    - Selectors:
+      - MeTransitionBack
+      PseudoStates: 00000000
+      PropertyMask: 262
+      BackgroundTexture: {fileID: 0}
+      BackgroundColor:
+        serializedVersion: 2
+        rgba: 4281545523
+      BorderColor:
+        serializedVersion: 2
+        rgba: 4279900698
+      BorderTopColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRightColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderBottomColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderLeftColor:
+        serializedVersion: 2
+        rgba: 0
+      TextColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRadius:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      BorderWidth:
+        m_Left: 1
+        m_Right: 1
+        m_Top: 1
+        m_Bottom: 1
+  - Enabled: 0
+    Title: --- | --- [ P R O J E C T ] ---
+    StyleRules: []
+  - Enabled: 1
+    Title: Arrow Navigation
+    StyleRules:
+    - Selectors:
+      - ArrowNavigationRight
+      PseudoStates: 00000000
+      PropertyMask: 1
+      BackgroundTexture: {fileID: 2800000, guid: cf61150663ab68f4a928109dd82f1107, type: 3}
+      BackgroundColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderTopColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRightColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderBottomColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderLeftColor:
+        serializedVersion: 2
+        rgba: 0
+      TextColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRadius:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      BorderWidth:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+    - Selectors:
+      - ArrowNavigationRight
+      PseudoStates: 02000000
+      PropertyMask: 3
+      BackgroundTexture: {fileID: 2800000, guid: 9a1ec0098a06e6c4e8ac2ea294f53bce, type: 3}
+      BackgroundColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderTopColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRightColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderBottomColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderLeftColor:
+        serializedVersion: 2
+        rgba: 0
+      TextColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRadius:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      BorderWidth:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+  - Enabled: 1
+    Title: Exposable Popup Menu
+    StyleRules:
+    - Selectors:
+      - ExposablePopupMenu
+      PseudoStates: 00000000
+      PropertyMask: 130
+      BackgroundTexture: {fileID: 0}
+      BackgroundColor:
+        serializedVersion: 2
+        rgba: 4284900966
+      BorderColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderTopColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRightColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderBottomColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderLeftColor:
+        serializedVersion: 2
+        rgba: 0
+      TextColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRadius:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      BorderWidth:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+    - Selectors:
+      - ExposablePopupMenu
+      PseudoStates: 02000000
+      PropertyMask: 2
+      BackgroundTexture: {fileID: 0}
+      BackgroundColor:
+        serializedVersion: 2
+        rgba: 4283256141
+      BorderColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderTopColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRightColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderBottomColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderLeftColor:
+        serializedVersion: 2
+        rgba: 0
+      TextColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRadius:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      BorderWidth:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+  - Enabled: 1
+    Title: Exposable Popup Item
+    StyleRules:
+    - Selectors:
+      - ExposablePopupItem
+      PseudoStates: 02000000
+      PropertyMask: 130
+      BackgroundTexture: {fileID: 0}
+      BackgroundColor:
+        serializedVersion: 2
+        rgba: 4283256141
+      BorderColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderTopColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRightColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderBottomColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderLeftColor:
+        serializedVersion: 2
+        rgba: 0
+      TextColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRadius:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      BorderWidth:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+    - Selectors:
+      - ExposablePopupItem
+      PseudoStates: 0100000010000000
+      PropertyMask: 130
+      BackgroundTexture: {fileID: 0}
+      BackgroundColor:
+        serializedVersion: 2
+        rgba: 4284900966
+      BorderColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderTopColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRightColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderBottomColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderLeftColor:
+        serializedVersion: 2
+        rgba: 0
+      TextColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRadius:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      BorderWidth:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+  - Enabled: 1
+    Title: Rename Field
+    StyleRules:
+    - Selectors:
+      - OL-MiniRenameField
+      PseudoStates: 00000000
+      PropertyMask: 2
+      BackgroundTexture: {fileID: 0}
+      BackgroundColor:
+        serializedVersion: 2
+        rgba: 4280690214
+      BorderColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderTopColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRightColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderBottomColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderLeftColor:
+        serializedVersion: 2
+        rgba: 0
+      TextColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRadius:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      BorderWidth:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+  - Enabled: 1
+    Title: Top / Bottom Bar
+    StyleRules:
+    - Selectors:
+      - ProjectBrowserTopBarBg
+      - ProjectBrowserBottomBarBg
+      PseudoStates: 00000000
+      PropertyMask: 6
+      BackgroundTexture: {fileID: 0}
+      BackgroundColor:
+        serializedVersion: 2
+        rgba: 4280690214
+      BorderColor:
+        serializedVersion: 2
+        rgba: 4279900698
+      BorderTopColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRightColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderBottomColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderLeftColor:
+        serializedVersion: 2
+        rgba: 0
+      TextColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRadius:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      BorderWidth:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+  - Enabled: 1
+    Title: Grid View Item Label Background
+    StyleRules:
+    - Selectors:
+      - ProjectBrowserGridLabel
+      PseudoStates: 1000000014000000
+      PropertyMask: 390
+      BackgroundTexture: {fileID: 0}
+      BackgroundColor:
+        serializedVersion: 2
+        rgba: 4284900966
+      BorderColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderTopColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRightColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderBottomColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderLeftColor:
+        serializedVersion: 2
+        rgba: 0
+      TextColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRadius:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      BorderWidth:
+        m_Left: 1
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+  - Enabled: 1
+    Title: OL Result Label
+    StyleRules:
+    - Selectors:
+      - OL-ResultLabel
+      PseudoStates: 14000000
+      PropertyMask: 2
+      BackgroundTexture: {fileID: 0}
+      BackgroundColor:
+        serializedVersion: 2
+        rgba: 4280690214
+      BorderColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderTopColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRightColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderBottomColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderLeftColor:
+        serializedVersion: 2
+        rgba: 0
+      TextColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRadius:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      BorderWidth:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+    - Selectors:
+      - OL-ResultLabel
+      PseudoStates: 10000000
+      PropertyMask: 2
+      BackgroundTexture: {fileID: 0}
+      BackgroundColor:
+        serializedVersion: 2
+        rgba: 1080452710
+      BorderColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderTopColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRightColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderBottomColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderLeftColor:
+        serializedVersion: 2
+        rgba: 0
+      TextColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRadius:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      BorderWidth:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+  - Enabled: 1
+    Title: Ping
+    StyleRules:
+    - Selectors:
+      - TV-Ping
+      - OL-Ping
+      - OL-MiniPing
+      PseudoStates: 00000000
+      PropertyMask: 390
+      BackgroundTexture: {fileID: 0}
+      BackgroundColor:
+        serializedVersion: 2
+        rgba: 4286611584
+      BorderColor:
+        serializedVersion: 2
+        rgba: 4279900698
+      BorderTopColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRightColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderBottomColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderLeftColor:
+        serializedVersion: 2
+        rgba: 0
+      TextColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRadius:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      BorderWidth:
+        m_Left: 1
+        m_Right: 1
+        m_Top: 1
+        m_Bottom: 1
+  - Enabled: 0
+    Title: --- | --- [ C O N S O L E ] ---
+    StyleRules: []
+  - Enabled: 1
+    Title: Log Icon
+    StyleRules:
+    - Selectors:
+      - CN-EntryInfoIcon
+      PseudoStates: 00000000
+      PropertyMask: 1
+      BackgroundTexture: {fileID: 2800000, guid: 4d13a0e2a8d9b49498f79f69598df8c8, type: 3}
+      BackgroundColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderTopColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRightColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderBottomColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderLeftColor:
+        serializedVersion: 2
+        rgba: 0
+      TextColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRadius:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      BorderWidth:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+    - Selectors:
+      - CN-EntryWarnIcon
+      PseudoStates: 00000000
+      PropertyMask: 1
+      BackgroundTexture: {fileID: 2800000, guid: 12acef22c60bb5f4cba537c49601bc3b, type: 3}
+      BackgroundColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderTopColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRightColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderBottomColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderLeftColor:
+        serializedVersion: 2
+        rgba: 0
+      TextColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRadius:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      BorderWidth:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+    - Selectors:
+      - CN-EntryErrorIcon
+      PseudoStates: 00000000
+      PropertyMask: 1
+      BackgroundTexture: {fileID: 2800000, guid: 8c210f13b049c6e47a29732fa97dda78, type: 3}
+      BackgroundColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderTopColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRightColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderBottomColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderLeftColor:
+        serializedVersion: 2
+        rgba: 0
+      TextColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRadius:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      BorderWidth:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+  - Enabled: 1
+    Title: Log Stack
+    StyleRules:
+    - Selectors:
+      - CN-EntryBackOdd
+      PseudoStates: 00000000
+      PropertyMask: 2
+      BackgroundTexture: {fileID: 0}
+      BackgroundColor:
+        serializedVersion: 2
+        rgba: 639244826
+      BorderColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderTopColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRightColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderBottomColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderLeftColor:
+        serializedVersion: 2
+        rgba: 0
+      TextColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRadius:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      BorderWidth:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+    - Selectors:
+      - CN-EntryBackEven
+      PseudoStates: 00000000
+      PropertyMask: 2
+      BackgroundTexture: {fileID: 0}
+      BackgroundColor:
+        serializedVersion: 2
+        rgba: 1276779034
+      BorderColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderTopColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRightColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderBottomColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderLeftColor:
+        serializedVersion: 2
+        rgba: 0
+      TextColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRadius:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      BorderWidth:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+    - Selectors:
+      - CN-EntryBackEven
+      - CN-EntryBackOdd
+      PseudoStates: 10000000
+      PropertyMask: 2
+      BackgroundTexture: {fileID: 0}
+      BackgroundColor:
+        serializedVersion: 2
+        rgba: 2149194266
+      BorderColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderTopColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRightColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderBottomColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderLeftColor:
+        serializedVersion: 2
+        rgba: 0
+      TextColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRadius:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      BorderWidth:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+  - Enabled: 1
+    Title: Log Counter (On Collapse)
+    StyleRules:
+    - Selectors:
+      - CN-CountBadge
+      PseudoStates: 00000000
+      PropertyMask: 130
+      BackgroundTexture: {fileID: 0}
+      BackgroundColor:
+        serializedVersion: 2
+        rgba: 4284900966
+      BorderColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderTopColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRightColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderBottomColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderLeftColor:
+        serializedVersion: 2
+        rgba: 0
+      TextColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRadius:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      BorderWidth:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+  - Enabled: 0
+    Title: --- | --- [ G A M E ] ---
+    StyleRules: []
+  - Enabled: 1
+    Title: Stats Window
+    StyleRules:
+    - Selectors:
+      - Window
+      PseudoStates: 00000000
+      PropertyMask: 390
+      BackgroundTexture: {fileID: 0}
+      BackgroundColor:
+        serializedVersion: 2
+        rgba: 3206158874
+      BorderColor:
+        serializedVersion: 2
+        rgba: 4288256409
+      BorderTopColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRightColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderBottomColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderLeftColor:
+        serializedVersion: 2
+        rgba: 0
+      TextColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRadius:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      BorderWidth:
+        m_Left: 1
+        m_Right: 1
+        m_Top: 1
+        m_Bottom: 1
+  - Enabled: 0
+    Title: --- | --- [ I N S P E C T O R ] ---
+    StyleRules: []
+  - Enabled: 1
+    Title: Big Title
+    StyleRules:
+    - Selectors:
+      - IN-BigTitle
+      PseudoStates: 00000000
+      PropertyMask: 6
+      BackgroundTexture: {fileID: 0}
+      BackgroundColor:
+        serializedVersion: 2
+        rgba: 4281545523
+      BorderColor:
+        serializedVersion: 2
+        rgba: 4279900698
+      BorderTopColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRightColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderBottomColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderLeftColor:
+        serializedVersion: 2
+        rgba: 0
+      TextColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRadius:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      BorderWidth:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+  - Enabled: 1
+    Title: Footer
+    StyleRules:
+    - Selectors:
+      - IN-Footer
+      PseudoStates: 00000000
+      PropertyMask: 6
+      BackgroundTexture: {fileID: 0}
+      BackgroundColor:
+        serializedVersion: 2
+        rgba: 4283256141
+      BorderColor:
+        serializedVersion: 2
+        rgba: 4279900698
+      BorderTopColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRightColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderBottomColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderLeftColor:
+        serializedVersion: 2
+        rgba: 0
+      TextColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRadius:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      BorderWidth:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+  - Enabled: 1
+    Title: Title
+    StyleRules:
+    - Selectors:
+      - IN-Title
+      PseudoStates: 0000000010000000
+      PropertyMask: 262
+      BackgroundTexture: {fileID: 0}
+      BackgroundColor:
+        serializedVersion: 2
+        rgba: 4284900966
+      BorderColor:
+        serializedVersion: 2
+        rgba: 4279900698
+      BorderTopColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRightColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderBottomColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderLeftColor:
+        serializedVersion: 2
+        rgba: 0
+      TextColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRadius:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      BorderWidth:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 1
+        m_Bottom: 0
+    - Selectors:
+      - IN-Title
+      PseudoStates: 020000001200000016000000
+      PropertyMask: 2
+      BackgroundTexture: {fileID: 0}
+      BackgroundColor:
+        serializedVersion: 2
+        rgba: 4286611584
+      BorderColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderTopColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRightColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderBottomColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderLeftColor:
+        serializedVersion: 2
+        rgba: 0
+      TextColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRadius:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      BorderWidth:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+    - Selectors:
+      - IN-Title
+      PseudoStates: 01000000
+      PropertyMask: 2
+      BackgroundTexture: {fileID: 0}
+      BackgroundColor:
+        serializedVersion: 2
+        rgba: 4283256141
+      BorderColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderTopColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRightColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderBottomColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderLeftColor:
+        serializedVersion: 2
+        rgba: 0
+      TextColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRadius:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      BorderWidth:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+  - Enabled: 1
+    Title: Title Text
+    StyleRules:
+    - Selectors:
+      - IN-TitleText
+      PseudoStates: 0000000004000000
+      PropertyMask: 512
+      BackgroundTexture: {fileID: 0}
+      BackgroundColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderTopColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRightColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderBottomColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderLeftColor:
+        serializedVersion: 2
+        rgba: 0
+      TextColor:
+        serializedVersion: 2
+        rgba: 4291611852
+      BorderRadius:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      BorderWidth:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+  - Enabled: 1
+    Title: Insertion Marker
+    StyleRules:
+    - Selectors:
+      - InsertionMarker
+      PseudoStates: 00000000
+      PropertyMask: 2
+      BackgroundTexture: {fileID: 0}
+      BackgroundColor:
+        serializedVersion: 2
+        rgba: 4280690214
+      BorderColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderTopColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRightColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderBottomColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderLeftColor:
+        serializedVersion: 2
+        rgba: 0
+      TextColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRadius:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      BorderWidth:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+  - Enabled: 0
+    Title: --- | --- [ S C E N E ] ---
+    StyleRules: []
+  - Enabled: 1
+    Title: Drag Selection
+    StyleRules:
+    - Selectors:
+      - SelectionRect
+      PseudoStates: 00000000
+      PropertyMask: 390
+      BackgroundTexture: {fileID: 0}
+      BackgroundColor:
+        serializedVersion: 2
+        rgba: 1077097267
+      BorderColor:
+        serializedVersion: 2
+        rgba: 3204448256
+      BorderTopColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRightColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderBottomColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderLeftColor:
+        serializedVersion: 2
+        rgba: 0
+      TextColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRadius:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      BorderWidth:
+        m_Left: 1
+        m_Right: 1
+        m_Top: 1
+        m_Bottom: 1
+  - Enabled: 0
+    Title: 
+    StyleRules: []
+  - Enabled: 0
+    Title: --- [ E D I T O R ] ---
+    StyleRules: []
+  - Enabled: 1
+    Title: Background
+    StyleRules:
+    - Selectors:
+      - AppToolbar
+      PseudoStates: 00000000
+      PropertyMask: 2
+      BackgroundTexture: {fileID: 0}
+      BackgroundColor:
+        serializedVersion: 2
+        rgba: 4278190080
+      BorderColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderTopColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRightColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderBottomColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderLeftColor:
+        serializedVersion: 2
+        rgba: 0
+      TextColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRadius:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      BorderWidth:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 4
+    - Selectors:
+      - ScrollView
+      - ScrollViewAlt
+      - TabWindowBackground
+      PseudoStates: 00000000
+      PropertyMask: 258
+      BackgroundTexture: {fileID: 0}
+      BackgroundColor:
+        serializedVersion: 2
+        rgba: 4281545523
+      BorderColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderTopColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRightColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderBottomColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderLeftColor:
+        serializedVersion: 2
+        rgba: 0
+      TextColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRadius:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      BorderWidth:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+  - Enabled: 1
+    Title: Dock
+    StyleRules:
+    - Selectors:
+      - dockarea
+      PseudoStates: 00000000
+      PropertyMask: 2
+      BackgroundTexture: {fileID: 0}
+      BackgroundColor:
+        serializedVersion: 2
+        rgba: 4288256409
+      BorderColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderTopColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRightColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderBottomColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderLeftColor:
+        serializedVersion: 2
+        rgba: 0
+      TextColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRadius:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      BorderWidth:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+    - Selectors:
+      - dockHeader
+      PseudoStates: 00000000
+      PropertyMask: 130
+      BackgroundTexture: {fileID: 0}
+      BackgroundColor:
+        serializedVersion: 2
+        rgba: 4279900698
+      BorderColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderTopColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRightColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderBottomColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderLeftColor:
+        serializedVersion: 2
+        rgba: 0
+      TextColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRadius:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      BorderWidth:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 15
+  - Enabled: 0
+    Title: --- | --- [ D R A G T A B ] ---
+    StyleRules: []
+  - Enabled: 1
+    Title: Background
+    StyleRules:
+    - Selectors:
+      - dragtab
+      - dragtab-first
+      PseudoStates: 00000000
+      PropertyMask: 130
+      BackgroundTexture: {fileID: 0}
+      BackgroundColor:
+        serializedVersion: 2
+        rgba: 4279900698
+      BorderColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderTopColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRightColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderBottomColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderLeftColor:
+        serializedVersion: 2
+        rgba: 0
+      TextColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRadius:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      BorderWidth:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 2
+    - Selectors:
+      - dragtab
+      - dragtab-first
+      PseudoStates: 02000000
+      PropertyMask: 262
+      BackgroundTexture: {fileID: 0}
+      BackgroundColor:
+        serializedVersion: 2
+        rgba: 4284900966
+      BorderColor:
+        serializedVersion: 2
+        rgba: 4281545523
+      BorderTopColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRightColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderBottomColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderLeftColor:
+        serializedVersion: 2
+        rgba: 0
+      TextColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRadius:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      BorderWidth:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 2
+    - Selectors:
+      - dragtab
+      - dragtab-first
+      PseudoStates: 0100000010000000
+      PropertyMask: 10
+      BackgroundTexture: {fileID: 0}
+      BackgroundColor:
+        serializedVersion: 2
+        rgba: 4281545523
+      BorderColor:
+        serializedVersion: 2
+        rgba: 4284900966
+      BorderTopColor:
+        serializedVersion: 2
+        rgba: 4284900966
+      BorderRightColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderBottomColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderLeftColor:
+        serializedVersion: 2
+        rgba: 0
+      TextColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRadius:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      BorderWidth:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 2
+  - Enabled: 1
+    Title: Scroller
+    StyleRules:
+    - Selectors:
+      - dragtab-scroller-next
+      - dragtab-scroller-prev
+      PseudoStates: 00000000
+      PropertyMask: 386
+      BackgroundTexture: {fileID: 0}
+      BackgroundColor:
+        serializedVersion: 2
+        rgba: 4281545523
+      BorderColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderTopColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRightColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderBottomColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderLeftColor:
+        serializedVersion: 2
+        rgba: 0
+      TextColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRadius:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      BorderWidth:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+    - Selectors:
+      - dragtab-scroller-next
+      - dragtab-scroller-prev
+      PseudoStates: 02000000
+      PropertyMask: 2
+      BackgroundTexture: {fileID: 0}
+      BackgroundColor:
+        serializedVersion: 2
+        rgba: 4286611584
+      BorderColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderTopColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRightColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderBottomColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderLeftColor:
+        serializedVersion: 2
+        rgba: 0
+      TextColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRadius:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      BorderWidth:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+  - Enabled: 0
+    Title: --- | --- [ S T A T U S   B A R ] ---
+    StyleRules: []
+  - Enabled: 1
+    Title: Icon Buttons
+    StyleRules:
+    - Selectors:
+      - StatusBarIcon
+      PseudoStates: 00000000
+      PropertyMask: 258
+      BackgroundTexture: {fileID: 0}
+      BackgroundColor:
+        serializedVersion: 2
+        rgba: 4281545523
+      BorderColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderTopColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRightColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderBottomColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderLeftColor:
+        serializedVersion: 2
+        rgba: 0
+      TextColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRadius:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      BorderWidth:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+    - Selectors:
+      - StatusBarIcon
+      PseudoStates: 02000000
+      PropertyMask: 2
+      BackgroundTexture: {fileID: 0}
+      BackgroundColor:
+        serializedVersion: 2
+        rgba: 4284900966
+      BorderColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderTopColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRightColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderBottomColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderLeftColor:
+        serializedVersion: 2
+        rgba: 0
+      TextColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRadius:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      BorderWidth:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+    - Selectors:
+      - StatusBarIcon
+      PseudoStates: 01000000
+      PropertyMask: 2
+      BackgroundTexture: {fileID: 0}
+      BackgroundColor:
+        serializedVersion: 2
+        rgba: 4288256409
+      BorderColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderTopColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRightColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderBottomColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderLeftColor:
+        serializedVersion: 2
+        rgba: 0
+      TextColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRadius:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      BorderWidth:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+  - Enabled: 0
+    Title: --- | --- [ T R E E   V I E W ] ---
+    StyleRules: []
+  - Enabled: 1
+    Title: Line
+    StyleRules:
+    - Selectors:
+      - TV-Line
+      PseudoStates: 02000000
+      PropertyMask: 262
+      BackgroundTexture: {fileID: 0}
+      BackgroundColor:
+        serializedVersion: 2
+        rgba: 645955712
+      BorderColor:
+        serializedVersion: 2
+        rgba: 3214514585
+      BorderTopColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRightColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderBottomColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderLeftColor:
+        serializedVersion: 2
+        rgba: 0
+      TextColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRadius:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      BorderWidth:
+        m_Left: 1
+        m_Right: 1
+        m_Top: 1
+        m_Bottom: 1
+  - Enabled: 1
+    Title: Selection
+    StyleRules:
+    - Selectors:
+      - TV-Selection
+      PseudoStates: 00000000
+      PropertyMask: 2
+      BackgroundTexture: {fileID: 0}
+      BackgroundColor:
+        serializedVersion: 2
+        rgba: 1075452442
+      BorderColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderTopColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRightColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderBottomColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderLeftColor:
+        serializedVersion: 2
+        rgba: 0
+      TextColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRadius:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      BorderWidth:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+    - Selectors:
+      - TV-Selection
+      PseudoStates: 14000000
+      PropertyMask: 2
+      BackgroundTexture: {fileID: 0}
+      BackgroundColor:
+        serializedVersion: 2
+        rgba: 3211159142
+      BorderColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderTopColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRightColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderBottomColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderLeftColor:
+        serializedVersion: 2
+        rgba: 0
+      TextColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRadius:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      BorderWidth:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+  - Enabled: 0
+    Title: 
+    StyleRules: []
+  - Enabled: 0
+    Title: --- [ S H U R I K E N ] ---
+    StyleRules: []
+  - Enabled: 1
+    Title: Background
+    StyleRules:
+    - Selectors:
+      - ShurikenModuleBg
+      PseudoStates: 00000000
+      PropertyMask: 390
+      BackgroundTexture: {fileID: 0}
+      BackgroundColor:
+        serializedVersion: 2
+        rgba: 4281545523
+      BorderColor:
+        serializedVersion: 2
+        rgba: 4279900698
+      BorderTopColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRightColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderBottomColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderLeftColor:
+        serializedVersion: 2
+        rgba: 0
+      TextColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRadius:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      BorderWidth:
+        m_Left: 1
+        m_Right: 1
+        m_Top: 1
+        m_Bottom: 1
+  - Enabled: 1
+    Title: Emitter Title
+    StyleRules:
+    - Selectors:
+      - ShurikenEmitterTitle
+      PseudoStates: 00000000
+      PropertyMask: 262
+      BackgroundTexture: {fileID: 0}
+      BackgroundColor:
+        serializedVersion: 2
+        rgba: 1076241958
+      BorderColor:
+        serializedVersion: 2
+        rgba: 4279900698
+      BorderTopColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRightColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderBottomColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderLeftColor:
+        serializedVersion: 2
+        rgba: 0
+      TextColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRadius:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      BorderWidth:
+        m_Left: 1
+        m_Right: 1
+        m_Top: 1
+        m_Bottom: 1
+  - Enabled: 1
+    Title: Module Title
+    StyleRules:
+    - Selectors:
+      - ShurikenModuleTitle
+      PseudoStates: 0000000010000000
+      PropertyMask: 390
+      BackgroundTexture: {fileID: 0}
+      BackgroundColor:
+        serializedVersion: 2
+        rgba: 4284900966
+      BorderColor:
+        serializedVersion: 2
+        rgba: 4279900698
+      BorderTopColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRightColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderBottomColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderLeftColor:
+        serializedVersion: 2
+        rgba: 0
+      TextColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRadius:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      BorderWidth:
+        m_Left: 1
+        m_Right: 1
+        m_Top: 1
+        m_Bottom: 1
+    - Selectors:
+      - ShurikenModuleTitle
+      PseudoStates: 01000000
+      PropertyMask: 2
+      BackgroundTexture: {fileID: 0}
+      BackgroundColor:
+        serializedVersion: 2
+        rgba: 4286611584
+      BorderColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderTopColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRightColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderBottomColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderLeftColor:
+        serializedVersion: 2
+        rgba: 0
+      TextColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRadius:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      BorderWidth:
+        m_Left: 1
+        m_Right: 1
+        m_Top: 1
+        m_Bottom: 1
+  - Enabled: 0
+    Title: Empty
     StyleRules: []
   <InstantApply>k__BackingField: 0
