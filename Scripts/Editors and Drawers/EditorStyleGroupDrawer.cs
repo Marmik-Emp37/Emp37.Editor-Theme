@@ -1,113 +1,142 @@
-using System.Linq;
-
 using UnityEditor;
-using static UnityEditor.EditorStyles;
+using static UnityEditor.EditorGUIUtility;
 
 using UnityEngine;
 
 namespace Emp37.ET
 {
+      using static ETHelpers;
+      using static UnityEngine.UI.Image;
+
+      // @r: == Redeem
       [CustomPropertyDrawer(typeof(StyleRuleGroup))]
       internal class EditorStyleGroupDrawer : PropertyDrawer
       {
-            private const string p_Enabled = "Enabled", p_Title = "Title", p_StyleRules = "StyleRules";
-            private const string groupTitleControl = "TitleControl";
+            private const string p_Enabled = "<" + nameof(StyleRuleGroup.Enabled) + ">k__BackingField";
+            private const string p_Title = nameof(StyleRuleGroup.Title);
+            private const string p_StyleRules = nameof(StyleRuleGroup.StyleRules);
+            private const string control_TargetTitle = nameof(StyleRuleGroup) + ":Control.Title";
 
-            private const float HeaderSize = 32F, HighlightWidth = 3F, BackgroundAlpha = 0.25F;
-
-            private static readonly GUIStyle descriptionLabelStyle = new(label) { fontSize = 14 };
-            private static readonly GUIStyle descriptionTextFieldStyle = new(textField) { alignment = TextAnchor.MiddleLeft, fontSize = 14 };
+            private const float HeaderSize = 32F;
+            private const float FooterHeight = 24F;
 
 
             public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)
             {
-                  using SerializedProperty enabled = property.FindPropertyRelative(p_Enabled), description = property.FindPropertyRelative(p_Title);
+                  _ = EditorGUI.BeginProperty(position, label, property);
 
-                  using (new EditorGUI.PropertyScope(position, label, property))
+                  position.height = HeaderSize;
+                  DrawHeader(position, property);
+
+                  if (property.isExpanded)
                   {
-                        #region H E A D E R
-                        Rect headerRect = new(position) { height = HeaderSize };
+                        position.y += position.height + Spacing; // - H : Header
 
-                        // background highlight rect
-                        EditorGUI.DrawRect(new(headerRect) { width = HighlightWidth }, StyleHelpers.BackgroundTint);
-                        EditorGUI.DrawRect(headerRect, StyleHelpers.BackgroundTint.ChangeOpacity(BackgroundAlpha));
-                        headerRect.x += HighlightWidth + 3F;
+                        SerializedProperty group = property.FindPropertyRelative(p_StyleRules);
+                        position = DrawArrayElements(position, group); // - H : Elements
 
-                        // expandable foldout toggle
-                        headerRect.width = 18F;
-                        EditorGUI.BeginChangeCheck();
-                        property.isExpanded = EditorGUI.Toggle(headerRect, property.isExpanded, foldout);
-                        if (EditorGUI.EndChangeCheck()) description.isExpanded = false;
-                        headerRect.x += headerRect.width;
+                        position.height = FooterHeight;
+                        DrawFooter(position, group);
 
-                        // enabled state toggle
-                        enabled.boolValue = EditorGUI.Toggle(headerRect, enabled.boolValue);
-                        headerRect.x += headerRect.width;
+                        position.y += position.height + Spacing;  // - H : Footer
 
-                        // style group title
-                        headerRect.width = position.width - (headerRect.x - position.x) - HeaderSize;
-                        GUI.SetNextControlName(groupTitleControl); // - [ c:0 ]
-                        if (description.isExpanded)
-                        {
-                              EditorGUI.BeginChangeCheck();
-                              description.stringValue = EditorGUI.DelayedTextField(headerRect, description.stringValue, descriptionTextFieldStyle);
-                              if (EditorGUI.EndChangeCheck()) description.isExpanded = false;
-                        }
-                        else
-                        {
-                              EditorGUI.LabelField(headerRect, description.stringValue, descriptionLabelStyle);
-                        }
-                        headerRect.x += headerRect.width;
-
-                        // edit title button
-                        headerRect.width = HeaderSize;
-                        if (GUI.Button(headerRect, EditorGUIUtility.IconContent("_Menu")) && (description.isExpanded = !description.isExpanded))
-                        {
-                              GUI.FocusControl(groupTitleControl); // - [ c:0 ]
-                        }
-                        #endregion
-
-                        if (property.isExpanded)
-                        {
-                              headerRect.height += EditorGUIUtility.standardVerticalSpacing; // - [ h:0 ]
-
-                              Rect contentRect = new(position) { y = position.y + headerRect.height, height = position.height - headerRect.height - EditorGUIUtility.standardVerticalSpacing /*extra*/ };
-
-                              // background highlight rect
-                              EditorGUI.DrawRect(contentRect, StyleHelpers.BackgroundTint.ChangeOpacity(BackgroundAlpha));
-
-                              #region A R R A Y   E L E M E N T S
-                              SerializedProperty group = property.FindPropertyRelative(p_StyleRules);
-                              int size = group.arraySize;
-                              for (byte i = 0; i < size; i++)
-                              {
-                                    SerializedProperty context = group.GetArrayElementAtIndex(i);
-                                    contentRect.height = EditorGUI.GetPropertyHeight(context);
-                                    _ = EditorGUI.PropertyField(contentRect, context, true);
-                                    contentRect.y += contentRect.height;
-                              }
-                              #endregion
-
-                              #region C O N T R O L   O P T I O N S
-                              contentRect.width /= 2F;
-                              contentRect.height = miniButton.fixedHeight; // - [ h:1 ]
-                              if (GUI.Button(contentRect, EditorGUIUtility.IconContent("d_Toolbar Plus"), miniButtonLeft)) group.InsertArrayElementAtIndex(size++);
-                              contentRect.x += contentRect.width;
-                              if (GUI.Button(contentRect, EditorGUIUtility.IconContent("d_Toolbar Minus"), miniButtonRight) && size > 0) group.DeleteArrayElementAtIndex(--size);
-                              #endregion
-                        }
+                        position.height = Spacing; // - H : Separator
+                        EditorGUI.DrawRect(position, ETStyles.ThemeAccent);
                   }
+
+                  EditorGUI.EndProperty();
             }
             public override float GetPropertyHeight(SerializedProperty property, GUIContent label)
             {
-                  float height = HeaderSize;
                   if (property.isExpanded)
                   {
+                        float value = HeaderSize + Spacing + /*- @r >> H : Header*/ FooterHeight + Spacing + /*- @r >> H : Footer*/ Spacing /*- @r >> H : Separator*/;
+
                         SerializedProperty group = property.FindPropertyRelative(p_StyleRules);
-                        height += Enumerable.Range(0, group.arraySize).Sum(index => EditorGUI.GetPropertyHeight(group.GetArrayElementAtIndex(index)))
-                              + miniButton.fixedHeight + EditorGUIUtility.standardVerticalSpacing; // - [ h:0 + h:1 ]
+                        for (int i = group.arraySize - 1; i >= 0; i--)
+                        {
+                              value += EditorGUI.GetPropertyHeight(group.GetArrayElementAtIndex(i)) + Spacing; // - @r >> H : Elements
+                        }
+
+                        return value;
                   }
-                  return height;
+                  return HeaderSize;
+            }
+
+            private static void DrawHeader(Rect position, SerializedProperty property)
+            {
+                  Rect original = position;
+
+                  // Background
+                  EditorGUI.DrawRect(position, ETStyles.ThemeAccent);
+                  position.width = 3F;
+                  EditorGUI.DrawRect(position, ETStyles.ThemeTint);
+
+                  position.x += position.width + Spacing;
+
+                  // Expand Toggle
+                  position.width = 20F;
+                  property.isExpanded = EditorGUI.Toggle(position, property.isExpanded, EditorStyles.foldout);
+
+                  position.x += position.width;
+
+                  // Enabled Property
+                  SerializedProperty enabled = property.FindPropertyRelative(p_Enabled);
+                  enabled.boolValue = EditorGUI.Toggle(position, enabled.boolValue);
+
+                  position.x += position.width;
+
+                  // Title
+                  position.width = original.width - (position.x - original.x) - Spacing - HeaderSize; // - [ W : Spacing & W : Menu Button ]
+                  GUI.SetNextControlName(control_TargetTitle);
+                  SerializedProperty title = property.FindPropertyRelative(p_Title);
+                  if (title.isExpanded)
+                  {
+                        using EditorGUI.ChangeCheckScope check = new();
+                        string text = EditorGUI.DelayedTextField(position, title.stringValue, ETStyles.largeTextField);
+                        if (check.changed) { title.stringValue = text; title.isExpanded = false; }
+                  }
+                  else
+                  {
+                        EditorGUI.LabelField(position, title.stringValue, ETStyles.largeText);
+                  }
+
+                  position.x += position.width + Spacing; // - W : Spacing
+
+                  // Rename Title Button
+                  position.width = HeaderSize; // - W : Menu Button
+                  if (GUI.Button(position, ETStyles.Menu) && (title.isExpanded = !title.isExpanded))
+                  {
+                        GUI.FocusControl(control_TargetTitle);
+                  }
+            }
+            private static Rect DrawArrayElements(Rect position, SerializedProperty property)
+            {
+                  for (int size = property.arraySize, i = 0; i < size; i++)
+                  {
+                        SerializedProperty element = property.GetArrayElementAtIndex(i);
+
+                        Rect elementPosition = new(position) { height = EditorGUI.GetPropertyHeight(element, true) };
+                        EditorGUI.PropertyField(elementPosition, element, true);
+
+                        position.y += elementPosition.height + Spacing;
+                  }
+                  return position;
+            }
+            private static void DrawFooter(Rect position, SerializedProperty property)
+            {
+                  position.width *= 0.5F;
+                  if (GUI.Button(position, "Add", GUI.skin.button))
+                  {
+                        property.InsertArrayElementAtIndex(property.arraySize);
+                  }
+
+                  position.x += position.width;
+
+                  if (GUI.Button(position, "Remove", GUI.skin.button) && property.arraySize > 0)
+                  {
+                        property.DeleteArrayElementAtIndex(property.arraySize - 1);
+                  }
             }
       }
 }
