@@ -10,54 +10,87 @@ namespace Emp37.ET
       [Serializable]
       public struct StyleRule
       {
-            public string[] Selectors;
-            public PseudoStates[] PseudoStates;
-            public Properties PropertyMask;
+            public string[] ClassSelectors;
+            public PseudoClasses[] PseudoClasses;
+            public StyleAttributes PropertyMask;
 
             public Texture2D BackgroundTexture;
             public Color32 BackgroundColor, BorderColor, BorderTopColor, BorderRightColor, BorderBottomColor, BorderLeftColor, TextColor;
-            public RectOffset BorderRadius, BorderWidth;
+            public StyleOffset BorderRadius, BorderWidth;
 
-            public static readonly IEnumerable<Properties> propertiesMap = Enum.GetValues(typeof(Properties)).Cast<Properties>();
-
-
-            public override readonly string ToString()
+            public static (StyleAttributes Flag, string Name)[] PropertyMap =
             {
-                  StyleRule rule = this;
+                  (StyleAttributes.BackgroundImage, nameof(BackgroundTexture)),
+                  (StyleAttributes.BackgroundColor, nameof(BackgroundColor)),
+                  (StyleAttributes.BorderColor, nameof(BorderColor)),
+                  (StyleAttributes.BorderTopColor, nameof(BorderTopColor)),
+                  (StyleAttributes.BorderRightColor, nameof(BorderRightColor)),
+                  (StyleAttributes.BorderBottomColor, nameof(BorderBottomColor)),
+                  (StyleAttributes.BorderLeftColor, nameof(BorderLeftColor)),
+                  (StyleAttributes.BorderRadius, nameof(BorderRadius)),
+                  (StyleAttributes.BorderWidth, nameof(BorderWidth)),
+                  (StyleAttributes.Color, nameof(TextColor))
+            };
 
-                  IEnumerable<string> classes =
-                        from selector in rule.Selectors
-                        where !string.IsNullOrWhiteSpace(selector)
-                        from stateMask in rule.PseudoStates
-                        let pseudoChain = stateMask is 0 ? null : $":{string.Join(':', stateMask.ToString().Split(',').Select(value => value.Trim().ToLower()))}"
-                        select $".{selector}{pseudoChain}";
-
-                  if (!classes.Any()) return null;
-
-                  IEnumerable<string> properties =
-                        from property in propertiesMap
-                        where rule.PropertyMask.HasFlag(property)
-                        let propertyName = Regex.Replace(property.ToString(), "(?<!^)([A-Z])", "-$1").ToLower()
-                        let expression = property switch
+            private readonly IEnumerable<string> WriteSelectorList
+            {
+                  get
+                  {
+                        foreach (string classType in ClassSelectors.Where(item => !string.IsNullOrWhiteSpace(item)))
                         {
-                              Properties.BackgroundImage => USSTools.Format(rule.BackgroundTexture),
-                              Properties.BackgroundColor => USSTools.Format(rule.BackgroundColor),
-                              Properties.BorderColor => USSTools.Format(rule.BorderColor),
-                              Properties.BorderTopColor => USSTools.Format(rule.BorderTopColor),
-                              Properties.BorderRightColor => USSTools.Format(rule.BorderRightColor),
-                              Properties.BorderBottomColor => USSTools.Format(rule.BorderBottomColor),
-                              Properties.BorderLeftColor => USSTools.Format(rule.BorderLeftColor),
-                              Properties.BorderRadius => USSTools.Format(rule.BorderRadius),
-                              Properties.BorderWidth => USSTools.Format(rule.BorderWidth),
-                              Properties.Color => USSTools.Format(rule.TextColor),
-                              _ => null,
+                              foreach (PseudoClasses pseudoClass in PseudoClasses)
+                              {
+                                    string chain = pseudoClass == 0 ? string.Empty : ':' + pseudoClass.ToString().Replace(", ", ":").ToLower();
+                                    yield return $".{classType}{chain}";
+                              }
                         }
-                        where expression != null
-                        select $"\t{propertyName}: {expression};";
+                  }
+            }
+            private readonly IEnumerable<string> WriteStyleBlock
+            {
+                  get
+                  {
+                        foreach ((StyleAttributes property, _) in PropertyMap)
+                        {
+                              if (!PropertyMask.HasFlag(property)) continue;
 
-                  if (!properties.Any()) return null;
+                              string expression = property switch
+                              {
+                                    StyleAttributes.BackgroundImage => USSTools.Format(BackgroundTexture),
+                                    StyleAttributes.BackgroundColor => USSTools.Format(BackgroundColor),
+                                    StyleAttributes.BorderColor => USSTools.Format(BorderColor),
+                                    StyleAttributes.BorderTopColor => USSTools.Format(BorderTopColor),
+                                    StyleAttributes.BorderRightColor => USSTools.Format(BorderRightColor),
+                                    StyleAttributes.BorderBottomColor => USSTools.Format(BorderBottomColor),
+                                    StyleAttributes.BorderLeftColor => USSTools.Format(BorderLeftColor),
+                                    StyleAttributes.BorderRadius => USSTools.Format(BorderRadius),
+                                    StyleAttributes.BorderWidth => USSTools.Format(BorderWidth),
+                                    StyleAttributes.Color => USSTools.Format(TextColor),
+                                    _ => null
+                              };
 
-                  return $"{string.Join(",\n", classes)} {{\n{string.Join('\n', properties)}\n}}";
+                              if (string.IsNullOrEmpty(expression)) continue;
+
+                              string name = Regex.Replace(property.ToString(), "(?<!^)([A-Z])", "-$1").ToLower();
+                              yield return $"\t{name}: {expression};";
+                        }
+                  }
+            }
+
+
+            public readonly override string ToString()
+            {
+                  IEnumerable<string> selectorList = WriteSelectorList;
+                  if (!selectorList.Any())
+                  {
+                        return null;
+                  }
+                  IEnumerable<string> propertiesReference = WriteStyleBlock;
+                  if (!propertiesReference.Any())
+                  {
+                        return null;
+                  }
+                  return $"{string.Join(",\n", selectorList)} {{\n{string.Join('\n', propertiesReference)}\n}}";
             }
       }
 }
