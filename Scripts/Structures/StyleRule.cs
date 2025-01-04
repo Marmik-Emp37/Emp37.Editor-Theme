@@ -1,46 +1,63 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.RegularExpressions;
 
 using UnityEngine;
 
 namespace Emp37.ET
 {
       [Serializable]
-      internal struct StyleRule
+      public struct StyleRule
       {
-            private static readonly string[] properties =
-            {
-                  nameof(background_image),
-                  nameof(background_color),
-                  nameof(border_color),
-                  nameof(border_top_color),
-                  nameof(border_right_color),
-                  nameof(border_bottom_color),
-                  nameof(border_left_color),
-                  nameof(border_radius),
-                  nameof(border_width),
-                  nameof(color)
-            };
-            public static readonly Dictionary<int, string> PropertyMap = properties.Select((name, index) => (Key: 1 << index, Value: name)).ToDictionary(entry => entry.Key, entry => entry.Value);
-
-            public string[] ClassTypes;
+            public string[] Selectors;
             public PseudoStates[] PseudoStates;
-            public int PropertyBitmask;
+            public Properties PropertyMask;
+
+            public Texture2D BackgroundTexture;
+            public Color32 BackgroundColor, BorderColor, BorderTopColor, BorderRightColor, BorderBottomColor, BorderLeftColor, TextColor;
+            public RectOffset BorderRadius, BorderWidth;
+
+            public static readonly IEnumerable<Properties> propertiesMap = Enum.GetValues(typeof(Properties)).Cast<Properties>();
 
 
-            public Texture2D
-                  background_image;
-            public Color32
-                  background_color,
-                  border_color,
-                  border_top_color,
-                  border_right_color,
-                  border_bottom_color,
-                  border_left_color,
-                  color;
-            public RectOffset
-                  border_radius,
-                  border_width;
+            public override readonly string ToString()
+            {
+                  StyleRule rule = this;
+
+                  IEnumerable<string> classes =
+                        from selector in rule.Selectors
+                        where !string.IsNullOrWhiteSpace(selector)
+                        from stateMask in rule.PseudoStates
+                        let pseudoChain = stateMask is 0 ? null : $":{string.Join(':', stateMask.ToString().Split(',').Select(value => value.Trim().ToLower()))}"
+                        select $".{selector}{pseudoChain}";
+
+                  if (!classes.Any()) return null;
+
+                  IEnumerable<string> properties =
+                        from property in propertiesMap
+                        where rule.PropertyMask.HasFlag(property)
+                        let propertyName = Regex.Replace(property.ToString(), "(?<!^)([A-Z])", "-$1").ToLower()
+                        let expression = property switch
+                        {
+                              Properties.BackgroundImage => USSTools.Format(rule.BackgroundTexture),
+                              Properties.BackgroundColor => USSTools.Format(rule.BackgroundColor),
+                              Properties.BorderColor => USSTools.Format(rule.BorderColor),
+                              Properties.BorderTopColor => USSTools.Format(rule.BorderTopColor),
+                              Properties.BorderRightColor => USSTools.Format(rule.BorderRightColor),
+                              Properties.BorderBottomColor => USSTools.Format(rule.BorderBottomColor),
+                              Properties.BorderLeftColor => USSTools.Format(rule.BorderLeftColor),
+                              Properties.BorderRadius => USSTools.Format(rule.BorderRadius),
+                              Properties.BorderWidth => USSTools.Format(rule.BorderWidth),
+                              Properties.Color => USSTools.Format(rule.TextColor),
+                              _ => null,
+                        }
+                        where expression != null
+                        select $"\t{propertyName}: {expression};";
+
+                  if (!properties.Any()) return null;
+
+                  return $"{string.Join(",\n", classes)} {{\n{string.Join('\n', properties)}\n}}";
+            }
       }
 }

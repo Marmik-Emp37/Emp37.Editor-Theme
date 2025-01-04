@@ -1,10 +1,16 @@
-﻿namespace Emp37.ET
+﻿using System.Linq;
+
+namespace Emp37.ET
 {
       [System.Serializable]
-      internal struct StyleRuleGroup
+      public struct StyleRuleGroup
       {
-            public string Description;
+            public bool Enabled;
+            public string Title;
 
-            public StyleRule[] Styles;
+            public StyleRule[] StyleRules;
+
+
+            public readonly override string ToString() => Enabled ? string.Join('\n', from rule in StyleRules let value = rule.ToString() where !string.IsNullOrEmpty(value) select value) : null;
       }
 }
