@@ -18,7 +18,19 @@ namespace Emp37.ET
             public Color32 BackgroundColor, BorderColor, BorderTopColor, BorderRightColor, BorderBottomColor, BorderLeftColor, TextColor;
             public RectOffset BorderRadius, BorderWidth;
 
-            public static readonly IEnumerable<Properties> propertiesMap = Enum.GetValues(typeof(Properties)).Cast<Properties>();
+            public static Dictionary<Properties, string> propertiesMap = new()
+            {
+                  { Properties.BackgroundImage, nameof(BackgroundTexture) + "XD" },
+                  { Properties.BackgroundColor, nameof(BackgroundColor) },
+                  { Properties.BorderColor, nameof(BorderColor) },
+                  { Properties.BorderTopColor, nameof(BorderTopColor) },
+                  { Properties.BorderRightColor, nameof(BorderRightColor) },
+                  { Properties.BorderBottomColor, nameof(BorderBottomColor) },
+                  { Properties.BorderLeftColor, nameof(BorderLeftColor) },
+                  { Properties.Color, nameof(TextColor) },
+                  { Properties.BorderRadius, nameof(BorderRadius) },
+                  { Properties.BorderWidth, nameof(BorderWidth) }
+            };
 
 
             public override readonly string ToString()
@@ -35,7 +47,7 @@ namespace Emp37.ET
                   if (!classes.Any()) return null;
 
                   IEnumerable<string> properties =
-                        from property in propertiesMap
+                        from property in propertiesMap.Keys
                         where rule.PropertyMask.HasFlag(property)
                         let propertyName = Regex.Replace(property.ToString(), "(?<!^)([A-Z])", "-$1").ToLower()
                         let expression = property switch

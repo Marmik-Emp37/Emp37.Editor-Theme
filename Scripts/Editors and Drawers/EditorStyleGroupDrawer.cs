@@ -91,9 +91,9 @@ namespace Emp37.ET
                               #region C O N T R O L   O P T I O N S
                               contentRect.width /= 2F;
                               contentRect.height = miniButton.fixedHeight; // - [ h:1 ]
-                              if (GUI.Button(contentRect, EditorGUIUtility.IconContent("d_Toolbar Plus"), miniButtonLeft)) group.InsertArrayElementAtIndex(size++);
+                              if (GUI.Button(contentRect, "Add", miniButtonLeft)) group.InsertArrayElementAtIndex(size++);
                               contentRect.x += contentRect.width;
-                              if (GUI.Button(contentRect, EditorGUIUtility.IconContent("d_Toolbar Minus"), miniButtonRight) && size > 0) group.DeleteArrayElementAtIndex(--size);
+                              if (GUI.Button(contentRect, "Remove", miniButtonRight) && size > 0) group.DeleteArrayElementAtIndex(--size);
                               #endregion
                         }
                   }

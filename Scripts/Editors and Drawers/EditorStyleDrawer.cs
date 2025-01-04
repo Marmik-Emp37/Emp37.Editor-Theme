@@ -5,6 +5,7 @@ using static UnityEditor.EditorStyles;
 using static UnityEditor.EditorGUIUtility;
 
 using UnityEngine;
+using System.Runtime.Remoting.Contexts;
 
 namespace Emp37.ET
 {
@@ -37,24 +38,12 @@ namespace Emp37.ET
                                     position.height = EditorGUI.GetPropertyHeight(propertyMask);
                                     _ = EditorGUI.PropertyField(position, propertyMask);
                                     position.y += position.height + standardVerticalSpacing;
-                                    foreach (Properties _property in StyleRule.propertiesMap)
+
+                                    foreach (var entry in StyleRule.propertiesMap)
                                     {
-                                          if (((Properties) propertyMask.enumValueFlag).HasFlag(_property))
+                                          if (((Properties) propertyMask.enumValueFlag).HasFlag(entry.Key))
                                           {
-                                                SerializedProperty context = property.FindPropertyRelative(_property switch
-                                                {
-                                                      Properties.BackgroundImage => "BackgroundTexture",
-                                                      Properties.BackgroundColor => "BackgroundColor",
-                                                      Properties.BorderColor => "BorderColor",
-                                                      Properties.BorderTopColor => "BorderTopColor",
-                                                      Properties.BorderRightColor => "BorderRightColor",
-                                                      Properties.BorderBottomColor => "BorderBottomColor",
-                                                      Properties.BorderLeftColor => "BorderLeftColor",
-                                                      Properties.Color => "TextColor",
-                                                      Properties.BorderRadius => "BorderRadius",
-                                                      Properties.BorderWidth => "BorderWidth",
-                                                      _ => null
-                                                });
+                                                SerializedProperty context = property.FindPropertyRelative(entry.Value);
                                                 if (context != null)
                                                 {
                                                       position.height = EditorGUI.GetPropertyHeight(context);
@@ -76,31 +65,8 @@ namespace Emp37.ET
                         height += standardVerticalSpacing;
 
                         SerializedProperty propertyMask = property.FindPropertyRelative(p_PropertyMask);
-                        height += EditorGUI.GetPropertyHeight(propertyMask);
-                        foreach (Properties _property in StyleRule.propertiesMap)
-                        {
-                              if (((Properties) propertyMask.enumValueFlag).HasFlag(_property))
-                              {
-                                    SerializedProperty context = property.FindPropertyRelative(_property switch
-                                    {
-                                          Properties.BackgroundImage => "BackgroundTexture",
-                                          Properties.BackgroundColor => "BackgroundColor",
-                                          Properties.BorderColor => "BorderColor",
-                                          Properties.BorderTopColor => "BorderTopColor",
-                                          Properties.BorderRightColor => "BorderRightColor",
-                                          Properties.BorderBottomColor => "BorderBottomColor",
-                                          Properties.BorderLeftColor => "BorderLeftColor",
-                                          Properties.Color => "TextColor",
-                                          Properties.BorderRadius => "BorderRadius",
-                                          Properties.BorderWidth => "BorderWidth",
-                                          _ => null
-                                    });
-                                    if (context != null)
-                                    {
-                                          height += EditorGUI.GetPropertyHeight(context) + standardVerticalSpacing;
-                                    }
-                              }
-                        }
+                        height += EditorGUI.GetPropertyHeight(propertyMask)
+                              + StyleRule.propertiesMap.Where(entry => ((Properties) propertyMask.enumValueFlag).HasFlag(entry.Key)).Select(item => property.FindPropertyRelative(item.Value)).Where(item => item != null).Sum(item => EditorGUI.GetPropertyHeight(item) + standardVerticalSpacing);
                   }
                   return height;
             }
@@ -120,9 +86,9 @@ namespace Emp37.ET
 
                   // options
                   Rect optionRect = new(position) { width = position.width * 0.5F, height = miniButton.fixedHeight };
-                  if (GUI.Button(optionRect, "+", miniButtonLeft) || property.arraySize is 0) property.InsertArrayElementAtIndex(property.arraySize);
+                  if (GUI.Button(optionRect, IconContent("d_Toolbar Plus"), miniButtonLeft) || property.arraySize is 0) property.InsertArrayElementAtIndex(property.arraySize);
                   optionRect.x += optionRect.width;
-                  if (GUI.Button(optionRect, "-", miniButtonRight) && property.arraySize > 1) property.DeleteArrayElementAtIndex(property.arraySize - 1);
+                  if (GUI.Button(optionRect, IconContent("d_Toolbar Minus"), miniButtonRight) && property.arraySize > 1) property.DeleteArrayElementAtIndex(property.arraySize - 1);
                   position.y += optionRect.height + standardVerticalSpacing;
 
                   EditorGUI.DrawRect(new(position) { height = LineHeight }, StyleHelpers.BackgroundTint.ChangeOpacity(0.25F)); // separator line
