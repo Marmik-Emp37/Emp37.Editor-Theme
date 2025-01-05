@@ -15,7 +15,43 @@ MonoBehaviour:
   StyleRuleGroups:
   - Enabled: 0
     Title: --- [ G U I ] ---
-    StyleRules: []
+    StyleRules:
+    - Selectors:
+      - 
+      PseudoStates: 00000000
+      PropertyMask: 0
+      BackgroundTexture: {fileID: 0}
+      BackgroundColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderTopColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRightColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderBottomColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderLeftColor:
+        serializedVersion: 2
+        rgba: 0
+      TextColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRadius:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      BorderWidth:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
   - Enabled: 1
     Title: Box
     StyleRules:
@@ -4887,4 +4923,4 @@ MonoBehaviour:
   - Enabled: 0
     Title: Empty
     StyleRules: []
-  <InstantApply>k__BackingField: 0
+  <InstantApply>k__BackingField: 1
