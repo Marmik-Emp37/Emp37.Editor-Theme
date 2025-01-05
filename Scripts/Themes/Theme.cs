@@ -6,6 +6,8 @@ namespace Emp37.ET
 {
       public abstract class Theme : ScriptableObject
       {
+            public const string Directory = "Assets/Editor/StyleSheets/Extensions", FileExtension = ".uss";
+
             public enum Type { Light, Dark }
 
             public StyleRuleGroup[] StyleRuleGroups;
@@ -14,11 +16,9 @@ namespace Emp37.ET
 
             public abstract Type ThemeType { get; }
 
-
             /// <summary>
             /// Generates a finalised USS code representation for this theme.
             /// </summary>
-            public sealed override string ToString() => $"/*-----\n[ Theme: {ThemeType}-{name} ]\n-----*/\n\n" +
-                  string.Join("\n\n", from ruleGroup in StyleRuleGroups let value = ruleGroup.ToString() where !string.IsNullOrEmpty(value) select $"/*-[{ruleGroup.Title}]-*/\n{value}");
+            public sealed override string ToString() => $"/*-----\n[ Theme: {ThemeType}-{name} ]\n-----*/\n\n" + string.Join("\n\n", from @group in StyleRuleGroups let value = @group.ToString() where !string.IsNullOrEmpty(value) select $"/*-[{@group.Title}]-*/\n{value}");
       }
 }

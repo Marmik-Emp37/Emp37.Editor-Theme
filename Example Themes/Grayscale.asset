@@ -13,47 +13,10 @@ MonoBehaviour:
   m_Name: Grayscale
   m_EditorClassIdentifier: 
   StyleRuleGroups:
-  - Enabled: 0
-    Title: --- [ G U I ] ---
-    StyleRules:
-    - Selectors:
-      - 
-      PseudoStates: 00000000
-      PropertyMask: 0
-      BackgroundTexture: {fileID: 0}
-      BackgroundColor:
-        serializedVersion: 2
-        rgba: 0
-      BorderColor:
-        serializedVersion: 2
-        rgba: 0
-      BorderTopColor:
-        serializedVersion: 2
-        rgba: 0
-      BorderRightColor:
-        serializedVersion: 2
-        rgba: 0
-      BorderBottomColor:
-        serializedVersion: 2
-        rgba: 0
-      BorderLeftColor:
-        serializedVersion: 2
-        rgba: 0
-      TextColor:
-        serializedVersion: 2
-        rgba: 0
-      BorderRadius:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
-      BorderWidth:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
-  - Enabled: 1
-    Title: Box
+  - Title: --- [ G U I ] ---
+    StyleRules: []
+    <Enabled>k__BackingField: 0
+  - Title: Box
     StyleRules:
     - Selectors:
       - HelpBox
@@ -164,8 +127,8 @@ MonoBehaviour:
         m_Right: 0
         m_Top: 1
         m_Bottom: 0
-  - Enabled: 1
-    Title: Foldout Header
+    <Enabled>k__BackingField: 1
+  - Title: Foldout Header
     StyleRules:
     - Selectors:
       - FoldoutHeader
@@ -275,8 +238,8 @@ MonoBehaviour:
         m_Right: 1
         m_Top: 1
         m_Bottom: 1
-  - Enabled: 1
-    Title: Prefab Label
+    <Enabled>k__BackingField: 1
+  - Title: Prefab Label
     StyleRules:
     - Selectors:
       - PR-PrefabLabel
@@ -314,8 +277,8 @@ MonoBehaviour:
         m_Right: 0
         m_Top: 0
         m_Bottom: 0
-  - Enabled: 1
-    Title: Button Group
+    <Enabled>k__BackingField: 1
+  - Title: Button Group
     StyleRules:
     - Selectors:
       - Tab-first
@@ -587,8 +550,8 @@ MonoBehaviour:
         m_Right: 1
         m_Top: 1
         m_Bottom: 1
-  - Enabled: 1
-    Title: Scrollbar
+    <Enabled>k__BackingField: 1
+  - Title: Scrollbar
     StyleRules:
     - Selectors:
       - HorizontalScrollbar
@@ -627,8 +590,8 @@ MonoBehaviour:
         m_Right: 0
         m_Top: 0
         m_Bottom: 0
-  - Enabled: 1
-    Title: Scrollbar Button
+    <Enabled>k__BackingField: 1
+  - Title: Scrollbar Button
     StyleRules:
     - Selectors:
       - HorizontalScrollbarLeftButton
@@ -708,8 +671,8 @@ MonoBehaviour:
         m_Right: 0
         m_Top: 0
         m_Bottom: 0
-  - Enabled: 1
-    Title: Scrollbar Thumb
+    <Enabled>k__BackingField: 1
+  - Title: Scrollbar Thumb
     StyleRules:
     - Selectors:
       - HorizontalScrollbarThumb
@@ -822,8 +785,8 @@ MonoBehaviour:
         m_Right: 1
         m_Top: 0
         m_Bottom: 0
-  - Enabled: 1
-    Title: Slider
+    <Enabled>k__BackingField: 1
+  - Title: Slider
     StyleRules:
     - Selectors:
       - HorizontalSlider
@@ -863,8 +826,8 @@ MonoBehaviour:
         m_Right: 0
         m_Top: 0
         m_Bottom: 0
-  - Enabled: 1
-    Title: Slider Thumb
+    <Enabled>k__BackingField: 1
+  - Title: Slider Thumb
     StyleRules:
     - Selectors:
       - HorizontalSliderThumb
@@ -942,8 +905,8 @@ MonoBehaviour:
         m_Right: 1
         m_Top: 1
         m_Bottom: 1
-  - Enabled: 1
-    Title: Slider Thumb Extent
+    <Enabled>k__BackingField: 1
+  - Title: Slider Thumb Extent
     StyleRules:
     - Selectors:
       - HorizontalSliderThumbExtent
@@ -981,11 +944,11 @@ MonoBehaviour:
         m_Right: 1
         m_Top: 1
         m_Bottom: 1
-  - Enabled: 0
-    Title: --- | --- [ T O O L B A R ] ---
+    <Enabled>k__BackingField: 1
+  - Title: --- | --- [ T O O L B A R ] ---
     StyleRules: []
-  - Enabled: 1
-    Title: Background
+    <Enabled>k__BackingField: 0
+  - Title: Background
     StyleRules:
     - Selectors:
       - Toolbar
@@ -1028,8 +991,8 @@ MonoBehaviour:
         m_Right: 0
         m_Top: 0
         m_Bottom: 1
-  - Enabled: 1
-    Title: Button / Dropdown / Popup
+    <Enabled>k__BackingField: 1
+  - Title: Button / Dropdown / Popup
     StyleRules:
     - Selectors:
       - toolbarbutton
@@ -1218,8 +1181,8 @@ MonoBehaviour:
         m_Right: 1
         m_Top: 1
         m_Bottom: 0
-  - Enabled: 1
-    Title: '[OVERRIDE: toolbarbuttonRight]'
+    <Enabled>k__BackingField: 1
+  - Title: '[OVERRIDE: toolbarbuttonRight]'
     StyleRules:
     - Selectors:
       - toolbarbuttonRight
@@ -1257,8 +1220,8 @@ MonoBehaviour:
         m_Right: 1
         m_Top: 0
         m_Bottom: 0
-  - Enabled: 1
-    Title: Text Search Field
+    <Enabled>k__BackingField: 1
+  - Title: Text Search Field
     StyleRules:
     - Selectors:
       - ToolbarSeachTextField
@@ -1386,8 +1349,8 @@ MonoBehaviour:
         m_Right: 1
         m_Top: 1
         m_Bottom: 1
-  - Enabled: 1
-    Title: Text Search Field Button
+    <Enabled>k__BackingField: 1
+  - Title: Text Search Field Button
     StyleRules:
     - Selectors:
       - ToolbarSearchTextFieldJumpButton
@@ -1497,11 +1460,11 @@ MonoBehaviour:
         m_Right: 0
         m_Top: 0
         m_Bottom: 0
-  - Enabled: 0
-    Title: --- | --- [ F I E L D S ] ---
+    <Enabled>k__BackingField: 1
+  - Title: --- | --- [ F I E L D S ] ---
     StyleRules: []
-  - Enabled: 1
-    Title: Button
+    <Enabled>k__BackingField: 0
+  - Title: Button
     StyleRules:
     - Selectors:
       - Button
@@ -1695,8 +1658,8 @@ MonoBehaviour:
         m_Right: 0
         m_Top: 0
         m_Bottom: 0
-  - Enabled: 1
-    Title: Color
+    <Enabled>k__BackingField: 1
+  - Title: Color
     StyleRules:
     - Selectors:
       - ColorField
@@ -1806,8 +1769,8 @@ MonoBehaviour:
         m_Right: 1
         m_Top: 1
         m_Bottom: 1
-  - Enabled: 1
-    Title: Gradient Field Box
+    <Enabled>k__BackingField: 1
+  - Title: Gradient Field Box
     StyleRules:
     - Selectors:
       - ColorPickerBox
@@ -1845,8 +1808,8 @@ MonoBehaviour:
         m_Right: 0
         m_Top: 0
         m_Bottom: 0
-  - Enabled: 1
-    Title: Multi-Column Header
+    <Enabled>k__BackingField: 1
+  - Title: Multi-Column Header
     StyleRules:
     - Selectors:
       - MultiColumnTopBar
@@ -1884,8 +1847,8 @@ MonoBehaviour:
         m_Right: 1
         m_Top: 1
         m_Bottom: 1
-  - Enabled: 1
-    Title: Label
+    <Enabled>k__BackingField: 1
+  - Title: Label
     StyleRules:
     - Selectors:
       - ControlLabel
@@ -1961,8 +1924,8 @@ MonoBehaviour:
         m_Right: 0
         m_Top: 0
         m_Bottom: 0
-  - Enabled: 1
-    Title: Popup
+    <Enabled>k__BackingField: 1
+  - Title: Popup
     StyleRules:
     - Selectors:
       - MiniPopup
@@ -2078,8 +2041,8 @@ MonoBehaviour:
         m_Right: 1
         m_Top: 1
         m_Bottom: 1
-  - Enabled: 1
-    Title: Toggle
+    <Enabled>k__BackingField: 1
+  - Title: Toggle
     StyleRules:
     - Selectors:
       - Toggle
@@ -2303,8 +2266,8 @@ MonoBehaviour:
         m_Right: 0
         m_Top: 0
         m_Bottom: 0
-  - Enabled: 1
-    Title: Toggle Mixed
+    <Enabled>k__BackingField: 1
+  - Title: Toggle Mixed
     StyleRules:
     - Selectors:
       - ToggleMixed
@@ -2414,8 +2377,8 @@ MonoBehaviour:
         m_Right: 0
         m_Top: 0
         m_Bottom: 0
-  - Enabled: 1
-    Title: Text / Object
+    <Enabled>k__BackingField: 1
+  - Title: Text / Object
     StyleRules:
     - Selectors:
       - TextField
@@ -2588,11 +2551,11 @@ MonoBehaviour:
         m_Right: 1
         m_Top: 1
         m_Bottom: 1
-  - Enabled: 0
-    Title: --- | --- [ R E O R D E R E D   L I S T ] ---
+    <Enabled>k__BackingField: 1
+  - Title: --- | --- [ R E O R D E R E D   L I S T ] ---
     StyleRules: []
-  - Enabled: 1
-    Title: Element
+    <Enabled>k__BackingField: 0
+  - Title: Element
     StyleRules:
     - Selectors:
       - RL-Element
@@ -2666,8 +2629,8 @@ MonoBehaviour:
         m_Right: 0
         m_Top: 0
         m_Bottom: 0
-  - Enabled: 1
-    Title: Header / Background
+    <Enabled>k__BackingField: 1
+  - Title: Header / Background
     StyleRules:
     - Selectors:
       - RL-Header
@@ -2742,8 +2705,8 @@ MonoBehaviour:
         m_Right: 0
         m_Top: 0
         m_Bottom: 0
-  - Enabled: 1
-    Title: Footer
+    <Enabled>k__BackingField: 1
+  - Title: Footer
     StyleRules:
     - Selectors:
       - RL-Footer
@@ -2781,17 +2744,17 @@ MonoBehaviour:
         m_Right: 0
         m_Top: 0
         m_Bottom: 0
-  - Enabled: 0
-    Title: 
+    <Enabled>k__BackingField: 1
+  - Title: 
     StyleRules: []
-  - Enabled: 0
-    Title: --- [ T A B ] ---
+    <Enabled>k__BackingField: 0
+  - Title: --- [ T A B ] ---
     StyleRules: []
-  - Enabled: 0
-    Title: --- [ H I E R A R C H Y ] ---
+    <Enabled>k__BackingField: 0
+  - Title: --- [ H I E R A R C H Y ] ---
     StyleRules: []
-  - Enabled: 1
-    Title: Options Background
+    <Enabled>k__BackingField: 0
+  - Title: Options Background
     StyleRules:
     - Selectors:
       - WhiteBackground
@@ -2829,8 +2792,8 @@ MonoBehaviour:
         m_Right: 0
         m_Top: 0
         m_Bottom: 0
-  - Enabled: 1
-    Title: Scene Name Bar
+    <Enabled>k__BackingField: 1
+  - Title: Scene Name Bar
     StyleRules:
     - Selectors:
       - SceneTopBarBg
@@ -2868,11 +2831,11 @@ MonoBehaviour:
         m_Right: 0
         m_Top: 0
         m_Bottom: 0
-  - Enabled: 0
-    Title: --- [ A N I M A T I O N ] ---
+    <Enabled>k__BackingField: 1
+  - Title: --- [ A N I M A T I O N ] ---
     StyleRules: []
-  - Enabled: 1
-    Title: Row
+    <Enabled>k__BackingField: 0
+  - Title: Row
     StyleRules:
     - Selectors:
       - AnimationRowOdd
@@ -2946,8 +2909,8 @@ MonoBehaviour:
         m_Right: 0
         m_Top: 0
         m_Bottom: 0
-  - Enabled: 1
-    Title: Separator
+    <Enabled>k__BackingField: 1
+  - Title: Separator
     StyleRules:
     - Selectors:
       - AnimLeftPaneSeparator
@@ -2985,8 +2948,8 @@ MonoBehaviour:
         m_Right: 10
         m_Top: 10
         m_Bottom: 10
-  - Enabled: 1
-    Title: Transition
+    <Enabled>k__BackingField: 1
+  - Title: Transition
     StyleRules:
     - Selectors:
       - MeTransitionHead
@@ -3097,11 +3060,11 @@ MonoBehaviour:
         m_Right: 1
         m_Top: 1
         m_Bottom: 1
-  - Enabled: 0
-    Title: --- | --- [ P R O J E C T ] ---
+    <Enabled>k__BackingField: 1
+  - Title: --- | --- [ P R O J E C T ] ---
     StyleRules: []
-  - Enabled: 1
-    Title: Arrow Navigation
+    <Enabled>k__BackingField: 0
+  - Title: Arrow Navigation
     StyleRules:
     - Selectors:
       - ArrowNavigationRight
@@ -3175,8 +3138,8 @@ MonoBehaviour:
         m_Right: 0
         m_Top: 0
         m_Bottom: 0
-  - Enabled: 1
-    Title: Exposable Popup Menu
+    <Enabled>k__BackingField: 1
+  - Title: Exposable Popup Menu
     StyleRules:
     - Selectors:
       - ExposablePopupMenu
@@ -3250,8 +3213,8 @@ MonoBehaviour:
         m_Right: 0
         m_Top: 0
         m_Bottom: 0
-  - Enabled: 1
-    Title: Exposable Popup Item
+    <Enabled>k__BackingField: 1
+  - Title: Exposable Popup Item
     StyleRules:
     - Selectors:
       - ExposablePopupItem
@@ -3325,8 +3288,8 @@ MonoBehaviour:
         m_Right: 0
         m_Top: 0
         m_Bottom: 0
-  - Enabled: 1
-    Title: Rename Field
+    <Enabled>k__BackingField: 1
+  - Title: Rename Field
     StyleRules:
     - Selectors:
       - OL-MiniRenameField
@@ -3364,8 +3327,8 @@ MonoBehaviour:
         m_Right: 0
         m_Top: 0
         m_Bottom: 0
-  - Enabled: 1
-    Title: Top / Bottom Bar
+    <Enabled>k__BackingField: 1
+  - Title: Top / Bottom Bar
     StyleRules:
     - Selectors:
       - ProjectBrowserTopBarBg
@@ -3404,8 +3367,8 @@ MonoBehaviour:
         m_Right: 0
         m_Top: 0
         m_Bottom: 0
-  - Enabled: 1
-    Title: Grid View Item Label Background
+    <Enabled>k__BackingField: 1
+  - Title: Grid View Item Label Background
     StyleRules:
     - Selectors:
       - ProjectBrowserGridLabel
@@ -3443,8 +3406,8 @@ MonoBehaviour:
         m_Right: 0
         m_Top: 0
         m_Bottom: 0
-  - Enabled: 1
-    Title: OL Result Label
+    <Enabled>k__BackingField: 1
+  - Title: OL Result Label
     StyleRules:
     - Selectors:
       - OL-ResultLabel
@@ -3518,8 +3481,8 @@ MonoBehaviour:
         m_Right: 0
         m_Top: 0
         m_Bottom: 0
-  - Enabled: 1
-    Title: Ping
+    <Enabled>k__BackingField: 1
+  - Title: Ping
     StyleRules:
     - Selectors:
       - TV-Ping
@@ -3559,11 +3522,11 @@ MonoBehaviour:
         m_Right: 1
         m_Top: 1
         m_Bottom: 1
-  - Enabled: 0
-    Title: --- | --- [ C O N S O L E ] ---
+    <Enabled>k__BackingField: 1
+  - Title: --- | --- [ C O N S O L E ] ---
     StyleRules: []
-  - Enabled: 1
-    Title: Log Icon
+    <Enabled>k__BackingField: 0
+  - Title: Log Icon
     StyleRules:
     - Selectors:
       - CN-EntryInfoIcon
@@ -3673,8 +3636,8 @@ MonoBehaviour:
         m_Right: 0
         m_Top: 0
         m_Bottom: 0
-  - Enabled: 1
-    Title: Log Stack
+    <Enabled>k__BackingField: 1
+  - Title: Log Stack
     StyleRules:
     - Selectors:
       - CN-EntryBackOdd
@@ -3785,8 +3748,8 @@ MonoBehaviour:
         m_Right: 0
         m_Top: 0
         m_Bottom: 0
-  - Enabled: 1
-    Title: Log Counter (On Collapse)
+    <Enabled>k__BackingField: 1
+  - Title: Log Counter (On Collapse)
     StyleRules:
     - Selectors:
       - CN-CountBadge
@@ -3824,11 +3787,11 @@ MonoBehaviour:
         m_Right: 0
         m_Top: 0
         m_Bottom: 0
-  - Enabled: 0
-    Title: --- | --- [ G A M E ] ---
+    <Enabled>k__BackingField: 1
+  - Title: --- | --- [ G A M E ] ---
     StyleRules: []
-  - Enabled: 1
-    Title: Stats Window
+    <Enabled>k__BackingField: 0
+  - Title: Stats Window
     StyleRules:
     - Selectors:
       - Window
@@ -3866,11 +3829,11 @@ MonoBehaviour:
         m_Right: 1
         m_Top: 1
         m_Bottom: 1
-  - Enabled: 0
-    Title: --- | --- [ I N S P E C T O R ] ---
+    <Enabled>k__BackingField: 1
+  - Title: --- | --- [ I N S P E C T O R ] ---
     StyleRules: []
-  - Enabled: 1
-    Title: Big Title
+    <Enabled>k__BackingField: 0
+  - Title: Big Title
     StyleRules:
     - Selectors:
       - IN-BigTitle
@@ -3908,8 +3871,8 @@ MonoBehaviour:
         m_Right: 0
         m_Top: 0
         m_Bottom: 0
-  - Enabled: 1
-    Title: Footer
+    <Enabled>k__BackingField: 1
+  - Title: Footer
     StyleRules:
     - Selectors:
       - IN-Footer
@@ -3947,8 +3910,8 @@ MonoBehaviour:
         m_Right: 0
         m_Top: 0
         m_Bottom: 0
-  - Enabled: 1
-    Title: Title
+    <Enabled>k__BackingField: 1
+  - Title: Title
     StyleRules:
     - Selectors:
       - IN-Title
@@ -4058,8 +4021,8 @@ MonoBehaviour:
         m_Right: 0
         m_Top: 0
         m_Bottom: 0
-  - Enabled: 1
-    Title: Title Text
+    <Enabled>k__BackingField: 1
+  - Title: Title Text
     StyleRules:
     - Selectors:
       - IN-TitleText
@@ -4097,8 +4060,8 @@ MonoBehaviour:
         m_Right: 0
         m_Top: 0
         m_Bottom: 0
-  - Enabled: 1
-    Title: Insertion Marker
+    <Enabled>k__BackingField: 1
+  - Title: Insertion Marker
     StyleRules:
     - Selectors:
       - InsertionMarker
@@ -4136,11 +4099,11 @@ MonoBehaviour:
         m_Right: 0
         m_Top: 0
         m_Bottom: 0
-  - Enabled: 0
-    Title: --- | --- [ S C E N E ] ---
+    <Enabled>k__BackingField: 1
+  - Title: --- | --- [ S C E N E ] ---
     StyleRules: []
-  - Enabled: 1
-    Title: Drag Selection
+    <Enabled>k__BackingField: 0
+  - Title: Drag Selection
     StyleRules:
     - Selectors:
       - SelectionRect
@@ -4178,14 +4141,14 @@ MonoBehaviour:
         m_Right: 1
         m_Top: 1
         m_Bottom: 1
-  - Enabled: 0
-    Title: 
+    <Enabled>k__BackingField: 1
+  - Title: 
     StyleRules: []
-  - Enabled: 0
-    Title: --- [ E D I T O R ] ---
+    <Enabled>k__BackingField: 0
+  - Title: --- [ E D I T O R ] ---
     StyleRules: []
-  - Enabled: 1
-    Title: Background
+    <Enabled>k__BackingField: 0
+  - Title: Background
     StyleRules:
     - Selectors:
       - AppToolbar
@@ -4261,8 +4224,8 @@ MonoBehaviour:
         m_Right: 0
         m_Top: 0
         m_Bottom: 0
-  - Enabled: 1
-    Title: Dock
+    <Enabled>k__BackingField: 1
+  - Title: Dock
     StyleRules:
     - Selectors:
       - dockarea
@@ -4336,11 +4299,11 @@ MonoBehaviour:
         m_Right: 0
         m_Top: 0
         m_Bottom: 15
-  - Enabled: 0
-    Title: --- | --- [ D R A G T A B ] ---
+    <Enabled>k__BackingField: 1
+  - Title: --- | --- [ D R A G T A B ] ---
     StyleRules: []
-  - Enabled: 1
-    Title: Background
+    <Enabled>k__BackingField: 0
+  - Title: Background
     StyleRules:
     - Selectors:
       - dragtab
@@ -4453,8 +4416,8 @@ MonoBehaviour:
         m_Right: 0
         m_Top: 0
         m_Bottom: 2
-  - Enabled: 1
-    Title: Scroller
+    <Enabled>k__BackingField: 1
+  - Title: Scroller
     StyleRules:
     - Selectors:
       - dragtab-scroller-next
@@ -4530,11 +4493,11 @@ MonoBehaviour:
         m_Right: 0
         m_Top: 0
         m_Bottom: 0
-  - Enabled: 0
-    Title: --- | --- [ S T A T U S   B A R ] ---
+    <Enabled>k__BackingField: 1
+  - Title: --- | --- [ S T A T U S   B A R ] ---
     StyleRules: []
-  - Enabled: 1
-    Title: Icon Buttons
+    <Enabled>k__BackingField: 0
+  - Title: Icon Buttons
     StyleRules:
     - Selectors:
       - StatusBarIcon
@@ -4644,11 +4607,11 @@ MonoBehaviour:
         m_Right: 0
         m_Top: 0
         m_Bottom: 0
-  - Enabled: 0
-    Title: --- | --- [ T R E E   V I E W ] ---
+    <Enabled>k__BackingField: 1
+  - Title: --- | --- [ T R E E   V I E W ] ---
     StyleRules: []
-  - Enabled: 1
-    Title: Line
+    <Enabled>k__BackingField: 0
+  - Title: Line
     StyleRules:
     - Selectors:
       - TV-Line
@@ -4686,8 +4649,8 @@ MonoBehaviour:
         m_Right: 1
         m_Top: 1
         m_Bottom: 1
-  - Enabled: 1
-    Title: Selection
+    <Enabled>k__BackingField: 1
+  - Title: Selection
     StyleRules:
     - Selectors:
       - TV-Selection
@@ -4761,14 +4724,14 @@ MonoBehaviour:
         m_Right: 0
         m_Top: 0
         m_Bottom: 0
-  - Enabled: 0
-    Title: 
+    <Enabled>k__BackingField: 1
+  - Title: 
     StyleRules: []
-  - Enabled: 0
-    Title: --- [ S H U R I K E N ] ---
+    <Enabled>k__BackingField: 0
+  - Title: --- [ S H U R I K E N ] ---
     StyleRules: []
-  - Enabled: 1
-    Title: Background
+    <Enabled>k__BackingField: 0
+  - Title: Background
     StyleRules:
     - Selectors:
       - ShurikenModuleBg
@@ -4806,8 +4769,8 @@ MonoBehaviour:
         m_Right: 1
         m_Top: 1
         m_Bottom: 1
-  - Enabled: 1
-    Title: Emitter Title
+    <Enabled>k__BackingField: 1
+  - Title: Emitter Title
     StyleRules:
     - Selectors:
       - ShurikenEmitterTitle
@@ -4845,8 +4808,8 @@ MonoBehaviour:
         m_Right: 1
         m_Top: 1
         m_Bottom: 1
-  - Enabled: 1
-    Title: Module Title
+    <Enabled>k__BackingField: 1
+  - Title: Module Title
     StyleRules:
     - Selectors:
       - ShurikenModuleTitle
@@ -4920,7 +4883,8 @@ MonoBehaviour:
         m_Right: 1
         m_Top: 1
         m_Bottom: 1
-  - Enabled: 0
-    Title: Empty
+    <Enabled>k__BackingField: 1
+  - Title: Empty
     StyleRules: []
+    <Enabled>k__BackingField: 0
   <InstantApply>k__BackingField: 1

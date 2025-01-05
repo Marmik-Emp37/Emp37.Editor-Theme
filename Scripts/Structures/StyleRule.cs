@@ -32,7 +32,6 @@ namespace Emp37.ET
                   { Properties.BorderWidth, nameof(BorderWidth) }
             };
 
-
             public override readonly string ToString()
             {
                   StyleRule rule = this;

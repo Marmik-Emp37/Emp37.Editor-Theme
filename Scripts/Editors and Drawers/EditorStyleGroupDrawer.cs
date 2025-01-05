@@ -2,6 +2,7 @@ using System.Linq;
 
 using UnityEditor;
 using static UnityEditor.EditorStyles;
+using static UnityEditor.EditorGUIUtility;
 
 using UnityEngine;
 
@@ -10,14 +11,14 @@ namespace Emp37.ET
       [CustomPropertyDrawer(typeof(StyleRuleGroup))]
       internal class EditorStyleGroupDrawer : PropertyDrawer
       {
-            private const string p_Enabled = "Enabled", p_Title = "Title", p_StyleRules = "StyleRules";
-            private const string groupTitleControl = "TitleControl";
+            private const string p_Enabled = "<Enabled>k__BackingField", p_Title = "Title", p_StyleRules = "StyleRules";
+            private const string control_TargetTitle = "Control.StyleRuleGroup.Title";
 
-            private const float HeaderSize = 32F, HighlightWidth = 3F, BackgroundAlpha = 0.25F;
+            private const float headerSize = 32F, highlightWidth = 3F, backgroundAlpha = 0.25F;
+            private const int textSize = 14;
 
-            private static readonly GUIStyle descriptionLabelStyle = new(label) { fontSize = 14 };
-            private static readonly GUIStyle descriptionTextFieldStyle = new(textField) { alignment = TextAnchor.MiddleLeft, fontSize = 14 };
-
+            private static readonly GUIStyle descriptionLabelStyle = new(label) { fontSize = textSize };
+            private static readonly GUIStyle descriptionTextFieldStyle = new(textField) { alignment = TextAnchor.MiddleLeft, fontSize = textSize };
 
             public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)
             {
@@ -26,12 +27,12 @@ namespace Emp37.ET
                   using (new EditorGUI.PropertyScope(position, label, property))
                   {
                         #region H E A D E R
-                        Rect headerRect = new(position) { height = HeaderSize };
+                        Rect headerRect = new(position) { height = headerSize };
 
                         // background highlight rect
-                        EditorGUI.DrawRect(new(headerRect) { width = HighlightWidth }, StyleHelpers.BackgroundTint);
-                        EditorGUI.DrawRect(headerRect, StyleHelpers.BackgroundTint.ChangeOpacity(BackgroundAlpha));
-                        headerRect.x += HighlightWidth + 3F;
+                        EditorGUI.DrawRect(new(headerRect) { width = highlightWidth }, GUIHelpers.BackgroundTint);
+                        EditorGUI.DrawRect(headerRect, GUIHelpers.BackgroundTint.ChangeOpacity(backgroundAlpha));
+                        headerRect.x += highlightWidth + 3F;
 
                         // expandable foldout toggle
                         headerRect.width = 18F;
@@ -45,8 +46,8 @@ namespace Emp37.ET
                         headerRect.x += headerRect.width;
 
                         // style group title
-                        headerRect.width = position.width - (headerRect.x - position.x) - HeaderSize;
-                        GUI.SetNextControlName(groupTitleControl); // - [ c:0 ]
+                        headerRect.width = position.width - (headerRect.x - position.x) - headerSize;
+                        GUI.SetNextControlName(control_TargetTitle); // - [ c:0 ]
                         if (description.isExpanded)
                         {
                               EditorGUI.BeginChangeCheck();
@@ -60,21 +61,18 @@ namespace Emp37.ET
                         headerRect.x += headerRect.width;
 
                         // edit title button
-                        headerRect.width = HeaderSize;
-                        if (GUI.Button(headerRect, EditorGUIUtility.IconContent("_Menu")) && (description.isExpanded = !description.isExpanded))
+                        headerRect.width = headerSize;
+                        if (GUI.Button(headerRect, IconContent("_Menu")) && (description.isExpanded = !description.isExpanded))
                         {
-                              GUI.FocusControl(groupTitleControl); // - [ c:0 ]
+                              GUI.FocusControl(control_TargetTitle); // - [ c:0 ]
                         }
                         #endregion
 
                         if (property.isExpanded)
                         {
-                              headerRect.height += EditorGUIUtility.standardVerticalSpacing; // - [ h:0 ]
+                              Rect contentRect = new(position) { y = position.y + (headerRect.height += standardVerticalSpacing), height = position.height - headerRect.height - standardVerticalSpacing };
 
-                              Rect contentRect = new(position) { y = position.y + headerRect.height, height = position.height - headerRect.height - EditorGUIUtility.standardVerticalSpacing /*extra*/ };
-
-                              // background highlight rect
-                              EditorGUI.DrawRect(contentRect, StyleHelpers.BackgroundTint.ChangeOpacity(BackgroundAlpha));
+                              EditorGUI.DrawRect(contentRect, GUIHelpers.BackgroundTint.ChangeOpacity(backgroundAlpha)); // background
 
                               #region A R R A Y   E L E M E N T S
                               SerializedProperty group = property.FindPropertyRelative(p_StyleRules);
@@ -100,14 +98,10 @@ namespace Emp37.ET
             }
             public override float GetPropertyHeight(SerializedProperty property, GUIContent label)
             {
-                  float height = HeaderSize;
-                  if (property.isExpanded)
-                  {
-                        SerializedProperty group = property.FindPropertyRelative(p_StyleRules);
-                        height += Enumerable.Range(0, group.arraySize).Sum(index => EditorGUI.GetPropertyHeight(group.GetArrayElementAtIndex(index)))
-                              + miniButton.fixedHeight + EditorGUIUtility.standardVerticalSpacing; // - [ h:0 + h:1 ]
-                  }
-                  return height;
+                  if (!property.isExpanded) return headerSize;
+
+                  SerializedProperty group = property.FindPropertyRelative(p_StyleRules);
+                  return headerSize + Enumerable.Range(0, group.arraySize).Sum(index => EditorGUI.GetPropertyHeight(group.GetArrayElementAtIndex(index))) + (miniButton.fixedHeight /*- [ h:0 ]*/ + standardVerticalSpacing /*- [ h:1 ]*/);
             }
       }
 }
