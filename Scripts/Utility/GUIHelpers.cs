@@ -7,9 +7,7 @@ namespace Emp37.ET
       public static class GUIHelpers
       {
             public const float Spacing = 2F;
-            public static readonly Color BackgroundTint = EditorGUIUtility.isProSkin ? Color.black : Color.white;
-
-            public static readonly GUIStyle CenteredLabel = new(GUI.skin.label) { alignment = TextAnchor.MiddleCenter };
+            public static readonly Color EditorThemeTint = EditorGUIUtility.isProSkin ? Color.black : Color.white;
 
             public static Color SetAlpha(this Color color, float value) => new(color.r, color.g, color.b, value);
             public static Rect Inset(this Rect rect, float value) => new(rect) { x = rect.x + value, width = rect.width - 2F * value };
@@ -17,11 +15,10 @@ namespace Emp37.ET
             public static void ArrayField(Rect position, SerializedProperty property)
             {
                   position.height = 24F;
-                  EditorGUI.DrawRect(position, BackgroundTint.SetAlpha(0.125F));
-                  EditorGUI.LabelField(position, property.displayName, CenteredLabel);
+                  EditorGUI.DrawRect(position, EditorThemeTint.SetAlpha(0.15F));
+                  EditorGUI.LabelField(position, property.displayName, CustomGUIStyles.centeredLabel);
                   position.y += position.height + EditorGUIUtility.standardVerticalSpacing; // - [ h:0 ]
 
-                  position = position.Inset(15F);
                   for (int i = 0; i < property.arraySize; i++)
                   {
                         SerializedProperty element = property.GetArrayElementAtIndex(i);
@@ -30,6 +27,7 @@ namespace Emp37.ET
                         position.y += position.height + EditorGUIUtility.standardVerticalSpacing; // - [ h:1 ]
                   }
 
+                  position = EditorGUI.IndentedRect(position);
                   position.height = EditorStyles.miniButton.fixedHeight;
                   position.width /= 2F; // splitting buttons
                   int size = property.arraySize;
