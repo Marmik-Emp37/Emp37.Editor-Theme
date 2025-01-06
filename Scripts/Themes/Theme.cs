@@ -6,8 +6,6 @@ namespace Emp37.ET
 {
       public abstract class Theme : ScriptableObject
       {
-            public const string Directory = "Assets/Editor/StyleSheets/Extensions", FileExtension = ".uss";
-
             public enum Type { Light, Dark }
 
             public StyleRuleGroup[] StyleRuleGroups;
@@ -15,6 +13,7 @@ namespace Emp37.ET
             [field: SerializeField] public bool InstantApply { get; private set; }
 
             public abstract Type ThemeType { get; }
+
 
             /// <summary>
             /// Generates a finalised USS code representation for this theme.

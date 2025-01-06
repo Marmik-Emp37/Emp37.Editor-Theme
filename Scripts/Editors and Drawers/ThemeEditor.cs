@@ -12,44 +12,65 @@ namespace Emp37.ET
       [CustomEditor(typeof(Theme), true)]
       internal class ThemeEditor : Editor
       {
-            private const float applyButtonSize = 42F;
+            public const string DIRECTORY = "Assets/Editor/StyleSheets/Extensions";
+            public const string FILE_EXTENSION = ".uss";
+
+            private const float h_ApplyButton = 42F;
 
             public override void OnInspectorGUI()
             {
                   base.OnInspectorGUI();
 
                   GUILayout.Space(10F);
-                  if (GUILayout.Button("Apply Theme", GUILayout.Height(applyButtonSize)))
+                  if (GUILayout.Button("Apply Theme", GUILayout.Height(h_ApplyButton)))
                   {
-                        if (!Directory.Exists(Theme.Directory)) Directory.CreateDirectory(Theme.Directory);
+                        ApplyTheme();
+                  }
+                  DrawExpandCollapseButtons();
+            }
 
-                        Theme target = base.target as Theme;
-                        string path = Path.Combine(Theme.Directory, target.ThemeType + Theme.FileExtension);
-                        File.WriteAllText(path, target.ToString());
-                        AssetDatabase.Refresh();
-                        if (ValidateSkinSwitch(target.ThemeType))
+            private void ApplyTheme()
+            {
+                  Theme target = base.target as Theme;
+
+                  if (!Directory.Exists(DIRECTORY)) Directory.CreateDirectory(DIRECTORY);
+
+                  string path = Path.Combine(DIRECTORY, target.ThemeType + FILE_EXTENSION);
+                  File.WriteAllText(path, target.ToString());
+                  AssetDatabase.Refresh();
+
+                  if (ShouldSwitchSkin(target.ThemeType))
+                  {
+                        InternalEditorUtility.SwitchSkinAndRepaintAllViews();
+                  }
+                  else
+                  {
+                        InternalEditorUtility.RepaintAllViews();
+                        if (!target.InstantApply)
                         {
-                              InternalEditorUtility.SwitchSkinAndRepaintAllViews();
-                        }
-                        else
-                        {
-                              InternalEditorUtility.RepaintAllViews();
-                              if (!target.InstantApply) CompilationPipeline.RequestScriptCompilation();
+                              CompilationPipeline.RequestScriptCompilation();
                         }
                   }
-
+            }
+            private void DrawExpandCollapseButtons()
+            {
                   using (new EditorGUILayout.HorizontalScope())
                   {
-                        if (GUILayout.Button("Expand", EditorStyles.miniButtonLeft)) ExpandProperties(true);
-                        if (GUILayout.Button("Collapse", EditorStyles.miniButtonRight)) ExpandProperties(false);
+                        if (GUILayout.Button("Expand", EditorStyles.miniButtonLeft))
+                        {
+                              ExpandProperties(true);
+                        }
+                        if (GUILayout.Button("Collapse", EditorStyles.miniButtonRight))
+                        {
+                              ExpandProperties(false);
+                        }
                   }
             }
-
-            private void ExpandProperties(bool value)
+            private void ExpandProperties(bool expand)
             {
-                  using SerializedProperty iterator = serializedObject.GetIterator();
-                  while (iterator.NextVisible(true)) if (iterator.depth < 4) iterator.isExpanded = value;
+                  SerializedProperty iterator = serializedObject.GetIterator();
+                  while (iterator.NextVisible(true) && iterator.depth < 4) iterator.isExpanded = expand;
             }
-            private bool ValidateSkinSwitch(Theme.Type themeType) => (themeType == Theme.Type.Dark) ^ EditorGUIUtility.isProSkin;
+            private bool ShouldSwitchSkin(Theme.Type themeType) => (themeType == Theme.Type.Dark) ^ EditorGUIUtility.isProSkin;
       }
 }

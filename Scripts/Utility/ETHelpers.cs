@@ -4,18 +4,19 @@ using UnityEngine;
 
 namespace Emp37.ET
 {
-      public static class GUIHelpers
+      public static class ETHelpers
       {
             public const float Spacing = 2F;
-            public static readonly Color EditorThemeTint = EditorGUIUtility.isProSkin ? Color.black : Color.white;
 
-            public static Color SetAlpha(this Color color, float value) => new(color.r, color.g, color.b, value);
+            public static readonly Color ThemeTint = EditorGUIUtility.isProSkin ? Color.black : Color.white;
+            public static readonly Color ThemeAccent = new(ThemeTint.r, ThemeTint.g, ThemeTint.b, 0.2F);
+
             public static Rect Inset(this Rect rect, float value) => new(rect) { x = rect.x + value, width = rect.width - 2F * value };
 
             public static void ArrayField(Rect position, SerializedProperty property)
             {
                   position.height = 24F;
-                  EditorGUI.DrawRect(position, EditorThemeTint.SetAlpha(0.15F));
+                  EditorGUI.DrawRect(position, ThemeAccent);
                   EditorGUI.LabelField(position, property.displayName, CustomGUIStyles.centeredLabel);
                   position.y += position.height + EditorGUIUtility.standardVerticalSpacing; // - [ h:0 ]
 

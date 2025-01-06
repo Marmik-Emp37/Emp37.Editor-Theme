@@ -18,21 +18,21 @@ namespace Emp37.ET
             public Color32 BackgroundColor, BorderColor, BorderTopColor, BorderRightColor, BorderBottomColor, BorderLeftColor, TextColor;
             public RectOffset BorderRadius, BorderWidth;
 
-            public static Dictionary<Properties, string> PropertiesMap = new()
+            public static (Properties Property, string Name)[] PropertiesMap =
             {
-                  { Properties.BackgroundImage, nameof(BackgroundTexture) },
-                  { Properties.BackgroundColor, nameof(BackgroundColor) },
-                  { Properties.BorderColor, nameof(BorderColor) },
-                  { Properties.BorderTopColor, nameof(BorderTopColor) },
-                  { Properties.BorderRightColor, nameof(BorderRightColor) },
-                  { Properties.BorderBottomColor, nameof(BorderBottomColor) },
-                  { Properties.BorderLeftColor, nameof(BorderLeftColor) },
-                  { Properties.Color, nameof(TextColor) },
-                  { Properties.BorderRadius, nameof(BorderRadius) },
-                  { Properties.BorderWidth, nameof(BorderWidth) }
+                  (Properties.BackgroundImage, nameof(BackgroundTexture)),
+                  (Properties.BackgroundColor, nameof(BackgroundColor)),
+                  (Properties.BorderColor, nameof(BorderColor)),
+                  (Properties.BorderTopColor, nameof(BorderTopColor)),
+                  (Properties.BorderRightColor, nameof(BorderRightColor)),
+                  (Properties.BorderBottomColor, nameof(BorderBottomColor)),
+                  (Properties.BorderLeftColor, nameof(BorderLeftColor)),
+                  (Properties.Color, nameof(TextColor)),
+                  (Properties.BorderRadius, nameof(BorderRadius)),
+                  (Properties.BorderWidth, nameof(BorderWidth))
             };
 
-            public override readonly string ToString()
+public override readonly string ToString()
             {
                   StyleRule rule = this;
 
@@ -46,10 +46,10 @@ namespace Emp37.ET
                   if (!classes.Any()) return null;
 
                   IEnumerable<string> properties =
-                        from property in PropertiesMap.Keys
-                        where rule.PropertyMask.HasFlag(property)
-                        let propertyName = Regex.Replace(property.ToString(), "(?<!^)([A-Z])", "-$1").ToLower()
-                        let expression = property switch
+                        from item in PropertiesMap
+                        where rule.PropertyMask.HasFlag(item.Property)
+                        let propertyName = Regex.Replace(item.Property.ToString(), "(?<!^)([A-Z])", "-$1").ToLower()
+                        let expression = item.Property switch
                         {
                               Properties.BackgroundImage => USSTools.Format(rule.BackgroundTexture),
                               Properties.BackgroundColor => USSTools.Format(rule.BackgroundColor),
