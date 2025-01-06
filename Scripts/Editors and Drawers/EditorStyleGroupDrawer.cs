@@ -69,8 +69,6 @@ namespace Emp37.ET
                         {
                               Rect contentRect = new(position) { y = position.y + (headerRect.height += standardVerticalSpacing), height = position.height - headerRect.height - standardVerticalSpacing };
 
-                              EditorGUI.DrawRect(contentRect, GUIHelpers.EditorThemeTint.SetAlpha(backgroundAlpha)); // background
-
                               #region A R R A Y   E L E M E N T S
                               SerializedProperty group = property.FindPropertyRelative(p_StyleRules);
                               int size = group.arraySize;
