@@ -13,28 +13,37 @@ namespace Emp37.ET
       {
             private const string p_Selectors = "Selectors", p_PseudoStates = "PseudoStates", p_PropertyMask = "PropertyMask";
 
-            private const float HeaderHeight = 21F;
+            private const float headerHeight = 21F;
 
-            private static readonly GUIStyle expandToggleStyle = new(foldoutHeader) { fontStyle = FontStyle.Normal, fixedHeight = HeaderHeight };
+            private static readonly GUIStyle expandToggleStyle = new(foldoutHeader) { fontStyle = FontStyle.Normal, fixedHeight = headerHeight };
 
             public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)
             {
+                  SerializedProperty selectors = property.FindPropertyRelative(p_Selectors), pseudoStates = property.FindPropertyRelative(p_PseudoStates);
+
                   using (new EditorGUI.PropertyScope(position, label, property))
                   {
-                        position.height = HeaderHeight;
+                        position.height = headerHeight;
                         if (property.isExpanded = GUI.Toggle(position, property.isExpanded, label, expandToggleStyle))
                         {
                               position.y += position.height + standardVerticalSpacing;
 
-                              position.y = GUIHelpers.ArrayField(position, property.FindPropertyRelative(p_Selectors));
-                              position.y = GUIHelpers.ArrayField(position, property.FindPropertyRelative(p_PseudoStates));
+                              GUIHelpers.ArrayField(position, selectors);
+                              position.y += GUIHelpers.CalculateArrayHeight(selectors);
+                              GUIHelpers.ArrayField(position, pseudoStates);
+                              position.y += GUIHelpers.CalculateArrayHeight(pseudoStates);
 
-                              using (new EditorGUI.IndentLevelScope(2))
+                              position.height = GUIHelpers.Spacing;
+                              EditorGUI.DrawRect(position, GUIHelpers.BackgroundTint.SetAlpha(0.25F));
+                              position.y += position.height + standardVerticalSpacing;
+
+                              using (new EditorGUI.IndentLevelScope(1))
                               {
                                     SerializedProperty propertyMask = property.FindPropertyRelative(p_PropertyMask);
                                     position.height = EditorGUI.GetPropertyHeight(propertyMask);
                                     _ = EditorGUI.PropertyField(position, propertyMask);
                                     position.y += position.height + standardVerticalSpacing;
+
                                     Properties mask = (Properties) propertyMask.enumValueFlag;
                                     foreach (SerializedProperty context in from item in StyleRule.PropertiesMap where mask.HasFlag(item.Key) select property.FindPropertyRelative(item.Value))
                                     {
@@ -48,16 +57,19 @@ namespace Emp37.ET
             }
             public override float GetPropertyHeight(SerializedProperty property, GUIContent label)
             {
-                  float height = HeaderHeight + standardVerticalSpacing;
+                  if (!property.isExpanded) return headerHeight;
+
+                  float spacing = standardVerticalSpacing, height = headerHeight;
                   if (property.isExpanded)
                   {
-                        height += GUIHelpers.GetArrayHeight(property.FindPropertyRelative(p_Selectors), HeaderHeight) + GUIHelpers.GetArrayHeight(property.FindPropertyRelative(p_PseudoStates), HeaderHeight);
-                        height += standardVerticalSpacing;
+                        height += GUIHelpers.CalculateArrayHeight(property.FindPropertyRelative(p_Selectors)) + GUIHelpers.CalculateArrayHeight(property.FindPropertyRelative(p_PseudoStates));
+                        height += spacing;
+                        height += GUIHelpers.Spacing + spacing;
 
                         SerializedProperty propertyMask = property.FindPropertyRelative(p_PropertyMask);
                         Properties mask = (Properties) propertyMask.enumValueFlag;
                         height += EditorGUI.GetPropertyHeight(propertyMask)
-                              + StyleRule.PropertiesMap.Where(entry => mask.HasFlag(entry.Key)).Select(item => property.FindPropertyRelative(item.Value)).Sum(item => EditorGUI.GetPropertyHeight(item) + standardVerticalSpacing);
+                              + StyleRule.PropertiesMap.Where(entry => mask.HasFlag(entry.Key)).Select(item => property.FindPropertyRelative(item.Value)).Sum(item => EditorGUI.GetPropertyHeight(item) + spacing);
                   }
                   return height;
             }
