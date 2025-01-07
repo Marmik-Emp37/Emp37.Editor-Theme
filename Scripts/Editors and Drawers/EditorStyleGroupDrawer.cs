@@ -1,12 +1,9 @@
 using UnityEditor;
-using static UnityEditor.EditorStyles;
-using static UnityEditor.EditorGUIUtility;
 
 using UnityEngine;
 
 namespace Emp37.ET
 {
-      // @r: == redeem label
       [CustomPropertyDrawer(typeof(StyleRuleGroup))]
       internal class EditorStyleGroupDrawer : PropertyDrawer
       {
@@ -15,95 +12,91 @@ namespace Emp37.ET
             private const string p_StyleRules = "StyleRules";
             private const string control_TargetTitle = "Control.StyleRuleGroup.Title";
 
-            private const float height_Header = 32F;
-            private const float size_Button = 24F;
+            private const int HeaderSize = 32, HighlightWidth = 3, ElementWidth = 20, FooterHeight = 24;
 
 
             public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)
             {
                   using (new EditorGUI.PropertyScope(position, label, property))
                   {
-                        position.height = height_Header;
-
-                        Header(position, property);
+                        position.height = HeaderSize;
+                        RenderHeader(position, property);
 
                         if (property.isExpanded)
                         {
-                              position.y += position.height + standardVerticalSpacing; // - [ height : 0 ]
+                              position.y += position.height + EditorGUIUtility.standardVerticalSpacing; // - H : Header
 
                               SerializedProperty group = property.FindPropertyRelative(p_StyleRules);
-                              for (int size = group.arraySize, i = 0; i < size; i++)
+
+                              for (int i = 0; i < group.arraySize; i++)
                               {
-                                    SerializedProperty context = group.GetArrayElementAtIndex(i);
-                                    position.height = EditorGUI.GetPropertyHeight(context);
-                                    _ = EditorGUI.PropertyField(position, context, true);
-
-                                    position.y += position.height + standardVerticalSpacing; // - [ height : 1 ]
+                                    SerializedProperty element = group.GetArrayElementAtIndex(i);
+                                    position.height = EditorGUI.GetPropertyHeight(element);
+                                    EditorGUI.PropertyField(position, element, true);
+                                    position.y += position.height + EditorGUIUtility.standardVerticalSpacing; // - H : Array Elements
                               }
-                              position.height = size_Button;
 
-                              DrawArrayControls(position, group);
+                              position.height = FooterHeight;
+                              RenderFooter(position, group);
 
-                              position.y += position.height + standardVerticalSpacing; // - [ height : 2 ]
-                              position.height = ETHelpers.Spacing; // - [ height : 3 ]
-
+                              position.y += position.height + EditorGUIUtility.standardVerticalSpacing;  // - H : Array Controls
+                              position.height = ETHelpers.Spacing; // - H : Separator
                               EditorGUI.DrawRect(position, ETHelpers.ThemeAccent);
                         }
                   }
             }
             public override float GetPropertyHeight(SerializedProperty property, GUIContent label)
             {
-                  if (!property.isExpanded) return height_Header;
+                  if (!property.isExpanded) return HeaderSize;
 
-                  float height = height_Header + standardVerticalSpacing;  // - [ @r: height : 0 ]
+                  float height = HeaderSize + EditorGUIUtility.standardVerticalSpacing; // - @r >> H : Header
 
                   SerializedProperty group = property.FindPropertyRelative(p_StyleRules);
-                  for (int size = group.arraySize, i = 0; i < size; i++)
+                  for (int i = 0; i < group.arraySize; i++)
                   {
-                        height += EditorGUI.GetPropertyHeight(group.GetArrayElementAtIndex(i)) + standardVerticalSpacing; // - [ @r: height : 1 ]
+                        height += EditorGUI.GetPropertyHeight(group.GetArrayElementAtIndex(i)) + EditorGUIUtility.standardVerticalSpacing; // - @r >> H : Array Elements
                   }
 
-                  height += size_Button + standardVerticalSpacing; // - [ @r: height : 2 ]
-
-                  height += ETHelpers.Spacing;  // - [ @r: height : 3 ]
+                  height += FooterHeight + EditorGUIUtility.standardVerticalSpacing; // - @r >> H : Array Controls
+                  height += ETHelpers.Spacing; // - @r >> H : Separator
 
                   return height;
             }
 
-            private static void Header(Rect position, SerializedProperty property)
+            /// <summary>
+            /// Draws the header section of the property.
+            /// </summary>
+            private static void RenderHeader(Rect position, SerializedProperty property)
             {
-                  const int size_Highlight = 3;
-
-
                   SerializedProperty enabled = property.FindPropertyRelative(p_Enabled), description = property.FindPropertyRelative(p_Title);
 
                   Rect current = position;
 
+                  // Draw Background
                   EditorGUI.DrawRect(current, ETHelpers.ThemeAccent);
 
-                  current.width = size_Highlight;
-
+                  current.width = HighlightWidth;
                   EditorGUI.DrawRect(current, ETHelpers.ThemeTint);
 
+                  // Draw Expand Toggle
                   current.x += current.width;
-                  current.width = 20F; // assumed width
+                  current.width = ElementWidth;
+                  property.isExpanded = EditorGUI.Toggle(current, property.isExpanded, EditorStyles.foldout);
 
-                  property.isExpanded = EditorGUI.Toggle(current, property.isExpanded, foldout);
-
+                  // Draw Group.Enabled Toggle
                   current.x += current.width;
-
                   enabled.boolValue = EditorGUI.Toggle(current, enabled.boolValue);
 
+                  // Draw Title
                   current.x += current.width;
-                  current.width = position.width - (current.x - position.x) - ETHelpers.Spacing - size_Button; // - [ @r: width : 0 ]
-
-                  GUI.SetNextControlName(control_TargetTitle); // - [ control : 0 ]
+                  current.width = position.width - (current.x - position.x) - ETHelpers.Spacing - HeaderSize; // - [ W : Spacing - W : Menu Button ]
+                  GUI.SetNextControlName(control_TargetTitle);
 
                   if (description.isExpanded)
                   {
-                        using EditorGUI.ChangeCheckScope scope = new();
+                        using var check = new EditorGUI.ChangeCheckScope();
                         string text = EditorGUI.DelayedTextField(current, description.stringValue, ETStyles.largeTextField);
-                        if (scope.changed)
+                        if (check.changed)
                         {
                               description.stringValue = text;
                               description.isExpanded = false;
@@ -114,25 +107,33 @@ namespace Emp37.ET
                         EditorGUI.LabelField(current, description.stringValue, ETStyles.largeText);
                   }
 
-                  current.x += current.width + ETHelpers.Spacing; // - [ width : 0 ]
-                  current.width = size_Button;
-
-                  if (GUI.Button(current, IconContent("_Menu")) && (description.isExpanded = !description.isExpanded))
+                  // Draw Rename Title Button
+                  current.x += current.width + ETHelpers.Spacing; // - W : Spacing
+                  current.width = HeaderSize; // - W : Menu Button
+                  if (GUI.Button(current, EditorGUIUtility.IconContent("_Menu")))
                   {
-                        GUI.FocusControl(control_TargetTitle); // - [ @r: control : 0 ]
+                        description.isExpanded = !description.isExpanded;
+                        GUI.FocusControl(control_TargetTitle);
                   }
             }
-            private void DrawArrayControls(Rect position, SerializedProperty property)
+            /// <summary>
+            /// Draws the Add and Remove buttons for the array.
+            /// </summary>
+            private static void RenderFooter(Rect position, SerializedProperty arrayProperty)
             {
-                  int size = property.arraySize;
+                  int size = arrayProperty.arraySize;
 
                   position.width *= 0.5F;
-
-                  if (GUI.Button(position, "Add", GUI.skin.button)) property.InsertArrayElementAtIndex(size++);
+                  if (GUI.Button(position, "Add", GUI.skin.button))
+                  {
+                        arrayProperty.InsertArrayElementAtIndex(size++);
+                  }
 
                   position.x += position.width;
-
-                  if (GUI.Button(position, "Remove", GUI.skin.button) && size > 0) property.DeleteArrayElementAtIndex(--size);
+                  if (GUI.Button(position, "Remove", GUI.skin.button) && size > 0)
+                  {
+                        arrayProperty.DeleteArrayElementAtIndex(--size);
+                  }
             }
       }
 }
