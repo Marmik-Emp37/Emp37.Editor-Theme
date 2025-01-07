@@ -20,7 +20,7 @@ namespace Emp37.ET
                   using (new EditorGUI.PropertyScope(position, label, property))
                   {
                         position.height = HeaderSize;
-                        RenderHeader(position, property);
+                        DrawHeader(position, property);
 
                         if (property.isExpanded)
                         {
@@ -37,7 +37,7 @@ namespace Emp37.ET
                               }
 
                               position.height = FooterHeight;
-                              RenderFooter(position, group);
+                              DrawFooter(position, group);
 
                               position.y += position.height + EditorGUIUtility.standardVerticalSpacing;  // - H : Array Controls
                               position.height = ETHelpers.Spacing; // - H : Separator
@@ -66,7 +66,7 @@ namespace Emp37.ET
             /// <summary>
             /// Draws the header section of the property.
             /// </summary>
-            private static void RenderHeader(Rect position, SerializedProperty property)
+            private static void DrawHeader(Rect position, SerializedProperty property)
             {
                   SerializedProperty enabled = property.FindPropertyRelative(p_Enabled), description = property.FindPropertyRelative(p_Title);
 
@@ -119,7 +119,7 @@ namespace Emp37.ET
             /// <summary>
             /// Draws the Add and Remove buttons for the array.
             /// </summary>
-            private static void RenderFooter(Rect position, SerializedProperty arrayProperty)
+            private static void DrawFooter(Rect position, SerializedProperty arrayProperty)
             {
                   int size = arrayProperty.arraySize;
 
