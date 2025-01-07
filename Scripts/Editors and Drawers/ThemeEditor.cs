@@ -15,14 +15,15 @@ namespace Emp37.ET
             public const string DIRECTORY = "Assets/Editor/StyleSheets/Extensions";
             public const string FILE_EXTENSION = ".uss";
 
-            private const float h_ApplyButton = 42F;
+            private const float height_ApplyButton = 42F;
+
 
             public override void OnInspectorGUI()
             {
                   base.OnInspectorGUI();
 
                   GUILayout.Space(10F);
-                  if (GUILayout.Button("Apply Theme", GUILayout.Height(h_ApplyButton)))
+                  if (GUILayout.Button("Apply Theme", GUILayout.Height(height_ApplyButton)))
                   {
                         ApplyTheme();
                   }

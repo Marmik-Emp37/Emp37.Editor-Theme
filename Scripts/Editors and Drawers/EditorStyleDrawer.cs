@@ -21,7 +21,6 @@ namespace Emp37.ET
             public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)
             {
                   SerializedProperty selectors = property.FindPropertyRelative(p_Selectors), pseudoStates = property.FindPropertyRelative(p_PseudoStates);
-
                   using (new EditorGUI.PropertyScope(position, label, property))
                   {
                         position.height = HeaderSize;
@@ -38,11 +37,16 @@ namespace Emp37.ET
 
                               position.height = 24;
                               EditorGUI.DrawRect(position, ETHelpers.ThemeTint);
-                              EditorGUI.LabelField(position, propertyMask.displayName, CustomGUIStyles.centeredLabel);
+                              EditorGUI.LabelField(position, propertyMask.displayName, ETStyles.centeredLabel);
                               position.y += position.height + standardVerticalSpacing;
 
                               position.height = maskFieldStyle.fixedHeight;
-                              propertyMask.enumValueFlag = (int) (Properties) EditorGUI.EnumFlagsField(position, (Properties) propertyMask.enumValueFlag, maskFieldStyle);
+                              EditorGUI.BeginChangeCheck();
+                              var valueFlag = EditorGUI.EnumFlagsField(position, (Properties) propertyMask.enumValueFlag, maskFieldStyle);
+                              if (EditorGUI.EndChangeCheck())
+                              {
+                                    property.enumValueFlag = (int) (Properties) valueFlag;
+                              }
                               position.y += position.height + standardVerticalSpacing;
 
                               using (new EditorGUI.IndentLevelScope(1))

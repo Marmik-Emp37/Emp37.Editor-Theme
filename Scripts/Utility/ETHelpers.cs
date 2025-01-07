@@ -17,7 +17,7 @@ namespace Emp37.ET
             {
                   position.height = 24F;
                   EditorGUI.DrawRect(position, ThemeAccent);
-                  EditorGUI.LabelField(position, property.displayName, CustomGUIStyles.centeredLabel);
+                  EditorGUI.LabelField(position, property.displayName, ETStyles.centeredLabel);
                   position.y += position.height + EditorGUIUtility.standardVerticalSpacing; // - [ h:0 ]
 
                   for (int i = 0; i < property.arraySize; i++)
