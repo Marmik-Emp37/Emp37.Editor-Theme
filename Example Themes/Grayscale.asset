@@ -18,10 +18,10 @@ MonoBehaviour:
     <Enabled>k__BackingField: 0
   - Title: Box
     StyleRules:
-    - Selectors:
+    - ClassSelectors:
       - HelpBox
       - FrameBox
-      PseudoStates: 00000000
+      PseudoClasses: 00000000
       PropertyMask: 390
       BackgroundTexture: {fileID: 0}
       BackgroundColor:
@@ -55,9 +55,9 @@ MonoBehaviour:
         m_Right: 1
         m_Top: 1
         m_Bottom: 1
-    - Selectors:
+    - ClassSelectors:
       - Box
-      PseudoStates: 00000000
+      PseudoClasses: 00000000
       PropertyMask: 2
       BackgroundTexture: {fileID: 0}
       BackgroundColor:
@@ -91,9 +91,9 @@ MonoBehaviour:
         m_Right: 0
         m_Top: 1
         m_Bottom: 0
-    - Selectors:
+    - ClassSelectors:
       - CN-Box
-      PseudoStates: 00000000
+      PseudoClasses: 00000000
       PropertyMask: 2
       BackgroundTexture: {fileID: 0}
       BackgroundColor:
@@ -130,9 +130,9 @@ MonoBehaviour:
     <Enabled>k__BackingField: 1
   - Title: Foldout Header
     StyleRules:
-    - Selectors:
+    - ClassSelectors:
       - FoldoutHeader
-      PseudoStates: 000000000400000010000000
+      PseudoClasses: 000000000400000010000000
       PropertyMask: 514
       BackgroundTexture: {fileID: 0}
       BackgroundColor:
@@ -166,9 +166,9 @@ MonoBehaviour:
         m_Right: 0
         m_Top: 0
         m_Bottom: 0
-    - Selectors:
+    - ClassSelectors:
       - FoldoutHeader
-      PseudoStates: 020000001200000006000000
+      PseudoClasses: 020000001200000006000000
       PropertyMask: 2
       BackgroundTexture: {fileID: 0}
       BackgroundColor:
@@ -202,9 +202,9 @@ MonoBehaviour:
         m_Right: 0
         m_Top: 0
         m_Bottom: 0
-    - Selectors:
+    - ClassSelectors:
       - FoldoutHeader
-      PseudoStates: 0100000005000000
+      PseudoClasses: 0100000005000000
       PropertyMask: 294
       BackgroundTexture: {fileID: 0}
       BackgroundColor:
@@ -241,9 +241,8 @@ MonoBehaviour:
     <Enabled>k__BackingField: 1
   - Title: Prefab Label
     StyleRules:
-    - Selectors:
-      - PR-PrefabLabel
-      PseudoStates: 0000000004000000
+    - ClassSelectors: []
+      PseudoClasses: 0000000004000000
       PropertyMask: 512
       BackgroundTexture: {fileID: 0}
       BackgroundColor:
@@ -280,27 +279,9 @@ MonoBehaviour:
     <Enabled>k__BackingField: 1
   - Title: Button Group
     StyleRules:
-    - Selectors:
-      - Tab-first
-      - Tab-middle
-      - Tab-last
-      - minibuttonleft
-      - minibuttonmid
-      - minibuttonright
-      - LargeButtonLeft
-      - LargeButtonMid
-      - LargeButtonRight
-      - CommandLeft
-      - CommandMid
-      - CommandRight
-      - ButtonLeft
-      - ButtonMid
-      - ButtonRight
-      - AppCommandLeft
-      - AppCommandMid
-      - AppCommandRight
-      - SearchModeFilter
-      PseudoStates: 0000000004000000
+    - ClassSelectors:
+      - 
+      PseudoClasses: 0000000004000000
       PropertyMask: 486
       BackgroundTexture: {fileID: 0}
       BackgroundColor:
@@ -334,27 +315,8 @@ MonoBehaviour:
         m_Right: 1
         m_Top: 1
         m_Bottom: 1
-    - Selectors:
-      - Tab-first
-      - Tab-middle
-      - Tab-last
-      - minibuttonleft
-      - minibuttonmid
-      - minibuttonright
-      - LargeButtonLeft
-      - LargeButtonMid
-      - LargeButtonRight
-      - CommandLeft
-      - CommandMid
-      - CommandRight
-      - ButtonLeft
-      - ButtonMid
-      - ButtonRight
-      - AppCommandLeft
-      - AppCommandMid
-      - AppCommandRight
-      - SearchModeFilter
-      PseudoStates: 02000000
+    - ClassSelectors: []
+      PseudoClasses: 02000000
       PropertyMask: 258
       BackgroundTexture: {fileID: 0}
       BackgroundColor:
@@ -388,27 +350,8 @@ MonoBehaviour:
         m_Right: 1
         m_Top: 1
         m_Bottom: 1
-    - Selectors:
-      - Tab-first
-      - Tab-middle
-      - Tab-last
-      - minibuttonleft
-      - minibuttonmid
-      - minibuttonright
-      - LargeButtonLeft
-      - LargeButtonMid
-      - LargeButtonRight
-      - CommandLeft
-      - CommandMid
-      - CommandRight
-      - ButtonLeft
-      - ButtonMid
-      - ButtonRight
-      - AppCommandLeft
-      - AppCommandMid
-      - AppCommandRight
-      - SearchModeFilter
-      PseudoStates: 010000001000000005000000110000001400000015000000
+    - ClassSelectors: []
+      PseudoClasses: 010000001000000005000000110000001400000015000000
       PropertyMask: 302
       BackgroundTexture: {fileID: 0}
       BackgroundColor:
@@ -442,27 +385,8 @@ MonoBehaviour:
         m_Right: 1
         m_Top: 1
         m_Bottom: 1
-    - Selectors:
-      - Tab-first
-      - Tab-middle
-      - Tab-last
-      - minibuttonleft
-      - minibuttonmid
-      - minibuttonright
-      - LargeButtonLeft
-      - LargeButtonMid
-      - LargeButtonRight
-      - CommandLeft
-      - CommandMid
-      - CommandRight
-      - ButtonLeft
-      - ButtonMid
-      - ButtonRight
-      - AppCommandLeft
-      - AppCommandMid
-      - AppCommandRight
-      - SearchModeFilter
-      PseudoStates: 010000001000000005000000110000001400000015000000
+    - ClassSelectors: []
+      PseudoClasses: 010000001000000005000000110000001400000015000000
       PropertyMask: 302
       BackgroundTexture: {fileID: 0}
       BackgroundColor:
@@ -496,27 +420,8 @@ MonoBehaviour:
         m_Right: 1
         m_Top: 1
         m_Bottom: 1
-    - Selectors:
-      - Tab-first
-      - Tab-middle
-      - Tab-last
-      - minibuttonleft
-      - minibuttonmid
-      - minibuttonright
-      - LargeButtonLeft
-      - LargeButtonMid
-      - LargeButtonRight
-      - CommandLeft
-      - CommandMid
-      - CommandRight
-      - ButtonLeft
-      - ButtonMid
-      - ButtonRight
-      - AppCommandLeft
-      - AppCommandMid
-      - AppCommandRight
-      - SearchModeFilter
-      PseudoStates: 1200000016000000
+    - ClassSelectors: []
+      PseudoClasses: 1200000016000000
       PropertyMask: 302
       BackgroundTexture: {fileID: 0}
       BackgroundColor:
@@ -553,10 +458,8 @@ MonoBehaviour:
     <Enabled>k__BackingField: 1
   - Title: Scrollbar
     StyleRules:
-    - Selectors:
-      - HorizontalScrollbar
-      - VerticalScrollbar
-      PseudoStates: 00000000
+    - ClassSelectors: []
+      PseudoClasses: 00000000
       PropertyMask: 6
       BackgroundTexture: {fileID: 0}
       BackgroundColor:
@@ -593,12 +496,8 @@ MonoBehaviour:
     <Enabled>k__BackingField: 1
   - Title: Scrollbar Button
     StyleRules:
-    - Selectors:
-      - HorizontalScrollbarLeftButton
-      - HorizontalScrollbarRightButton
-      - VerticalScrollbarUpButton
-      - VerticalScrollbarDownButton
-      PseudoStates: 00000000
+    - ClassSelectors: []
+      PseudoClasses: 00000000
       PropertyMask: 134
       BackgroundTexture: {fileID: 0}
       BackgroundColor:
@@ -632,12 +531,8 @@ MonoBehaviour:
         m_Right: 0
         m_Top: 0
         m_Bottom: 1
-    - Selectors:
-      - HorizontalScrollbarLeftButton
-      - HorizontalScrollbarRightButton
-      - VerticalScrollbarUpButton
-      - VerticalScrollbarDownButton
-      PseudoStates: 0100000002000000
+    - ClassSelectors: []
+      PseudoClasses: 0100000002000000
       PropertyMask: 2
       BackgroundTexture: {fileID: 0}
       BackgroundColor:
@@ -674,11 +569,8 @@ MonoBehaviour:
     <Enabled>k__BackingField: 1
   - Title: Scrollbar Thumb
     StyleRules:
-    - Selectors:
-      - HorizontalScrollbarThumb
-      - VerticalScrollbarThumb
-      - HorizontalMinMaxScrollbarThumb
-      PseudoStates: 0000000002000000
+    - ClassSelectors: []
+      PseudoClasses: 0000000002000000
       PropertyMask: 134
       BackgroundTexture: {fileID: 0}
       BackgroundColor:
@@ -712,10 +604,8 @@ MonoBehaviour:
         m_Right: 1
         m_Top: 0
         m_Bottom: 0
-    - Selectors:
-      - HorizontalScrollbarThumb
-      - HorizontalMinMaxScrollbarThumb
-      PseudoStates: 0000000002000000
+    - ClassSelectors: []
+      PseudoClasses: 0000000002000000
       PropertyMask: 256
       BackgroundTexture: {fileID: 0}
       BackgroundColor:
@@ -749,9 +639,8 @@ MonoBehaviour:
         m_Right: 0
         m_Top: 0
         m_Bottom: 1
-    - Selectors:
-      - VerticalScrollbarThumb
-      PseudoStates: 0000000002000000
+    - ClassSelectors: []
+      PseudoClasses: 0000000002000000
       PropertyMask: 256
       BackgroundTexture: {fileID: 0}
       BackgroundColor:
@@ -788,11 +677,8 @@ MonoBehaviour:
     <Enabled>k__BackingField: 1
   - Title: Slider
     StyleRules:
-    - Selectors:
-      - HorizontalSlider
-      - ToolbarSlider
-      - PreSlider
-      PseudoStates: 0000000040000000
+    - ClassSelectors: []
+      PseudoClasses: 0000000040000000
       PropertyMask: 2
       BackgroundTexture: {fileID: 0}
       BackgroundColor:
@@ -829,11 +715,8 @@ MonoBehaviour:
     <Enabled>k__BackingField: 1
   - Title: Slider Thumb
     StyleRules:
-    - Selectors:
-      - HorizontalSliderThumb
-      - PreSliderThumb
-      - MinMaxHorizontalSliderThumb
-      PseudoStates: 0000000040000000
+    - ClassSelectors: []
+      PseudoClasses: 0000000040000000
       PropertyMask: 390
       BackgroundTexture: {fileID: 0}
       BackgroundColor:
@@ -867,11 +750,8 @@ MonoBehaviour:
         m_Right: 1
         m_Top: 1
         m_Bottom: 1
-    - Selectors:
-      - HorizontalSliderThumb
-      - PreSliderThumb
-      - MinMaxHorizontalSliderThumb
-      PseudoStates: 02000000
+    - ClassSelectors: []
+      PseudoClasses: 02000000
       PropertyMask: 2
       BackgroundTexture: {fileID: 0}
       BackgroundColor:
@@ -908,9 +788,8 @@ MonoBehaviour:
     <Enabled>k__BackingField: 1
   - Title: Slider Thumb Extent
     StyleRules:
-    - Selectors:
-      - HorizontalSliderThumbExtent
-      PseudoStates: 0100000004000000
+    - ClassSelectors: []
+      PseudoClasses: 0100000004000000
       PropertyMask: 2
       BackgroundTexture: {fileID: 0}
       BackgroundColor:
@@ -950,14 +829,8 @@ MonoBehaviour:
     <Enabled>k__BackingField: 0
   - Title: Background
     StyleRules:
-    - Selectors:
-      - Toolbar
-      - PreToolbar
-      - ToolbarBottom
-      - AnimPlayToolbar
-      - AnimClipToolbar
-      - TimeScrubber
-      PseudoStates: 00000000
+    - ClassSelectors: []
+      PseudoClasses: 00000000
       PropertyMask: 6
       BackgroundTexture: {fileID: 0}
       BackgroundColor:
@@ -994,20 +867,8 @@ MonoBehaviour:
     <Enabled>k__BackingField: 1
   - Title: Button / Dropdown / Popup
     StyleRules:
-    - Selectors:
-      - toolbarbutton
-      - ToolbarDropDown
-      - ToolbarDropDownToggle
-      - ToolbarDropDownToggleButton
-      - ToolbarPopup
-      - ToolbarPopupLeft
-      - toolbarbuttonRight
-      - ToolbarDropDownToggleRight
-      - ToolbarDropDownRight
-      - AnimClipToolbarPopup
-      - AnimClipToolbarButton
-      - ToolbarCreateAddNewDropDown
-      PseudoStates: 00000000
+    - ClassSelectors: []
+      PseudoClasses: 00000000
       PropertyMask: 6
       BackgroundTexture: {fileID: 0}
       BackgroundColor:
@@ -1041,20 +902,8 @@ MonoBehaviour:
         m_Right: 1
         m_Top: 1
         m_Bottom: 0
-    - Selectors:
-      - toolbarbutton
-      - ToolbarDropDown
-      - ToolbarDropDownToggle
-      - ToolbarDropDownToggleButton
-      - ToolbarPopup
-      - ToolbarPopupLeft
-      - toolbarbuttonRight
-      - ToolbarDropDownToggleRight
-      - ToolbarDropDownRight
-      - AnimClipToolbarPopup
-      - AnimClipToolbarButton
-      - ToolbarCreateAddNewDropDown
-      PseudoStates: 02000000
+    - ClassSelectors: []
+      PseudoClasses: 02000000
       PropertyMask: 2
       BackgroundTexture: {fileID: 0}
       BackgroundColor:
@@ -1088,20 +937,8 @@ MonoBehaviour:
         m_Right: 0
         m_Top: 0
         m_Bottom: 0
-    - Selectors:
-      - toolbarbutton
-      - ToolbarDropDown
-      - ToolbarDropDownToggle
-      - ToolbarDropDownToggleButton
-      - ToolbarPopup
-      - ToolbarPopupLeft
-      - toolbarbuttonRight
-      - ToolbarDropDownToggleRight
-      - ToolbarDropDownRight
-      - AnimClipToolbarPopup
-      - AnimClipToolbarButton
-      - ToolbarCreateAddNewDropDown
-      PseudoStates: 12000000
+    - ClassSelectors: []
+      PseudoClasses: 12000000
       PropertyMask: 2
       BackgroundTexture: {fileID: 0}
       BackgroundColor:
@@ -1135,19 +972,8 @@ MonoBehaviour:
         m_Right: 0
         m_Top: 0
         m_Bottom: 0
-    - Selectors:
-      - toolbarbutton
-      - ToolbarDropDown
-      - ToolbarDropDownToggle
-      - ToolbarDropDownToggleButton
-      - ToolbarPopup
-      - ToolbarPopupLeft
-      - toolbarbuttonRight
-      - ToolbarDropDownToggleRight
-      - ToolbarDropDownRight
-      - AnimClipToolbarPopup
-      - AnimClipToolbarButton
-      PseudoStates: 0100000010000000
+    - ClassSelectors: []
+      PseudoClasses: 0100000010000000
       PropertyMask: 6
       BackgroundTexture: {fileID: 0}
       BackgroundColor:
@@ -1184,9 +1010,8 @@ MonoBehaviour:
     <Enabled>k__BackingField: 1
   - Title: '[OVERRIDE: toolbarbuttonRight]'
     StyleRules:
-    - Selectors:
-      - toolbarbuttonRight
-      PseudoStates: 000000000100000010000000
+    - ClassSelectors: []
+      PseudoClasses: 000000000100000010000000
       PropertyMask: 256
       BackgroundTexture: {fileID: 0}
       BackgroundColor:
@@ -1223,15 +1048,8 @@ MonoBehaviour:
     <Enabled>k__BackingField: 1
   - Title: Text Search Field
     StyleRules:
-    - Selectors:
-      - ToolbarSeachTextField
-      - ToolbarSearchTextField
-      - ToolbarSeachTextFieldPopup
-      - ToolbarSearchTextFieldPopup
-      - ToolbarSearchTextFieldWithJump
-      - ToolbarSearchTextFieldWithJumpPopup
-      - SearchTextField
-      PseudoStates: 00000000
+    - ClassSelectors: []
+      PseudoClasses: 00000000
       PropertyMask: 142
       BackgroundTexture: {fileID: 0}
       BackgroundColor:
@@ -1265,15 +1083,8 @@ MonoBehaviour:
         m_Right: 0
         m_Top: 0
         m_Bottom: 0
-    - Selectors:
-      - ToolbarSeachTextField
-      - ToolbarSearchTextField
-      - ToolbarSeachTextFieldPopup
-      - ToolbarSearchTextFieldPopup
-      - ToolbarSearchTextFieldWithJump
-      - ToolbarSearchTextFieldWithJumpPopup
-      - SearchTextField
-      PseudoStates: 0200000004000000
+    - ClassSelectors: []
+      PseudoClasses: 0200000004000000
       PropertyMask: 12
       BackgroundTexture: {fileID: 0}
       BackgroundColor:
@@ -1307,15 +1118,8 @@ MonoBehaviour:
         m_Right: 0
         m_Top: 0
         m_Bottom: 0
-    - Selectors:
-      - ToolbarSeachTextField
-      - ToolbarSearchTextField
-      - ToolbarSeachTextFieldPopup
-      - ToolbarSearchTextFieldPopup
-      - ToolbarSearchTextFieldWithJump
-      - ToolbarSearchTextFieldWithJumpPopup
-      - SearchTextField
-      PseudoStates: 010000000200000006000000
+    - ClassSelectors: []
+      PseudoClasses: 010000000200000006000000
       PropertyMask: 268
       BackgroundTexture: {fileID: 0}
       BackgroundColor:
@@ -1352,9 +1156,8 @@ MonoBehaviour:
     <Enabled>k__BackingField: 1
   - Title: Text Search Field Button
     StyleRules:
-    - Selectors:
-      - ToolbarSearchTextFieldJumpButton
-      PseudoStates: 00000000
+    - ClassSelectors: []
+      PseudoClasses: 00000000
       PropertyMask: 134
       BackgroundTexture: {fileID: 0}
       BackgroundColor:
@@ -1388,9 +1191,8 @@ MonoBehaviour:
         m_Right: 0
         m_Top: 0
         m_Bottom: 0
-    - Selectors:
-      - ToolbarSearchTextFieldJumpButton
-      PseudoStates: 02000000
+    - ClassSelectors: []
+      PseudoClasses: 02000000
       PropertyMask: 2
       BackgroundTexture: {fileID: 0}
       BackgroundColor:
@@ -1424,9 +1226,8 @@ MonoBehaviour:
         m_Right: 0
         m_Top: 0
         m_Bottom: 0
-    - Selectors:
-      - ToolbarSearchTextFieldJumpButton
-      PseudoStates: 01000000
+    - ClassSelectors: []
+      PseudoClasses: 01000000
       PropertyMask: 6
       BackgroundTexture: {fileID: 0}
       BackgroundColor:
@@ -1466,21 +1267,8 @@ MonoBehaviour:
     <Enabled>k__BackingField: 0
   - Title: Button
     StyleRules:
-    - Selectors:
-      - Button
-      - minibutton
-      - AC-Button
-      - LargeButton
-      - AppCommand
-      - MiniToolbarButton
-      - RL-FooterButton
-      - ObjectFieldButton
-      - TimeScrubberButton
-      - DropDownButton
-      - DropDownToggleButton
-      - PreDropDown
-      - EditModeSingleButton
-      PseudoStates: 00000000
+    - ClassSelectors: []
+      PseudoClasses: 00000000
       PropertyMask: 166
       BackgroundTexture: {fileID: 0}
       BackgroundColor:
@@ -1514,21 +1302,8 @@ MonoBehaviour:
         m_Right: 0
         m_Top: 0
         m_Bottom: 0
-    - Selectors:
-      - Button
-      - minibutton
-      - AC-Button
-      - LargeButton
-      - AppCommand
-      - MiniToolbarButton
-      - RL-FooterButton
-      - ObjectFieldButton
-      - TimeScrubberButton
-      - DropDownButton
-      - DropDownToggleButton
-      - PreDropDown
-      - EditModeSingleButton
-      PseudoStates: 02000000
+    - ClassSelectors: []
+      PseudoClasses: 02000000
       PropertyMask: 2
       BackgroundTexture: {fileID: 0}
       BackgroundColor:
@@ -1562,21 +1337,8 @@ MonoBehaviour:
         m_Right: 1
         m_Top: 1
         m_Bottom: 1
-    - Selectors:
-      - Button
-      - minibutton
-      - AC-Button
-      - LargeButton
-      - AppCommand
-      - MiniToolbarButton
-      - RL-FooterButton
-      - ObjectFieldButton
-      - TimeScrubberButton
-      - DropDownButton
-      - DropDownToggleButton
-      - PreDropDown
-      - EditModeSingleButton
-      PseudoStates: 12000000
+    - ClassSelectors: []
+      PseudoClasses: 12000000
       PropertyMask: 2
       BackgroundTexture: {fileID: 0}
       BackgroundColor:
@@ -1610,21 +1372,8 @@ MonoBehaviour:
         m_Right: 0
         m_Top: 0
         m_Bottom: 0
-    - Selectors:
-      - Button
-      - minibutton
-      - AC-Button
-      - LargeButton
-      - AppCommand
-      - MiniToolbarButton
-      - RL-FooterButton
-      - ObjectFieldButton
-      - TimeScrubberButton
-      - DropDownButton
-      - DropDownToggleButton
-      - PreDropDown
-      - EditModeSingleButton
-      PseudoStates: 010000001000000011000000
+    - ClassSelectors: []
+      PseudoClasses: 010000001000000011000000
       PropertyMask: 46
       BackgroundTexture: {fileID: 0}
       BackgroundColor:
@@ -1661,9 +1410,8 @@ MonoBehaviour:
     <Enabled>k__BackingField: 1
   - Title: Color
     StyleRules:
-    - Selectors:
-      - ColorField
-      PseudoStates: 00000000
+    - ClassSelectors: []
+      PseudoClasses: 00000000
       PropertyMask: 132
       BackgroundTexture: {fileID: 0}
       BackgroundColor:
@@ -1697,9 +1445,8 @@ MonoBehaviour:
         m_Right: 0
         m_Top: 0
         m_Bottom: 0
-    - Selectors:
-      - ColorField
-      PseudoStates: 02000000
+    - ClassSelectors: []
+      PseudoClasses: 02000000
       PropertyMask: 4
       BackgroundTexture: {fileID: 0}
       BackgroundColor:
@@ -1733,9 +1480,8 @@ MonoBehaviour:
         m_Right: 0
         m_Top: 0
         m_Bottom: 0
-    - Selectors:
-      - ColorField
-      PseudoStates: 0400000006000000
+    - ClassSelectors: []
+      PseudoClasses: 0400000006000000
       PropertyMask: 260
       BackgroundTexture: {fileID: 0}
       BackgroundColor:
@@ -1772,9 +1518,8 @@ MonoBehaviour:
     <Enabled>k__BackingField: 1
   - Title: Gradient Field Box
     StyleRules:
-    - Selectors:
-      - ColorPickerBox
-      PseudoStates: 00000000
+    - ClassSelectors: []
+      PseudoClasses: 00000000
       PropertyMask: 4
       BackgroundTexture: {fileID: 0}
       BackgroundColor:
@@ -1811,9 +1556,8 @@ MonoBehaviour:
     <Enabled>k__BackingField: 1
   - Title: Multi-Column Header
     StyleRules:
-    - Selectors:
-      - MultiColumnTopBar
-      PseudoStates: 00000000
+    - ClassSelectors: []
+      PseudoClasses: 00000000
       PropertyMask: 390
       BackgroundTexture: {fileID: 0}
       BackgroundColor:
@@ -1850,10 +1594,8 @@ MonoBehaviour:
     <Enabled>k__BackingField: 1
   - Title: Label
     StyleRules:
-    - Selectors:
-      - ControlLabel
-      - ShurikenLabel
-      PseudoStates: 01000000
+    - ClassSelectors: []
+      PseudoClasses: 01000000
       PropertyMask: 512
       BackgroundTexture: {fileID: 0}
       BackgroundColor:
@@ -1887,10 +1629,8 @@ MonoBehaviour:
         m_Right: 0
         m_Top: 0
         m_Bottom: 0
-    - Selectors:
-      - ControlLabel
-      - ShurikenLabel
-      PseudoStates: 04000000
+    - ClassSelectors: []
+      PseudoClasses: 04000000
       PropertyMask: 512
       BackgroundTexture: {fileID: 0}
       BackgroundColor:
@@ -1927,11 +1667,8 @@ MonoBehaviour:
     <Enabled>k__BackingField: 1
   - Title: Popup
     StyleRules:
-    - Selectors:
-      - MiniPopup
-      - MiniPullDown
-      - ShurikenPopup
-      PseudoStates: 00000000
+    - ClassSelectors: []
+      PseudoClasses: 00000000
       PropertyMask: 166
       BackgroundTexture: {fileID: 0}
       BackgroundColor:
@@ -1965,11 +1702,8 @@ MonoBehaviour:
         m_Right: 0
         m_Top: 0
         m_Bottom: 0
-    - Selectors:
-      - MiniPopup
-      - MiniPullDown
-      - ShurikenPopup
-      PseudoStates: 02000000
+    - ClassSelectors: []
+      PseudoClasses: 02000000
       PropertyMask: 2
       BackgroundTexture: {fileID: 0}
       BackgroundColor:
@@ -2003,11 +1737,8 @@ MonoBehaviour:
         m_Right: 0
         m_Top: 0
         m_Bottom: 0
-    - Selectors:
-      - MiniPopup
-      - MiniPullDown
-      - ShurikenPopup
-      PseudoStates: 06000000
+    - ClassSelectors: []
+      PseudoClasses: 06000000
       PropertyMask: 294
       BackgroundTexture: {fileID: 0}
       BackgroundColor:
@@ -2044,10 +1775,8 @@ MonoBehaviour:
     <Enabled>k__BackingField: 1
   - Title: Toggle
     StyleRules:
-    - Selectors:
-      - Toggle
-      - ShurikenToggle
-      PseudoStates: 0000000040000000
+    - ClassSelectors: []
+      PseudoClasses: 0000000040000000
       PropertyMask: 1
       BackgroundTexture: {fileID: 2800000, guid: d7c6c018506563c4cb0b44e9163a5e49, type: 3}
       BackgroundColor:
@@ -2081,10 +1810,8 @@ MonoBehaviour:
         m_Right: 0
         m_Top: 0
         m_Bottom: 0
-    - Selectors:
-      - Toggle
-      - ShurikenToggle
-      PseudoStates: 0200000006000000
+    - ClassSelectors: []
+      PseudoClasses: 0200000006000000
       PropertyMask: 1
       BackgroundTexture: {fileID: 2800000, guid: 661b5c417be79694480d07fcb44b1a81, type: 3}
       BackgroundColor:
@@ -2118,10 +1845,8 @@ MonoBehaviour:
         m_Right: 0
         m_Top: 0
         m_Bottom: 0
-    - Selectors:
-      - Toggle
-      - ShurikenToggle
-      PseudoStates: 010000000400000005000000
+    - ClassSelectors: []
+      PseudoClasses: 010000000400000005000000
       PropertyMask: 1
       BackgroundTexture: {fileID: 2800000, guid: 3892f089aff2e3048a4d111ec525765d, type: 3}
       BackgroundColor:
@@ -2155,10 +1880,8 @@ MonoBehaviour:
         m_Right: 0
         m_Top: 0
         m_Bottom: 0
-    - Selectors:
-      - Toggle
-      - ShurikenToggle
-      PseudoStates: 1000000050000000
+    - ClassSelectors: []
+      PseudoClasses: 1000000050000000
       PropertyMask: 1
       BackgroundTexture: {fileID: 2800000, guid: 8de8ae56093e91c49ac04c78edaaaf24, type: 3}
       BackgroundColor:
@@ -2192,10 +1915,8 @@ MonoBehaviour:
         m_Right: 0
         m_Top: 0
         m_Bottom: 0
-    - Selectors:
-      - Toggle
-      - ShurikenToggle
-      PseudoStates: 1200000016000000
+    - ClassSelectors: []
+      PseudoClasses: 1200000016000000
       PropertyMask: 1
       BackgroundTexture: {fileID: 2800000, guid: dad293ec9d63c1b4da591e2fbbc29d1f, type: 3}
       BackgroundColor:
@@ -2229,10 +1950,8 @@ MonoBehaviour:
         m_Right: 0
         m_Top: 0
         m_Bottom: 0
-    - Selectors:
-      - Toggle
-      - ShurikenToggle
-      PseudoStates: 110000001400000015000000
+    - ClassSelectors: []
+      PseudoClasses: 110000001400000015000000
       PropertyMask: 1
       BackgroundTexture: {fileID: 2800000, guid: a2044d39f98d6e64cbb667f2258f3774, type: 3}
       BackgroundColor:
@@ -2269,9 +1988,8 @@ MonoBehaviour:
     <Enabled>k__BackingField: 1
   - Title: Toggle Mixed
     StyleRules:
-    - Selectors:
-      - ToggleMixed
-      PseudoStates: 00000000
+    - ClassSelectors: []
+      PseudoClasses: 00000000
       PropertyMask: 1
       BackgroundTexture: {fileID: 2800000, guid: f67313e976222064ba6cb42540b8ac12, type: 3}
       BackgroundColor:
@@ -2305,9 +2023,8 @@ MonoBehaviour:
         m_Right: 0
         m_Top: 0
         m_Bottom: 0
-    - Selectors:
-      - ToggleMixed
-      PseudoStates: 0200000006000000
+    - ClassSelectors: []
+      PseudoClasses: 0200000006000000
       PropertyMask: 1
       BackgroundTexture: {fileID: 2800000, guid: c629d9932346b614bbe59699e7ca1cb7, type: 3}
       BackgroundColor:
@@ -2341,9 +2058,8 @@ MonoBehaviour:
         m_Right: 0
         m_Top: 0
         m_Bottom: 0
-    - Selectors:
-      - ToggleMixed
-      PseudoStates: 010000000400000005000000
+    - ClassSelectors: []
+      PseudoClasses: 010000000400000005000000
       PropertyMask: 1
       BackgroundTexture: {fileID: 2800000, guid: c29864a8f63dc9845b82b64444f3ca61, type: 3}
       BackgroundColor:
@@ -2380,18 +2096,8 @@ MonoBehaviour:
     <Enabled>k__BackingField: 1
   - Title: Text / Object
     StyleRules:
-    - Selectors:
-      - TextField
-      - BoldTextField
-      - ToolbarTextField
-      - TextFieldDropDown
-      - TextFieldDropDownText
-      - ToolbarSliderTextField
-      - ShurikenValue
-      - ShurikenObjectField
-      - ObjectField
-      - AnimationSelectionTextField
-      PseudoStates: 00000000
+    - ClassSelectors: []
+      PseudoClasses: 00000000
       PropertyMask: 142
       BackgroundTexture: {fileID: 0}
       BackgroundColor:
@@ -2425,18 +2131,8 @@ MonoBehaviour:
         m_Right: 0
         m_Top: 0
         m_Bottom: 0
-    - Selectors:
-      - TextField
-      - BoldTextField
-      - ToolbarTextField
-      - TextFieldDropDown
-      - TextFieldDropDownText
-      - ToolbarSliderTextField
-      - ShurikenValue
-      - ShurikenObjectField
-      - ObjectField
-      - AnimationSelectionTextField
-      PseudoStates: 02000000
+    - ClassSelectors: []
+      PseudoClasses: 02000000
       PropertyMask: 300
       BackgroundTexture: {fileID: 0}
       BackgroundColor:
@@ -2470,18 +2166,8 @@ MonoBehaviour:
         m_Right: 1
         m_Top: 1
         m_Bottom: 1
-    - Selectors:
-      - TextField
-      - BoldTextField
-      - ToolbarTextField
-      - TextFieldDropDown
-      - TextFieldDropDownText
-      - ToolbarSliderTextField
-      - ShurikenValue
-      - ShurikenObjectField
-      - ObjectField
-      - AnimationSelectionTextField
-      PseudoStates: 0100000004000000050000000600000007000000
+    - ClassSelectors: []
+      PseudoClasses: 0100000004000000050000000600000007000000
       PropertyMask: 300
       BackgroundTexture: {fileID: 0}
       BackgroundColor:
@@ -2515,9 +2201,8 @@ MonoBehaviour:
         m_Right: 1
         m_Top: 1
         m_Bottom: 1
-    - Selectors:
-      - ObjectField
-      PseudoStates: 10000000
+    - ClassSelectors: []
+      PseudoClasses: 10000000
       PropertyMask: 2
       BackgroundTexture: {fileID: 0}
       BackgroundColor:
@@ -2557,9 +2242,8 @@ MonoBehaviour:
     <Enabled>k__BackingField: 0
   - Title: Element
     StyleRules:
-    - Selectors:
-      - RL-Element
-      PseudoStates: 11000000
+    - ClassSelectors: []
+      PseudoClasses: 11000000
       PropertyMask: 2
       BackgroundTexture: {fileID: 0}
       BackgroundColor:
@@ -2593,9 +2277,8 @@ MonoBehaviour:
         m_Right: 0
         m_Top: 0
         m_Bottom: 0
-    - Selectors:
-      - RL-Element
-      PseudoStates: 15000000
+    - ClassSelectors: []
+      PseudoClasses: 15000000
       PropertyMask: 2
       BackgroundTexture: {fileID: 0}
       BackgroundColor:
@@ -2632,9 +2315,8 @@ MonoBehaviour:
     <Enabled>k__BackingField: 1
   - Title: Header / Background
     StyleRules:
-    - Selectors:
-      - RL-Header
-      PseudoStates: 00000000
+    - ClassSelectors: []
+      PseudoClasses: 00000000
       PropertyMask: 134
       BackgroundTexture: {fileID: 0}
       BackgroundColor:
@@ -2668,10 +2350,8 @@ MonoBehaviour:
         m_Right: 0
         m_Top: 0
         m_Bottom: 0
-    - Selectors:
-      - RL-Background
-      - RL-Empty-Header
-      PseudoStates: 00000000
+    - ClassSelectors: []
+      PseudoClasses: 00000000
       PropertyMask: 134
       BackgroundTexture: {fileID: 0}
       BackgroundColor:
@@ -2708,9 +2388,8 @@ MonoBehaviour:
     <Enabled>k__BackingField: 1
   - Title: Footer
     StyleRules:
-    - Selectors:
-      - RL-Footer
-      PseudoStates: 00000000
+    - ClassSelectors: []
+      PseudoClasses: 00000000
       PropertyMask: 258
       BackgroundTexture: {fileID: 0}
       BackgroundColor:
@@ -2756,9 +2435,8 @@ MonoBehaviour:
     <Enabled>k__BackingField: 0
   - Title: Options Background
     StyleRules:
-    - Selectors:
-      - WhiteBackground
-      PseudoStates: 00000000
+    - ClassSelectors: []
+      PseudoClasses: 00000000
       PropertyMask: 2
       BackgroundTexture: {fileID: 0}
       BackgroundColor:
@@ -2795,9 +2473,8 @@ MonoBehaviour:
     <Enabled>k__BackingField: 1
   - Title: Scene Name Bar
     StyleRules:
-    - Selectors:
-      - SceneTopBarBg
-      PseudoStates: 00000000
+    - ClassSelectors: []
+      PseudoClasses: 00000000
       PropertyMask: 258
       BackgroundTexture: {fileID: 0}
       BackgroundColor:
@@ -2837,9 +2514,8 @@ MonoBehaviour:
     <Enabled>k__BackingField: 0
   - Title: Row
     StyleRules:
-    - Selectors:
-      - AnimationRowOdd
-      PseudoStates: 00000000
+    - ClassSelectors: []
+      PseudoClasses: 00000000
       PropertyMask: 2
       BackgroundTexture: {fileID: 0}
       BackgroundColor:
@@ -2873,9 +2549,8 @@ MonoBehaviour:
         m_Right: 0
         m_Top: 0
         m_Bottom: 0
-    - Selectors:
-      - AnimationRowEven
-      PseudoStates: 00000000
+    - ClassSelectors: []
+      PseudoClasses: 00000000
       PropertyMask: 2
       BackgroundTexture: {fileID: 0}
       BackgroundColor:
@@ -2912,9 +2587,8 @@ MonoBehaviour:
     <Enabled>k__BackingField: 1
   - Title: Separator
     StyleRules:
-    - Selectors:
-      - AnimLeftPaneSeparator
-      PseudoStates: 00000000
+    - ClassSelectors: []
+      PseudoClasses: 00000000
       PropertyMask: 2
       BackgroundTexture: {fileID: 0}
       BackgroundColor:
@@ -2951,9 +2625,8 @@ MonoBehaviour:
     <Enabled>k__BackingField: 1
   - Title: Transition
     StyleRules:
-    - Selectors:
-      - MeTransitionHead
-      PseudoStates: 00000000
+    - ClassSelectors: []
+      PseudoClasses: 00000000
       PropertyMask: 262
       BackgroundTexture: {fileID: 0}
       BackgroundColor:
@@ -2987,10 +2660,8 @@ MonoBehaviour:
         m_Right: 1
         m_Top: 1
         m_Bottom: 0
-    - Selectors:
-      - MeTransitionSelect
-      - MeTransitionSelectHead
-      PseudoStates: 00000000
+    - ClassSelectors: []
+      PseudoClasses: 00000000
       PropertyMask: 2
       BackgroundTexture: {fileID: 0}
       BackgroundColor:
@@ -3024,9 +2695,8 @@ MonoBehaviour:
         m_Right: 0
         m_Top: 1
         m_Bottom: 2
-    - Selectors:
-      - MeTransitionBack
-      PseudoStates: 00000000
+    - ClassSelectors: []
+      PseudoClasses: 00000000
       PropertyMask: 262
       BackgroundTexture: {fileID: 0}
       BackgroundColor:
@@ -3066,9 +2736,8 @@ MonoBehaviour:
     <Enabled>k__BackingField: 0
   - Title: Arrow Navigation
     StyleRules:
-    - Selectors:
-      - ArrowNavigationRight
-      PseudoStates: 00000000
+    - ClassSelectors: []
+      PseudoClasses: 00000000
       PropertyMask: 1
       BackgroundTexture: {fileID: 2800000, guid: cf61150663ab68f4a928109dd82f1107, type: 3}
       BackgroundColor:
@@ -3102,9 +2771,8 @@ MonoBehaviour:
         m_Right: 0
         m_Top: 0
         m_Bottom: 0
-    - Selectors:
-      - ArrowNavigationRight
-      PseudoStates: 02000000
+    - ClassSelectors: []
+      PseudoClasses: 02000000
       PropertyMask: 3
       BackgroundTexture: {fileID: 2800000, guid: 9a1ec0098a06e6c4e8ac2ea294f53bce, type: 3}
       BackgroundColor:
@@ -3141,9 +2809,8 @@ MonoBehaviour:
     <Enabled>k__BackingField: 1
   - Title: Exposable Popup Menu
     StyleRules:
-    - Selectors:
-      - ExposablePopupMenu
-      PseudoStates: 00000000
+    - ClassSelectors: []
+      PseudoClasses: 00000000
       PropertyMask: 130
       BackgroundTexture: {fileID: 0}
       BackgroundColor:
@@ -3177,9 +2844,8 @@ MonoBehaviour:
         m_Right: 0
         m_Top: 0
         m_Bottom: 0
-    - Selectors:
-      - ExposablePopupMenu
-      PseudoStates: 02000000
+    - ClassSelectors: []
+      PseudoClasses: 02000000
       PropertyMask: 2
       BackgroundTexture: {fileID: 0}
       BackgroundColor:
@@ -3216,9 +2882,8 @@ MonoBehaviour:
     <Enabled>k__BackingField: 1
   - Title: Exposable Popup Item
     StyleRules:
-    - Selectors:
-      - ExposablePopupItem
-      PseudoStates: 02000000
+    - ClassSelectors: []
+      PseudoClasses: 02000000
       PropertyMask: 130
       BackgroundTexture: {fileID: 0}
       BackgroundColor:
@@ -3252,9 +2917,8 @@ MonoBehaviour:
         m_Right: 0
         m_Top: 0
         m_Bottom: 0
-    - Selectors:
-      - ExposablePopupItem
-      PseudoStates: 0100000010000000
+    - ClassSelectors: []
+      PseudoClasses: 0100000010000000
       PropertyMask: 130
       BackgroundTexture: {fileID: 0}
       BackgroundColor:
@@ -3291,9 +2955,8 @@ MonoBehaviour:
     <Enabled>k__BackingField: 1
   - Title: Rename Field
     StyleRules:
-    - Selectors:
-      - OL-MiniRenameField
-      PseudoStates: 00000000
+    - ClassSelectors: []
+      PseudoClasses: 00000000
       PropertyMask: 2
       BackgroundTexture: {fileID: 0}
       BackgroundColor:
@@ -3330,10 +2993,8 @@ MonoBehaviour:
     <Enabled>k__BackingField: 1
   - Title: Top / Bottom Bar
     StyleRules:
-    - Selectors:
-      - ProjectBrowserTopBarBg
-      - ProjectBrowserBottomBarBg
-      PseudoStates: 00000000
+    - ClassSelectors: []
+      PseudoClasses: 00000000
       PropertyMask: 6
       BackgroundTexture: {fileID: 0}
       BackgroundColor:
@@ -3370,9 +3031,8 @@ MonoBehaviour:
     <Enabled>k__BackingField: 1
   - Title: Grid View Item Label Background
     StyleRules:
-    - Selectors:
-      - ProjectBrowserGridLabel
-      PseudoStates: 1000000014000000
+    - ClassSelectors: []
+      PseudoClasses: 1000000014000000
       PropertyMask: 390
       BackgroundTexture: {fileID: 0}
       BackgroundColor:
@@ -3409,9 +3069,8 @@ MonoBehaviour:
     <Enabled>k__BackingField: 1
   - Title: OL Result Label
     StyleRules:
-    - Selectors:
-      - OL-ResultLabel
-      PseudoStates: 14000000
+    - ClassSelectors: []
+      PseudoClasses: 14000000
       PropertyMask: 2
       BackgroundTexture: {fileID: 0}
       BackgroundColor:
@@ -3445,9 +3104,8 @@ MonoBehaviour:
         m_Right: 0
         m_Top: 0
         m_Bottom: 0
-    - Selectors:
-      - OL-ResultLabel
-      PseudoStates: 10000000
+    - ClassSelectors: []
+      PseudoClasses: 10000000
       PropertyMask: 2
       BackgroundTexture: {fileID: 0}
       BackgroundColor:
@@ -3484,11 +3142,8 @@ MonoBehaviour:
     <Enabled>k__BackingField: 1
   - Title: Ping
     StyleRules:
-    - Selectors:
-      - TV-Ping
-      - OL-Ping
-      - OL-MiniPing
-      PseudoStates: 00000000
+    - ClassSelectors: []
+      PseudoClasses: 00000000
       PropertyMask: 390
       BackgroundTexture: {fileID: 0}
       BackgroundColor:
@@ -3528,9 +3183,8 @@ MonoBehaviour:
     <Enabled>k__BackingField: 0
   - Title: Log Icon
     StyleRules:
-    - Selectors:
-      - CN-EntryInfoIcon
-      PseudoStates: 00000000
+    - ClassSelectors: []
+      PseudoClasses: 00000000
       PropertyMask: 1
       BackgroundTexture: {fileID: 2800000, guid: 4d13a0e2a8d9b49498f79f69598df8c8, type: 3}
       BackgroundColor:
@@ -3564,9 +3218,8 @@ MonoBehaviour:
         m_Right: 0
         m_Top: 0
         m_Bottom: 0
-    - Selectors:
-      - CN-EntryWarnIcon
-      PseudoStates: 00000000
+    - ClassSelectors: []
+      PseudoClasses: 00000000
       PropertyMask: 1
       BackgroundTexture: {fileID: 2800000, guid: 12acef22c60bb5f4cba537c49601bc3b, type: 3}
       BackgroundColor:
@@ -3600,9 +3253,8 @@ MonoBehaviour:
         m_Right: 0
         m_Top: 0
         m_Bottom: 0
-    - Selectors:
-      - CN-EntryErrorIcon
-      PseudoStates: 00000000
+    - ClassSelectors: []
+      PseudoClasses: 00000000
       PropertyMask: 1
       BackgroundTexture: {fileID: 2800000, guid: 8c210f13b049c6e47a29732fa97dda78, type: 3}
       BackgroundColor:
@@ -3639,9 +3291,8 @@ MonoBehaviour:
     <Enabled>k__BackingField: 1
   - Title: Log Stack
     StyleRules:
-    - Selectors:
-      - CN-EntryBackOdd
-      PseudoStates: 00000000
+    - ClassSelectors: []
+      PseudoClasses: 00000000
       PropertyMask: 2
       BackgroundTexture: {fileID: 0}
       BackgroundColor:
@@ -3675,9 +3326,8 @@ MonoBehaviour:
         m_Right: 0
         m_Top: 0
         m_Bottom: 0
-    - Selectors:
-      - CN-EntryBackEven
-      PseudoStates: 00000000
+    - ClassSelectors: []
+      PseudoClasses: 00000000
       PropertyMask: 2
       BackgroundTexture: {fileID: 0}
       BackgroundColor:
@@ -3711,10 +3361,8 @@ MonoBehaviour:
         m_Right: 0
         m_Top: 0
         m_Bottom: 0
-    - Selectors:
-      - CN-EntryBackEven
-      - CN-EntryBackOdd
-      PseudoStates: 10000000
+    - ClassSelectors: []
+      PseudoClasses: 10000000
       PropertyMask: 2
       BackgroundTexture: {fileID: 0}
       BackgroundColor:
@@ -3751,9 +3399,8 @@ MonoBehaviour:
     <Enabled>k__BackingField: 1
   - Title: Log Counter (On Collapse)
     StyleRules:
-    - Selectors:
-      - CN-CountBadge
-      PseudoStates: 00000000
+    - ClassSelectors: []
+      PseudoClasses: 00000000
       PropertyMask: 130
       BackgroundTexture: {fileID: 0}
       BackgroundColor:
@@ -3793,9 +3440,8 @@ MonoBehaviour:
     <Enabled>k__BackingField: 0
   - Title: Stats Window
     StyleRules:
-    - Selectors:
-      - Window
-      PseudoStates: 00000000
+    - ClassSelectors: []
+      PseudoClasses: 00000000
       PropertyMask: 390
       BackgroundTexture: {fileID: 0}
       BackgroundColor:
@@ -3835,9 +3481,8 @@ MonoBehaviour:
     <Enabled>k__BackingField: 0
   - Title: Big Title
     StyleRules:
-    - Selectors:
-      - IN-BigTitle
-      PseudoStates: 00000000
+    - ClassSelectors: []
+      PseudoClasses: 00000000
       PropertyMask: 6
       BackgroundTexture: {fileID: 0}
       BackgroundColor:
@@ -3874,9 +3519,8 @@ MonoBehaviour:
     <Enabled>k__BackingField: 1
   - Title: Footer
     StyleRules:
-    - Selectors:
-      - IN-Footer
-      PseudoStates: 00000000
+    - ClassSelectors: []
+      PseudoClasses: 00000000
       PropertyMask: 6
       BackgroundTexture: {fileID: 0}
       BackgroundColor:
@@ -3913,9 +3557,8 @@ MonoBehaviour:
     <Enabled>k__BackingField: 1
   - Title: Title
     StyleRules:
-    - Selectors:
-      - IN-Title
-      PseudoStates: 0000000010000000
+    - ClassSelectors: []
+      PseudoClasses: 0000000010000000
       PropertyMask: 262
       BackgroundTexture: {fileID: 0}
       BackgroundColor:
@@ -3949,9 +3592,8 @@ MonoBehaviour:
         m_Right: 0
         m_Top: 1
         m_Bottom: 0
-    - Selectors:
-      - IN-Title
-      PseudoStates: 020000001200000016000000
+    - ClassSelectors: []
+      PseudoClasses: 020000001200000016000000
       PropertyMask: 2
       BackgroundTexture: {fileID: 0}
       BackgroundColor:
@@ -3985,9 +3627,8 @@ MonoBehaviour:
         m_Right: 0
         m_Top: 0
         m_Bottom: 0
-    - Selectors:
-      - IN-Title
-      PseudoStates: 01000000
+    - ClassSelectors: []
+      PseudoClasses: 01000000
       PropertyMask: 2
       BackgroundTexture: {fileID: 0}
       BackgroundColor:
@@ -4024,9 +3665,8 @@ MonoBehaviour:
     <Enabled>k__BackingField: 1
   - Title: Title Text
     StyleRules:
-    - Selectors:
-      - IN-TitleText
-      PseudoStates: 0000000004000000
+    - ClassSelectors: []
+      PseudoClasses: 0000000004000000
       PropertyMask: 512
       BackgroundTexture: {fileID: 0}
       BackgroundColor:
@@ -4063,9 +3703,8 @@ MonoBehaviour:
     <Enabled>k__BackingField: 1
   - Title: Insertion Marker
     StyleRules:
-    - Selectors:
-      - InsertionMarker
-      PseudoStates: 00000000
+    - ClassSelectors: []
+      PseudoClasses: 00000000
       PropertyMask: 2
       BackgroundTexture: {fileID: 0}
       BackgroundColor:
@@ -4105,9 +3744,8 @@ MonoBehaviour:
     <Enabled>k__BackingField: 0
   - Title: Drag Selection
     StyleRules:
-    - Selectors:
-      - SelectionRect
-      PseudoStates: 00000000
+    - ClassSelectors: []
+      PseudoClasses: 00000000
       PropertyMask: 390
       BackgroundTexture: {fileID: 0}
       BackgroundColor:
@@ -4150,9 +3788,8 @@ MonoBehaviour:
     <Enabled>k__BackingField: 0
   - Title: Background
     StyleRules:
-    - Selectors:
-      - AppToolbar
-      PseudoStates: 00000000
+    - ClassSelectors: []
+      PseudoClasses: 00000000
       PropertyMask: 2
       BackgroundTexture: {fileID: 0}
       BackgroundColor:
@@ -4186,11 +3823,8 @@ MonoBehaviour:
         m_Right: 0
         m_Top: 0
         m_Bottom: 4
-    - Selectors:
-      - ScrollView
-      - ScrollViewAlt
-      - TabWindowBackground
-      PseudoStates: 00000000
+    - ClassSelectors: []
+      PseudoClasses: 00000000
       PropertyMask: 258
       BackgroundTexture: {fileID: 0}
       BackgroundColor:
@@ -4227,9 +3861,8 @@ MonoBehaviour:
     <Enabled>k__BackingField: 1
   - Title: Dock
     StyleRules:
-    - Selectors:
-      - dockarea
-      PseudoStates: 00000000
+    - ClassSelectors: []
+      PseudoClasses: 00000000
       PropertyMask: 2
       BackgroundTexture: {fileID: 0}
       BackgroundColor:
@@ -4263,9 +3896,8 @@ MonoBehaviour:
         m_Right: 0
         m_Top: 0
         m_Bottom: 0
-    - Selectors:
-      - dockHeader
-      PseudoStates: 00000000
+    - ClassSelectors: []
+      PseudoClasses: 00000000
       PropertyMask: 130
       BackgroundTexture: {fileID: 0}
       BackgroundColor:
@@ -4305,10 +3937,8 @@ MonoBehaviour:
     <Enabled>k__BackingField: 0
   - Title: Background
     StyleRules:
-    - Selectors:
-      - dragtab
-      - dragtab-first
-      PseudoStates: 00000000
+    - ClassSelectors: []
+      PseudoClasses: 00000000
       PropertyMask: 130
       BackgroundTexture: {fileID: 0}
       BackgroundColor:
@@ -4342,10 +3972,8 @@ MonoBehaviour:
         m_Right: 0
         m_Top: 0
         m_Bottom: 2
-    - Selectors:
-      - dragtab
-      - dragtab-first
-      PseudoStates: 02000000
+    - ClassSelectors: []
+      PseudoClasses: 02000000
       PropertyMask: 262
       BackgroundTexture: {fileID: 0}
       BackgroundColor:
@@ -4379,10 +4007,8 @@ MonoBehaviour:
         m_Right: 0
         m_Top: 0
         m_Bottom: 2
-    - Selectors:
-      - dragtab
-      - dragtab-first
-      PseudoStates: 0100000010000000
+    - ClassSelectors: []
+      PseudoClasses: 0100000010000000
       PropertyMask: 10
       BackgroundTexture: {fileID: 0}
       BackgroundColor:
@@ -4419,10 +4045,8 @@ MonoBehaviour:
     <Enabled>k__BackingField: 1
   - Title: Scroller
     StyleRules:
-    - Selectors:
-      - dragtab-scroller-next
-      - dragtab-scroller-prev
-      PseudoStates: 00000000
+    - ClassSelectors: []
+      PseudoClasses: 00000000
       PropertyMask: 386
       BackgroundTexture: {fileID: 0}
       BackgroundColor:
@@ -4456,10 +4080,8 @@ MonoBehaviour:
         m_Right: 0
         m_Top: 0
         m_Bottom: 0
-    - Selectors:
-      - dragtab-scroller-next
-      - dragtab-scroller-prev
-      PseudoStates: 02000000
+    - ClassSelectors: []
+      PseudoClasses: 02000000
       PropertyMask: 2
       BackgroundTexture: {fileID: 0}
       BackgroundColor:
@@ -4499,9 +4121,8 @@ MonoBehaviour:
     <Enabled>k__BackingField: 0
   - Title: Icon Buttons
     StyleRules:
-    - Selectors:
-      - StatusBarIcon
-      PseudoStates: 00000000
+    - ClassSelectors: []
+      PseudoClasses: 00000000
       PropertyMask: 258
       BackgroundTexture: {fileID: 0}
       BackgroundColor:
@@ -4535,9 +4156,8 @@ MonoBehaviour:
         m_Right: 0
         m_Top: 0
         m_Bottom: 0
-    - Selectors:
-      - StatusBarIcon
-      PseudoStates: 02000000
+    - ClassSelectors: []
+      PseudoClasses: 02000000
       PropertyMask: 2
       BackgroundTexture: {fileID: 0}
       BackgroundColor:
@@ -4571,9 +4191,8 @@ MonoBehaviour:
         m_Right: 0
         m_Top: 0
         m_Bottom: 0
-    - Selectors:
-      - StatusBarIcon
-      PseudoStates: 01000000
+    - ClassSelectors: []
+      PseudoClasses: 01000000
       PropertyMask: 2
       BackgroundTexture: {fileID: 0}
       BackgroundColor:
@@ -4613,9 +4232,8 @@ MonoBehaviour:
     <Enabled>k__BackingField: 0
   - Title: Line
     StyleRules:
-    - Selectors:
-      - TV-Line
-      PseudoStates: 02000000
+    - ClassSelectors: []
+      PseudoClasses: 02000000
       PropertyMask: 262
       BackgroundTexture: {fileID: 0}
       BackgroundColor:
@@ -4652,9 +4270,8 @@ MonoBehaviour:
     <Enabled>k__BackingField: 1
   - Title: Selection
     StyleRules:
-    - Selectors:
-      - TV-Selection
-      PseudoStates: 00000000
+    - ClassSelectors: []
+      PseudoClasses: 00000000
       PropertyMask: 2
       BackgroundTexture: {fileID: 0}
       BackgroundColor:
@@ -4688,9 +4305,8 @@ MonoBehaviour:
         m_Right: 0
         m_Top: 0
         m_Bottom: 0
-    - Selectors:
-      - TV-Selection
-      PseudoStates: 14000000
+    - ClassSelectors: []
+      PseudoClasses: 14000000
       PropertyMask: 2
       BackgroundTexture: {fileID: 0}
       BackgroundColor:
@@ -4733,9 +4349,8 @@ MonoBehaviour:
     <Enabled>k__BackingField: 0
   - Title: Background
     StyleRules:
-    - Selectors:
-      - ShurikenModuleBg
-      PseudoStates: 00000000
+    - ClassSelectors: []
+      PseudoClasses: 00000000
       PropertyMask: 390
       BackgroundTexture: {fileID: 0}
       BackgroundColor:
@@ -4772,9 +4387,8 @@ MonoBehaviour:
     <Enabled>k__BackingField: 1
   - Title: Emitter Title
     StyleRules:
-    - Selectors:
-      - ShurikenEmitterTitle
-      PseudoStates: 00000000
+    - ClassSelectors: []
+      PseudoClasses: 00000000
       PropertyMask: 262
       BackgroundTexture: {fileID: 0}
       BackgroundColor:
@@ -4811,9 +4425,8 @@ MonoBehaviour:
     <Enabled>k__BackingField: 1
   - Title: Module Title
     StyleRules:
-    - Selectors:
-      - ShurikenModuleTitle
-      PseudoStates: 0000000010000000
+    - ClassSelectors: []
+      PseudoClasses: 0000000010000000
       PropertyMask: 390
       BackgroundTexture: {fileID: 0}
       BackgroundColor:
@@ -4847,9 +4460,8 @@ MonoBehaviour:
         m_Right: 1
         m_Top: 1
         m_Bottom: 1
-    - Selectors:
-      - ShurikenModuleTitle
-      PseudoStates: 01000000
+    - ClassSelectors: []
+      PseudoClasses: 01000000
       PropertyMask: 2
       BackgroundTexture: {fileID: 0}
       BackgroundColor:

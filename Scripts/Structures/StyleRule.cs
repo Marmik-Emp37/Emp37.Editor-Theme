@@ -10,65 +10,78 @@ namespace Emp37.ET
       [Serializable]
       public struct StyleRule
       {
-            public string[] Selectors;
-            public PseudoStates[] PseudoStates;
-            public Properties PropertyMask;
+            public string[] ClassSelectors;
+            public PseudoClasses[] PseudoClasses;
+            public USSProperties PropertyMask;
 
             public Texture2D BackgroundTexture;
             public Color32 BackgroundColor, BorderColor, BorderTopColor, BorderRightColor, BorderBottomColor, BorderLeftColor, TextColor;
             public RectOffset BorderRadius, BorderWidth;
 
-            public static (Properties Property, string Name)[] PropertiesMap =
+            public static (USSProperties Property, string Name)[] PropertyMap =
             {
-                  (Properties.BackgroundImage, nameof(BackgroundTexture)),
-                  (Properties.BackgroundColor, nameof(BackgroundColor)),
-                  (Properties.BorderColor, nameof(BorderColor)),
-                  (Properties.BorderTopColor, nameof(BorderTopColor)),
-                  (Properties.BorderRightColor, nameof(BorderRightColor)),
-                  (Properties.BorderBottomColor, nameof(BorderBottomColor)),
-                  (Properties.BorderLeftColor, nameof(BorderLeftColor)),
-                  (Properties.Color, nameof(TextColor)),
-                  (Properties.BorderRadius, nameof(BorderRadius)),
-                  (Properties.BorderWidth, nameof(BorderWidth))
+                  (USSProperties.BackgroundImage, nameof(BackgroundTexture)),
+                  (USSProperties.BackgroundColor, nameof(BackgroundColor)),
+                  (USSProperties.BorderColor, nameof(BorderColor)),
+                  (USSProperties.BorderTopColor, nameof(BorderTopColor)),
+                  (USSProperties.BorderRightColor, nameof(BorderRightColor)),
+                  (USSProperties.BorderBottomColor, nameof(BorderBottomColor)),
+                  (USSProperties.BorderLeftColor, nameof(BorderLeftColor)),
+                  (USSProperties.Color, nameof(TextColor)),
+                  (USSProperties.BorderRadius, nameof(BorderRadius)),
+                  (USSProperties.BorderWidth, nameof(BorderWidth))
             };
 
-public override readonly string ToString()
+            public readonly override string ToString()
             {
-                  StyleRule rule = this;
+                  IEnumerable<string> selectors = ConstructSelectors();
+                  if (!selectors.Any())
+                  {
+                        return null;
+                  }
+                  IEnumerable<string> properties = ConstructPropertyBlock();
+                  if (!properties.Any())
+                  {
+                        return null;
+                  }
+                  return $"{string.Join(",\n", selectors)} {{\n{string.Join('\n', properties)}\n}}";
+            }
 
-                  IEnumerable<string> classes =
-                        from selector in rule.Selectors
-                        where !string.IsNullOrWhiteSpace(selector)
-                        from stateMask in rule.PseudoStates
-                        let pseudoChain = stateMask is 0 ? null : $":{string.Join(':', stateMask.ToString().Split(',').Select(value => value.Trim().ToLower()))}"
-                        select $".{selector}{pseudoChain}";
-
-                  if (!classes.Any()) return null;
-
-                  IEnumerable<string> properties =
-                        from item in PropertiesMap
-                        where rule.PropertyMask.HasFlag(item.Property)
-                        let propertyName = Regex.Replace(item.Property.ToString(), "(?<!^)([A-Z])", "-$1").ToLower()
-                        let expression = item.Property switch
+            private readonly IEnumerable<string> ConstructSelectors()
+            {
+                  foreach (string classType in ClassSelectors)
+                  {
+                        if (string.IsNullOrWhiteSpace(classType)) continue;
+                        foreach (PseudoClasses pseudoClass in PseudoClasses)
                         {
-                              Properties.BackgroundImage => USSTools.Format(rule.BackgroundTexture),
-                              Properties.BackgroundColor => USSTools.Format(rule.BackgroundColor),
-                              Properties.BorderColor => USSTools.Format(rule.BorderColor),
-                              Properties.BorderTopColor => USSTools.Format(rule.BorderTopColor),
-                              Properties.BorderRightColor => USSTools.Format(rule.BorderRightColor),
-                              Properties.BorderBottomColor => USSTools.Format(rule.BorderBottomColor),
-                              Properties.BorderLeftColor => USSTools.Format(rule.BorderLeftColor),
-                              Properties.BorderRadius => USSTools.Format(rule.BorderRadius),
-                              Properties.BorderWidth => USSTools.Format(rule.BorderWidth),
-                              Properties.Color => USSTools.Format(rule.TextColor),
-                              _ => null,
+                              string chain = pseudoClass == 0 ? string.Empty : ':' + pseudoClass.ToString().Replace(", ", ":").ToLower();
+                              yield return $".{classType}{chain}";
                         }
-                        where expression != null
-                        select $"\t{propertyName}: {expression};";
-
-                  if (!properties.Any()) return null;
-
-                  return $"{string.Join(",\n", classes)} {{\n{string.Join('\n', properties)}\n}}";
+                  }
+            }
+            private readonly IEnumerable<string> ConstructPropertyBlock()
+            {
+                  foreach ((USSProperties property, _) in PropertyMap)
+                  {
+                        if (!PropertyMask.HasFlag(property)) continue;
+                        string expression = property switch
+                        {
+                              USSProperties.BackgroundImage => USSTools.Format(BackgroundTexture),
+                              USSProperties.BackgroundColor => USSTools.Format(BackgroundColor),
+                              USSProperties.BorderColor => USSTools.Format(BorderColor),
+                              USSProperties.BorderTopColor => USSTools.Format(BorderTopColor),
+                              USSProperties.BorderRightColor => USSTools.Format(BorderRightColor),
+                              USSProperties.BorderBottomColor => USSTools.Format(BorderBottomColor),
+                              USSProperties.BorderLeftColor => USSTools.Format(BorderLeftColor),
+                              USSProperties.BorderRadius => USSTools.Format(BorderRadius),
+                              USSProperties.BorderWidth => USSTools.Format(BorderWidth),
+                              USSProperties.Color => USSTools.Format(TextColor),
+                              _ => null
+                        };
+                        if (string.IsNullOrEmpty(expression)) continue;
+                        string name = Regex.Replace(property.ToString(), "(?<!^)([A-Z])", "-$1").ToLower();
+                        yield return $"\t{name}: {expression};";
+                  }
             }
       }
 }
