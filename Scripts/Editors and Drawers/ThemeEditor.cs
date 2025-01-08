@@ -70,7 +70,7 @@ namespace Emp37.ET
             private void ExpandProperties(bool expand)
             {
                   SerializedProperty iterator = serializedObject.GetIterator();
-                  while (iterator.NextVisible(true) && iterator.depth < 4) iterator.isExpanded = expand;
+                  while (iterator.NextVisible(true)) if (iterator.depth < 4) iterator.isExpanded = expand;
             }
             private bool ShouldSwitchSkin(Theme.Type themeType) => (themeType == Theme.Type.Dark) ^ EditorGUIUtility.isProSkin;
       }

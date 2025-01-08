@@ -36,7 +36,7 @@ namespace Emp37.ET
                               SerializedProperty propertyMask = property.FindPropertyRelative(p_PropertyMask);
 
                               position.height = 24;
-                              EditorGUI.DrawRect(position, ETHelpers.ThemeTint);
+                              EditorGUI.DrawRect(position, ETHelpers.ThemeAccent);
                               EditorGUI.LabelField(position, propertyMask.displayName, ETStyles.centeredLabel);
                               position.y += position.height + standardVerticalSpacing;
 
