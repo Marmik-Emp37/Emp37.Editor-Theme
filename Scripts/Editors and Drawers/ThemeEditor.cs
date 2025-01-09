@@ -1,9 +1,4 @@
-using System.IO;
-
 using UnityEditor;
-using UnityEditor.Compilation;
-
-using UnityEditorInternal;
 
 using UnityEngine;
 
@@ -12,10 +7,7 @@ namespace Emp37.ET
       [CustomEditor(typeof(Theme), true)]
       internal class ThemeEditor : Editor
       {
-            public const string DIRECTORY = "Assets/Editor/StyleSheets/Extensions";
-            public const string FILE_EXTENSION = ".uss";
-
-            private const float height_ApplyButton = 42F;
+            private const float ButtonHeight = 42F;
 
 
             public override void OnInspectorGUI()
@@ -23,36 +15,13 @@ namespace Emp37.ET
                   base.OnInspectorGUI();
 
                   GUILayout.Space(10F);
-                  if (GUILayout.Button("Apply Theme", GUILayout.Height(height_ApplyButton)))
+                  if (GUILayout.Button("Apply Theme", GUILayout.Height(ButtonHeight)))
                   {
-                        ApplyTheme();
+                        (target as Theme).WriteTheme();
                   }
                   DrawExpandCollapseButtons();
             }
 
-            private void ApplyTheme()
-            {
-                  Theme target = base.target as Theme;
-
-                  if (!Directory.Exists(DIRECTORY)) Directory.CreateDirectory(DIRECTORY);
-
-                  string path = Path.Combine(DIRECTORY, target.ThemeType + FILE_EXTENSION);
-                  File.WriteAllText(path, target.ToString());
-                  AssetDatabase.Refresh();
-
-                  if (ShouldSwitchSkin(target.ThemeType))
-                  {
-                        InternalEditorUtility.SwitchSkinAndRepaintAllViews();
-                  }
-                  else
-                  {
-                        InternalEditorUtility.RepaintAllViews();
-                        if (!target.InstantApply)
-                        {
-                              CompilationPipeline.RequestScriptCompilation();
-                        }
-                  }
-            }
             private void DrawExpandCollapseButtons()
             {
                   using (new EditorGUILayout.HorizontalScope())
@@ -72,6 +41,5 @@ namespace Emp37.ET
                   SerializedProperty iterator = serializedObject.GetIterator();
                   while (iterator.NextVisible(true)) if (iterator.depth < 4) iterator.isExpanded = expand;
             }
-            private bool ShouldSwitchSkin(Theme.Type themeType) => (themeType == Theme.Type.Dark) ^ EditorGUIUtility.isProSkin;
       }
 }
