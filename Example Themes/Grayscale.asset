@@ -14,7 +14,45 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   StyleRuleGroups:
   - Title: --- [ G U I ] ---
-    StyleRules: []
+    StyleRules:
+    - ClassSelectors:
+      - 
+      PseudoClasses: 00000000
+      PropertyMask: 0
+      BackgroundTexture: {fileID: 0}
+      BackgroundColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderTopColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRightColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderBottomColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderLeftColor:
+        serializedVersion: 2
+        rgba: 0
+      TextColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRadius:
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
+      BorderWidth:
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
     <Enabled>k__BackingField: 0
   - Title: Box
     StyleRules:
@@ -46,15 +84,17 @@ MonoBehaviour:
         serializedVersion: 2
         rgba: 0
       BorderRadius:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
       BorderWidth:
-        m_Left: 1
-        m_Right: 1
-        m_Top: 1
-        m_Bottom: 1
+        Top: 1
+        Right: 1
+        Bottom: 1
+        Left: 1
+        UnitType: 0
     - ClassSelectors:
       - Box
       PseudoClasses: 00000000
@@ -82,15 +122,17 @@ MonoBehaviour:
         serializedVersion: 2
         rgba: 0
       BorderRadius:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
       BorderWidth:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 1
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
     - ClassSelectors:
       - CN-Box
       PseudoClasses: 00000000
@@ -118,15 +160,17 @@ MonoBehaviour:
         serializedVersion: 2
         rgba: 0
       BorderRadius:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
       BorderWidth:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 1
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
     <Enabled>k__BackingField: 1
   - Title: Foldout Header
     StyleRules:
@@ -157,15 +201,17 @@ MonoBehaviour:
         serializedVersion: 2
         rgba: 4291611852
       BorderRadius:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
       BorderWidth:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
     - ClassSelectors:
       - FoldoutHeader
       PseudoClasses: 020000001200000006000000
@@ -193,15 +239,17 @@ MonoBehaviour:
         serializedVersion: 2
         rgba: 0
       BorderRadius:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
       BorderWidth:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
     - ClassSelectors:
       - FoldoutHeader
       PseudoClasses: 0100000005000000
@@ -229,15 +277,17 @@ MonoBehaviour:
         serializedVersion: 2
         rgba: 0
       BorderRadius:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
       BorderWidth:
-        m_Left: 1
-        m_Right: 1
-        m_Top: 1
-        m_Bottom: 1
+        Top: 1
+        Right: 1
+        Bottom: 1
+        Left: 1
+        UnitType: 0
     <Enabled>k__BackingField: 1
   - Title: Prefab Label
     StyleRules:
@@ -268,15 +318,17 @@ MonoBehaviour:
         serializedVersion: 2
         rgba: 4294967295
       BorderRadius:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
       BorderWidth:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
     <Enabled>k__BackingField: 1
   - Title: Button Group
     StyleRules:
@@ -325,15 +377,17 @@ MonoBehaviour:
         serializedVersion: 2
         rgba: 0
       BorderRadius:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
       BorderWidth:
-        m_Left: 1
-        m_Right: 1
-        m_Top: 1
-        m_Bottom: 1
+        Top: 1
+        Right: 1
+        Bottom: 1
+        Left: 1
+        UnitType: 0
     - ClassSelectors:
       - Tab-first
       - Tab-middle
@@ -379,15 +433,17 @@ MonoBehaviour:
         serializedVersion: 2
         rgba: 0
       BorderRadius:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
       BorderWidth:
-        m_Left: 1
-        m_Right: 1
-        m_Top: 1
-        m_Bottom: 1
+        Top: 1
+        Right: 1
+        Bottom: 1
+        Left: 1
+        UnitType: 0
     - ClassSelectors:
       - Tab-first
       - Tab-middle
@@ -433,15 +489,17 @@ MonoBehaviour:
         serializedVersion: 2
         rgba: 0
       BorderRadius:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
       BorderWidth:
-        m_Left: 1
-        m_Right: 1
-        m_Top: 1
-        m_Bottom: 1
+        Top: 1
+        Right: 1
+        Bottom: 1
+        Left: 1
+        UnitType: 0
     - ClassSelectors:
       - Tab-first
       - Tab-middle
@@ -487,15 +545,17 @@ MonoBehaviour:
         serializedVersion: 2
         rgba: 0
       BorderRadius:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
       BorderWidth:
-        m_Left: 1
-        m_Right: 1
-        m_Top: 1
-        m_Bottom: 1
+        Top: 1
+        Right: 1
+        Bottom: 1
+        Left: 1
+        UnitType: 0
     - ClassSelectors:
       - Tab-first
       - Tab-middle
@@ -541,15 +601,17 @@ MonoBehaviour:
         serializedVersion: 2
         rgba: 0
       BorderRadius:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
       BorderWidth:
-        m_Left: 1
-        m_Right: 1
-        m_Top: 1
-        m_Bottom: 1
+        Top: 1
+        Right: 1
+        Bottom: 1
+        Left: 1
+        UnitType: 0
     <Enabled>k__BackingField: 1
   - Title: Scrollbar
     StyleRules:
@@ -581,15 +643,17 @@ MonoBehaviour:
         serializedVersion: 2
         rgba: 0
       BorderRadius:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
       BorderWidth:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
     <Enabled>k__BackingField: 1
   - Title: Scrollbar Button
     StyleRules:
@@ -623,15 +687,17 @@ MonoBehaviour:
         serializedVersion: 2
         rgba: 0
       BorderRadius:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
       BorderWidth:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 1
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
     - ClassSelectors:
       - HorizontalScrollbarLeftButton
       - HorizontalScrollbarRightButton
@@ -662,15 +728,17 @@ MonoBehaviour:
         serializedVersion: 2
         rgba: 0
       BorderRadius:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
       BorderWidth:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
     <Enabled>k__BackingField: 1
   - Title: Scrollbar Thumb
     StyleRules:
@@ -703,15 +771,17 @@ MonoBehaviour:
         serializedVersion: 2
         rgba: 0
       BorderRadius:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
       BorderWidth:
-        m_Left: 0
-        m_Right: 1
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
     - ClassSelectors:
       - HorizontalScrollbarThumb
       - HorizontalMinMaxScrollbarThumb
@@ -740,15 +810,17 @@ MonoBehaviour:
         serializedVersion: 2
         rgba: 0
       BorderRadius:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
       BorderWidth:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 1
+        Top: 0
+        Right: 0
+        Bottom: 1
+        Left: 0
+        UnitType: 0
     - ClassSelectors:
       - VerticalScrollbarThumb
       PseudoClasses: 0000000002000000
@@ -776,15 +848,17 @@ MonoBehaviour:
         serializedVersion: 2
         rgba: 0
       BorderRadius:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
       BorderWidth:
-        m_Left: 0
-        m_Right: 1
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 1
+        Bottom: 0
+        Left: 0
+        UnitType: 0
     <Enabled>k__BackingField: 1
   - Title: Slider
     StyleRules:
@@ -817,15 +891,17 @@ MonoBehaviour:
         serializedVersion: 2
         rgba: 0
       BorderRadius:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
       BorderWidth:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
     <Enabled>k__BackingField: 1
   - Title: Slider Thumb
     StyleRules:
@@ -858,15 +934,17 @@ MonoBehaviour:
         serializedVersion: 2
         rgba: 0
       BorderRadius:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
       BorderWidth:
-        m_Left: 1
-        m_Right: 1
-        m_Top: 1
-        m_Bottom: 1
+        Top: 1
+        Right: 1
+        Bottom: 1
+        Left: 1
+        UnitType: 0
     - ClassSelectors:
       - HorizontalSliderThumb
       - PreSliderThumb
@@ -896,15 +974,17 @@ MonoBehaviour:
         serializedVersion: 2
         rgba: 0
       BorderRadius:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
       BorderWidth:
-        m_Left: 1
-        m_Right: 1
-        m_Top: 1
-        m_Bottom: 1
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
     <Enabled>k__BackingField: 1
   - Title: Slider Thumb Extent
     StyleRules:
@@ -935,15 +1015,17 @@ MonoBehaviour:
         serializedVersion: 2
         rgba: 0
       BorderRadius:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
       BorderWidth:
-        m_Left: 1
-        m_Right: 1
-        m_Top: 1
-        m_Bottom: 1
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
     <Enabled>k__BackingField: 1
   - Title: --- | --- [ T O O L B A R ] ---
     StyleRules: []
@@ -982,15 +1064,17 @@ MonoBehaviour:
         serializedVersion: 2
         rgba: 0
       BorderRadius:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
       BorderWidth:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 1
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
     <Enabled>k__BackingField: 1
   - Title: Button / Dropdown / Popup
     StyleRules:
@@ -1032,15 +1116,17 @@ MonoBehaviour:
         serializedVersion: 2
         rgba: 0
       BorderRadius:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
       BorderWidth:
-        m_Left: 1
-        m_Right: 1
-        m_Top: 1
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
     - ClassSelectors:
       - toolbarbutton
       - ToolbarDropDown
@@ -1079,15 +1165,17 @@ MonoBehaviour:
         serializedVersion: 2
         rgba: 0
       BorderRadius:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
       BorderWidth:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
     - ClassSelectors:
       - toolbarbutton
       - ToolbarDropDown
@@ -1126,15 +1214,17 @@ MonoBehaviour:
         serializedVersion: 2
         rgba: 0
       BorderRadius:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
       BorderWidth:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
     - ClassSelectors:
       - toolbarbutton
       - ToolbarDropDown
@@ -1172,15 +1262,17 @@ MonoBehaviour:
         serializedVersion: 2
         rgba: 0
       BorderRadius:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
       BorderWidth:
-        m_Left: 0
-        m_Right: 1
-        m_Top: 1
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
     <Enabled>k__BackingField: 1
   - Title: '[OVERRIDE: toolbarbuttonRight]'
     StyleRules:
@@ -1211,15 +1303,17 @@ MonoBehaviour:
         serializedVersion: 2
         rgba: 0
       BorderRadius:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
       BorderWidth:
-        m_Left: 1
-        m_Right: 1
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 1
+        Bottom: 0
+        Left: 1
+        UnitType: 0
     <Enabled>k__BackingField: 1
   - Title: Text Search Field
     StyleRules:
@@ -1256,15 +1350,17 @@ MonoBehaviour:
         serializedVersion: 2
         rgba: 0
       BorderRadius:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
       BorderWidth:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
     - ClassSelectors:
       - ToolbarSeachTextField
       - ToolbarSearchTextField
@@ -1298,15 +1394,17 @@ MonoBehaviour:
         serializedVersion: 2
         rgba: 0
       BorderRadius:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
       BorderWidth:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
     - ClassSelectors:
       - ToolbarSeachTextField
       - ToolbarSearchTextField
@@ -1340,15 +1438,17 @@ MonoBehaviour:
         serializedVersion: 2
         rgba: 0
       BorderRadius:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
       BorderWidth:
-        m_Left: 1
-        m_Right: 1
-        m_Top: 1
-        m_Bottom: 1
+        Top: 1
+        Right: 1
+        Bottom: 1
+        Left: 1
+        UnitType: 0
     <Enabled>k__BackingField: 1
   - Title: Text Search Field Button
     StyleRules:
@@ -1379,15 +1479,17 @@ MonoBehaviour:
         serializedVersion: 2
         rgba: 0
       BorderRadius:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
       BorderWidth:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
     - ClassSelectors:
       - ToolbarSearchTextFieldJumpButton
       PseudoClasses: 02000000
@@ -1415,15 +1517,17 @@ MonoBehaviour:
         serializedVersion: 2
         rgba: 0
       BorderRadius:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
       BorderWidth:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
     - ClassSelectors:
       - ToolbarSearchTextFieldJumpButton
       PseudoClasses: 01000000
@@ -1451,15 +1555,17 @@ MonoBehaviour:
         serializedVersion: 2
         rgba: 0
       BorderRadius:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
       BorderWidth:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
     <Enabled>k__BackingField: 1
   - Title: --- | --- [ F I E L D S ] ---
     StyleRules: []
@@ -1505,15 +1611,17 @@ MonoBehaviour:
         serializedVersion: 2
         rgba: 0
       BorderRadius:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
       BorderWidth:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
     - ClassSelectors:
       - Button
       - minibutton
@@ -1553,15 +1661,17 @@ MonoBehaviour:
         serializedVersion: 2
         rgba: 0
       BorderRadius:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
       BorderWidth:
-        m_Left: 1
-        m_Right: 1
-        m_Top: 1
-        m_Bottom: 1
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
     - ClassSelectors:
       - Button
       - minibutton
@@ -1601,15 +1711,17 @@ MonoBehaviour:
         serializedVersion: 2
         rgba: 0
       BorderRadius:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
       BorderWidth:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
     - ClassSelectors:
       - Button
       - minibutton
@@ -1649,15 +1761,17 @@ MonoBehaviour:
         serializedVersion: 2
         rgba: 0
       BorderRadius:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
       BorderWidth:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
     <Enabled>k__BackingField: 1
   - Title: Color
     StyleRules:
@@ -1688,15 +1802,17 @@ MonoBehaviour:
         serializedVersion: 2
         rgba: 0
       BorderRadius:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
       BorderWidth:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
     - ClassSelectors:
       - ColorField
       PseudoClasses: 02000000
@@ -1724,15 +1840,17 @@ MonoBehaviour:
         serializedVersion: 2
         rgba: 0
       BorderRadius:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
       BorderWidth:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
     - ClassSelectors:
       - ColorField
       PseudoClasses: 0400000006000000
@@ -1760,15 +1878,17 @@ MonoBehaviour:
         serializedVersion: 2
         rgba: 0
       BorderRadius:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
       BorderWidth:
-        m_Left: 1
-        m_Right: 1
-        m_Top: 1
-        m_Bottom: 1
+        Top: 1
+        Right: 1
+        Bottom: 1
+        Left: 1
+        UnitType: 0
     <Enabled>k__BackingField: 1
   - Title: Gradient Field Box
     StyleRules:
@@ -1799,15 +1919,17 @@ MonoBehaviour:
         serializedVersion: 2
         rgba: 0
       BorderRadius:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
       BorderWidth:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
     <Enabled>k__BackingField: 1
   - Title: Multi-Column Header
     StyleRules:
@@ -1838,15 +1960,17 @@ MonoBehaviour:
         serializedVersion: 2
         rgba: 0
       BorderRadius:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
       BorderWidth:
-        m_Left: 1
-        m_Right: 1
-        m_Top: 1
-        m_Bottom: 1
+        Top: 1
+        Right: 1
+        Bottom: 1
+        Left: 1
+        UnitType: 0
     <Enabled>k__BackingField: 1
   - Title: Label
     StyleRules:
@@ -1878,15 +2002,17 @@ MonoBehaviour:
         serializedVersion: 2
         rgba: 4286611584
       BorderRadius:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
       BorderWidth:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
     - ClassSelectors:
       - ControlLabel
       - ShurikenLabel
@@ -1915,15 +2041,17 @@ MonoBehaviour:
         serializedVersion: 2
         rgba: 4294967295
       BorderRadius:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
       BorderWidth:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
     <Enabled>k__BackingField: 1
   - Title: Popup
     StyleRules:
@@ -1956,15 +2084,17 @@ MonoBehaviour:
         serializedVersion: 2
         rgba: 0
       BorderRadius:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
       BorderWidth:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
     - ClassSelectors:
       - MiniPopup
       - MiniPullDown
@@ -1994,15 +2124,17 @@ MonoBehaviour:
         serializedVersion: 2
         rgba: 0
       BorderRadius:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
       BorderWidth:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
     - ClassSelectors:
       - MiniPopup
       - MiniPullDown
@@ -2032,15 +2164,17 @@ MonoBehaviour:
         serializedVersion: 2
         rgba: 0
       BorderRadius:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
       BorderWidth:
-        m_Left: 1
-        m_Right: 1
-        m_Top: 1
-        m_Bottom: 1
+        Top: 1
+        Right: 1
+        Bottom: 1
+        Left: 1
+        UnitType: 0
     <Enabled>k__BackingField: 1
   - Title: Toggle
     StyleRules:
@@ -2072,15 +2206,17 @@ MonoBehaviour:
         serializedVersion: 2
         rgba: 0
       BorderRadius:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
       BorderWidth:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
     - ClassSelectors:
       - Toggle
       - ShurikenToggle
@@ -2109,15 +2245,17 @@ MonoBehaviour:
         serializedVersion: 2
         rgba: 0
       BorderRadius:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
       BorderWidth:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
     - ClassSelectors:
       - Toggle
       - ShurikenToggle
@@ -2146,15 +2284,17 @@ MonoBehaviour:
         serializedVersion: 2
         rgba: 0
       BorderRadius:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
       BorderWidth:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
     - ClassSelectors:
       - Toggle
       - ShurikenToggle
@@ -2183,15 +2323,17 @@ MonoBehaviour:
         serializedVersion: 2
         rgba: 0
       BorderRadius:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
       BorderWidth:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
     - ClassSelectors:
       - Toggle
       - ShurikenToggle
@@ -2220,15 +2362,17 @@ MonoBehaviour:
         serializedVersion: 2
         rgba: 0
       BorderRadius:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
       BorderWidth:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
     - ClassSelectors:
       - Toggle
       - ShurikenToggle
@@ -2257,15 +2401,17 @@ MonoBehaviour:
         serializedVersion: 2
         rgba: 0
       BorderRadius:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
       BorderWidth:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
     <Enabled>k__BackingField: 1
   - Title: Toggle Mixed
     StyleRules:
@@ -2296,15 +2442,17 @@ MonoBehaviour:
         serializedVersion: 2
         rgba: 0
       BorderRadius:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
       BorderWidth:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
     - ClassSelectors:
       - ToggleMixed
       PseudoClasses: 0200000006000000
@@ -2332,15 +2480,17 @@ MonoBehaviour:
         serializedVersion: 2
         rgba: 0
       BorderRadius:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
       BorderWidth:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
     - ClassSelectors:
       - ToggleMixed
       PseudoClasses: 010000000400000005000000
@@ -2368,15 +2518,17 @@ MonoBehaviour:
         serializedVersion: 2
         rgba: 0
       BorderRadius:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
       BorderWidth:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
     <Enabled>k__BackingField: 1
   - Title: Text / Object
     StyleRules:
@@ -2416,15 +2568,17 @@ MonoBehaviour:
         serializedVersion: 2
         rgba: 0
       BorderRadius:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
       BorderWidth:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
     - ClassSelectors:
       - TextField
       - BoldTextField
@@ -2461,15 +2615,17 @@ MonoBehaviour:
         serializedVersion: 2
         rgba: 0
       BorderRadius:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
       BorderWidth:
-        m_Left: 1
-        m_Right: 1
-        m_Top: 1
-        m_Bottom: 1
+        Top: 1
+        Right: 1
+        Bottom: 1
+        Left: 1
+        UnitType: 0
     - ClassSelectors:
       - TextField
       - BoldTextField
@@ -2506,15 +2662,17 @@ MonoBehaviour:
         serializedVersion: 2
         rgba: 0
       BorderRadius:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
       BorderWidth:
-        m_Left: 1
-        m_Right: 1
-        m_Top: 1
-        m_Bottom: 1
+        Top: 1
+        Right: 1
+        Bottom: 1
+        Left: 1
+        UnitType: 0
     - ClassSelectors:
       - ObjectField
       PseudoClasses: 10000000
@@ -2542,15 +2700,17 @@ MonoBehaviour:
         serializedVersion: 2
         rgba: 0
       BorderRadius:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
       BorderWidth:
-        m_Left: 1
-        m_Right: 1
-        m_Top: 1
-        m_Bottom: 1
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
     <Enabled>k__BackingField: 1
   - Title: --- | --- [ R E O R D E R E D   L I S T ] ---
     StyleRules: []
@@ -2584,15 +2744,17 @@ MonoBehaviour:
         serializedVersion: 2
         rgba: 0
       BorderRadius:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
       BorderWidth:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
     - ClassSelectors:
       - RL-Element
       PseudoClasses: 15000000
@@ -2620,15 +2782,17 @@ MonoBehaviour:
         serializedVersion: 2
         rgba: 0
       BorderRadius:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
       BorderWidth:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
     <Enabled>k__BackingField: 1
   - Title: Header / Background
     StyleRules:
@@ -2659,15 +2823,17 @@ MonoBehaviour:
         serializedVersion: 2
         rgba: 0
       BorderRadius:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
       BorderWidth:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
     - ClassSelectors:
       - RL-Background
       - RL-Empty-Header
@@ -2696,15 +2862,17 @@ MonoBehaviour:
         serializedVersion: 2
         rgba: 0
       BorderRadius:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
       BorderWidth:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
     <Enabled>k__BackingField: 1
   - Title: Footer
     StyleRules:
@@ -2735,15 +2903,17 @@ MonoBehaviour:
         serializedVersion: 2
         rgba: 0
       BorderRadius:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
       BorderWidth:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
     <Enabled>k__BackingField: 1
   - Title: 
     StyleRules: []
@@ -2783,15 +2953,17 @@ MonoBehaviour:
         serializedVersion: 2
         rgba: 0
       BorderRadius:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
       BorderWidth:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
     <Enabled>k__BackingField: 1
   - Title: Scene Name Bar
     StyleRules:
@@ -2822,15 +2994,17 @@ MonoBehaviour:
         serializedVersion: 2
         rgba: 0
       BorderRadius:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
       BorderWidth:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
     <Enabled>k__BackingField: 1
   - Title: --- [ A N I M A T I O N ] ---
     StyleRules: []
@@ -2864,15 +3038,17 @@ MonoBehaviour:
         serializedVersion: 2
         rgba: 0
       BorderRadius:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
       BorderWidth:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
     - ClassSelectors:
       - AnimationRowEven
       PseudoClasses: 00000000
@@ -2900,15 +3076,17 @@ MonoBehaviour:
         serializedVersion: 2
         rgba: 0
       BorderRadius:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
       BorderWidth:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
     <Enabled>k__BackingField: 1
   - Title: Separator
     StyleRules:
@@ -2939,15 +3117,17 @@ MonoBehaviour:
         serializedVersion: 2
         rgba: 0
       BorderRadius:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
       BorderWidth:
-        m_Left: 10
-        m_Right: 10
-        m_Top: 10
-        m_Bottom: 10
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
     <Enabled>k__BackingField: 1
   - Title: Transition
     StyleRules:
@@ -2978,15 +3158,17 @@ MonoBehaviour:
         serializedVersion: 2
         rgba: 0
       BorderRadius:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
       BorderWidth:
-        m_Left: 1
-        m_Right: 1
-        m_Top: 1
-        m_Bottom: 0
+        Top: 1
+        Right: 1
+        Bottom: 0
+        Left: 1
+        UnitType: 0
     - ClassSelectors:
       - MeTransitionSelect
       - MeTransitionSelectHead
@@ -3015,15 +3197,17 @@ MonoBehaviour:
         serializedVersion: 2
         rgba: 0
       BorderRadius:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
       BorderWidth:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 1
-        m_Bottom: 2
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
     - ClassSelectors:
       - MeTransitionBack
       PseudoClasses: 00000000
@@ -3051,15 +3235,17 @@ MonoBehaviour:
         serializedVersion: 2
         rgba: 0
       BorderRadius:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
       BorderWidth:
-        m_Left: 1
-        m_Right: 1
-        m_Top: 1
-        m_Bottom: 1
+        Top: 1
+        Right: 1
+        Bottom: 1
+        Left: 1
+        UnitType: 0
     <Enabled>k__BackingField: 1
   - Title: --- | --- [ P R O J E C T ] ---
     StyleRules: []
@@ -3093,15 +3279,17 @@ MonoBehaviour:
         serializedVersion: 2
         rgba: 0
       BorderRadius:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
       BorderWidth:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
     - ClassSelectors:
       - ArrowNavigationRight
       PseudoClasses: 02000000
@@ -3129,15 +3317,17 @@ MonoBehaviour:
         serializedVersion: 2
         rgba: 0
       BorderRadius:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
       BorderWidth:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
     <Enabled>k__BackingField: 1
   - Title: Exposable Popup Menu
     StyleRules:
@@ -3168,15 +3358,17 @@ MonoBehaviour:
         serializedVersion: 2
         rgba: 0
       BorderRadius:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
       BorderWidth:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
     - ClassSelectors:
       - ExposablePopupMenu
       PseudoClasses: 02000000
@@ -3204,15 +3396,17 @@ MonoBehaviour:
         serializedVersion: 2
         rgba: 0
       BorderRadius:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
       BorderWidth:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
     <Enabled>k__BackingField: 1
   - Title: Exposable Popup Item
     StyleRules:
@@ -3243,15 +3437,17 @@ MonoBehaviour:
         serializedVersion: 2
         rgba: 0
       BorderRadius:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
       BorderWidth:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
     - ClassSelectors:
       - ExposablePopupItem
       PseudoClasses: 0100000010000000
@@ -3279,15 +3475,17 @@ MonoBehaviour:
         serializedVersion: 2
         rgba: 0
       BorderRadius:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
       BorderWidth:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
     <Enabled>k__BackingField: 1
   - Title: Rename Field
     StyleRules:
@@ -3318,15 +3516,17 @@ MonoBehaviour:
         serializedVersion: 2
         rgba: 0
       BorderRadius:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
       BorderWidth:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
     <Enabled>k__BackingField: 1
   - Title: Top / Bottom Bar
     StyleRules:
@@ -3358,15 +3558,17 @@ MonoBehaviour:
         serializedVersion: 2
         rgba: 0
       BorderRadius:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
       BorderWidth:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
     <Enabled>k__BackingField: 1
   - Title: Grid View Item Label Background
     StyleRules:
@@ -3397,15 +3599,17 @@ MonoBehaviour:
         serializedVersion: 2
         rgba: 0
       BorderRadius:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
       BorderWidth:
-        m_Left: 1
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 1
+        UnitType: 0
     <Enabled>k__BackingField: 1
   - Title: OL Result Label
     StyleRules:
@@ -3436,15 +3640,17 @@ MonoBehaviour:
         serializedVersion: 2
         rgba: 0
       BorderRadius:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
       BorderWidth:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
     - ClassSelectors:
       - OL-ResultLabel
       PseudoClasses: 10000000
@@ -3472,15 +3678,17 @@ MonoBehaviour:
         serializedVersion: 2
         rgba: 0
       BorderRadius:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
       BorderWidth:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
     <Enabled>k__BackingField: 1
   - Title: Ping
     StyleRules:
@@ -3513,15 +3721,17 @@ MonoBehaviour:
         serializedVersion: 2
         rgba: 0
       BorderRadius:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
       BorderWidth:
-        m_Left: 1
-        m_Right: 1
-        m_Top: 1
-        m_Bottom: 1
+        Top: 1
+        Right: 1
+        Bottom: 1
+        Left: 1
+        UnitType: 0
     <Enabled>k__BackingField: 1
   - Title: --- | --- [ C O N S O L E ] ---
     StyleRules: []
@@ -3555,15 +3765,17 @@ MonoBehaviour:
         serializedVersion: 2
         rgba: 0
       BorderRadius:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
       BorderWidth:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
     - ClassSelectors:
       - CN-EntryWarnIcon
       PseudoClasses: 00000000
@@ -3591,15 +3803,17 @@ MonoBehaviour:
         serializedVersion: 2
         rgba: 0
       BorderRadius:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
       BorderWidth:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
     - ClassSelectors:
       - CN-EntryErrorIcon
       PseudoClasses: 00000000
@@ -3627,15 +3841,17 @@ MonoBehaviour:
         serializedVersion: 2
         rgba: 0
       BorderRadius:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
       BorderWidth:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
     <Enabled>k__BackingField: 1
   - Title: Log Stack
     StyleRules:
@@ -3666,15 +3882,17 @@ MonoBehaviour:
         serializedVersion: 2
         rgba: 0
       BorderRadius:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
       BorderWidth:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
     - ClassSelectors:
       - CN-EntryBackEven
       PseudoClasses: 00000000
@@ -3702,15 +3920,17 @@ MonoBehaviour:
         serializedVersion: 2
         rgba: 0
       BorderRadius:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
       BorderWidth:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
     - ClassSelectors:
       - CN-EntryBackEven
       - CN-EntryBackOdd
@@ -3739,15 +3959,17 @@ MonoBehaviour:
         serializedVersion: 2
         rgba: 0
       BorderRadius:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
       BorderWidth:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
     <Enabled>k__BackingField: 1
   - Title: Log Counter (On Collapse)
     StyleRules:
@@ -3778,15 +4000,17 @@ MonoBehaviour:
         serializedVersion: 2
         rgba: 0
       BorderRadius:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
       BorderWidth:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
     <Enabled>k__BackingField: 1
   - Title: --- | --- [ G A M E ] ---
     StyleRules: []
@@ -3820,15 +4044,17 @@ MonoBehaviour:
         serializedVersion: 2
         rgba: 0
       BorderRadius:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
       BorderWidth:
-        m_Left: 1
-        m_Right: 1
-        m_Top: 1
-        m_Bottom: 1
+        Top: 1
+        Right: 1
+        Bottom: 1
+        Left: 1
+        UnitType: 0
     <Enabled>k__BackingField: 1
   - Title: --- | --- [ I N S P E C T O R ] ---
     StyleRules: []
@@ -3862,15 +4088,17 @@ MonoBehaviour:
         serializedVersion: 2
         rgba: 0
       BorderRadius:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
       BorderWidth:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
     <Enabled>k__BackingField: 1
   - Title: Footer
     StyleRules:
@@ -3901,15 +4129,17 @@ MonoBehaviour:
         serializedVersion: 2
         rgba: 0
       BorderRadius:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
       BorderWidth:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
     <Enabled>k__BackingField: 1
   - Title: Title
     StyleRules:
@@ -3940,15 +4170,17 @@ MonoBehaviour:
         serializedVersion: 2
         rgba: 0
       BorderRadius:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
       BorderWidth:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 1
-        m_Bottom: 0
+        Top: 1
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
     - ClassSelectors:
       - IN-Title
       PseudoClasses: 020000001200000016000000
@@ -3976,15 +4208,17 @@ MonoBehaviour:
         serializedVersion: 2
         rgba: 0
       BorderRadius:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
       BorderWidth:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
     - ClassSelectors:
       - IN-Title
       PseudoClasses: 01000000
@@ -4012,15 +4246,17 @@ MonoBehaviour:
         serializedVersion: 2
         rgba: 0
       BorderRadius:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
       BorderWidth:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
     <Enabled>k__BackingField: 1
   - Title: Title Text
     StyleRules:
@@ -4051,15 +4287,17 @@ MonoBehaviour:
         serializedVersion: 2
         rgba: 4291611852
       BorderRadius:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
       BorderWidth:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
     <Enabled>k__BackingField: 1
   - Title: Insertion Marker
     StyleRules:
@@ -4090,15 +4328,17 @@ MonoBehaviour:
         serializedVersion: 2
         rgba: 0
       BorderRadius:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
       BorderWidth:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
     <Enabled>k__BackingField: 1
   - Title: --- | --- [ S C E N E ] ---
     StyleRules: []
@@ -4132,15 +4372,17 @@ MonoBehaviour:
         serializedVersion: 2
         rgba: 0
       BorderRadius:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
       BorderWidth:
-        m_Left: 1
-        m_Right: 1
-        m_Top: 1
-        m_Bottom: 1
+        Top: 1
+        Right: 1
+        Bottom: 1
+        Left: 1
+        UnitType: 0
     <Enabled>k__BackingField: 1
   - Title: 
     StyleRules: []
@@ -4177,15 +4419,17 @@ MonoBehaviour:
         serializedVersion: 2
         rgba: 0
       BorderRadius:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
       BorderWidth:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 4
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
     - ClassSelectors:
       - ScrollView
       - ScrollViewAlt
@@ -4215,15 +4459,17 @@ MonoBehaviour:
         serializedVersion: 2
         rgba: 0
       BorderRadius:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
       BorderWidth:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
     <Enabled>k__BackingField: 1
   - Title: Dock
     StyleRules:
@@ -4254,15 +4500,17 @@ MonoBehaviour:
         serializedVersion: 2
         rgba: 0
       BorderRadius:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
       BorderWidth:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
     - ClassSelectors:
       - dockHeader
       PseudoClasses: 00000000
@@ -4290,15 +4538,17 @@ MonoBehaviour:
         serializedVersion: 2
         rgba: 0
       BorderRadius:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
       BorderWidth:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 15
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
     <Enabled>k__BackingField: 1
   - Title: --- | --- [ D R A G T A B ] ---
     StyleRules: []
@@ -4333,15 +4583,17 @@ MonoBehaviour:
         serializedVersion: 2
         rgba: 0
       BorderRadius:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
       BorderWidth:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 2
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
     - ClassSelectors:
       - dragtab
       - dragtab-first
@@ -4370,15 +4622,17 @@ MonoBehaviour:
         serializedVersion: 2
         rgba: 0
       BorderRadius:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
       BorderWidth:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 2
+        Top: 0
+        Right: 0
+        Bottom: 2
+        Left: 0
+        UnitType: 0
     - ClassSelectors:
       - dragtab
       - dragtab-first
@@ -4407,15 +4661,17 @@ MonoBehaviour:
         serializedVersion: 2
         rgba: 0
       BorderRadius:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
       BorderWidth:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 2
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
     <Enabled>k__BackingField: 1
   - Title: Scroller
     StyleRules:
@@ -4447,15 +4703,17 @@ MonoBehaviour:
         serializedVersion: 2
         rgba: 0
       BorderRadius:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
       BorderWidth:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
     - ClassSelectors:
       - dragtab-scroller-next
       - dragtab-scroller-prev
@@ -4484,15 +4742,17 @@ MonoBehaviour:
         serializedVersion: 2
         rgba: 0
       BorderRadius:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
       BorderWidth:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
     <Enabled>k__BackingField: 1
   - Title: --- | --- [ S T A T U S   B A R ] ---
     StyleRules: []
@@ -4526,15 +4786,17 @@ MonoBehaviour:
         serializedVersion: 2
         rgba: 0
       BorderRadius:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
       BorderWidth:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
     - ClassSelectors:
       - StatusBarIcon
       PseudoClasses: 02000000
@@ -4562,15 +4824,17 @@ MonoBehaviour:
         serializedVersion: 2
         rgba: 0
       BorderRadius:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
       BorderWidth:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
     - ClassSelectors:
       - StatusBarIcon
       PseudoClasses: 01000000
@@ -4598,15 +4862,17 @@ MonoBehaviour:
         serializedVersion: 2
         rgba: 0
       BorderRadius:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
       BorderWidth:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
     <Enabled>k__BackingField: 1
   - Title: --- | --- [ T R E E   V I E W ] ---
     StyleRules: []
@@ -4640,15 +4906,17 @@ MonoBehaviour:
         serializedVersion: 2
         rgba: 0
       BorderRadius:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
       BorderWidth:
-        m_Left: 1
-        m_Right: 1
-        m_Top: 1
-        m_Bottom: 1
+        Top: 1
+        Right: 1
+        Bottom: 1
+        Left: 1
+        UnitType: 0
     <Enabled>k__BackingField: 1
   - Title: Selection
     StyleRules:
@@ -4679,15 +4947,17 @@ MonoBehaviour:
         serializedVersion: 2
         rgba: 0
       BorderRadius:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
       BorderWidth:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
     - ClassSelectors:
       - TV-Selection
       PseudoClasses: 14000000
@@ -4715,15 +4985,17 @@ MonoBehaviour:
         serializedVersion: 2
         rgba: 0
       BorderRadius:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
       BorderWidth:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
     <Enabled>k__BackingField: 1
   - Title: 
     StyleRules: []
@@ -4760,15 +5032,17 @@ MonoBehaviour:
         serializedVersion: 2
         rgba: 0
       BorderRadius:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
       BorderWidth:
-        m_Left: 1
-        m_Right: 1
-        m_Top: 1
-        m_Bottom: 1
+        Top: 1
+        Right: 1
+        Bottom: 1
+        Left: 1
+        UnitType: 0
     <Enabled>k__BackingField: 1
   - Title: Emitter Title
     StyleRules:
@@ -4799,15 +5073,17 @@ MonoBehaviour:
         serializedVersion: 2
         rgba: 0
       BorderRadius:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
       BorderWidth:
-        m_Left: 1
-        m_Right: 1
-        m_Top: 1
-        m_Bottom: 1
+        Top: 1
+        Right: 1
+        Bottom: 1
+        Left: 1
+        UnitType: 0
     <Enabled>k__BackingField: 1
   - Title: Module Title
     StyleRules:
@@ -4838,15 +5114,17 @@ MonoBehaviour:
         serializedVersion: 2
         rgba: 0
       BorderRadius:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
       BorderWidth:
-        m_Left: 1
-        m_Right: 1
-        m_Top: 1
-        m_Bottom: 1
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
     - ClassSelectors:
       - ShurikenModuleTitle
       PseudoClasses: 01000000
@@ -4874,17 +5152,19 @@ MonoBehaviour:
         serializedVersion: 2
         rgba: 0
       BorderRadius:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
       BorderWidth:
-        m_Left: 1
-        m_Right: 1
-        m_Top: 1
-        m_Bottom: 1
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
     <Enabled>k__BackingField: 1
   - Title: Empty
     StyleRules: []
     <Enabled>k__BackingField: 0
-  <InstantApply>k__BackingField: 1
+  instantApply: 1

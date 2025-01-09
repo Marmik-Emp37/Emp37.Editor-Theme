@@ -41,14 +41,9 @@ namespace Emp37.ET
                               position.y += position.height + standardVerticalSpacing;
 
                               position.height = maskFieldStyle.fixedHeight;
-                              EditorGUI.BeginChangeCheck();
-                              var valueFlag = EditorGUI.EnumFlagsField(position, (USSProperties) propertyMask.enumValueFlag, maskFieldStyle);
-                              if (EditorGUI.EndChangeCheck())
-                              {
-                                    property.enumValueFlag = (int) (USSProperties) valueFlag;
-                              }
-                              position.y += position.height + standardVerticalSpacing;
+                              propertyMask.intValue = (int) (USSProperties) EditorGUI.EnumFlagsField(position, (USSProperties) propertyMask.intValue, maskFieldStyle);
 
+                              position.y += position.height + standardVerticalSpacing;
                               using (new EditorGUI.IndentLevelScope(1))
                               {
                                     USSProperties mask = (USSProperties) propertyMask.enumValueFlag;

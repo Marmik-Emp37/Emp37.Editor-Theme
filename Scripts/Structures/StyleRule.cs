@@ -16,7 +16,7 @@ namespace Emp37.ET
 
             public Texture2D BackgroundTexture;
             public Color32 BackgroundColor, BorderColor, BorderTopColor, BorderRightColor, BorderBottomColor, BorderLeftColor, TextColor;
-            public RectOffset BorderRadius, BorderWidth;
+            public StyleOffset BorderRadius, BorderWidth;
 
             public static (USSProperties Property, string Name)[] PropertyMap =
             {
@@ -63,8 +63,8 @@ namespace Emp37.ET
                                     USSProperties.BorderRightColor => USSTools.Format(BorderRightColor),
                                     USSProperties.BorderBottomColor => USSTools.Format(BorderBottomColor),
                                     USSProperties.BorderLeftColor => USSTools.Format(BorderLeftColor),
-                                    USSProperties.BorderRadius => USSTools.Format(BorderRadius, "px"),
-                                    USSProperties.BorderWidth => USSTools.Format(BorderWidth, "px"),
+                                    USSProperties.BorderRadius => USSTools.Format(BorderRadius),
+                                    USSProperties.BorderWidth => USSTools.Format(BorderWidth),
                                     USSProperties.Color => USSTools.Format(TextColor),
                                     _ => null
                               };
