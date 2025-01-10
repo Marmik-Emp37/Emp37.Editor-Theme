@@ -1,9 +1,13 @@
 using UnityEditor;
+using static UnityEditor.EditorGUIUtility;
 
 using UnityEngine;
 
 namespace Emp37.ET
 {
+      using static ETHelpers;
+
+      // @r: == Redeem
       [CustomPropertyDrawer(typeof(StyleRuleGroup))]
       internal class EditorStyleGroupDrawer : PropertyDrawer
       {
@@ -12,127 +16,123 @@ namespace Emp37.ET
             private const string p_StyleRules = "StyleRules";
             private const string control_TargetTitle = "Control.StyleRuleGroup.Title";
 
-            private const int HeaderSize = 32, HighlightWidth = 3, ElementWidth = 20, FooterHeight = 24;
+            private const float HeaderSize = 32F, FooterHeight = 24F;
+            private const float ElementWidth = 20F;
 
+
+            private void DrawHeader(Rect position, SerializedProperty property)
+            {
+                  SerializedProperty enabled = property.FindPropertyRelative(p_Enabled), title = property.FindPropertyRelative(p_Title);
+
+                  Rect rect = new(position) { height = HeaderSize };
+
+                  // Background
+                  EditorGUI.DrawRect(rect, ThemeAccent);
+                  rect.width = 3F;
+                  EditorGUI.DrawRect(rect, ThemeTint);
+
+                  rect.x += rect.width;
+
+                  // Expand Toggle
+                  rect.width = ElementWidth;
+                  property.isExpanded = EditorGUI.Toggle(rect, property.isExpanded, EditorStyles.foldout);
+
+                  rect.x += rect.width;
+
+                  // Enabled Property
+                  enabled.boolValue = EditorGUI.Toggle(rect, enabled.boolValue);
+
+                  rect.x += rect.width;
+
+                  // Title
+                  rect.width = position.width - (rect.x - position.x) - Spacing - HeaderSize; // - [ W : Spacing & W : Menu Button ]
+                  GUI.SetNextControlName(control_TargetTitle);
+                  if (title.isExpanded)
+                  {
+                        using EditorGUI.ChangeCheckScope check = new();
+                        string text = EditorGUI.DelayedTextField(rect, title.stringValue, ETStyles.largeTextField);
+                        if (check.changed) { title.stringValue = text; title.isExpanded = false; }
+                  }
+                  else
+                  {
+                        EditorGUI.LabelField(rect, title.stringValue, ETStyles.largeText);
+                  }
+
+                  rect.x += rect.width + Spacing; // - W : Spacing
+
+                  // Rename Title Button
+                  rect.width = HeaderSize; // - W : Menu Button
+                  if (GUI.Button(rect, IconContent("_Menu")) && (title.isExpanded = !title.isExpanded))
+                  {
+                        GUI.FocusControl(control_TargetTitle);
+                  }
+            }
+            private void DrawFooter(Rect rect, SerializedProperty group)
+            {
+                  int size = group.arraySize;
+
+                  rect.height = FooterHeight;
+                  rect.width *= 0.5F;
+
+                  if (GUI.Button(rect, "Add", GUI.skin.button))
+                  {
+                        group.InsertArrayElementAtIndex(size++);
+                  }
+
+                  rect.x += rect.width;
+
+                  if (GUI.Button(rect, "Remove", GUI.skin.button) && size > 0)
+                  {
+                        group.DeleteArrayElementAtIndex(--size);
+                  }
+            }
 
             public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)
             {
                   using (new EditorGUI.PropertyScope(position, label, property))
                   {
-                        position.height = HeaderSize;
                         DrawHeader(position, property);
-
                         if (property.isExpanded)
                         {
-                              position.y += position.height + EditorGUIUtility.standardVerticalSpacing; // - H : Header
+                              position.y += HeaderSize + Spacing; // - H : Header
 
+                              #region E L E M E N TS
                               SerializedProperty group = property.FindPropertyRelative(p_StyleRules);
 
-                              for (int i = 0; i < group.arraySize; i++)
+                              for (int size = group.arraySize, i = 0; i < size; i++)
                               {
                                     SerializedProperty element = group.GetArrayElementAtIndex(i);
                                     position.height = EditorGUI.GetPropertyHeight(element);
                                     EditorGUI.PropertyField(position, element, true);
-                                    position.y += position.height + EditorGUIUtility.standardVerticalSpacing; // - H : Array Elements
+                                    position.y += position.height + Spacing; // - H : Elements
                               }
+                              #endregion
 
-                              position.height = FooterHeight;
                               DrawFooter(position, group);
 
-                              position.y += position.height + EditorGUIUtility.standardVerticalSpacing;  // - H : Array Controls
-                              position.height = ETHelpers.Spacing; // - H : Separator
-                              EditorGUI.DrawRect(position, ETHelpers.ThemeAccent);
+                              position.y += FooterHeight + Spacing; // - H : Footer
+
+                              position.height = Spacing; // - H : Separator
+                              EditorGUI.DrawRect(position, ThemeAccent);
                         }
                   }
             }
             public override float GetPropertyHeight(SerializedProperty property, GUIContent label)
             {
-                  if (!property.isExpanded) return HeaderSize;
-
-                  float height = HeaderSize + EditorGUIUtility.standardVerticalSpacing; // - @r >> H : Header
-
-                  SerializedProperty group = property.FindPropertyRelative(p_StyleRules);
-                  for (int i = 0; i < group.arraySize; i++)
+                  if (property.isExpanded)
                   {
-                        height += EditorGUI.GetPropertyHeight(group.GetArrayElementAtIndex(i)) + EditorGUIUtility.standardVerticalSpacing; // - @r >> H : Array Elements
-                  }
-
-                  height += FooterHeight + EditorGUIUtility.standardVerticalSpacing; // - @r >> H : Array Controls
-                  height += ETHelpers.Spacing; // - @r >> H : Separator
-
-                  return height;
-            }
-
-            /// <summary>
-            /// Draws the header section of the property.
-            /// </summary>
-            private static void DrawHeader(Rect position, SerializedProperty property)
-            {
-                  SerializedProperty enabled = property.FindPropertyRelative(p_Enabled), description = property.FindPropertyRelative(p_Title);
-
-                  Rect current = position;
-
-                  // Draw Background
-                  EditorGUI.DrawRect(current, ETHelpers.ThemeAccent);
-
-                  current.width = HighlightWidth;
-                  EditorGUI.DrawRect(current, ETHelpers.ThemeTint);
-
-                  // Draw Expand Toggle
-                  current.x += current.width;
-                  current.width = ElementWidth;
-                  property.isExpanded = EditorGUI.Toggle(current, property.isExpanded, EditorStyles.foldout);
-
-                  // Draw Group.Enabled Toggle
-                  current.x += current.width;
-                  enabled.boolValue = EditorGUI.Toggle(current, enabled.boolValue);
-
-                  // Draw Title
-                  current.x += current.width;
-                  current.width = position.width - (current.x - position.x) - ETHelpers.Spacing - HeaderSize; // - [ W : Spacing - W : Menu Button ]
-                  GUI.SetNextControlName(control_TargetTitle);
-
-                  if (description.isExpanded)
-                  {
-                        using var check = new EditorGUI.ChangeCheckScope();
-                        string text = EditorGUI.DelayedTextField(current, description.stringValue, ETStyles.largeTextField);
-                        if (check.changed)
+                        float value = HeaderSize + Spacing; // - @r >> H : Header
+                        for (int i = property.FindPropertyRelative(p_StyleRules).arraySize - 1; i >= 0; i--)
                         {
-                              description.stringValue = text;
-                              description.isExpanded = false;
+                              value += EditorGUI.GetPropertyHeight(property.FindPropertyRelative(p_StyleRules).GetArrayElementAtIndex(i)) + Spacing; // - @r >> H : Elements
                         }
+                        value += FooterHeight + Spacing; // - @r >> H : Footer
+                        value += Spacing; // - @r >> H : Separator
+                        return value;
                   }
                   else
                   {
-                        EditorGUI.LabelField(current, description.stringValue, ETStyles.largeText);
-                  }
-
-                  // Draw Rename Title Button
-                  current.x += current.width + ETHelpers.Spacing; // - W : Spacing
-                  current.width = HeaderSize; // - W : Menu Button
-                  if (GUI.Button(current, EditorGUIUtility.IconContent("_Menu")))
-                  {
-                        description.isExpanded = !description.isExpanded;
-                        GUI.FocusControl(control_TargetTitle);
-                  }
-            }
-            /// <summary>
-            /// Draws the Add and Remove buttons for the array.
-            /// </summary>
-            private static void DrawFooter(Rect position, SerializedProperty arrayProperty)
-            {
-                  int size = arrayProperty.arraySize;
-
-                  position.width *= 0.5F;
-                  if (GUI.Button(position, "Add", GUI.skin.button))
-                  {
-                        arrayProperty.InsertArrayElementAtIndex(size++);
-                  }
-
-                  position.x += position.width;
-                  if (GUI.Button(position, "Remove", GUI.skin.button) && size > 0)
-                  {
-                        arrayProperty.DeleteArrayElementAtIndex(--size);
+                        return HeaderSize;
                   }
             }
       }

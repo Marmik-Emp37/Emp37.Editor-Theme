@@ -28,10 +28,10 @@ namespace Emp37.ET
                         {
                               position.y += position.height + standardVerticalSpacing; // - [ height : 0 ]
 
-                              ETHelpers.ArrayField(position, selectors);
-                              position.y += ETHelpers.CalculateArrayHeight(selectors);
-                              ETHelpers.ArrayField(position, pseudoStates);
-                              position.y += ETHelpers.CalculateArrayHeight(pseudoStates);
+                              ArrayField(position, selectors);
+                              position.y += CalculateArrayHeight(selectors);
+                              ArrayField(position, pseudoStates);
+                              position.y +=CalculateArrayHeight(pseudoStates);
 
                               SerializedProperty propertyMask = property.FindPropertyRelative(p_PropertyMask);
 
@@ -64,7 +64,7 @@ namespace Emp37.ET
                   float spacing = standardVerticalSpacing, height = HeaderSize;
                   if (property.isExpanded)
                   {
-                        height += ETHelpers.CalculateArrayHeight(property.FindPropertyRelative(p_ClassSelectors)) + ETHelpers.CalculateArrayHeight(property.FindPropertyRelative(p_PseudoClasses));
+                        height += CalculateArrayHeight(property.FindPropertyRelative(p_ClassSelectors)) + CalculateArrayHeight(property.FindPropertyRelative(p_PseudoClasses));
                         height += spacing;
                         height += 24 + spacing;
 
@@ -73,6 +73,38 @@ namespace Emp37.ET
                         height += maskFieldStyle.fixedHeight
                               + StyleRule.PropertyMap.Where(entry => mask.HasFlag(entry.Property)).Select(item => property.FindPropertyRelative(item.Name)).Sum(item => EditorGUI.GetPropertyHeight(item) + spacing);
                   }
+                  return height;
+            }
+
+
+            public static void ArrayField(Rect position, SerializedProperty property)
+            {
+                  position.height = 24F;
+                  EditorGUI.DrawRect(position, ETHelpers. ThemeAccent);
+                  EditorGUI.LabelField(position, property.displayName, ETStyles.centeredLabel);
+                  position.y += position.height + EditorGUIUtility.standardVerticalSpacing; // - [ h:0 ]
+
+                  for (int i = 0; i < property.arraySize; i++)
+                  {
+                        SerializedProperty element = property.GetArrayElementAtIndex(i);
+                        position.height = EditorGUI.GetPropertyHeight(element);
+                        EditorGUI.PropertyField(position, element, GUIContent.none, false);
+                        position.y += position.height + EditorGUIUtility.standardVerticalSpacing; // - [ h:1 ]
+                  }
+
+                  position = EditorGUI.IndentedRect(position);
+                  position.height = EditorStyles.miniButton.fixedHeight;
+                  position.width /= 2F; // splitting buttons
+                  int size = property.arraySize;
+                  if (GUI.Button(position, EditorGUIUtility.IconContent("d_Toolbar Plus"), EditorStyles.miniButtonLeft) || size is 0) property.InsertArrayElementAtIndex(size++);
+                  position.x += position.width; // append to right
+                  if (GUI.Button(position, EditorGUIUtility.IconContent("d_Toolbar Minus"), EditorStyles.miniButtonRight) && size > 0) property.DeleteArrayElementAtIndex(--size);
+            }
+            public static float CalculateArrayHeight(SerializedProperty property)
+            {
+                  float height = 24F + EditorGUIUtility.standardVerticalSpacing; // - [ h:0 ]
+                  for (int i = 0; i < property.arraySize; i++) height += EditorGUI.GetPropertyHeight(property.GetArrayElementAtIndex(i)) + EditorGUIUtility.standardVerticalSpacing; // - [ h:1 ]
+                  height += EditorStyles.miniButton.fixedHeight + EditorGUIUtility.standardVerticalSpacing; // options button height + extra spacing
                   return height;
             }
       }
