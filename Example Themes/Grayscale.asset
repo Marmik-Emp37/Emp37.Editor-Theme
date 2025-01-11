@@ -14,45 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   StyleRuleGroups:
   - Title: --- [ G U I ] ---
-    StyleRules:
-    - ClassSelectors:
-      - 
-      PseudoClasses: 00000000
-      PropertyMask: 0
-      BackgroundTexture: {fileID: 0}
-      BackgroundColor:
-        serializedVersion: 2
-        rgba: 0
-      BorderColor:
-        serializedVersion: 2
-        rgba: 0
-      BorderTopColor:
-        serializedVersion: 2
-        rgba: 0
-      BorderRightColor:
-        serializedVersion: 2
-        rgba: 0
-      BorderBottomColor:
-        serializedVersion: 2
-        rgba: 0
-      BorderLeftColor:
-        serializedVersion: 2
-        rgba: 0
-      TextColor:
-        serializedVersion: 2
-        rgba: 0
-      BorderRadius:
-        Top: 0
-        Right: 0
-        Bottom: 0
-        Left: 0
-        UnitType: 0
-      BorderWidth:
-        Top: 0
-        Right: 0
-        Bottom: 0
-        Left: 0
-        UnitType: 0
+    StyleRules: []
     <Enabled>k__BackingField: 0
   - Title: Box
     StyleRules:
