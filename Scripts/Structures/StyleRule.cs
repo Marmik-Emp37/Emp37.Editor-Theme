@@ -27,9 +27,9 @@ namespace Emp37.ET
                   (USSProperties.BorderRightColor, nameof(BorderRightColor)),
                   (USSProperties.BorderBottomColor, nameof(BorderBottomColor)),
                   (USSProperties.BorderLeftColor, nameof(BorderLeftColor)),
-                  (USSProperties.Color, nameof(TextColor)),
                   (USSProperties.BorderRadius, nameof(BorderRadius)),
-                  (USSProperties.BorderWidth, nameof(BorderWidth))
+                  (USSProperties.BorderWidth, nameof(BorderWidth)),
+                  (USSProperties.Color, nameof(TextColor))
             };
 
             private readonly IEnumerable<string> WriteSelectorList

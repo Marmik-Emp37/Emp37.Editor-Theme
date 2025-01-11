@@ -1,6 +1,8 @@
+using System;
+
 namespace Emp37.ET
 {
-      [System.Serializable]
+      [Serializable]
       public struct StyleOffset
       {
             public enum Unit
@@ -20,6 +22,24 @@ namespace Emp37.ET
                   Bottom = bottom;
                   Left = left;
                   UnitType = unit;
+            }
+
+            public readonly override bool Equals(object obj)
+            {
+                  return obj is StyleOffset offset && Top == offset.Top && Right == offset.Right && Bottom == offset.Bottom && Left == offset.Left && UnitType == offset.UnitType;
+            }
+            public readonly override int GetHashCode()
+            {
+                  return HashCode.Combine(Top, Right, Bottom, Left, UnitType);
+            }
+
+            public static bool operator ==(StyleOffset context, StyleOffset other)
+            {
+                  return context.Equals(other);
+            }
+            public static bool operator !=(StyleOffset context, StyleOffset other)
+            {
+                  return !context.Equals(other);
             }
       }
 }

@@ -32,7 +32,7 @@ namespace Emp37.ET
                   rect.x += rect.width + Spacing;
 
                   // Expand Toggle
-                  rect.width = ElementControlWidth;
+                  rect.width = 20F;
                   property.isExpanded = EditorGUI.Toggle(rect, property.isExpanded, EditorStyles.foldout);
 
                   rect.x += rect.width;
