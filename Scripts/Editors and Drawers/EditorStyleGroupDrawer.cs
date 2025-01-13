@@ -17,7 +17,6 @@ namespace Emp37.ET
             private const string control_TargetTitle = "Control.StyleRuleGroup.Title";
 
             private const float HeaderSize = 32F, FooterHeight = 24F;
-            private const float ElementControlWidth = 20F;
 
 
             private void DrawHeader(Rect position, SerializedProperty property)

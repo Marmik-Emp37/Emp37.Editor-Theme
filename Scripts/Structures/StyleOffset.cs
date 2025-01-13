@@ -7,6 +7,7 @@ namespace Emp37.ET
       {
             public enum Unit
             {
+                  None,
                   Pixels,
                   Percentage,
             }
@@ -31,15 +32,6 @@ namespace Emp37.ET
             public readonly override int GetHashCode()
             {
                   return HashCode.Combine(Top, Right, Bottom, Left, UnitType);
-            }
-
-            public static bool operator ==(StyleOffset context, StyleOffset other)
-            {
-                  return context.Equals(other);
-            }
-            public static bool operator !=(StyleOffset context, StyleOffset other)
-            {
-                  return !context.Equals(other);
             }
       }
 }
