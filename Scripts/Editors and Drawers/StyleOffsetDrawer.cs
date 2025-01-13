@@ -59,6 +59,7 @@ namespace Emp37.ET
                   DrawField(position.Indent(labelRect.width + Spacing), property);
 
                   EditorGUI.indentLevel = indent;
+
                   EditorGUI.EndProperty();
             }
       }
