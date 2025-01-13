@@ -20,7 +20,7 @@ namespace Emp37.ET
             [field: Tooltip("Enable to preview changes immediately as they are applied.\n\n<b>Note:</b> Some changes may require a domain reload to take full effect.")]
             [SerializeField] private bool instantApply;
 
-            public abstract Type ThemeType { get; }
+            protected abstract Type ThemeType { get; }
 
             private IEnumerable<string> WriteStyleGroups
             {

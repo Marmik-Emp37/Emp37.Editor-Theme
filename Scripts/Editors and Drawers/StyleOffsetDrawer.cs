@@ -27,9 +27,9 @@ namespace Emp37.ET
                   position.x += position.width + Spacing;
 
                   position.width = width - position.width - Spacing;
-                  property.intValue = EditorGUI.IntField(position, property.intValue);
+                  property.intValue = Mathf.Clamp(EditorGUI.IntField(position, property.intValue), 0, int.MaxValue);
             }
-            private void DrawField(Rect position, SerializedProperty property)
+            private void DrawFields(Rect position, SerializedProperty property)
             {
                   int count = p_OffsetFields.Length;
 
@@ -56,7 +56,7 @@ namespace Emp37.ET
                   int indent = EditorGUI.indentLevel;
                   EditorGUI.indentLevel = 0;
 
-                  DrawField(position.Indent(labelRect.width + Spacing), property);
+                  DrawFields(position.Indent(labelRect.width + Spacing), property);
 
                   EditorGUI.indentLevel = indent;
 

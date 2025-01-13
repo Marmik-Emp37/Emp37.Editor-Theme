@@ -12,9 +12,9 @@ namespace Emp37.ET
       [CustomPropertyDrawer(typeof(StyleRule))]
       internal class EditorStyleDrawer : PropertyDrawer
       {
-            internal const float HeaderSize = 21F;
-
             private const string p_ClassSelectors = "ClassSelectors", p_PseudoClasses = "PseudoClasses", p_PropertyMask = "PropertyMask";
+            
+            internal const float HeaderSize = 21F;
 
             private static readonly GUIStyle expandToggleStyle = new(foldoutHeader) { fontStyle = FontStyle.Normal, fixedHeight = HeaderSize }, maskFieldStyle = new(layerMaskField) { fixedHeight = HeaderSize };
 
@@ -76,7 +76,6 @@ namespace Emp37.ET
                   }
                   return height;
             }
-
 
             public static void ArrayField(Rect position, SerializedProperty property)
             {
