@@ -109,11 +109,11 @@ namespace Emp37.ET
                         {
                               position.y += position.height + standardVerticalSpacing; // - H : Header
 
-                              position = DrawArrayProperty(position, property.FindPropertyRelative(p_Selectors)); // - H : Array-Selectors
-                              position = DrawArrayProperty(position, property.FindPropertyRelative(p_PseudoClasses)); // - H : Array-PseudoClasses
+                              position = DrawArrayProperty(position, property.FindPropertyRelative(p_Selectors)); // - H : Array 1
+                              position = DrawArrayProperty(position, property.FindPropertyRelative(p_PseudoClasses)); // - H : Array 2
 
                               position.height = SectionTitleHeight;
-                              ETStyles.DrawHeaderRect(position, property.displayName); // - H : Attributes 
+                              ETStyles.DrawHeaderRect(position, property.displayName);
 
                               position.y += position.height + standardVerticalSpacing; // - H : Mask Header
 
@@ -126,11 +126,11 @@ namespace Emp37.ET
                   if (property.isExpanded)
                   {
                         StyleAttributes activeFlags = (StyleAttributes) property.FindPropertyRelative(p_Mask).enumValueFlag;
-                        return BaseHeight + standardVerticalSpacing /*- @r >> H : Header*/
-                              + CalculateArrayPropertyHeight(property.FindPropertyRelative(p_Selectors)) + CalculateArrayPropertyHeight(property.FindPropertyRelative(p_PseudoClasses)) /*- @r >> H : Arrays*/
-                              + SectionTitleHeight + standardVerticalSpacing /*- @r >> H : Mask Header*/
-                              + StyleRule.PropertyMap.Where(entry => activeFlags.HasFlag(entry.Flag)).Sum(item => EditorGUI.GetPropertyHeight(property.FindPropertyRelative(item.Name)) + standardVerticalSpacing) /*- @r >> H : Attributes*/
-                              + propertyMaskField.fixedHeight; /*- @r >> H : Property Mask*/
+                        return BaseHeight + standardVerticalSpacing // - @r >> H : Header
+                              + CalculateArrayPropertyHeight(property.FindPropertyRelative(p_Selectors)) + CalculateArrayPropertyHeight(property.FindPropertyRelative(p_PseudoClasses)) //- @r >> H : Array (1 + 2)
+                              + SectionTitleHeight + standardVerticalSpacing //- @r >> H : Mask Header
+                              + StyleRule.PropertyMap.Where(entry => activeFlags.HasFlag(entry.Flag)).Sum(item => EditorGUI.GetPropertyHeight(property.FindPropertyRelative(item.Name)) + standardVerticalSpacing) //- @r >> H : Attributes
+                              + propertyMaskField.fixedHeight; //- @r >> H : Property Mask
                   }
                   else
                   {
