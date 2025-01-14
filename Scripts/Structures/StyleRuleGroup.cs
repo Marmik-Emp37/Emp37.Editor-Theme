@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 
 namespace Emp37.ET
 {
@@ -11,18 +12,7 @@ namespace Emp37.ET
 
             [field: UnityEngine.SerializeField] public bool Enabled { get; set; }
 
-            private readonly IEnumerable<string> WriteRules
-            {
-                  get
-                  {
-                        foreach (StyleRule style in StyleRules)
-                        {
-                              string value = style.ToString();
-                              if (string.IsNullOrEmpty(value)) continue;
-                              yield return value;
-                        }
-                  }
-            }
+            private readonly IEnumerable<string> WriteRules => from style in StyleRules let value = style.ToString() where !string.IsNullOrEmpty(value) select value;
 
 
             public readonly override string ToString() => Enabled ? string.Join('\n', WriteRules) : null;

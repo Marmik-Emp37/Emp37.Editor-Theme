@@ -1,7 +1,7 @@
 ﻿namespace Emp37.ET
 {
       [System.Flags]
-      public enum USSProperties : int
+      public enum StyleAttributes : int
       {
             BackgroundImage = 1 << 0,
             BackgroundColor = 1 << 1,

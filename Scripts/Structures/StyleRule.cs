@@ -12,33 +12,32 @@ namespace Emp37.ET
       {
             public string[] ClassSelectors;
             public PseudoClasses[] PseudoClasses;
-            public USSProperties PropertyMask;
+            public StyleAttributes PropertyMask;
 
             public Texture2D BackgroundTexture;
             public Color32 BackgroundColor, BorderColor, BorderTopColor, BorderRightColor, BorderBottomColor, BorderLeftColor, TextColor;
             public StyleOffset BorderRadius, BorderWidth;
 
-            public static (USSProperties Property, string Name)[] PropertyMap =
+            public static (StyleAttributes Flag, string Name)[] PropertyMap =
             {
-                  (USSProperties.BackgroundImage, nameof(BackgroundTexture)),
-                  (USSProperties.BackgroundColor, nameof(BackgroundColor)),
-                  (USSProperties.BorderColor, nameof(BorderColor)),
-                  (USSProperties.BorderTopColor, nameof(BorderTopColor)),
-                  (USSProperties.BorderRightColor, nameof(BorderRightColor)),
-                  (USSProperties.BorderBottomColor, nameof(BorderBottomColor)),
-                  (USSProperties.BorderLeftColor, nameof(BorderLeftColor)),
-                  (USSProperties.BorderRadius, nameof(BorderRadius)),
-                  (USSProperties.BorderWidth, nameof(BorderWidth)),
-                  (USSProperties.Color, nameof(TextColor))
+                  (StyleAttributes.BackgroundImage, nameof(BackgroundTexture)),
+                  (StyleAttributes.BackgroundColor, nameof(BackgroundColor)),
+                  (StyleAttributes.BorderColor, nameof(BorderColor)),
+                  (StyleAttributes.BorderTopColor, nameof(BorderTopColor)),
+                  (StyleAttributes.BorderRightColor, nameof(BorderRightColor)),
+                  (StyleAttributes.BorderBottomColor, nameof(BorderBottomColor)),
+                  (StyleAttributes.BorderLeftColor, nameof(BorderLeftColor)),
+                  (StyleAttributes.BorderRadius, nameof(BorderRadius)),
+                  (StyleAttributes.BorderWidth, nameof(BorderWidth)),
+                  (StyleAttributes.Color, nameof(TextColor))
             };
 
             private readonly IEnumerable<string> WriteSelectorList
             {
                   get
                   {
-                        foreach (string classType in ClassSelectors)
+                        foreach (string classType in ClassSelectors.Where(item => !string.IsNullOrWhiteSpace(item)))
                         {
-                              if (string.IsNullOrWhiteSpace(classType)) continue;
                               foreach (PseudoClasses pseudoClass in PseudoClasses)
                               {
                                     string chain = pseudoClass == 0 ? string.Empty : ':' + pseudoClass.ToString().Replace(", ", ":").ToLower();
@@ -51,24 +50,27 @@ namespace Emp37.ET
             {
                   get
                   {
-                        foreach ((USSProperties property, _) in PropertyMap)
+                        foreach ((StyleAttributes property, _) in PropertyMap)
                         {
                               if (!PropertyMask.HasFlag(property)) continue;
+
                               string expression = property switch
                               {
-                                    USSProperties.BackgroundImage => USSTools.Format(BackgroundTexture),
-                                    USSProperties.BackgroundColor => USSTools.Format(BackgroundColor),
-                                    USSProperties.BorderColor => USSTools.Format(BorderColor),
-                                    USSProperties.BorderTopColor => USSTools.Format(BorderTopColor),
-                                    USSProperties.BorderRightColor => USSTools.Format(BorderRightColor),
-                                    USSProperties.BorderBottomColor => USSTools.Format(BorderBottomColor),
-                                    USSProperties.BorderLeftColor => USSTools.Format(BorderLeftColor),
-                                    USSProperties.BorderRadius => USSTools.Format(BorderRadius),
-                                    USSProperties.BorderWidth => USSTools.Format(BorderWidth),
-                                    USSProperties.Color => USSTools.Format(TextColor),
+                                    StyleAttributes.BackgroundImage => USSTools.Format(BackgroundTexture),
+                                    StyleAttributes.BackgroundColor => USSTools.Format(BackgroundColor),
+                                    StyleAttributes.BorderColor => USSTools.Format(BorderColor),
+                                    StyleAttributes.BorderTopColor => USSTools.Format(BorderTopColor),
+                                    StyleAttributes.BorderRightColor => USSTools.Format(BorderRightColor),
+                                    StyleAttributes.BorderBottomColor => USSTools.Format(BorderBottomColor),
+                                    StyleAttributes.BorderLeftColor => USSTools.Format(BorderLeftColor),
+                                    StyleAttributes.BorderRadius => USSTools.Format(BorderRadius),
+                                    StyleAttributes.BorderWidth => USSTools.Format(BorderWidth),
+                                    StyleAttributes.Color => USSTools.Format(TextColor),
                                     _ => null
                               };
+
                               if (string.IsNullOrEmpty(expression)) continue;
+
                               string name = Regex.Replace(property.ToString(), "(?<!^)([A-Z])", "-$1").ToLower();
                               yield return $"\t{name}: {expression};";
                         }

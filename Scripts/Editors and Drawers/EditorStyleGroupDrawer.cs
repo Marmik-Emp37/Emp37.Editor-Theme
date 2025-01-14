@@ -2,6 +2,7 @@ using UnityEditor;
 using static UnityEditor.EditorGUIUtility;
 
 using UnityEngine;
+using System.Linq;
 
 namespace Emp37.ET
 {
@@ -19,14 +20,14 @@ namespace Emp37.ET
             private const float HeaderSize = 32F, FooterHeight = 24F;
 
 
-            private void DrawHeader(Rect position, SerializedProperty property)
+            private static void DrawHeader(Rect position, SerializedProperty property)
             {
                   Rect rect = position;
 
                   // Background
-                  EditorGUI.DrawRect(rect, ThemeAccent);
+                  EditorGUI.DrawRect(rect, ETStyles.ThemeAccent);
                   rect.width = 3F;
-                  EditorGUI.DrawRect(rect, ThemeTint);
+                  EditorGUI.DrawRect(rect, ETStyles.ThemeTint);
 
                   rect.x += rect.width + Spacing;
 
@@ -66,16 +67,16 @@ namespace Emp37.ET
                         GUI.FocusControl(control_TargetTitle);
                   }
             }
-            private Rect DrawElements(Rect position, SerializedProperty property)
+            private static Rect DrawArrayElements(Rect position, SerializedProperty property)
             {
                   for (int size = property.arraySize, i = 0; i < size; i++)
                   {
                         SerializedProperty element = property.GetArrayElementAtIndex(i);
 
-                        position.height = EditorGUI.GetPropertyHeight(element);
-                        EditorGUI.PropertyField(position, element, true);
+                        Rect elementRect = new(position) { height = EditorGUI.GetPropertyHeight(element, true) };
+                        EditorGUI.PropertyField(elementRect, element, true);
 
-                        position.y += position.height + Spacing;
+                        position.y += elementRect.height + Spacing;
                   }
                   return position;
             }
@@ -107,7 +108,7 @@ namespace Emp37.ET
                         position.y += position.height + Spacing; // - H : Header
 
                         SerializedProperty group = property.FindPropertyRelative(p_StyleRules);
-                        position = DrawElements(position, group); // - H : Elements
+                        position = DrawArrayElements(position, group); // - H : Elements
 
                         position.height = FooterHeight;
                         DrawFooter(position, group);
@@ -115,7 +116,7 @@ namespace Emp37.ET
                         position.y += position.height + Spacing;  // - H : Footer
 
                         position.height = Spacing; // - H : Separator
-                        EditorGUI.DrawRect(position, ThemeAccent);
+                        EditorGUI.DrawRect(position, ETStyles.ThemeAccent);
                   }
 
                   EditorGUI.EndProperty();
@@ -124,14 +125,14 @@ namespace Emp37.ET
             {
                   if (property.isExpanded)
                   {
-                        float value = HeaderSize + Spacing; // - @r >> H : Header
+                        float value = HeaderSize + Spacing + /*- @r >> H : Header*/ FooterHeight + Spacing + /*- @r >> H : Footer*/ Spacing /*- @r >> H : Separator*/;
+
                         SerializedProperty group = property.FindPropertyRelative(p_StyleRules);
                         for (int i = group.arraySize - 1; i >= 0; i--)
                         {
                               value += EditorGUI.GetPropertyHeight(group.GetArrayElementAtIndex(i)) + Spacing; // - @r >> H : Elements
                         }
-                        value += FooterHeight + Spacing; // - @r >> H : Footer
-                        value += Spacing; // - @r >> H : Separator
+
                         return value;
                   }
                   else

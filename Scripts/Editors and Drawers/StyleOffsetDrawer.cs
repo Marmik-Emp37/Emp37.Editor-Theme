@@ -50,13 +50,13 @@ namespace Emp37.ET
             {
                   label = EditorGUI.BeginProperty(position, label, property);
 
-                  Rect labelRect = new(position) { width = labelWidth };
-                  EditorGUI.LabelField(labelRect, label);
+                  Rect labelPosition = new(position) { width = labelWidth };
+                  EditorGUI.LabelField(labelPosition, label);
 
                   int indent = EditorGUI.indentLevel;
                   EditorGUI.indentLevel = 0;
 
-                  DrawFields(position.Indent(labelRect.width + Spacing), property);
+                  DrawFields(position.Indent(labelPosition.width + Spacing), property);
 
                   EditorGUI.indentLevel = indent;
 

@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 
 using UnityEditor;
 using UnityEditor.Compilation;
@@ -22,18 +23,7 @@ namespace Emp37.ET
 
             protected abstract Type ThemeType { get; }
 
-            private IEnumerable<string> WriteStyleGroups
-            {
-                  get
-                  {
-                        foreach (StyleRuleGroup group in StyleRuleGroups)
-                        {
-                              string value = group.ToString();
-                              if (string.IsNullOrEmpty(value)) continue;
-                              yield return $"/*---[{group.Title}]---*/\n{value}";
-                        }
-                  }
-            }
+            private IEnumerable<string> WriteStyleGroups => from @group in StyleRuleGroups let value = @group.ToString() where !string.IsNullOrEmpty(value) select value;
 
 
             /// <summary>

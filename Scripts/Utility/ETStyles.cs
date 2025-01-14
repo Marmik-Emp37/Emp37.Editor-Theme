@@ -6,6 +6,8 @@ namespace Emp37.ET
 {
       public static class ETStyles
       {
+            public static readonly Color ThemeTint = EditorGUIUtility.isProSkin ? Color.black : Color.white;
+            public static readonly Color ThemeAccent = new(ThemeTint.r, ThemeTint.g, ThemeTint.b, 0.2F);
             /// <summary>
             /// A label style with centered alignment.
             /// Useful for displaying text that needs to be horizontally and vertically centered.
@@ -21,5 +23,11 @@ namespace Emp37.ET
             /// Suitable for input fields that need to match the font size of large labels.
             /// </summary>
             public static readonly GUIStyle largeTextField = new(EditorStyles.textField) { alignment = TextAnchor.MiddleLeft, fontSize = largeText.fontSize };
+
+            public static void DrawHeaderRect(Rect position, string label)
+            {
+                  EditorGUI.DrawRect(position, ThemeAccent);
+                  EditorGUI.LabelField(position, label, centeredLabel);
+            }
       }
 }
