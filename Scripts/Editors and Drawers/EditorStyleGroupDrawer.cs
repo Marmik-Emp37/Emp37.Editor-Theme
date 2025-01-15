@@ -11,9 +11,9 @@ namespace Emp37.ET
       [CustomPropertyDrawer(typeof(StyleRuleGroup))]
       internal class EditorStyleGroupDrawer : PropertyDrawer
       {
-            private const string p_Enabled = "<Enabled>k__BackingField";
-            private const string p_Title = "Title";
-            private const string p_StyleRules = "StyleRules";
+            private const string p_Enabled = "<" + nameof(StyleRuleGroup.Enabled) + ">k__BackingField";
+            private const string p_Title = nameof(StyleRuleGroup.Title);
+            private const string p_StyleRules = nameof(StyleRuleGroup.StyleRules);
             private const string control_TargetTitle = "Control.StyleRuleGroup.Title";
 
             private const float HeaderSize = 32F, FooterHeight = 24F;

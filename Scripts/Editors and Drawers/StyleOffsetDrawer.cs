@@ -11,8 +11,8 @@ namespace Emp37.ET
       [CustomPropertyDrawer(typeof(StyleOffset))]
       internal class StyleOffsetDrawer : PropertyDrawer
       {
-            private static readonly string[] p_OffsetFields = { "Left", "Bottom", "Right", "Top" };
-            private const string p_UnitType = "UnitType";
+            private static readonly string[] p_OffsetFields = { nameof(StyleOffset.Left), nameof(StyleOffset.Bottom), nameof(StyleOffset.Right), nameof(StyleOffset.Top) };
+            private const string p_UnitType = nameof(StyleOffset.UnitType);
 
             private const float UnitPopupWidth = 20F;
 

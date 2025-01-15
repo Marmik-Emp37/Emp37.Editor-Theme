@@ -12,9 +12,9 @@ namespace Emp37.ET
       [CustomPropertyDrawer(typeof(StyleRule))]
       internal class EditorStyleDrawer : PropertyDrawer
       {
-            private const string p_Selectors = "ClassSelectors";
-            private const string p_PseudoClasses = "PseudoClasses";
-            private const string p_Mask = "PropertyMask";
+            private const string p_Selectors = nameof(StyleRule.ClassSelectors);
+            private const string p_PseudoClasses = nameof(StyleRule.PseudoClasses);
+            private const string p_Mask = nameof(StyleRule.PropertyMask);
 
             private const float BaseHeight = 21F, TitleSectionHeight = 24F, RedLineHeight = 2F;
 

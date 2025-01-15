@@ -5129,4 +5129,4 @@ MonoBehaviour:
   - Title: Empty
     StyleRules: []
     <Enabled>k__BackingField: 0
-  instantApply: 1
+  recompileOnApply: 0
