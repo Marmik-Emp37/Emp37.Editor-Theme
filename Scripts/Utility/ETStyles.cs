@@ -6,25 +6,49 @@ namespace Emp37.ET
 {
       public static class ETStyles
       {
+            /// <summary>
+            /// The primary tint color of the theme, depending on the current editor skin.
+            /// For dark theme Black otherwise, White.
+            /// </summary>
             public static readonly Color ThemeTint = EditorGUIUtility.isProSkin ? Color.black : Color.white;
+            /// <summary>
+            /// A semi-transparent accent color derived from the theme tint.
+            /// Can be used for highlighting elements or creating subtle backgrounds.
+            /// </summary>
             public static readonly Color ThemeAccent = new(ThemeTint.r, ThemeTint.g, ThemeTint.b, 0.2F);
+
             /// <summary>
             /// A label style with centered alignment.
             /// Useful for displaying text that needs to be horizontally and vertically centered.
             /// </summary>
-            public static readonly GUIStyle centeredLabel = new(GUI.skin.label) { alignment = TextAnchor.MiddleCenter };
+            public static readonly GUIStyle centeredLabel = new(GUI.skin.label)
+            {
+                  alignment = TextAnchor.MiddleCenter
+            };
             /// <summary>
             /// A label style with larger text size.
             /// Ideal for headers, titles or prominent text elements in the editor.
             /// </summary>
-            public static readonly GUIStyle largeText = new(EditorStyles.label) { fontSize = 14 };
+            public static readonly GUIStyle largeText = new(EditorStyles.label)
+            {
+                  fontSize = 14
+            };
             /// <summary>
             /// A text field style with left-aligned text and a larger font size.
             /// Suitable for input fields that need to match the font size of large labels.
             /// </summary>
-            public static readonly GUIStyle largeTextField = new(EditorStyles.textField) { alignment = TextAnchor.MiddleLeft, fontSize = largeText.fontSize };
+            public static readonly GUIStyle largeTextField = new(EditorStyles.textField)
+            {
+                  alignment = TextAnchor.MiddleLeft,
+                  fontSize = largeText.fontSize
+            };
 
-            public static void DrawHeaderRect(Rect position, string label)
+            /// <summary>
+            /// Draws a background rectangle filled with the theme's accent color and overlays it with a centered label using the <see cref="centeredLabel"/> style.
+            /// </summary>
+            /// <param name="position">The rectangle area where the title will be drawn.</param>
+            /// <param name="label">The text to display in the title.</param>
+            public static void DrawAccentTitle(Rect position, string label)
             {
                   EditorGUI.DrawRect(position, ThemeAccent);
                   EditorGUI.LabelField(position, label, centeredLabel);

@@ -2,7 +2,6 @@ using UnityEditor;
 using static UnityEditor.EditorGUIUtility;
 
 using UnityEngine;
-using System.Linq;
 
 namespace Emp37.ET
 {
