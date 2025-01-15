@@ -1,6 +1,6 @@
-using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Collections.Generic;
 
 using UnityEditor;
 using UnityEditor.Compilation;
@@ -13,23 +13,20 @@ namespace Emp37.ET
 {
       public abstract class Theme : ScriptableObject
       {
-            public const string DIRECTORY = "Assets/Editor/StyleSheets/Extensions", FILE_EXTENSION = ".uss";
-
             public enum Type { Light, Dark }
 
+            public const string DIRECTORY = "Assets/Editor/StyleSheets/Extensions", FILE_EXTENSION = ".uss";
+
+
             public StyleRuleGroup[] StyleRuleGroups;
-            [field: Tooltip("Enable to preview changes immediately as they are applied.\n\n<b>Note:</b> Some changes may require a domain reload to take full effect.")]
+
+            [field: Tooltip("Enable to preview changes immediately as they are applied.\n\n<b>Note: </b>Some changes may require a domain reload to take full effect.")]
             [SerializeField] private bool recompileOnApply;
 
             protected abstract Type ThemeType { get; }
 
             private IEnumerable<string> WriteStyleGroups => from @group in StyleRuleGroups let value = @group.ToString() where !string.IsNullOrEmpty(value) select value;
 
-
-            /// <summary>
-            /// Generates a finalised USS code representation for this theme.
-            /// </summary>
-            public sealed override string ToString() => $"/*-----\n[ Theme: {ThemeType}-{name} ]\n-----*/\n\n{string.Join("\n\n", WriteStyleGroups)}";
 
             public void WriteTheme()
             {
@@ -53,5 +50,10 @@ namespace Emp37.ET
                   }
             }
             private bool ShouldSwitchSkin(Type themeType) => (themeType == Type.Dark) ^ EditorGUIUtility.isProSkin;
+
+            /// <summary>
+            /// Generates a finalised USS code representation for this theme.
+            /// </summary>
+            public sealed override string ToString() => $"/*-----\n[ Theme: {ThemeType}-{name} ]\n-----*/\n\n{string.Join("\n\n", WriteStyleGroups)}";
       }
 }

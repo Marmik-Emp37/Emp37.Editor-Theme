@@ -1282,7 +1282,6 @@ MonoBehaviour:
     - ClassSelectors:
       - ToolbarSeachTextField
       - ToolbarSearchTextField
-      - ToolbarSeachTextFieldPopup
       - ToolbarSearchTextFieldPopup
       - ToolbarSearchTextFieldWithJump
       - ToolbarSearchTextFieldWithJumpPopup
@@ -1326,7 +1325,6 @@ MonoBehaviour:
     - ClassSelectors:
       - ToolbarSeachTextField
       - ToolbarSearchTextField
-      - ToolbarSeachTextFieldPopup
       - ToolbarSearchTextFieldPopup
       - ToolbarSearchTextFieldWithJump
       - ToolbarSearchTextFieldWithJumpPopup
@@ -1370,7 +1368,6 @@ MonoBehaviour:
     - ClassSelectors:
       - ToolbarSeachTextField
       - ToolbarSearchTextField
-      - ToolbarSeachTextFieldPopup
       - ToolbarSearchTextFieldPopup
       - ToolbarSearchTextFieldWithJump
       - ToolbarSearchTextFieldWithJumpPopup

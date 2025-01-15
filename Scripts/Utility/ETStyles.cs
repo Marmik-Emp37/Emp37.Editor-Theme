@@ -21,9 +21,17 @@ namespace Emp37.ET
             /// A label style with centered alignment.
             /// Useful for displaying text that needs to be horizontally and vertically centered.
             /// </summary>
-            public static readonly GUIStyle centeredLabel = new(GUI.skin.label)
+            public static readonly GUIStyle centeredText = new(GUI.skin.label)
             {
                   alignment = TextAnchor.MiddleCenter
+            };
+            /// <summary>
+            /// A GUI style for displaying small text right-aligned.
+            /// Ideal for supplementary information or compact labels in the Unity Editor.
+            /// </summary>
+            public static readonly GUIStyle miniTextRight = new(EditorStyles.miniLabel)
+            {
+                  alignment = TextAnchor.MiddleRight
             };
             /// <summary>
             /// A label style with larger text size.
@@ -44,14 +52,14 @@ namespace Emp37.ET
             };
 
             /// <summary>
-            /// Draws a background rectangle filled with the theme's accent color and overlays it with a centered label using the <see cref="centeredLabel"/> style.
+            /// Draws a background rectangle filled with the theme's accent color and overlays it with a centered label using the <see cref="centeredText"/> style.
             /// </summary>
             /// <param name="position">The rectangle area where the title will be drawn.</param>
             /// <param name="label">The text to display in the title.</param>
             public static void DrawAccentTitle(Rect position, string label)
             {
                   EditorGUI.DrawRect(position, ThemeAccent);
-                  EditorGUI.LabelField(position, label, centeredLabel);
+                  EditorGUI.LabelField(position, label, centeredText);
             }
       }
 }
