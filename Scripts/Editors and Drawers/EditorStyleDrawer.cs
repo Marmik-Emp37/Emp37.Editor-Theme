@@ -47,19 +47,19 @@ namespace Emp37.ET
                   {
                         SerializedProperty element = property.GetArrayElementAtIndex(i);
 
-                        position.height = EditorGUI.GetPropertyHeight(element, false);
+                        position.height = singleLineHeight;
                         EditorGUI.PropertyField(position, element, GUIContent.none, false);
 
                         position.y += position.height + standardVerticalSpacing;
                   }
 
                   Rect buttonRect = new(position) { size = new(x: position.width * 0.5F, y: EditorStyles.miniButton.fixedHeight) };
-                  if (GUI.Button(buttonRect, IconContent("d_Toolbar Plus"), EditorStyles.miniButtonLeft) || count == 0)
+                  if (GUI.Button(buttonRect, ETStyles.Plus, EditorStyles.miniButtonLeft) || count == 0)
                   {
                         property.InsertArrayElementAtIndex(count++);
                   }
                   buttonRect.x += buttonRect.width;
-                  if (GUI.Button(buttonRect, IconContent("d_Toolbar Minus"), EditorStyles.miniButtonRight) && count > 0)
+                  if (GUI.Button(buttonRect, ETStyles.Minus, EditorStyles.miniButtonRight) && count > 0)
                   {
                         property.DeleteArrayElementAtIndex(--count);
                   }
@@ -95,37 +95,36 @@ namespace Emp37.ET
 
             public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)
             {
-                  using (new EditorGUI.PropertyScope(position, label, property))
+                  using EditorGUI.PropertyScope propertyScope = new(position, label, property);
+
+                  position.height = BaseHeight;
+                  if (property.isExpanded = GUI.Toggle(position, property.isExpanded, label, propertyExpandToggle))
                   {
-                        position.height = BaseHeight;
-                        if (property.isExpanded = GUI.Toggle(position, property.isExpanded, label, propertyExpandToggle))
+                        position.y += position.height + standardVerticalSpacing; // - H : Header
+
+                        position = DrawArrayProperty(position, property.FindPropertyRelative(p_Selectors));
+                        position = DrawArrayProperty(position, property.FindPropertyRelative(p_PseudoClasses));
+
+
+                        SerializedProperty mask = property.FindPropertyRelative(p_Mask);
+
+                        position.height = TitleSectionHeight;
+                        ETStyles.DrawAccentTitle(position, mask.displayName);
+
+                        position.y += position.height + standardVerticalSpacing; // - H : Mask Title
+
+                        using (EditorGUI.ChangeCheckScope check = new())
                         {
-                              position.y += position.height + standardVerticalSpacing; // - H : Header
-
-                              position = DrawArrayProperty(position, property.FindPropertyRelative(p_Selectors));
-                              position = DrawArrayProperty(position, property.FindPropertyRelative(p_PseudoClasses));
-
-
-                              SerializedProperty mask = property.FindPropertyRelative(p_Mask);
-
-                              position.height = TitleSectionHeight;
-                              ETStyles.DrawAccentTitle(position, mask.displayName);
-
-                              position.y += position.height + standardVerticalSpacing; // - H : Mask Title
-
-                              using (EditorGUI.ChangeCheckScope scope = new())
+                              position.height = propertyMaskField.fixedHeight;
+                              Enum value = EditorGUI.EnumFlagsField(position, (StyleAttributes) mask.enumValueFlag, propertyMaskField);
+                              if (check.changed)
                               {
-                                    position.height = propertyMaskField.fixedHeight;
-                                    Enum value = EditorGUI.EnumFlagsField(position, (StyleAttributes) mask.enumValueFlag, propertyMaskField);
-                                    if (scope.changed)
-                                    {
-                                          mask.enumValueFlag = (int) (StyleAttributes) value;
-                                    }
-                                    position.y += position.height + standardVerticalSpacing; // - H : Property Mask
+                                    mask.enumValueFlag = (int) (StyleAttributes) value;
                               }
-
-                              _ = DrawAttributes(position, property, (StyleAttributes) mask.enumValueFlag); // - H : Attributes
+                              position.y += position.height + standardVerticalSpacing; // - H : Property Mask
                         }
+
+                        _ = DrawAttributes(position, property, (StyleAttributes) mask.enumValueFlag); // - H : Attributes
                   }
             }
             public override float GetPropertyHeight(SerializedProperty property, GUIContent label)
@@ -155,10 +154,11 @@ namespace Emp37.ET
             private static float CalculateArrayPropertyHeight(SerializedProperty property)
             {
                   float height = TitleSectionHeight + 2F * standardVerticalSpacing + EditorStyles.miniButton.fixedHeight;
-                  for (int i = 0; i < property.arraySize; i++)
-                  {
-                        height += EditorGUI.GetPropertyHeight(property.GetArrayElementAtIndex(i)) + standardVerticalSpacing;
-                  }
+                  height += property.arraySize * (singleLineHeight + standardVerticalSpacing);
+                  //for (int i = 0; i < property.arraySize; i++)
+                  //{
+                  //      height += EditorGUI.GetPropertyHeight(property.GetArrayElementAtIndex(i)) + standardVerticalSpacing;
+                  //}
                   return height;
             }
       }

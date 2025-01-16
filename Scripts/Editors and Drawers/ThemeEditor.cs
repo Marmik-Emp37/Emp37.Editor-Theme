@@ -36,7 +36,7 @@ namespace Emp37.ET
                         using (new EditorGUI.DisabledGroupScope(string.IsNullOrEmpty(queryText)))
                         using (new ETHelpers.BackgroundColorScope(Color.red))
                         {
-                              if (GUILayout.Button(EditorGUIUtility.IconContent("d_clear"), GUILayout.Width(SearchSectionSize), GUILayout.ExpandHeight(true)))
+                              if (GUILayout.Button(ETStyles.Clear, GUILayout.Width(SearchSectionSize), GUILayout.ExpandHeight(true)))
                               {
                                     queryText = string.Empty;
                               }

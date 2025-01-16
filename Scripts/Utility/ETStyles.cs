@@ -1,4 +1,5 @@
 using UnityEditor;
+using static UnityEditor.EditorGUIUtility;
 
 using UnityEngine;
 
@@ -65,5 +66,7 @@ namespace Emp37.ET
                   EditorGUI.DrawRect(position, ThemeAccent);
                   EditorGUI.LabelField(position, label, centeredText);
             }
+
+            public static readonly GUIContent Plus = IconContent("d_Toolbar Plus"), Minus = IconContent("d_Toolbar Minus"), Menu = IconContent("_Menu"), Clear = IconContent("d_clear");
       }
 }

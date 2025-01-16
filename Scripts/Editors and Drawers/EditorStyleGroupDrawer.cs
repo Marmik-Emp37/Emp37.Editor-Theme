@@ -62,7 +62,7 @@ namespace Emp37.ET
 
                   // Rename Title Button
                   rect.width = HeaderSize; // - W : Menu Button
-                  if (GUI.Button(rect, IconContent("_Menu")) && (title.isExpanded = !title.isExpanded))
+                  if (GUI.Button(rect, ETStyles.Menu) && (title.isExpanded = !title.isExpanded))
                   {
                         GUI.FocusControl(control_TargetTitle);
                   }
