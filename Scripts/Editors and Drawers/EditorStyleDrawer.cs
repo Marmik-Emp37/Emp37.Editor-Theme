@@ -16,7 +16,9 @@ namespace Emp37.ET
             private const string p_PseudoClasses = nameof(StyleRule.PseudoClasses);
             private const string p_Mask = nameof(StyleRule.PropertyMask);
 
-            private const float BaseHeight = 21F, TitleSectionHeight = 24F, RedLineHeight = 2F;
+            private const float BaseHeight = 21F;
+            private const float TitleSectionHeight = 24F;
+            private const float RedLineHeight = 2F;
 
             private static readonly GUIStyle propertyExpandToggle = new(EditorStyles.foldoutHeader)
             {
@@ -29,6 +31,7 @@ namespace Emp37.ET
                   fontStyle = FontStyle.Italic,
                   fixedHeight = 30F
             };
+
 
             private static Rect DrawArrayProperty(Rect position, SerializedProperty property)
             {

@@ -14,9 +14,10 @@ namespace Emp37.ET
             private const string p_Enabled = "<" + nameof(StyleRuleGroup.Enabled) + ">k__BackingField";
             private const string p_Title = nameof(StyleRuleGroup.Title);
             private const string p_StyleRules = nameof(StyleRuleGroup.StyleRules);
-            private const string control_TargetTitle = "Control.StyleRuleGroup.Title";
+            private const string control_TargetTitle = nameof(StyleRuleGroup) + ":Control.Title";
 
-            private const float HeaderSize = 32F, FooterHeight = 24F;
+            private const float HeaderSize = 32F;
+            private const float FooterHeight = 24F;
 
 
             private static void DrawHeader(Rect position, SerializedProperty property)

@@ -11,15 +11,19 @@ namespace Emp37.ET
 
             public class BackgroundColorScope : GUI.Scope
             {
-                  public readonly Color Original;
+                  private readonly Color original = GUI.backgroundColor;
+                  public Color BackgroundColor { get => GUI.backgroundColor; set => GUI.backgroundColor = value; }
+
+                  public BackgroundColorScope()
+                  {
+                  }
                   public BackgroundColorScope(Color color)
                   {
-                        Original = GUI.backgroundColor;
                         GUI.backgroundColor = color;
                   }
                   protected override void CloseScope()
                   {
-                        GUI.backgroundColor = Original;
+                        GUI.backgroundColor = original;
                   }
             }
       }

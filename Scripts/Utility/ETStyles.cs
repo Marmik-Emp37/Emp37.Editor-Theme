@@ -29,7 +29,7 @@ namespace Emp37.ET
             /// A GUI style for displaying small text right-aligned.
             /// Ideal for supplementary information or compact labels in the Unity Editor.
             /// </summary>
-            public static readonly GUIStyle miniTextRight = new(EditorStyles.miniLabel)
+            public static readonly GUIStyle miniLabelRight = new(EditorStyles.miniLabel)
             {
                   alignment = TextAnchor.MiddleRight
             };
@@ -40,6 +40,10 @@ namespace Emp37.ET
             public static readonly GUIStyle largeText = new(EditorStyles.label)
             {
                   fontSize = 14
+            };
+            public static readonly GUIStyle largeHelpBox = new(EditorStyles.helpBox)
+            {
+                  fontSize = largeText.fontSize
             };
             /// <summary>
             /// A text field style with left-aligned text and a larger font size.

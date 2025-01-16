@@ -20,7 +20,7 @@ namespace Emp37.ET
 
             public StyleRuleGroup[] StyleRuleGroups;
 
-            [field: Tooltip("Enable to preview changes immediately as they are applied.\n\n<b>Note: </b>Some changes may require a domain reload to take full effect.")]
+            [field: Tooltip("Disable to preview changes immediately as they are applied.\n\n<b>Note: </b>Some changes may require a domain reload to take full effect.")]
             [SerializeField] private bool recompileOnApply;
 
             protected abstract Type ThemeType { get; }

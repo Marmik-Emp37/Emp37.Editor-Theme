@@ -10,82 +10,105 @@ namespace Emp37.ET
       [CustomEditor(typeof(Theme), true)]
       internal class ThemeEditor : Editor
       {
-            private const float ButtonSize = 42F, SearchBarSize = 32F;
+            private const float ButtonSize = 42F;
+            private const float SearchSectionSize = 32F;
 
-            private string searchQuery = string.Empty;
+            private const int MaxVisibleResults = 50;
+            private string queryText = string.Empty;
+            private IEnumerable<(string Name, string Path)> selectorHierarchy;
 
-            private IEnumerable<(string Name, string Path)> selectors;
+            private Theme Target => target as Theme;
 
 
             private void OnEnable()
             {
-                  selectors = (target as Theme).StyleRuleGroups.SelectMany((group, index) => group.StyleRules.SelectMany((rule, index) => rule.ClassSelectors.Select(item => (item, $"{group.Title} > Rule Element[{index}])"))));
+                  selectorHierarchy = Target.StyleRuleGroups
+                        .SelectMany((styleGroup, groupIdx) => styleGroup.StyleRules.SelectMany((style, styleIdx) => style.ClassSelectors.Select(selector => (selector, $"Group[{groupIdx}]: \"{styleGroup.Title}\" > Rule[{styleIdx}]"))));
+            }
+
+            private void DrawSearchField()
+            {
+                  EditorGUILayout.LabelField("Search Bar", EditorStyles.largeLabel);
+                  using (new GUILayout.HorizontalScope(GUILayout.Height(SearchSectionSize)))
+                  {
+                        queryText = EditorGUILayout.TextField(queryText, ETStyles.largeTextField, GUILayout.Height(SearchSectionSize)).Trim();
+
+                        using (new EditorGUI.DisabledGroupScope(string.IsNullOrEmpty(queryText)))
+                        using (new ETHelpers.BackgroundColorScope(Color.red))
+                        {
+                              if (GUILayout.Button(EditorGUIUtility.IconContent("d_clear"), GUILayout.Width(SearchSectionSize), GUILayout.ExpandHeight(true)))
+                              {
+                                    queryText = string.Empty;
+                              }
+                        }
+                  }
+                  EditorGUI.DrawRect(GUILayoutUtility.GetRect(default, 2F), ETStyles.ThemeTint);
+            }
+            private void DrawInspectorPanel()
+            {
+                  serializedObject.Update();
+                  DrawPropertiesExcluding(serializedObject, "m_Script");
+                  serializedObject.ApplyModifiedProperties();
+
+                  GUILayout.Space(10F);
+                  if (GUILayout.Button("Apply Theme", GUILayout.Height(ButtonSize)))
+                  {
+                        Target.WriteTheme();
+                  }
+                  using (new EditorGUILayout.HorizontalScope())
+                  {
+                        if (GUILayout.Button("Expand", EditorStyles.miniButtonLeft))
+                        {
+                              ExpandProperties(true);
+                        }
+                        if (GUILayout.Button("Collapse", EditorStyles.miniButtonRight))
+                        {
+                              ExpandProperties(false);
+                        }
+                  }
+            }
+            private void ShowSearchResults()
+            {
+                  List<(string Name, string Path)> results = selectorHierarchy.Where(entry => entry.Name.Contains(queryText, System.StringComparison.OrdinalIgnoreCase)).ToList();
+
+                  if (results.Any())
+                  {
+                        int count = results.Count, displayCount = Mathf.Min(count, MaxVisibleResults);
+                        using (ETHelpers.BackgroundColorScope scope = new())
+                        {
+                              for (int i = 0; i < displayCount; i++)
+                              {
+                                    (string name, string path) = results[i];
+                                    scope.BackgroundColor = ((i & 1) == 0) ? ETStyles.ThemeTint : ETStyles.ThemeAccent;
+
+                                    EditorGUILayout.LabelField(name, ETStyles.largeHelpBox);
+                                    EditorGUI.LabelField(GUILayoutUtility.GetLastRect(), path, ETStyles.miniLabelRight);
+                              }
+                        }
+                        if (count > MaxVisibleResults)
+                        {
+                              EditorGUILayout.HelpBox($"Showing {MaxVisibleResults} of {count} results. Refine your search for more specific results.", MessageType.Info);
+                        }
+                  }
+                  else
+                  {
+                        EditorGUILayout.HelpBox("No matching properties found.", MessageType.Info);
+                  }
             }
 
             public override void OnInspectorGUI()
             {
-                  #region S E A R C H   B A R
-                  EditorGUILayout.LabelField("Search Bar", EditorStyles.largeLabel);
-                  GUILayout.BeginHorizontal(GUILayout.Height(SearchBarSize));
-                  searchQuery = EditorGUILayout.TextField(searchQuery, ETStyles.largeTextField, GUILayout.Height(SearchBarSize));
-                  using (new EditorGUI.DisabledGroupScope(searchQuery.Length is 0))
-                  using (new ETHelpers.BackgroundColorScope(Color.red))
-                  {
-                        if (GUILayout.Button(EditorGUIUtility.IconContent("d_clear"), GUILayout.Width(SearchBarSize), GUILayout.ExpandHeight(true)))
-                        {
-                              searchQuery = string.Empty;
-                        }
-                  }
-                  GUILayout.EndHorizontal();
-                  EditorGUI.DrawRect(GUILayoutUtility.GetRect(default, 2F), ETStyles.ThemeTint);
-                  #endregion
+                  DrawSearchField();
 
                   GUILayout.Space(EditorGUIUtility.standardVerticalSpacing);
 
-                  if (searchQuery.Length == 0)
+                  if (string.IsNullOrWhiteSpace(queryText))
                   {
-                        serializedObject.Update();
-                        DrawPropertiesExcluding(serializedObject, "m_Script");
-                        serializedObject.ApplyModifiedProperties();
-
-                        GUILayout.Space(10F);
-                        if (GUILayout.Button("Apply Theme", GUILayout.Height(ButtonSize)))
-                        {
-                              Theme target = base.target as Theme;
-                              target.WriteTheme();
-                        }
-
-                        #region E X P A N D / C O L L A P S E   B U T T O N S
-                        using (new EditorGUILayout.HorizontalScope())
-                        {
-                              if (GUILayout.Button("Expand", EditorStyles.miniButtonLeft))
-                              {
-                                    ExpandProperties(true);
-                              }
-                              if (GUILayout.Button("Collapse", EditorStyles.miniButtonRight))
-                              {
-                                    ExpandProperties(false);
-                              }
-                        }
-                        #endregion
+                        DrawInspectorPanel();
                   }
                   else
                   {
-                        var results = string.IsNullOrWhiteSpace(searchQuery) ? selectors : selectors.Where(entry => entry.Name.Contains(searchQuery, System.StringComparison.OrdinalIgnoreCase));
-                        if (!results.Any())
-                        {
-                              EditorGUILayout.HelpBox("No matching properties found.", MessageType.Info);
-                        }
-                        else
-                        {
-                              foreach ((string name, string path) in results)
-                              {
-                                    GUILayout.BeginHorizontal();
-                                    EditorGUILayout.LabelField(name);
-                                    EditorGUILayout.LabelField(path, ETStyles.miniTextRight);
-                                    GUILayout.EndHorizontal();
-                              }
-                        }
+                        ShowSearchResults();
                   }
             }
 
