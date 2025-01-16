@@ -13,7 +13,7 @@ namespace Emp37.ET
             private const float ButtonSize = 42F;
             private const float SearchSectionSize = 32F;
 
-            private const int MaxVisibleResults = 50;
+            private const int MaxVisibleResults = 60;
             private string queryText = string.Empty;
             private IEnumerable<(string Name, string Path)> selectorHierarchy;
 
@@ -28,7 +28,7 @@ namespace Emp37.ET
 
             private void DrawSearchField()
             {
-                  EditorGUILayout.LabelField("Search Bar", EditorStyles.largeLabel);
+                  EditorGUILayout.LabelField("Search Selector", EditorStyles.largeLabel);
                   using (new GUILayout.HorizontalScope(GUILayout.Height(SearchSectionSize)))
                   {
                         queryText = EditorGUILayout.TextField(queryText, ETStyles.largeTextField, GUILayout.Height(SearchSectionSize)).Trim();
@@ -73,10 +73,10 @@ namespace Emp37.ET
 
                   if (results.Any())
                   {
-                        int count = results.Count, displayCount = Mathf.Min(count, MaxVisibleResults);
+                        int totalResults = results.Count;
                         using (ETHelpers.BackgroundColorScope scope = new())
                         {
-                              for (int i = 0; i < displayCount; i++)
+                              for (int count = Mathf.Min(totalResults, MaxVisibleResults), i = 0; i < count; i++)
                               {
                                     (string name, string path) = results[i];
                                     scope.BackgroundColor = ((i & 1) == 0) ? ETStyles.ThemeTint : ETStyles.ThemeAccent;
@@ -85,9 +85,9 @@ namespace Emp37.ET
                                     EditorGUI.LabelField(GUILayoutUtility.GetLastRect(), path, ETStyles.miniLabelRight);
                               }
                         }
-                        if (count > MaxVisibleResults)
+                        if (totalResults > MaxVisibleResults)
                         {
-                              EditorGUILayout.HelpBox($"Showing {MaxVisibleResults} of {count} results. Refine your search for more specific results.", MessageType.Info);
+                              EditorGUILayout.HelpBox($"Showing {MaxVisibleResults} of {totalResults} results. Refine your search for more specific results.", MessageType.Info);
                         }
                   }
                   else
