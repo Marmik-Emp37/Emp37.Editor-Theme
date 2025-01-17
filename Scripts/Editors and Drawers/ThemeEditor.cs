@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -11,32 +12,48 @@ namespace Emp37.ET
       internal class ThemeEditor : Editor
       {
             private const float ButtonSize = 42F;
-            private const float SearchSectionSize = 32F;
+            private const float SearchFieldHeight = 32F;
+            private const float SearchFieldButtonWidth = SearchFieldHeight;
 
-            private const int MaxVisibleResults = 60;
+            private const int MaxSearchResults = 60;
             private string queryText = string.Empty;
-            private IEnumerable<(string Name, string Path)> selectorHierarchy;
+            private IEnumerable<(string Name, string Path, Action Action)> selectorHierarchy;
 
             private Theme Target => target as Theme;
 
-
             private void OnEnable()
             {
-                  selectorHierarchy = Target.StyleRuleGroups
-                        .SelectMany((styleGroup, groupIdx) => styleGroup.StyleRules.SelectMany((style, styleIdx) => style.ClassSelectors.Select(selector => (selector, $"Group[{groupIdx}]: \"{styleGroup.Title}\" > Rule[{styleIdx}]"))));
+                  selectorHierarchy = Target.StyleRuleGroups.SelectMany((styleGroup, groupIdx) => styleGroup.StyleRules.SelectMany((style, styleIdx) => style.ClassSelectors.Select(selector =>
+                  (Name: selector, Path: $"Group[{groupIdx}]: {styleGroup.Title.Truncate(20)} > Element[{styleIdx}]", Action: new Action(() =>
+                  {
+                        ExpandProperties(false);
+
+                        SerializedProperty styleRuleGroups = serializedObject.FindProperty(nameof(Theme.StyleRuleGroups));
+                        if (styleRuleGroups == null) return;
+
+                        SerializedProperty group = styleRuleGroups.GetArrayElementAtIndex(groupIdx);
+                        if (group == null) return;
+
+                        SerializedProperty style = group.FindPropertyRelative(nameof(StyleRuleGroup.StyleRules))?.GetArrayElementAtIndex(styleIdx);
+                        if (style == null) return;
+
+                        styleRuleGroups.isExpanded = group.isExpanded = style.isExpanded = true;
+                        GUIUtility.keyboardControl = 0;
+                        queryText = string.Empty;
+                  })))));
             }
 
             private void DrawSearchField()
             {
                   EditorGUILayout.LabelField("Search Selector", EditorStyles.largeLabel);
-                  using (new GUILayout.HorizontalScope(GUILayout.Height(SearchSectionSize)))
+                  using (new GUILayout.HorizontalScope(GUILayout.Height(SearchFieldHeight)))
                   {
-                        queryText = EditorGUILayout.TextField(queryText, ETStyles.largeTextField, GUILayout.Height(SearchSectionSize)).Trim();
+                        queryText = EditorGUILayout.TextField(queryText, ETStyles.largeTextField, GUILayout.Height(SearchFieldHeight)).Trim();
 
                         using (new EditorGUI.DisabledGroupScope(string.IsNullOrEmpty(queryText)))
                         using (new ETHelpers.BackgroundColorScope(Color.red))
                         {
-                              if (GUILayout.Button(ETStyles.Clear, GUILayout.Width(SearchSectionSize), GUILayout.ExpandHeight(true)))
+                              if (GUILayout.Button(ETStyles.Clear, GUILayout.Width(SearchFieldButtonWidth), GUILayout.ExpandHeight(true)))
                               {
                                     queryText = string.Empty;
                               }
@@ -67,27 +84,33 @@ namespace Emp37.ET
                         }
                   }
             }
-            private void ShowSearchResults()
+            private void DrawSearchResults()
             {
-                  List<(string Name, string Path)> results = selectorHierarchy.Where(entry => entry.Name.Contains(queryText, System.StringComparison.OrdinalIgnoreCase)).ToList();
-
-                  if (results.Any())
+                  IEnumerable<(string, string, Action)> results = selectorHierarchy.Where(entry => entry.Name.Contains(queryText, StringComparison.OrdinalIgnoreCase)).Take(MaxSearchResults);
+                  int count = results.Count();
+                  if (count > 0)
                   {
-                        int totalResults = results.Count;
                         using (ETHelpers.BackgroundColorScope scope = new())
                         {
-                              for (int count = Mathf.Min(totalResults, MaxVisibleResults), i = 0; i < count; i++)
+                              int i = 0;
+                              foreach ((string name, string path, Action action) in results)
                               {
-                                    (string name, string path) = results[i];
-                                    scope.BackgroundColor = ((i & 1) == 0) ? ETStyles.ThemeTint : ETStyles.ThemeAccent;
+                                    scope.BackgroundColor = ((i++ & 1) == 0) ? ETStyles.ThemeTint : ETStyles.ThemeAccent;
 
-                                    EditorGUILayout.LabelField(name, ETStyles.largeHelpBox);
-                                    EditorGUI.LabelField(GUILayoutUtility.GetLastRect(), path, ETStyles.miniLabelRight);
+                                    using (new GUILayout.HorizontalScope())
+                                    {
+                                          EditorGUILayout.LabelField(name, ETStyles.largeHelpBox);
+                                          EditorGUI.LabelField(GUILayoutUtility.GetLastRect(), path + ' ', ETStyles.miniLabelRight);
+                                          if (GUILayout.Button(ETStyles.INFoldout, GUILayout.Width(25F), GUILayout.ExpandHeight(true)))
+                                          {
+                                                action?.Invoke();
+                                          }
+                                    }
                               }
                         }
-                        if (totalResults > MaxVisibleResults)
+                        if (count == MaxSearchResults)
                         {
-                              EditorGUILayout.HelpBox($"Showing {MaxVisibleResults} of {totalResults} results. Refine your search for more specific results.", MessageType.Info);
+                              EditorGUILayout.HelpBox($"Displaying the first {MaxSearchResults} results out of {selectorHierarchy.Count()}.\nYour search might match more items. Try refining your query to see specific results.", MessageType.Info);
                         }
                   }
                   else
@@ -108,7 +131,7 @@ namespace Emp37.ET
                   }
                   else
                   {
-                        ShowSearchResults();
+                        DrawSearchResults();
                   }
             }
 

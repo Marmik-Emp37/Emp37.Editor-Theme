@@ -3701,7 +3701,7 @@ MonoBehaviour:
       - CN-EntryInfoIcon
       PseudoClasses: 00000000
       PropertyMask: 1
-      BackgroundTexture: {fileID: 2800000, guid: 4d13a0e2a8d9b49498f79f69598df8c8, type: 3}
+      BackgroundTexture: {fileID: 2800000, guid: 5a7e0ab600ac26843846f8e95d957161, type: 3}
       BackgroundColor:
         serializedVersion: 2
         rgba: 0
@@ -3739,7 +3739,7 @@ MonoBehaviour:
       - CN-EntryWarnIcon
       PseudoClasses: 00000000
       PropertyMask: 1
-      BackgroundTexture: {fileID: 2800000, guid: 12acef22c60bb5f4cba537c49601bc3b, type: 3}
+      BackgroundTexture: {fileID: 2800000, guid: 692c3165cbd41364ca3a27b4264e56a9, type: 3}
       BackgroundColor:
         serializedVersion: 2
         rgba: 0

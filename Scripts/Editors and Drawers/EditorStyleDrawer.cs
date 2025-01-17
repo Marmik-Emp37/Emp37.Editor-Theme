@@ -54,12 +54,12 @@ namespace Emp37.ET
                   }
 
                   Rect buttonRect = new(position) { size = new(x: position.width * 0.5F, y: EditorStyles.miniButton.fixedHeight) };
-                  if (GUI.Button(buttonRect, ETStyles.Plus, EditorStyles.miniButtonLeft) || count == 0)
+                  if (GUI.Button(buttonRect, ETStyles.BoldPlus, EditorStyles.miniButtonLeft) || count == 0)
                   {
                         property.InsertArrayElementAtIndex(count++);
                   }
                   buttonRect.x += buttonRect.width;
-                  if (GUI.Button(buttonRect, ETStyles.Minus, EditorStyles.miniButtonRight) && count > 0)
+                  if (GUI.Button(buttonRect, ETStyles.BoldMinus, EditorStyles.miniButtonRight) && count > 0)
                   {
                         property.DeleteArrayElementAtIndex(--count);
                   }

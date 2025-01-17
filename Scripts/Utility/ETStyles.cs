@@ -67,6 +67,11 @@ namespace Emp37.ET
                   EditorGUI.LabelField(position, label, centeredText);
             }
 
-            public static readonly GUIContent Plus = IconContent("d_Toolbar Plus"), Minus = IconContent("d_Toolbar Minus"), Menu = IconContent("_Menu"), Clear = IconContent("d_clear");
+            public static readonly GUIContent
+                  BoldPlus = IconContent("d_Toolbar Plus"),
+                  BoldMinus = IconContent("d_Toolbar Minus"),
+                  Menu = IconContent("_Menu"),
+                  Clear = IconContent("d_clear"),
+                  INFoldout = IconContent("d_IN_foldout");
       }
 }

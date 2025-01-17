@@ -26,5 +26,7 @@ namespace Emp37.ET
                         GUI.backgroundColor = original;
                   }
             }
+
+            public static string Truncate(this string text, int length) => text.Length > length ? $"{text[..length]}..." : text;
       }
 }
