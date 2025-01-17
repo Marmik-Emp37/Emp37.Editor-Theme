@@ -12,50 +12,51 @@ namespace Emp37.ET
       internal class ThemeEditor : Editor
       {
             private const float ButtonSize = 42F;
-            private const float SearchFieldHeight = 32F;
-            private const float SearchFieldButtonWidth = SearchFieldHeight;
-
+            private const float SearchFieldSize = 32F;
             private const int MaxSearchResults = 60;
+
             private string queryText = string.Empty;
             private IEnumerable<(string Name, string Path, Action Action)> selectorHierarchy;
 
             private Theme Target => target as Theme;
+
 
             private void OnEnable()
             {
                   selectorHierarchy = Target.StyleRuleGroups.SelectMany((styleGroup, groupIdx) => styleGroup.StyleRules.SelectMany((style, styleIdx) => style.ClassSelectors.Select(selector =>
                   (Name: selector, Path: $"Group[{groupIdx}]: {styleGroup.Title.Truncate(20)} > Element[{styleIdx}]", Action: new Action(() =>
                   {
-                        ExpandProperties(false);
+                        SerializedProperty groupArray = serializedObject.FindProperty(nameof(Target.StyleRuleGroups));
+                        if (groupArray == null) return;
 
-                        SerializedProperty styleRuleGroups = serializedObject.FindProperty(nameof(Theme.StyleRuleGroups));
-                        if (styleRuleGroups == null) return;
-
-                        SerializedProperty group = styleRuleGroups.GetArrayElementAtIndex(groupIdx);
+                        SerializedProperty group = groupArray.GetArrayElementAtIndex(groupIdx);
                         if (group == null) return;
 
-                        SerializedProperty style = group.FindPropertyRelative(nameof(StyleRuleGroup.StyleRules))?.GetArrayElementAtIndex(styleIdx);
-                        if (style == null) return;
+                        SerializedProperty styleRule = group.FindPropertyRelative(nameof(styleGroup.StyleRules))?.GetArrayElementAtIndex(styleIdx);
+                        if (styleRule == null) return;
 
-                        styleRuleGroups.isExpanded = group.isExpanded = style.isExpanded = true;
-                        GUIUtility.keyboardControl = 0;
+                        ExpandProperties(false);
+                        groupArray.isExpanded = group.isExpanded = styleRule.isExpanded = true;
+
                         queryText = string.Empty;
+                        GUIUtility.keyboardControl = 0;
                   })))));
             }
 
             private void DrawSearchField()
             {
                   EditorGUILayout.LabelField("Search Selector", EditorStyles.largeLabel);
-                  using (new GUILayout.HorizontalScope(GUILayout.Height(SearchFieldHeight)))
+                  using (new GUILayout.HorizontalScope(GUILayout.Height(SearchFieldSize)))
                   {
-                        queryText = EditorGUILayout.TextField(queryText, ETStyles.largeTextField, GUILayout.Height(SearchFieldHeight)).Trim();
+                        queryText = EditorGUILayout.TextField(queryText, ETStyles.largeTextField, GUILayout.Height(SearchFieldSize)).Trim();
 
                         using (new EditorGUI.DisabledGroupScope(string.IsNullOrEmpty(queryText)))
                         using (new ETHelpers.BackgroundColorScope(Color.red))
                         {
-                              if (GUILayout.Button(ETStyles.Clear, GUILayout.Width(SearchFieldButtonWidth), GUILayout.ExpandHeight(true)))
+                              if (GUILayout.Button(ETStyles.Clear, GUILayout.Width(SearchFieldSize), GUILayout.ExpandHeight(true)))
                               {
                                     queryText = string.Empty;
+                                    GUIUtility.keyboardControl = default;
                               }
                         }
                   }
@@ -138,7 +139,9 @@ namespace Emp37.ET
             private void ExpandProperties(bool expand)
             {
                   SerializedProperty iterator = serializedObject.GetIterator();
-                  while (iterator.NextVisible(true)) if (iterator.depth < 4) iterator.isExpanded = expand;
+                  while (iterator.NextVisible(true))
+                        if (iterator.depth < 4)
+                              iterator.isExpanded = expand;
             }
       }
 }
