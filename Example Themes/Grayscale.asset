@@ -3777,7 +3777,7 @@ MonoBehaviour:
       - CN-EntryErrorIcon
       PseudoClasses: 00000000
       PropertyMask: 1
-      BackgroundTexture: {fileID: 2800000, guid: 8c210f13b049c6e47a29732fa97dda78, type: 3}
+      BackgroundTexture: {fileID: 2800000, guid: f75bf83197d16444e94f623b3aca9a74, type: 3}
       BackgroundColor:
         serializedVersion: 2
         rgba: 0
