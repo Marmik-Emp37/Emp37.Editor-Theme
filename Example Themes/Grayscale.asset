@@ -2134,6 +2134,46 @@ MonoBehaviour:
         Bottom: 1
         Left: 1
         UnitType: 1
+    - ClassSelectors:
+      - MiniPopup
+      - MiniPullDown
+      - ShurikenPopup
+      PseudoClasses: 0100000004000000
+      PropertyMask: 36
+      BackgroundTexture: {fileID: 0}
+      BackgroundColor:
+        serializedVersion: 2
+        rgba: 4286611584
+      BorderColor:
+        serializedVersion: 2
+        rgba: 4288256409
+      BorderTopColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRightColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderBottomColor:
+        serializedVersion: 2
+        rgba: 4288256409
+      BorderLeftColor:
+        serializedVersion: 2
+        rgba: 0
+      TextColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRadius:
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
+      BorderWidth:
+        Top: 1
+        Right: 1
+        Bottom: 1
+        Left: 1
+        UnitType: 1
     <Enabled>k__BackingField: 1
   - Title: Toggle
     StyleRules:
@@ -2874,9 +2914,6 @@ MonoBehaviour:
         Left: 0
         UnitType: 1
     <Enabled>k__BackingField: 1
-  - Title: 
-    StyleRules: []
-    <Enabled>k__BackingField: 0
   - Title: --- [ T A B ] ---
     StyleRules: []
     <Enabled>k__BackingField: 0
@@ -4343,9 +4380,6 @@ MonoBehaviour:
         Left: 1
         UnitType: 1
     <Enabled>k__BackingField: 1
-  - Title: 
-    StyleRules: []
-    <Enabled>k__BackingField: 0
   - Title: --- [ E D I T O R ] ---
     StyleRules: []
     <Enabled>k__BackingField: 0
@@ -4956,9 +4990,6 @@ MonoBehaviour:
         Left: 0
         UnitType: 0
     <Enabled>k__BackingField: 1
-  - Title: 
-    StyleRules: []
-    <Enabled>k__BackingField: 0
   - Title: --- [ S H U R I K E N ] ---
     StyleRules: []
     <Enabled>k__BackingField: 0

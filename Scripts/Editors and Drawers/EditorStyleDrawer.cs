@@ -76,7 +76,7 @@ namespace Emp37.ET
                         if (flags is 0)
                         {
                               position.height = RedLineHeight;
-                              EditorGUI.DrawRect(position.Inset(40F), Color.red);
+                              EditorGUI.DrawRect(ETHelpers.Inset(position, 40F), Color.red);
                               position.y += position.height; // - [ H ] : Red Line
                         }
                         else

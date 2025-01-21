@@ -24,7 +24,7 @@ namespace Emp37.ET
             private void OnEnable()
             {
                   selectorHierarchy = Target.StyleRuleGroups.SelectMany((styleGroup, groupIdx) => styleGroup.StyleRules.SelectMany((style, styleIdx) => style.ClassSelectors.Select(selector =>
-                  (Name: selector, Path: $"Group[{groupIdx}]: {styleGroup.Title.Truncate(20)} > Element[{styleIdx}]", Action: new Action(() =>
+                  (Name: selector, Path: $"Group[{groupIdx}]: {ETHelpers.Truncate(styleGroup.Title, 20)} > Element[{styleIdx}]", Action: new Action(() =>
                   {
                         SerializedProperty groupArray = serializedObject.FindProperty(nameof(Target.StyleRuleGroups));
                         if (groupArray == null) return;

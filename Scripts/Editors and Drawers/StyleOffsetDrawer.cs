@@ -56,7 +56,7 @@ namespace Emp37.ET
                   int indent = EditorGUI.indentLevel;
                   EditorGUI.indentLevel = 0;
 
-                  DrawFields(position.Indent(labelPosition.width + Spacing), property);
+                  DrawFields(ETHelpers.Indent(position, labelPosition.width + Spacing), property);
 
                   EditorGUI.indentLevel = indent;
 

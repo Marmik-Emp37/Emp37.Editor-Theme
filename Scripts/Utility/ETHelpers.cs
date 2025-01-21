@@ -6,8 +6,12 @@ namespace Emp37.ET
       {
             public const float Spacing = 2F, IndentWidth = 15F;
 
-            public static Rect Indent(this Rect rect, float value) => new(rect) { x = rect.x + value, width = rect.width - value };
-            public static Rect Inset(this Rect rect, float value) => new(rect) { x = rect.x + value, width = rect.width - 2F * value };
+
+            public static Rect Indent(Rect rect, float value) => new(rect) { x = rect.x + value, width = rect.width - value };
+            public static Rect Inset(Rect rect, float value) => new(rect) { x = rect.x + value, width = rect.width - 2F * value };
+
+            public static string Truncate(string text, int length) => text.Length > length ? $"{text[..length]}..." : text;
+
 
             public class BackgroundColorScope : GUI.Scope
             {
@@ -26,7 +30,5 @@ namespace Emp37.ET
                         GUI.backgroundColor = original;
                   }
             }
-
-            public static string Truncate(this string text, int length) => text.Length > length ? $"{text[..length]}..." : text;
       }
 }
