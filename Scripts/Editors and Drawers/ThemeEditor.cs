@@ -24,7 +24,7 @@ namespace Emp37.ET
             private void OnEnable()
             {
                   selectorHierarchy = Target.StyleRuleGroups.SelectMany((styleGroup, groupIdx) => styleGroup.StyleRules.SelectMany((style, styleIdx) => style.ClassSelectors.Select(selector =>
-                  (Name: selector, Path: $"Group[{groupIdx}]: {ETHelpers.Truncate(styleGroup.Title, 20)} > Element[{styleIdx}]", Action: new Action(() =>
+                  (Name: selector, Path: $"Style Rule Group [{groupIdx}]: \"{styleGroup.Title}\" > Element [{styleIdx}]", Action: new Action(() =>
                   {
                         SerializedProperty groupArray = serializedObject.FindProperty(nameof(Target.StyleRuleGroups));
                         if (groupArray == null) return;
@@ -101,12 +101,12 @@ namespace Emp37.ET
                                     using (new GUILayout.HorizontalScope())
                                     {
                                           EditorGUILayout.LabelField(name, ETStyles.largeHelpBox);
-                                          EditorGUI.LabelField(GUILayoutUtility.GetLastRect(), path + ' ', ETStyles.miniLabelRight);
                                           if (GUILayout.Button(ETStyles.INFoldout, GUILayout.Width(25F), GUILayout.ExpandHeight(true)))
                                           {
                                                 action?.Invoke();
                                           }
                                     }
+                                    EditorGUILayout.LabelField(path, EditorStyles.helpBox);
                               }
                         }
                         if (count == MaxSearchResults)
@@ -139,9 +139,7 @@ namespace Emp37.ET
             private void ExpandProperties(bool expand)
             {
                   SerializedProperty iterator = serializedObject.GetIterator();
-                  while (iterator.NextVisible(true))
-                        if (iterator.depth < 4)
-                              iterator.isExpanded = expand;
+                  while (iterator.NextVisible(true)) if (iterator.depth < 4) iterator.isExpanded = expand;
             }
       }
 }

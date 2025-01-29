@@ -10,8 +10,6 @@ namespace Emp37.ET
             public static Rect Indent(Rect rect, float value) => new(rect) { x = rect.x + value, width = rect.width - value };
             public static Rect Inset(Rect rect, float value) => new(rect) { x = rect.x + value, width = rect.width - 2F * value };
 
-            public static string Truncate(string text, int length) => text.Length > length ? $"{text[..length]}..." : text;
-
 
             public class BackgroundColorScope : GUI.Scope
             {
