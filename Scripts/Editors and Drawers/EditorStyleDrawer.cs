@@ -18,7 +18,7 @@ namespace Emp37.ET
 
             private const float BaseHeight = 21F;
             private const float TitleSectionHeight = 24F;
-            private const float RedLineHeight = 2F;
+            private const float EmptyStyleLineHeight = 2F;
 
             private static readonly GUIStyle propertyExpandToggle = new(EditorStyles.foldoutHeader)
             {
@@ -68,6 +68,12 @@ namespace Emp37.ET
 
                   return new(original) { y = position.y };
             }
+            private static float CalculateArrayPropertyHeight(SerializedProperty property)
+            {
+                  float height = TitleSectionHeight + 2F * standardVerticalSpacing + EditorStyles.miniButton.fixedHeight;
+                  height += property.arraySize * (singleLineHeight + standardVerticalSpacing);
+                  return height;
+            }
             private static Rect DrawAttributes(Rect position, SerializedProperty property, StyleAttributes flags)
             {
                   Rect original = position;
@@ -75,7 +81,7 @@ namespace Emp37.ET
                   {
                         if (flags is 0)
                         {
-                              position.height = RedLineHeight;
+                              position.height = EmptyStyleLineHeight;
                               EditorGUI.DrawRect(ETHelpers.Inset(position, 40F), Color.red);
                               position.y += position.height; // - [ H ] : Red Line
                         }
@@ -131,7 +137,7 @@ namespace Emp37.ET
             {
                   if (property.isExpanded)
                   {
-                        float value = BaseHeight + standardVerticalSpacing;   // @r >> H : Header
+                        float value = BaseHeight + standardVerticalSpacing; // @r >> H : Header
 
                         value += CalculateArrayPropertyHeight(property.FindPropertyRelative(p_Selectors));
                         value += CalculateArrayPropertyHeight(property.FindPropertyRelative(p_PseudoClasses));
@@ -140,26 +146,12 @@ namespace Emp37.ET
 
                         // @r >> H : Attributes
                         StyleAttributes flags = (StyleAttributes) property.FindPropertyRelative(p_Mask).enumValueFlag;
-                        value += flags is 0 ? RedLineHeight :
+                        value += flags is 0 ? EmptyStyleLineHeight :
                               StyleRule.PropertyMap.Where(entry => flags.HasFlag(entry.Flag)).Sum(entry => EditorGUI.GetPropertyHeight(property.FindPropertyRelative(entry.Name)) + standardVerticalSpacing);
 
                         return value;
                   }
-                  else
-                  {
-                        return BaseHeight;
-                  }
-            }
-
-            private static float CalculateArrayPropertyHeight(SerializedProperty property)
-            {
-                  float height = TitleSectionHeight + 2F * standardVerticalSpacing + EditorStyles.miniButton.fixedHeight;
-                  height += property.arraySize * (singleLineHeight + standardVerticalSpacing);
-                  //for (int i = 0; i < property.arraySize; i++)
-                  //{
-                  //      height += EditorGUI.GetPropertyHeight(property.GetArrayElementAtIndex(i)) + standardVerticalSpacing;
-                  //}
-                  return height;
+                  return BaseHeight;
             }
       }
 }

@@ -11,7 +11,7 @@ namespace Emp37.ET
             /// The primary tint color of the theme, depending on the current editor skin.
             /// For dark theme Black otherwise, White.
             /// </summary>
-            public static readonly Color ThemeTint = EditorGUIUtility.isProSkin ? Color.black : Color.white;
+            public static readonly Color ThemeTint = isProSkin ? Color.black : Color.white;
             /// <summary>
             /// A semi-transparent accent color derived from the theme tint.
             /// Can be used for highlighting elements or creating subtle backgrounds.

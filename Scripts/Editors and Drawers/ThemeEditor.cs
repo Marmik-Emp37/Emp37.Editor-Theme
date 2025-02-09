@@ -26,20 +26,15 @@ namespace Emp37.ET
                   selectorHierarchy = Target.StyleRuleGroups.SelectMany((styleGroup, groupIdx) => styleGroup.StyleRules.SelectMany((style, styleIdx) => style.ClassSelectors.Select(selector =>
                   (Name: selector, Path: $"Style Rule Group [{groupIdx}]: \"{styleGroup.Title}\" > Element [{styleIdx}]", Action: new Action(() =>
                   {
-                        SerializedProperty groupArray = serializedObject.FindProperty(nameof(Target.StyleRuleGroups));
-                        if (groupArray == null) return;
-
-                        SerializedProperty group = groupArray.GetArrayElementAtIndex(groupIdx);
-                        if (group == null) return;
-
-                        SerializedProperty styleRule = group.FindPropertyRelative(nameof(styleGroup.StyleRules))?.GetArrayElementAtIndex(styleIdx);
-                        if (styleRule == null) return;
+                        SerializedProperty styleRuleGroups = serializedObject.FindProperty(nameof(Target.StyleRuleGroups));
+                        SerializedProperty styleRuleGroupsElement = styleRuleGroups.GetArrayElementAtIndex(groupIdx);
+                        SerializedProperty styleRulesElement = styleRuleGroupsElement.FindPropertyRelative(nameof(styleGroup.StyleRules)).GetArrayElementAtIndex(styleIdx);
 
                         ExpandProperties(false);
-                        groupArray.isExpanded = group.isExpanded = styleRule.isExpanded = true;
+                        styleRuleGroups.isExpanded = styleRuleGroupsElement.isExpanded = styleRulesElement.isExpanded = true;
 
                         queryText = string.Empty;
-                        GUIUtility.keyboardControl = 0;
+                        GUIUtility.keyboardControl = default;
                   })))));
             }
 
@@ -119,6 +114,11 @@ namespace Emp37.ET
                         EditorGUILayout.HelpBox("No matching properties found.", MessageType.Info);
                   }
             }
+            private void ExpandProperties(bool expand)
+            {
+                  SerializedProperty iterator = serializedObject.GetIterator();
+                  while (iterator.NextVisible(true)) if (iterator.depth < 4) iterator.isExpanded = expand;
+            }
 
             public override void OnInspectorGUI()
             {
@@ -134,12 +134,6 @@ namespace Emp37.ET
                   {
                         DrawSearchResults();
                   }
-            }
-
-            private void ExpandProperties(bool expand)
-            {
-                  SerializedProperty iterator = serializedObject.GetIterator();
-                  while (iterator.NextVisible(true)) if (iterator.depth < 4) iterator.isExpanded = expand;
             }
       }
 }

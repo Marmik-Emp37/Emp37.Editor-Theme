@@ -135,10 +135,7 @@ namespace Emp37.ET
 
                         return value;
                   }
-                  else
-                  {
-                        return HeaderSize;
-                  }
+                  return HeaderSize;
             }
       }
 }
