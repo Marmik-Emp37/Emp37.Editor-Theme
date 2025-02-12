@@ -72,6 +72,7 @@ namespace Emp37.ET
                   BoldMinus = IconContent("d_Toolbar Minus"),
                   Menu = IconContent("_Menu"),
                   Clear = IconContent("d_clear"),
-                  INFoldout = IconContent("d_IN_foldout");
+                  INFoldout = IconContent("d_IN_foldout"),
+                  CustomSorting = IconContent("d_CustomSorting");
       }
 }

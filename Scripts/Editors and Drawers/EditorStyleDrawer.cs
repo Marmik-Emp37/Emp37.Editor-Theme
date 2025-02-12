@@ -33,16 +33,88 @@ namespace Emp37.ET
             };
 
 
+            public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)
+            {
+                  using EditorGUI.PropertyScope propertyScope = new(position, label, property);
+
+                  position.height = BaseHeight;
+                  if (property.isExpanded = GUI.Toggle(position, property.isExpanded, label, propertyExpandToggle))
+                  {
+                        position.y += position.height + standardVerticalSpacing; // - H : Header
+
+                        position = DrawArrayProperty(position, property.FindPropertyRelative(p_Selectors));
+                        position = DrawArrayProperty(position, property.FindPropertyRelative(p_PseudoClasses));
+
+
+                        SerializedProperty mask = property.FindPropertyRelative(p_Mask);
+
+                        position.height = TitleSectionHeight;
+                        ETStyles.DrawAccentTitle(position, mask.displayName);
+
+                        position.y += position.height + standardVerticalSpacing; // - H : Mask Title
+
+                        using (EditorGUI.ChangeCheckScope check = new())
+                        {
+                              position.height = propertyMaskField.fixedHeight;
+                              Enum value = EditorGUI.EnumFlagsField(position, (StyleAttributes) mask.enumValueFlag, propertyMaskField);
+                              if (check.changed)
+                              {
+                                    mask.enumValueFlag = (int) (StyleAttributes) value;
+                              }
+                              position.y += position.height + standardVerticalSpacing; // - H : Property Mask
+                        }
+
+                        _ = DrawAttributes(position, property, (StyleAttributes) mask.enumValueFlag); // - H : Attributes
+                  }
+            }
+            public override float GetPropertyHeight(SerializedProperty property, GUIContent label)
+            {
+                  if (property.isExpanded)
+                  {
+                        float value = BaseHeight + standardVerticalSpacing; // @r >> H : Header
+
+                        value += CalculateArrayPropertyHeight(property.FindPropertyRelative(p_Selectors));
+                        value += CalculateArrayPropertyHeight(property.FindPropertyRelative(p_PseudoClasses));
+
+                        value += TitleSectionHeight + propertyMaskField.fixedHeight + 2F * standardVerticalSpacing; // @r >> H : Mask Title + H : Property Mask
+
+                        // @r >> H : Attributes
+                        StyleAttributes flags = (StyleAttributes) property.FindPropertyRelative(p_Mask).enumValueFlag;
+                        value += flags is 0 ? EmptyStyleLineHeight :
+                              StyleRule.PropertyMap.Where(entry => flags.HasFlag(entry.Flag)).Sum(entry => EditorGUI.GetPropertyHeight(property.FindPropertyRelative(entry.Name)) + standardVerticalSpacing);
+
+                        return value;
+                  }
+                  return BaseHeight;
+            }
+
             private static Rect DrawArrayProperty(Rect position, SerializedProperty property)
             {
                   Rect original = position;
+                  int count = property.arraySize;
 
                   position.height = TitleSectionHeight;
                   ETStyles.DrawAccentTitle(position, property.displayName);
 
+                  if (property.arrayElementType == "string")
+                  {
+                        const float sortButtonWidth = 40F;
+
+                        Rect sortButtonRect = new(x: position.x + (position.width - sortButtonWidth - ETHelpers.Spacing), y: position.y + ETHelpers.Spacing, width: sortButtonWidth, height: position.height - (2F * ETHelpers.Spacing));
+                        if (GUI.Button(sortButtonRect, ETStyles.CustomSorting) && count > 1)
+                        {
+                              SerializedProperty[] elements = Enumerable.Range(0, count).Select(i => property.GetArrayElementAtIndex(i)).ToArray();
+                              int i = 0;
+                              foreach (string value in from element in elements let value = element.stringValue orderby value ascending select value)
+                              {
+                                    elements[i++].stringValue = value;
+                              }
+                              property.serializedObject.ApplyModifiedProperties();
+                        }
+                  }
+
                   position.y += position.height + standardVerticalSpacing;
 
-                  int count = property.arraySize;
                   for (int i = 0; i < count; i++)
                   {
                         SerializedProperty element = property.GetArrayElementAtIndex(i);
@@ -97,61 +169,6 @@ namespace Emp37.ET
                         }
                   }
                   return new(original) { y = position.y };
-            }
-
-            public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)
-            {
-                  using EditorGUI.PropertyScope propertyScope = new(position, label, property);
-
-                  position.height = BaseHeight;
-                  if (property.isExpanded = GUI.Toggle(position, property.isExpanded, label, propertyExpandToggle))
-                  {
-                        position.y += position.height + standardVerticalSpacing; // - H : Header
-
-                        position = DrawArrayProperty(position, property.FindPropertyRelative(p_Selectors));
-                        position = DrawArrayProperty(position, property.FindPropertyRelative(p_PseudoClasses));
-
-
-                        SerializedProperty mask = property.FindPropertyRelative(p_Mask);
-
-                        position.height = TitleSectionHeight;
-                        ETStyles.DrawAccentTitle(position, mask.displayName);
-
-                        position.y += position.height + standardVerticalSpacing; // - H : Mask Title
-
-                        using (EditorGUI.ChangeCheckScope check = new())
-                        {
-                              position.height = propertyMaskField.fixedHeight;
-                              Enum value = EditorGUI.EnumFlagsField(position, (StyleAttributes) mask.enumValueFlag, propertyMaskField);
-                              if (check.changed)
-                              {
-                                    mask.enumValueFlag = (int) (StyleAttributes) value;
-                              }
-                              position.y += position.height + standardVerticalSpacing; // - H : Property Mask
-                        }
-
-                        _ = DrawAttributes(position, property, (StyleAttributes) mask.enumValueFlag); // - H : Attributes
-                  }
-            }
-            public override float GetPropertyHeight(SerializedProperty property, GUIContent label)
-            {
-                  if (property.isExpanded)
-                  {
-                        float value = BaseHeight + standardVerticalSpacing; // @r >> H : Header
-
-                        value += CalculateArrayPropertyHeight(property.FindPropertyRelative(p_Selectors));
-                        value += CalculateArrayPropertyHeight(property.FindPropertyRelative(p_PseudoClasses));
-
-                        value += TitleSectionHeight + propertyMaskField.fixedHeight + 2F * standardVerticalSpacing; // @r >> H : Mask Title + H : Property Mask
-
-                        // @r >> H : Attributes
-                        StyleAttributes flags = (StyleAttributes) property.FindPropertyRelative(p_Mask).enumValueFlag;
-                        value += flags is 0 ? EmptyStyleLineHeight :
-                              StyleRule.PropertyMap.Where(entry => flags.HasFlag(entry.Flag)).Sum(entry => EditorGUI.GetPropertyHeight(property.FindPropertyRelative(entry.Name)) + standardVerticalSpacing);
-
-                        return value;
-                  }
-                  return BaseHeight;
             }
       }
 }

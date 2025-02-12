@@ -37,6 +37,21 @@ namespace Emp37.ET
                         GUIUtility.keyboardControl = default;
                   })))));
             }
+            public override void OnInspectorGUI()
+            {
+                  DrawSearchField();
+
+                  GUILayout.Space(EditorGUIUtility.standardVerticalSpacing);
+
+                  if (string.IsNullOrWhiteSpace(queryText))
+                  {
+                        DrawInspectorPanel();
+                  }
+                  else
+                  {
+                        DrawSearchResults();
+                  }
+            }
 
             private void DrawSearchField()
             {
@@ -118,22 +133,6 @@ namespace Emp37.ET
             {
                   SerializedProperty iterator = serializedObject.GetIterator();
                   while (iterator.NextVisible(true)) if (iterator.depth < 4) iterator.isExpanded = expand;
-            }
-
-            public override void OnInspectorGUI()
-            {
-                  DrawSearchField();
-
-                  GUILayout.Space(EditorGUIUtility.standardVerticalSpacing);
-
-                  if (string.IsNullOrWhiteSpace(queryText))
-                  {
-                        DrawInspectorPanel();
-                  }
-                  else
-                  {
-                        DrawSearchResults();
-                  }
             }
       }
 }

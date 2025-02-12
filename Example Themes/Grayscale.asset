@@ -1532,19 +1532,19 @@ MonoBehaviour:
   - Title: Button
     StyleRules:
     - ClassSelectors:
-      - Button
-      - minibutton
       - AC-Button
-      - LargeButton
       - AppCommand
-      - MiniToolbarButton
-      - RL-FooterButton
-      - ObjectFieldButton
-      - TimeScrubberButton
+      - Button
       - DropDownButton
       - DropDownToggleButton
-      - PreDropDown
       - EditModeSingleButton
+      - LargeButton
+      - minibutton
+      - MiniToolbarButton
+      - ObjectFieldButton
+      - PreDropDown
+      - RL-FooterButton
+      - TimeScrubberButton
       PseudoClasses: 00000000
       PropertyMask: 166
       BackgroundTexture: {fileID: 0}

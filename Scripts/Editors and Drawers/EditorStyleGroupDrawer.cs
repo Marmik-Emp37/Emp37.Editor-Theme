@@ -20,6 +20,48 @@ namespace Emp37.ET
             private const float FooterHeight = 24F;
 
 
+            public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)
+            {
+                  _ = EditorGUI.BeginProperty(position, label, property);
+
+                  position.height = HeaderSize;
+                  DrawHeader(position, property);
+
+                  if (property.isExpanded)
+                  {
+                        position.y += position.height + Spacing; // - H : Header
+
+                        SerializedProperty group = property.FindPropertyRelative(p_StyleRules);
+                        position = DrawArrayElements(position, group); // - H : Elements
+
+                        position.height = FooterHeight;
+                        DrawFooter(position, group);
+
+                        position.y += position.height + Spacing;  // - H : Footer
+
+                        position.height = Spacing; // - H : Separator
+                        EditorGUI.DrawRect(position, ETStyles.ThemeAccent);
+                  }
+
+                  EditorGUI.EndProperty();
+            }
+            public override float GetPropertyHeight(SerializedProperty property, GUIContent label)
+            {
+                  if (property.isExpanded)
+                  {
+                        float value = HeaderSize + Spacing + /*- @r >> H : Header*/ FooterHeight + Spacing + /*- @r >> H : Footer*/ Spacing /*- @r >> H : Separator*/;
+
+                        SerializedProperty group = property.FindPropertyRelative(p_StyleRules);
+                        for (int i = group.arraySize - 1; i >= 0; i--)
+                        {
+                              value += EditorGUI.GetPropertyHeight(group.GetArrayElementAtIndex(i)) + Spacing; // - @r >> H : Elements
+                        }
+
+                        return value;
+                  }
+                  return HeaderSize;
+            }
+
             private static void DrawHeader(Rect position, SerializedProperty property)
             {
                   Rect rect = position;
@@ -94,48 +136,6 @@ namespace Emp37.ET
                   {
                         property.DeleteArrayElementAtIndex(property.arraySize - 1);
                   }
-            }
-
-            public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)
-            {
-                  _ = EditorGUI.BeginProperty(position, label, property);
-
-                  position.height = HeaderSize;
-                  DrawHeader(position, property);
-
-                  if (property.isExpanded)
-                  {
-                        position.y += position.height + Spacing; // - H : Header
-
-                        SerializedProperty group = property.FindPropertyRelative(p_StyleRules);
-                        position = DrawArrayElements(position, group); // - H : Elements
-
-                        position.height = FooterHeight;
-                        DrawFooter(position, group);
-
-                        position.y += position.height + Spacing;  // - H : Footer
-
-                        position.height = Spacing; // - H : Separator
-                        EditorGUI.DrawRect(position, ETStyles.ThemeAccent);
-                  }
-
-                  EditorGUI.EndProperty();
-            }
-            public override float GetPropertyHeight(SerializedProperty property, GUIContent label)
-            {
-                  if (property.isExpanded)
-                  {
-                        float value = HeaderSize + Spacing + /*- @r >> H : Header*/ FooterHeight + Spacing + /*- @r >> H : Footer*/ Spacing /*- @r >> H : Separator*/;
-
-                        SerializedProperty group = property.FindPropertyRelative(p_StyleRules);
-                        for (int i = group.arraySize - 1; i >= 0; i--)
-                        {
-                              value += EditorGUI.GetPropertyHeight(group.GetArrayElementAtIndex(i)) + Spacing; // - @r >> H : Elements
-                        }
-
-                        return value;
-                  }
-                  return HeaderSize;
             }
       }
 }

@@ -17,6 +17,23 @@ namespace Emp37.ET
             private const float UnitPopupWidth = 20F;
 
 
+            public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)
+            {
+                  label = EditorGUI.BeginProperty(position, label, property);
+
+                  Rect labelPosition = new(position) { width = labelWidth };
+                  EditorGUI.LabelField(labelPosition, label);
+
+                  int indent = EditorGUI.indentLevel;
+                  EditorGUI.indentLevel = 0;
+
+                  DrawFields(Indent(position, labelPosition.width + Spacing), property);
+
+                  EditorGUI.indentLevel = indent;
+
+                  EditorGUI.EndProperty();
+            }
+
             private void DrawInteger(Rect position, SerializedProperty property)
             {
                   float width = position.width;
@@ -44,23 +61,6 @@ namespace Emp37.ET
 
                   position.width = UnitPopupWidth;
                   EditorGUI.PropertyField(position, property.FindPropertyRelative(p_UnitType), GUIContent.none);
-            }
-
-            public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)
-            {
-                  label = EditorGUI.BeginProperty(position, label, property);
-
-                  Rect labelPosition = new(position) { width = labelWidth };
-                  EditorGUI.LabelField(labelPosition, label);
-
-                  int indent = EditorGUI.indentLevel;
-                  EditorGUI.indentLevel = 0;
-
-                  DrawFields(Indent(position, labelPosition.width + Spacing), property);
-
-                  EditorGUI.indentLevel = indent;
-
-                  EditorGUI.EndProperty();
             }
       }
 }
