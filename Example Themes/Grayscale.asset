@@ -19,8 +19,8 @@ MonoBehaviour:
   - Title: Box
     StyleRules:
     - ClassSelectors:
-      - HelpBox
       - FrameBox
+      - HelpBox
       PseudoClasses: 00000000
       PropertyMask: 390
       BackgroundTexture: {fileID: 0}
@@ -295,25 +295,25 @@ MonoBehaviour:
   - Title: Button Group
     StyleRules:
     - ClassSelectors:
-      - Tab-first
-      - Tab-middle
-      - Tab-last
-      - minibuttonleft
-      - minibuttonmid
-      - minibuttonright
-      - LargeButtonLeft
-      - LargeButtonMid
-      - LargeButtonRight
-      - CommandLeft
-      - CommandMid
-      - CommandRight
-      - ButtonLeft
-      - ButtonMid
-      - ButtonRight
       - AppCommandLeft
       - AppCommandMid
       - AppCommandRight
+      - ButtonLeft
+      - ButtonMid
+      - ButtonRight
+      - CommandLeft
+      - CommandMid
+      - CommandRight
+      - LargeButtonLeft
+      - LargeButtonMid
+      - LargeButtonRight
+      - minibuttonleft
+      - minibuttonmid
+      - minibuttonright
       - SearchModeFilter
+      - Tab-first
+      - Tab-last
+      - Tab-middle
       PseudoClasses: 0000000004000000
       PropertyMask: 486
       BackgroundTexture: {fileID: 0}
@@ -351,25 +351,25 @@ MonoBehaviour:
         Left: 1
         UnitType: 1
     - ClassSelectors:
-      - Tab-first
-      - Tab-middle
-      - Tab-last
-      - minibuttonleft
-      - minibuttonmid
-      - minibuttonright
-      - LargeButtonLeft
-      - LargeButtonMid
-      - LargeButtonRight
-      - CommandLeft
-      - CommandMid
-      - CommandRight
-      - ButtonLeft
-      - ButtonMid
-      - ButtonRight
       - AppCommandLeft
       - AppCommandMid
       - AppCommandRight
+      - ButtonLeft
+      - ButtonMid
+      - ButtonRight
+      - CommandLeft
+      - CommandMid
+      - CommandRight
+      - LargeButtonLeft
+      - LargeButtonMid
+      - LargeButtonRight
+      - minibuttonleft
+      - minibuttonmid
+      - minibuttonright
       - SearchModeFilter
+      - Tab-first
+      - Tab-last
+      - Tab-middle
       PseudoClasses: 02000000
       PropertyMask: 258
       BackgroundTexture: {fileID: 0}
@@ -407,25 +407,25 @@ MonoBehaviour:
         Left: 1
         UnitType: 1
     - ClassSelectors:
-      - Tab-first
-      - Tab-middle
-      - Tab-last
-      - minibuttonleft
-      - minibuttonmid
-      - minibuttonright
-      - LargeButtonLeft
-      - LargeButtonMid
-      - LargeButtonRight
-      - CommandLeft
-      - CommandMid
-      - CommandRight
-      - ButtonLeft
-      - ButtonMid
-      - ButtonRight
       - AppCommandLeft
       - AppCommandMid
       - AppCommandRight
+      - ButtonLeft
+      - ButtonMid
+      - ButtonRight
+      - CommandLeft
+      - CommandMid
+      - CommandRight
+      - LargeButtonLeft
+      - LargeButtonMid
+      - LargeButtonRight
+      - minibuttonleft
+      - minibuttonmid
+      - minibuttonright
       - SearchModeFilter
+      - Tab-first
+      - Tab-last
+      - Tab-middle
       PseudoClasses: 010000001000000005000000110000001400000015000000
       PropertyMask: 302
       BackgroundTexture: {fileID: 0}
@@ -463,25 +463,25 @@ MonoBehaviour:
         Left: 1
         UnitType: 1
     - ClassSelectors:
-      - Tab-first
-      - Tab-middle
-      - Tab-last
-      - minibuttonleft
-      - minibuttonmid
-      - minibuttonright
-      - LargeButtonLeft
-      - LargeButtonMid
-      - LargeButtonRight
-      - CommandLeft
-      - CommandMid
-      - CommandRight
-      - ButtonLeft
-      - ButtonMid
-      - ButtonRight
       - AppCommandLeft
       - AppCommandMid
       - AppCommandRight
+      - ButtonLeft
+      - ButtonMid
+      - ButtonRight
+      - CommandLeft
+      - CommandMid
+      - CommandRight
+      - LargeButtonLeft
+      - LargeButtonMid
+      - LargeButtonRight
+      - minibuttonleft
+      - minibuttonmid
+      - minibuttonright
       - SearchModeFilter
+      - Tab-first
+      - Tab-last
+      - Tab-middle
       PseudoClasses: 010000001000000005000000110000001400000015000000
       PropertyMask: 302
       BackgroundTexture: {fileID: 0}
@@ -519,25 +519,25 @@ MonoBehaviour:
         Left: 1
         UnitType: 1
     - ClassSelectors:
-      - Tab-first
-      - Tab-middle
-      - Tab-last
-      - minibuttonleft
-      - minibuttonmid
-      - minibuttonright
-      - LargeButtonLeft
-      - LargeButtonMid
-      - LargeButtonRight
-      - CommandLeft
-      - CommandMid
-      - CommandRight
-      - ButtonLeft
-      - ButtonMid
-      - ButtonRight
       - AppCommandLeft
       - AppCommandMid
       - AppCommandRight
+      - ButtonLeft
+      - ButtonMid
+      - ButtonRight
+      - CommandLeft
+      - CommandMid
+      - CommandRight
+      - LargeButtonLeft
+      - LargeButtonMid
+      - LargeButtonRight
+      - minibuttonleft
+      - minibuttonmid
+      - minibuttonright
       - SearchModeFilter
+      - Tab-first
+      - Tab-last
+      - Tab-middle
       PseudoClasses: 1200000016000000
       PropertyMask: 302
       BackgroundTexture: {fileID: 0}
@@ -622,8 +622,8 @@ MonoBehaviour:
     - ClassSelectors:
       - HorizontalScrollbarLeftButton
       - HorizontalScrollbarRightButton
-      - VerticalScrollbarUpButton
       - VerticalScrollbarDownButton
+      - VerticalScrollbarUpButton
       PseudoClasses: 00000000
       PropertyMask: 134
       BackgroundTexture: {fileID: 0}
@@ -663,8 +663,8 @@ MonoBehaviour:
     - ClassSelectors:
       - HorizontalScrollbarLeftButton
       - HorizontalScrollbarRightButton
-      - VerticalScrollbarUpButton
       - VerticalScrollbarDownButton
+      - VerticalScrollbarUpButton
       PseudoClasses: 0100000002000000
       PropertyMask: 2
       BackgroundTexture: {fileID: 0}
@@ -705,9 +705,9 @@ MonoBehaviour:
   - Title: Scrollbar Thumb
     StyleRules:
     - ClassSelectors:
+      - HorizontalMinMaxScrollbarThumb
       - HorizontalScrollbarThumb
       - VerticalScrollbarThumb
-      - HorizontalMinMaxScrollbarThumb
       PseudoClasses: 0000000002000000
       PropertyMask: 134
       BackgroundTexture: {fileID: 0}
@@ -745,8 +745,8 @@ MonoBehaviour:
         Left: 0
         UnitType: 0
     - ClassSelectors:
-      - HorizontalScrollbarThumb
       - HorizontalMinMaxScrollbarThumb
+      - HorizontalScrollbarThumb
       PseudoClasses: 0000000002000000
       PropertyMask: 256
       BackgroundTexture: {fileID: 0}
@@ -826,8 +826,8 @@ MonoBehaviour:
     StyleRules:
     - ClassSelectors:
       - HorizontalSlider
-      - ToolbarSlider
       - PreSlider
+      - ToolbarSlider
       PseudoClasses: 0000000040000000
       PropertyMask: 2
       BackgroundTexture: {fileID: 0}
@@ -869,8 +869,8 @@ MonoBehaviour:
     StyleRules:
     - ClassSelectors:
       - HorizontalSliderThumb
-      - PreSliderThumb
       - MinMaxHorizontalSliderThumb
+      - PreSliderThumb
       PseudoClasses: 0000000040000000
       PropertyMask: 390
       BackgroundTexture: {fileID: 0}
@@ -909,8 +909,8 @@ MonoBehaviour:
         UnitType: 1
     - ClassSelectors:
       - HorizontalSliderThumb
-      - PreSliderThumb
       - MinMaxHorizontalSliderThumb
+      - PreSliderThumb
       PseudoClasses: 02000000
       PropertyMask: 2
       BackgroundTexture: {fileID: 0}
@@ -995,12 +995,12 @@ MonoBehaviour:
   - Title: Background
     StyleRules:
     - ClassSelectors:
-      - Toolbar
-      - PreToolbar
-      - ToolbarBottom
-      - AnimPlayToolbar
       - AnimClipToolbar
+      - AnimPlayToolbar
+      - PreToolbar
       - TimeScrubber
+      - Toolbar
+      - ToolbarBottom
       PseudoClasses: 00000000
       PropertyMask: 6
       BackgroundTexture: {fileID: 0}
@@ -1041,18 +1041,18 @@ MonoBehaviour:
   - Title: Button / Dropdown / Popup
     StyleRules:
     - ClassSelectors:
+      - AnimClipToolbarButton
+      - AnimClipToolbarPopup
       - toolbarbutton
+      - toolbarbuttonRight
+      - ToolbarCreateAddNewDropDown
       - ToolbarDropDown
+      - ToolbarDropDownRight
       - ToolbarDropDownToggle
       - ToolbarDropDownToggleButton
+      - ToolbarDropDownToggleRight
       - ToolbarPopup
       - ToolbarPopupLeft
-      - toolbarbuttonRight
-      - ToolbarDropDownToggleRight
-      - ToolbarDropDownRight
-      - AnimClipToolbarPopup
-      - AnimClipToolbarButton
-      - ToolbarCreateAddNewDropDown
       PseudoClasses: 00000000
       PropertyMask: 6
       BackgroundTexture: {fileID: 0}
@@ -1090,18 +1090,18 @@ MonoBehaviour:
         Left: 0
         UnitType: 0
     - ClassSelectors:
+      - AnimClipToolbarButton
+      - AnimClipToolbarPopup
       - toolbarbutton
+      - toolbarbuttonRight
+      - ToolbarCreateAddNewDropDown
       - ToolbarDropDown
+      - ToolbarDropDownRight
       - ToolbarDropDownToggle
       - ToolbarDropDownToggleButton
+      - ToolbarDropDownToggleRight
       - ToolbarPopup
       - ToolbarPopupLeft
-      - toolbarbuttonRight
-      - ToolbarDropDownToggleRight
-      - ToolbarDropDownRight
-      - AnimClipToolbarPopup
-      - AnimClipToolbarButton
-      - ToolbarCreateAddNewDropDown
       PseudoClasses: 02000000
       PropertyMask: 2
       BackgroundTexture: {fileID: 0}
@@ -1139,18 +1139,18 @@ MonoBehaviour:
         Left: 0
         UnitType: 0
     - ClassSelectors:
+      - AnimClipToolbarButton
+      - AnimClipToolbarPopup
       - toolbarbutton
+      - toolbarbuttonRight
+      - ToolbarCreateAddNewDropDown
       - ToolbarDropDown
+      - ToolbarDropDownRight
       - ToolbarDropDownToggle
       - ToolbarDropDownToggleButton
+      - ToolbarDropDownToggleRight
       - ToolbarPopup
       - ToolbarPopupLeft
-      - toolbarbuttonRight
-      - ToolbarDropDownToggleRight
-      - ToolbarDropDownRight
-      - AnimClipToolbarPopup
-      - AnimClipToolbarButton
-      - ToolbarCreateAddNewDropDown
       PseudoClasses: 12000000
       PropertyMask: 2
       BackgroundTexture: {fileID: 0}
@@ -1188,17 +1188,17 @@ MonoBehaviour:
         Left: 0
         UnitType: 0
     - ClassSelectors:
+      - AnimClipToolbarButton
+      - AnimClipToolbarPopup
       - toolbarbutton
+      - toolbarbuttonRight
       - ToolbarDropDown
+      - ToolbarDropDownRight
       - ToolbarDropDownToggle
       - ToolbarDropDownToggleButton
+      - ToolbarDropDownToggleRight
       - ToolbarPopup
       - ToolbarPopupLeft
-      - toolbarbuttonRight
-      - ToolbarDropDownToggleRight
-      - ToolbarDropDownRight
-      - AnimClipToolbarPopup
-      - AnimClipToolbarButton
       PseudoClasses: 0100000010000000
       PropertyMask: 6
       BackgroundTexture: {fileID: 0}
@@ -1277,15 +1277,15 @@ MonoBehaviour:
         Left: 1
         UnitType: 1
     <Enabled>k__BackingField: 1
-  - Title: Text Search Field
+  - Title: Text Field
     StyleRules:
     - ClassSelectors:
+      - SearchTextField
       - ToolbarSeachTextField
       - ToolbarSearchTextField
       - ToolbarSearchTextFieldPopup
       - ToolbarSearchTextFieldWithJump
       - ToolbarSearchTextFieldWithJumpPopup
-      - SearchTextField
       PseudoClasses: 00000000
       PropertyMask: 142
       BackgroundTexture: {fileID: 0}
@@ -1323,12 +1323,12 @@ MonoBehaviour:
         Left: 0
         UnitType: 0
     - ClassSelectors:
+      - SearchTextField
       - ToolbarSeachTextField
       - ToolbarSearchTextField
       - ToolbarSearchTextFieldPopup
       - ToolbarSearchTextFieldWithJump
       - ToolbarSearchTextFieldWithJumpPopup
-      - SearchTextField
       PseudoClasses: 0200000004000000
       PropertyMask: 12
       BackgroundTexture: {fileID: 0}
@@ -1366,12 +1366,12 @@ MonoBehaviour:
         Left: 0
         UnitType: 0
     - ClassSelectors:
+      - SearchTextField
       - ToolbarSeachTextField
       - ToolbarSearchTextField
       - ToolbarSearchTextFieldPopup
       - ToolbarSearchTextFieldWithJump
       - ToolbarSearchTextFieldWithJumpPopup
-      - SearchTextField
       PseudoClasses: 010000000200000006000000
       PropertyMask: 268
       BackgroundTexture: {fileID: 0}
@@ -1409,7 +1409,7 @@ MonoBehaviour:
         Left: 1
         UnitType: 1
     <Enabled>k__BackingField: 1
-  - Title: Text Search Field Button
+  - Title: Text Field Button
     StyleRules:
     - ClassSelectors:
       - ToolbarSearchTextFieldJumpButton
@@ -1582,19 +1582,19 @@ MonoBehaviour:
         Left: 0
         UnitType: 0
     - ClassSelectors:
-      - Button
-      - minibutton
       - AC-Button
-      - LargeButton
       - AppCommand
-      - MiniToolbarButton
-      - RL-FooterButton
-      - ObjectFieldButton
-      - TimeScrubberButton
+      - Button
       - DropDownButton
       - DropDownToggleButton
-      - PreDropDown
       - EditModeSingleButton
+      - LargeButton
+      - minibutton
+      - MiniToolbarButton
+      - ObjectFieldButton
+      - PreDropDown
+      - RL-FooterButton
+      - TimeScrubberButton
       PseudoClasses: 02000000
       PropertyMask: 2
       BackgroundTexture: {fileID: 0}
@@ -1632,19 +1632,19 @@ MonoBehaviour:
         Left: 0
         UnitType: 0
     - ClassSelectors:
-      - Button
-      - minibutton
       - AC-Button
-      - LargeButton
       - AppCommand
-      - MiniToolbarButton
-      - RL-FooterButton
-      - ObjectFieldButton
-      - TimeScrubberButton
+      - Button
       - DropDownButton
       - DropDownToggleButton
-      - PreDropDown
       - EditModeSingleButton
+      - LargeButton
+      - minibutton
+      - MiniToolbarButton
+      - ObjectFieldButton
+      - PreDropDown
+      - RL-FooterButton
+      - TimeScrubberButton
       PseudoClasses: 12000000
       PropertyMask: 2
       BackgroundTexture: {fileID: 0}
@@ -1682,19 +1682,19 @@ MonoBehaviour:
         Left: 0
         UnitType: 0
     - ClassSelectors:
-      - Button
-      - minibutton
       - AC-Button
-      - LargeButton
       - AppCommand
-      - MiniToolbarButton
-      - RL-FooterButton
-      - ObjectFieldButton
-      - TimeScrubberButton
+      - Button
       - DropDownButton
       - DropDownToggleButton
-      - PreDropDown
       - EditModeSingleButton
+      - LargeButton
+      - minibutton
+      - MiniToolbarButton
+      - ObjectFieldButton
+      - PreDropDown
+      - RL-FooterButton
+      - TimeScrubberButton
       PseudoClasses: 010000001000000011000000
       PropertyMask: 46
       BackgroundTexture: {fileID: 0}
@@ -2532,16 +2532,16 @@ MonoBehaviour:
   - Title: Text / Object
     StyleRules:
     - ClassSelectors:
-      - TextField
+      - AnimationSelectionTextField
       - BoldTextField
-      - ToolbarTextField
+      - ObjectField
+      - ShurikenObjectField
+      - ShurikenValue
+      - TextField
       - TextFieldDropDown
       - TextFieldDropDownText
       - ToolbarSliderTextField
-      - ShurikenValue
-      - ShurikenObjectField
-      - ObjectField
-      - AnimationSelectionTextField
+      - ToolbarTextField
       PseudoClasses: 00000000
       PropertyMask: 142
       BackgroundTexture: {fileID: 0}
@@ -2579,16 +2579,16 @@ MonoBehaviour:
         Left: 0
         UnitType: 0
     - ClassSelectors:
-      - TextField
+      - AnimationSelectionTextField
       - BoldTextField
-      - ToolbarTextField
+      - ObjectField
+      - ShurikenObjectField
+      - ShurikenValue
+      - TextField
       - TextFieldDropDown
       - TextFieldDropDownText
       - ToolbarSliderTextField
-      - ShurikenValue
-      - ShurikenObjectField
-      - ObjectField
-      - AnimationSelectionTextField
+      - ToolbarTextField
       PseudoClasses: 02000000
       PropertyMask: 300
       BackgroundTexture: {fileID: 0}
@@ -2626,16 +2626,16 @@ MonoBehaviour:
         Left: 1
         UnitType: 1
     - ClassSelectors:
-      - TextField
+      - AnimationSelectionTextField
       - BoldTextField
-      - ToolbarTextField
+      - ObjectField
+      - ShurikenObjectField
+      - ShurikenValue
+      - TextField
       - TextFieldDropDown
       - TextFieldDropDownText
       - ToolbarSliderTextField
-      - ShurikenValue
-      - ShurikenObjectField
-      - ObjectField
-      - AnimationSelectionTextField
+      - ToolbarTextField
       PseudoClasses: 0100000004000000050000000600000007000000
       PropertyMask: 300
       BackgroundTexture: {fileID: 0}
@@ -3527,8 +3527,8 @@ MonoBehaviour:
   - Title: Top / Bottom Bar
     StyleRules:
     - ClassSelectors:
-      - ProjectBrowserTopBarBg
       - ProjectBrowserBottomBarBg
+      - ProjectBrowserTopBarBg
       PseudoClasses: 00000000
       PropertyMask: 6
       BackgroundTexture: {fileID: 0}
