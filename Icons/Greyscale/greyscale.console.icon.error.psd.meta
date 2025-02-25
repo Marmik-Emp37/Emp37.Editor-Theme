@@ -1,15 +1,15 @@
 fileFormatVersion: 2
-guid: f67313e976222064ba6cb42540b8ac12
+guid: f75bf83197d16444e94f623b3aca9a74
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1118093070010634407
-    second: toggle.mixed_0
+      213: -7533588799787978529
+    second: console.entry-error-icon_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 1
+    enableMipMap: 0
     sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
@@ -37,8 +37,8 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
-    aniso: 1
+    filterMode: 0
+    aniso: 0
     mipBias: 0
     wrapU: 1
     wrapV: 1
@@ -72,11 +72,11 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 32
-    resizeAlgorithm: 0
-    textureFormat: 3
+    maxTextureSize: 64
+    resizeAlgorithm: 1
+    textureFormat: -1
     textureCompression: 1
-    compressionQuality: 50
+    compressionQuality: 0
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
@@ -96,16 +96,29 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: toggle.mixed_0
+      name: console.entry-error-icon_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 64
+        width: 57
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -115,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 95fa038d64cbb70f0800000000000000
-      internalID: -1118093070010634407
+      spriteID: fd0b6c8b6e0537790800000000000000
+      internalID: -7533588799787978529
       vertices: []
       indices: 
       edges: []

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: dad293ec9d63c1b4da591e2fbbc29d1f
+guid: 4c841974d46e43943ac54255d17c1467
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 9173356524930128450
-    second: toggle.checked.hover_0
+      213: -6271302391719593656
+    second: arr_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -28,7 +28,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
-  ignoreMipmapLimit: 1
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -73,8 +73,8 @@ TextureImporter:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 32
-    resizeAlgorithm: 0
-    textureFormat: 3
+    resizeAlgorithm: 1
+    textureFormat: 4
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
@@ -96,17 +96,30 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: toggle.checked.hover_0
+      name: arr_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 64
-        height: 64
+        x: 127
+        y: 143
+        width: 227
+        height: 227
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 24ad87a282f4e4f70800000000000000
-      internalID: 9173356524930128450
+      spriteID: 849fe7693bbd7f8a0800000000000000
+      internalID: -6271302391719593656
       vertices: []
       indices: 
       edges: []

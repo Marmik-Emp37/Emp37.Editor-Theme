@@ -1,15 +1,15 @@
 fileFormatVersion: 2
-guid: c29864a8f63dc9845b82b64444f3ca61
+guid: c629d9932346b614bbe59699e7ca1cb7
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6028810804490137479
-    second: toggle.mixed.active_0
+      213: -2799326107586310251
+    second: toggle.mixed.hover_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 1
+    enableMipMap: 0
     sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
@@ -96,11 +96,24 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 32
+    resizeAlgorithm: 0
+    textureFormat: 3
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: toggle.mixed.active_0
+      name: toggle.mixed.hover_0
       rect:
         serializedVersion: 2
         x: 0
@@ -115,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 78feba31c73aaa350800000000000000
-      internalID: 6028810804490137479
+      spriteID: 59f47d29cbbc629d0800000000000000
+      internalID: -2799326107586310251
       vertices: []
       indices: 
       edges: []

@@ -1,15 +1,15 @@
 fileFormatVersion: 2
-guid: f75bf83197d16444e94f623b3aca9a74
+guid: 661b5c417be79694480d07fcb44b1a81
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7533588799787978529
-    second: console.entry-error-icon_0
+      213: 2742853397262790834
+    second: toggle.hover_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 1
+    enableMipMap: 0
     sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
@@ -28,7 +28,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
-  ignoreMipmapLimit: 0
+  ignoreMipmapLimit: 1
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -38,7 +38,7 @@ TextureImporter:
   textureSettings:
     serializedVersion: 2
     filterMode: 1
-    aniso: 0
+    aniso: 1
     mipBias: 0
     wrapU: 1
     wrapV: 1
@@ -53,7 +53,7 @@ TextureImporter:
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spriteGenerateFallbackPhysicsShape: 1
+  spriteGenerateFallbackPhysicsShape: 0
   alphaUsage: 1
   alphaIsTransparency: 0
   spriteTessellationDetail: -1
@@ -73,10 +73,10 @@ TextureImporter:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 32
-    resizeAlgorithm: 1
-    textureFormat: -1
+    resizeAlgorithm: 0
+    textureFormat: 3
     textureCompression: 1
-    compressionQuality: 0
+    compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
@@ -98,9 +98,9 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
     buildTarget: Android
-    maxTextureSize: 2048
+    maxTextureSize: 32
     resizeAlgorithm: 0
-    textureFormat: -1
+    textureFormat: 3
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
@@ -113,12 +113,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: console.entry-error-icon_0
+      name: toggle.hover_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 57
+        width: 64
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fd0b6c8b6e0537790800000000000000
-      internalID: -7533588799787978529
+      spriteID: 2b072dee1a2901620800000000000000
+      internalID: 2742853397262790834
       vertices: []
       indices: 
       edges: []
@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      toggle.hover_0: 2742853397262790834
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
