@@ -4350,6 +4350,7 @@ MonoBehaviour:
       - MiniPopup
       - MiniPullDown
       - ShurikenPopup
+      - Popup
       PseudoClasses: 00000000
       PropertyMask: 166
       BackgroundTexture: {fileID: 0}
@@ -5435,8 +5436,8 @@ MonoBehaviour:
   - Title: GUI.Toggle
     StyleRules:
     - ClassSelectors:
-      - Toggle
       - ShurikenToggle
+      - Toggle
       PseudoClasses: 0000000040000000
       PropertyMask: 1
       BackgroundTexture: {fileID: 2800000, guid: dd05bb4f6ef05a841bdc320c14ac502e, type: 3}
@@ -5474,8 +5475,8 @@ MonoBehaviour:
         Left: 0
         UnitType: 0
     - ClassSelectors:
-      - Toggle
       - ShurikenToggle
+      - Toggle
       PseudoClasses: 0200000006000000
       PropertyMask: 1
       BackgroundTexture: {fileID: 2800000, guid: 565874c57e61c514297e703ef4d6557a, type: 3}
@@ -5513,8 +5514,8 @@ MonoBehaviour:
         Left: 0
         UnitType: 0
     - ClassSelectors:
-      - Toggle
       - ShurikenToggle
+      - Toggle
       PseudoClasses: 010000000400000005000000
       PropertyMask: 1
       BackgroundTexture: {fileID: 2800000, guid: 39ea828a58fc67147aa2c1b3a80084df, type: 3}
@@ -5552,8 +5553,8 @@ MonoBehaviour:
         Left: 0
         UnitType: 0
     - ClassSelectors:
-      - Toggle
       - ShurikenToggle
+      - Toggle
       PseudoClasses: 1000000050000000
       PropertyMask: 1
       BackgroundTexture: {fileID: 2800000, guid: dc652e98de5032c40bf6ca38ef972765, type: 3}
