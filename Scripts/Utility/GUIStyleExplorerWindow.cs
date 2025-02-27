@@ -8,6 +8,7 @@ namespace Emp37.ET
       {
             private Vector2 scrollPos;
             private GUIStyle activeStyle;
+            private string searchText = string.Empty;
 
             private const float PreviewHeight = 50F;
             private static readonly Vector2 Padding = new(x: 15F, y: 5F);
@@ -20,7 +21,7 @@ namespace Emp37.ET
 
                   foreach (GUIStyle style in GUI.skin.customStyles)
                   {
-                        if (GUILayout.Button(style.name, EditorStyles.label))
+                        if (style.name.Contains(searchText, System.StringComparison.OrdinalIgnoreCase) && GUILayout.Button(style.name, EditorStyles.label))
                         {
                               if (activeStyle == style)
                               {
@@ -42,7 +43,7 @@ namespace Emp37.ET
                         return;
                   }
                   GUILayout.Space(-2F);
-                  GUILayout.Label(activeStyle.name);
+                  EditorGUILayout.LabelField(activeStyle.name);
                   using (new GUILayout.VerticalScope())
                   {
                         GUILayout.Space(Padding.y);
@@ -60,6 +61,7 @@ namespace Emp37.ET
 
             private void OnGUI()
             {
+                  searchText = GUILayout.TextField(searchText);
                   DrawStyleList();
                   EditorGUI.DrawRect(GUILayoutUtility.GetRect(default, 2F), EditorGUIUtility.isProSkin ? Color.white : Color.black);
                   DrawStylePreview();
