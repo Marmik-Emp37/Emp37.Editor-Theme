@@ -21,6 +21,7 @@ namespace Emp37.ET
             public StyleRuleGroup[] StyleRuleGroups;
 
             [field: Tooltip("Disable to preview changes immediately as they are applied.\n\n<b>Note: </b>Some changes may require a domain reload to take full effect.")]
+            [SerializeField] private Color selectionColor;
             [SerializeField] private bool recompileOnApply;
 
             protected abstract Type ThemeType { get; }
@@ -34,6 +35,7 @@ namespace Emp37.ET
 
                   string path = Path.Combine(DIRECTORY, ThemeType + FILE_EXTENSION);
                   File.WriteAllText(path, ToString());
+                  GUI.skin.settings.selectionColor = selectionColor;
                   AssetDatabase.Refresh();
 
                   if (ShouldSwitchSkin(ThemeType))

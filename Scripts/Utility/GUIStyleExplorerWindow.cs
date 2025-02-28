@@ -74,7 +74,7 @@ namespace Emp37.ET
                   Debug.Log($"'{formattedName}' copied to clipboard.");
             }
 
-            [MenuItem("Tools/GUI Style Explorer")]
+            [MenuItem("Tools/Emp37/ET.GUI Style Explorer")]
             private static void ShowWindow()
             {
                   GUIStyleExplorerWindow window = GetWindow<GUIStyleExplorerWindow>();
