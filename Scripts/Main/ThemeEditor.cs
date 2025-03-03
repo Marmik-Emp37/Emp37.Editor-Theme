@@ -108,20 +108,23 @@ namespace Emp37.ET
                               {
                                     scope.BackgroundColor = ((i++ & 1) == 0) ? ETStyles.ThemeTint : ETStyles.ThemeAccent;
 
-                                    using (new GUILayout.HorizontalScope())
+                                    using (new EditorGUILayout.HorizontalScope())
                                     {
-                                          EditorGUILayout.LabelField(name, ETStyles.largeHelpBox);
+                                          using (new EditorGUILayout.VerticalScope())
+                                          {
+                                                EditorGUILayout.LabelField(name, ETStyles.largeHelpBox);
+                                                EditorGUILayout.LabelField(path, EditorStyles.helpBox);
+                                          }
                                           if (GUILayout.Button(ETStyles.INFoldout, GUILayout.Width(25F), GUILayout.ExpandHeight(true)))
                                           {
                                                 action?.Invoke();
                                           }
                                     }
-                                    EditorGUILayout.LabelField(path, EditorStyles.helpBox);
                               }
                         }
                         if (count == MaxSearchResults)
                         {
-                              EditorGUILayout.HelpBox($"Displaying the first {MaxSearchResults} results out of {selectorHierarchy.Count()}.\nYour search might match more items. Try refining your query to see specific results.", MessageType.Info);
+                              EditorGUILayout.HelpBox($"Showing the first {MaxSearchResults} results out of {selectorHierarchy.Count()}. More matches may exist, refine your search for precise results.", MessageType.Info);
                         }
                   }
                   else
