@@ -7,7 +7,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 576f9f6ec75a8534ba6048535868b776, type: 3}
   m_Name: Penelope
@@ -92,7 +92,6 @@ MonoBehaviour:
         Left: 0
         UnitType: 1
     - ClassSelectors:
-      - AnimationEventBackground
       - AnimationEventBackground
       PseudoClasses: 00000000
       PropertyMask: 262
@@ -331,8 +330,8 @@ MonoBehaviour:
   - Title: Animation.Toolbar.Button
     StyleRules:
     - ClassSelectors:
-      - AnimClipToolbarPopup
       - AnimClipToolbarButton
+      - AnimClipToolbarPopup
       PseudoClasses: 00000000
       PropertyMask: 390
       BackgroundTexture: {fileID: 0}
@@ -370,8 +369,8 @@ MonoBehaviour:
         Left: 1
         UnitType: 1
     - ClassSelectors:
-      - AnimClipToolbarPopup
       - AnimClipToolbarButton
+      - AnimClipToolbarPopup
       PseudoClasses: 02000000
       PropertyMask: 2
       BackgroundTexture: {fileID: 0}
@@ -409,9 +408,9 @@ MonoBehaviour:
         Left: 1
         UnitType: 1
     - ClassSelectors:
-      - AnimClipToolbarPopup
       - AnimClipToolbarButton
-      PseudoClasses: 01000000
+      - AnimClipToolbarPopup
+      PseudoClasses: 0100000010000000
       PropertyMask: 2
       BackgroundTexture: {fileID: 0}
       BackgroundColor:
@@ -1642,9 +1641,9 @@ MonoBehaviour:
   - Title: Editor.Background
     StyleRules:
     - ClassSelectors:
-      - TabWindowBackground
       - ScrollView
       - ScrollViewAlt
+      - TabWindowBackground
       PseudoClasses: 00000000
       PropertyMask: 134
       BackgroundTexture: {fileID: 0}
@@ -2159,6 +2158,44 @@ MonoBehaviour:
         Bottom: 1
         Left: 0
         UnitType: 1
+    - ClassSelectors:
+      - PreToolbar2
+      PseudoClasses: 00000000
+      PropertyMask: 2
+      BackgroundTexture: {fileID: 0}
+      BackgroundColor:
+        serializedVersion: 2
+        rgba: 4293190911
+      BorderColor:
+        serializedVersion: 2
+        rgba: 4288115420
+      BorderTopColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRightColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderBottomColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderLeftColor:
+        serializedVersion: 2
+        rgba: 0
+      TextColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRadius:
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 1
+      BorderWidth:
+        Top: 1
+        Right: 1
+        Bottom: 1
+        Left: 1
+        UnitType: 1
     <Enabled>k__BackingField: 1
   - Title: Editor.Toolbar.Button
     StyleRules:
@@ -2649,6 +2686,128 @@ MonoBehaviour:
         Bottom: 10
         Left: 10
         UnitType: 2
+      BorderWidth:
+        Top: 1
+        Right: 1
+        Bottom: 1
+        Left: 1
+        UnitType: 1
+    <Enabled>k__BackingField: 1
+  - Title: GUI.Box
+    StyleRules:
+    - ClassSelectors:
+      - Box
+      PseudoClasses: 00000000
+      PropertyMask: 134
+      BackgroundTexture: {fileID: 0}
+      BackgroundColor:
+        serializedVersion: 2
+        rgba: 4293190911
+      BorderColor:
+        serializedVersion: 2
+        rgba: 4291930607
+      BorderTopColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRightColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderBottomColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderLeftColor:
+        serializedVersion: 2
+        rgba: 0
+      TextColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRadius:
+        Top: 10
+        Right: 10
+        Bottom: 10
+        Left: 10
+        UnitType: 2
+      BorderWidth:
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
+    - ClassSelectors:
+      - HelpBox
+      - FrameBox
+      - GroupBox
+      PseudoClasses: 00000000
+      PropertyMask: 134
+      BackgroundTexture: {fileID: 0}
+      BackgroundColor:
+        serializedVersion: 2
+        rgba: 4293190911
+      BorderColor:
+        serializedVersion: 2
+        rgba: 4290884863
+      BorderTopColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRightColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderBottomColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderLeftColor:
+        serializedVersion: 2
+        rgba: 0
+      TextColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRadius:
+        Top: 10
+        Right: 10
+        Bottom: 10
+        Left: 10
+        UnitType: 2
+      BorderWidth:
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
+    <Enabled>k__BackingField: 1
+  - Title: GUI.Box (S)
+    StyleRules:
+    - ClassSelectors:
+      - GroupBox
+      PseudoClasses: 00000000
+      PropertyMask: 256
+      BackgroundTexture: {fileID: 0}
+      BackgroundColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderTopColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRightColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderBottomColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderLeftColor:
+        serializedVersion: 2
+        rgba: 0
+      TextColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRadius:
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
       BorderWidth:
         Top: 1
         Right: 1
@@ -3371,128 +3530,6 @@ MonoBehaviour:
         Right: 0
         Bottom: 0
         Left: 0
-        UnitType: 1
-    <Enabled>k__BackingField: 1
-  - Title: GUI.Box
-    StyleRules:
-    - ClassSelectors:
-      - Box
-      PseudoClasses: 00000000
-      PropertyMask: 134
-      BackgroundTexture: {fileID: 0}
-      BackgroundColor:
-        serializedVersion: 2
-        rgba: 4293190911
-      BorderColor:
-        serializedVersion: 2
-        rgba: 4291930607
-      BorderTopColor:
-        serializedVersion: 2
-        rgba: 0
-      BorderRightColor:
-        serializedVersion: 2
-        rgba: 0
-      BorderBottomColor:
-        serializedVersion: 2
-        rgba: 0
-      BorderLeftColor:
-        serializedVersion: 2
-        rgba: 0
-      TextColor:
-        serializedVersion: 2
-        rgba: 0
-      BorderRadius:
-        Top: 10
-        Right: 10
-        Bottom: 10
-        Left: 10
-        UnitType: 2
-      BorderWidth:
-        Top: 0
-        Right: 0
-        Bottom: 0
-        Left: 0
-        UnitType: 0
-    - ClassSelectors:
-      - HelpBox
-      - FrameBox
-      - GroupBox
-      PseudoClasses: 00000000
-      PropertyMask: 134
-      BackgroundTexture: {fileID: 0}
-      BackgroundColor:
-        serializedVersion: 2
-        rgba: 4293190911
-      BorderColor:
-        serializedVersion: 2
-        rgba: 4290884863
-      BorderTopColor:
-        serializedVersion: 2
-        rgba: 0
-      BorderRightColor:
-        serializedVersion: 2
-        rgba: 0
-      BorderBottomColor:
-        serializedVersion: 2
-        rgba: 0
-      BorderLeftColor:
-        serializedVersion: 2
-        rgba: 0
-      TextColor:
-        serializedVersion: 2
-        rgba: 0
-      BorderRadius:
-        Top: 10
-        Right: 10
-        Bottom: 10
-        Left: 10
-        UnitType: 2
-      BorderWidth:
-        Top: 0
-        Right: 0
-        Bottom: 0
-        Left: 0
-        UnitType: 0
-    <Enabled>k__BackingField: 1
-  - Title: GUI.Box (S)
-    StyleRules:
-    - ClassSelectors:
-      - GroupBox
-      PseudoClasses: 00000000
-      PropertyMask: 256
-      BackgroundTexture: {fileID: 0}
-      BackgroundColor:
-        serializedVersion: 2
-        rgba: 0
-      BorderColor:
-        serializedVersion: 2
-        rgba: 0
-      BorderTopColor:
-        serializedVersion: 2
-        rgba: 0
-      BorderRightColor:
-        serializedVersion: 2
-        rgba: 0
-      BorderBottomColor:
-        serializedVersion: 2
-        rgba: 0
-      BorderLeftColor:
-        serializedVersion: 2
-        rgba: 0
-      TextColor:
-        serializedVersion: 2
-        rgba: 0
-      BorderRadius:
-        Top: 0
-        Right: 0
-        Bottom: 0
-        Left: 0
-        UnitType: 0
-      BorderWidth:
-        Top: 1
-        Right: 1
-        Bottom: 1
-        Left: 1
         UnitType: 1
     <Enabled>k__BackingField: 1
   - Title: GUI.Field.Color
@@ -4438,8 +4475,8 @@ MonoBehaviour:
     - ClassSelectors:
       - MiniPopup
       - MiniPullDown
-      - ShurikenPopup
       - Popup
+      - ShurikenPopup
       PseudoClasses: 00000000
       PropertyMask: 166
       BackgroundTexture: {fileID: 0}
@@ -4479,6 +4516,7 @@ MonoBehaviour:
     - ClassSelectors:
       - MiniPopup
       - MiniPullDown
+      - Popup
       - ShurikenPopup
       PseudoClasses: 0200000006000000
       PropertyMask: 294
@@ -4519,6 +4557,7 @@ MonoBehaviour:
     - ClassSelectors:
       - MiniPopup
       - MiniPullDown
+      - Popup
       - ShurikenPopup
       PseudoClasses: 010000000400000005000000
       PropertyMask: 294
@@ -6291,8 +6330,9 @@ MonoBehaviour:
     StyleRules:
     - ClassSelectors:
       - IN-BigTitle
+      - IN-BigTitle-Post
       PseudoClasses: 00000000
-      PropertyMask: 262
+      PropertyMask: 6
       BackgroundTexture: {fileID: 0}
       BackgroundColor:
         serializedVersion: 2
@@ -6328,9 +6368,9 @@ MonoBehaviour:
         Left: 0
         UnitType: 1
     - ClassSelectors:
-      - IN-BigTitle-Post
+      - IN-BigTitle
       PseudoClasses: 00000000
-      PropertyMask: 6
+      PropertyMask: 256
       BackgroundTexture: {fileID: 0}
       BackgroundColor:
         serializedVersion: 2
@@ -6362,9 +6402,9 @@ MonoBehaviour:
       BorderWidth:
         Top: 0
         Right: 0
-        Bottom: 0
+        Bottom: 2
         Left: 0
-        UnitType: 0
+        UnitType: 1
     <Enabled>k__BackingField: 1
   - Title: Inspector.Title.Text
     StyleRules:
@@ -6838,7 +6878,7 @@ MonoBehaviour:
         Left: 0
         UnitType: 0
     <Enabled>k__BackingField: 1
-  - Title: Object.Selector.Styles.Tab
+  - Title: Object.Picker.Tab
     StyleRules:
     - ClassSelectors:
       - ObjectPickerTab
@@ -6993,7 +7033,7 @@ MonoBehaviour:
         Left: 0
         UnitType: 1
     <Enabled>k__BackingField: 1
-  - Title: Object.Selector.Styles.PreBackground
+  - Title: Object.Picker.Preview.Background
     StyleRules:
     - ClassSelectors:
       - PopupCurveSwatchBackground
@@ -7195,7 +7235,7 @@ MonoBehaviour:
     - ClassSelectors:
       - OL-Title
       - OL-Title-TextRight
-      PseudoClasses: 02000000
+      PseudoClasses: 0100000002000000
       PropertyMask: 2
       BackgroundTexture: {fileID: 0}
       BackgroundColor:
@@ -7232,7 +7272,7 @@ MonoBehaviour:
         Left: 1
         UnitType: 1
     <Enabled>k__BackingField: 1
-  - Title: Object.List.Entry
+  - Title: OL.Entry
     StyleRules:
     - ClassSelectors:
       - OL-EntryBackOdd
@@ -7711,85 +7751,6 @@ MonoBehaviour:
         Bottom: 0
         Left: 0
         UnitType: 0
-    <Enabled>k__BackingField: 1
-  - Title: Project.Asset.Expand.Button
-    StyleRules:
-    - ClassSelectors:
-      - ProjectBrowserSubAssetExpandBtn
-      PseudoClasses: 00000000
-      PropertyMask: 391
-      BackgroundTexture: {fileID: 2800000, guid: c3d5b853e4f4fb84fbfad52e826f9282, type: 3}
-      BackgroundColor:
-        serializedVersion: 2
-        rgba: 4294967295
-      BorderColor:
-        serializedVersion: 2
-        rgba: 4288115420
-      BorderTopColor:
-        serializedVersion: 2
-        rgba: 0
-      BorderRightColor:
-        serializedVersion: 2
-        rgba: 0
-      BorderBottomColor:
-        serializedVersion: 2
-        rgba: 0
-      BorderLeftColor:
-        serializedVersion: 2
-        rgba: 0
-      TextColor:
-        serializedVersion: 2
-        rgba: 0
-      BorderRadius:
-        Top: 100
-        Right: 100
-        Bottom: 100
-        Left: 100
-        UnitType: 2
-      BorderWidth:
-        Top: 2
-        Right: 2
-        Bottom: 2
-        Left: 2
-        UnitType: 1
-    - ClassSelectors:
-      - ProjectBrowserSubAssetExpandBtn
-      PseudoClasses: 10000000
-      PropertyMask: 3
-      BackgroundTexture: {fileID: 2800000, guid: 7982ed77c90d8214bbc7181668390249, type: 3}
-      BackgroundColor:
-        serializedVersion: 2
-        rgba: 4292078591
-      BorderColor:
-        serializedVersion: 2
-        rgba: 4288115420
-      BorderTopColor:
-        serializedVersion: 2
-        rgba: 0
-      BorderRightColor:
-        serializedVersion: 2
-        rgba: 0
-      BorderBottomColor:
-        serializedVersion: 2
-        rgba: 0
-      BorderLeftColor:
-        serializedVersion: 2
-        rgba: 0
-      TextColor:
-        serializedVersion: 2
-        rgba: 0
-      BorderRadius:
-        Top: 25
-        Right: 25
-        Bottom: 25
-        Left: 25
-        UnitType: 2
-      BorderWidth:
-        Top: 1
-        Right: 1
-        Bottom: 1
-        Left: 1
-        UnitType: 1
     <Enabled>k__BackingField: 1
   - Title: Project.Search.Popup.Menu
     StyleRules:
@@ -9024,4 +8985,4 @@ MonoBehaviour:
     StyleRules: []
     <Enabled>k__BackingField: 0
   selectionColor: {r: 0.86274517, g: 0.44705886, b: 0.5921569, a: 0.36862746}
-  recompileOnApply: 0
+  recompileOnApply: 1
