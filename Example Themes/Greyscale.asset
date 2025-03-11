@@ -3456,6 +3456,44 @@ MonoBehaviour:
         Bottom: 0
         Left: 0
         UnitType: 0
+    - ClassSelectors:
+      - ControlLabel
+      PseudoClasses: 01000000
+      PropertyMask: 512
+      BackgroundTexture: {fileID: 0}
+      BackgroundColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderTopColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRightColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderBottomColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderLeftColor:
+        serializedVersion: 2
+        rgba: 0
+      TextColor:
+        serializedVersion: 2
+        rgba: 4288256409
+      BorderRadius:
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
+      BorderWidth:
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
     <Enabled>k__BackingField: 1
   - Title: Object Field Thumb
     StyleRules:
@@ -5516,6 +5554,126 @@ MonoBehaviour:
         Left: 1
         UnitType: 1
     <Enabled>k__BackingField: 1
+  - Title: Grid List
+    StyleRules:
+    - ClassSelectors:
+      - GridList
+      - GridListText
+      PseudoClasses: 00000000
+      PropertyMask: 2
+      BackgroundTexture: {fileID: 0}
+      BackgroundColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderTopColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRightColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderBottomColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderLeftColor:
+        serializedVersion: 2
+        rgba: 0
+      TextColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRadius:
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
+      BorderWidth:
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
+    - ClassSelectors:
+      - GridList
+      - GridListText
+      PseudoClasses: 01000000
+      PropertyMask: 2
+      BackgroundTexture: {fileID: 0}
+      BackgroundColor:
+        serializedVersion: 2
+        rgba: 4280690214
+      BorderColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderTopColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRightColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderBottomColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderLeftColor:
+        serializedVersion: 2
+        rgba: 0
+      TextColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRadius:
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
+      BorderWidth:
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
+    - ClassSelectors:
+      - GridList
+      - GridListText
+      PseudoClasses: 10000000
+      PropertyMask: 262
+      BackgroundTexture: {fileID: 0}
+      BackgroundColor:
+        serializedVersion: 2
+        rgba: 4279900698
+      BorderColor:
+        serializedVersion: 2
+        rgba: 4288256409
+      BorderTopColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRightColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderBottomColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderLeftColor:
+        serializedVersion: 2
+        rgba: 0
+      TextColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRadius:
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
+      BorderWidth:
+        Top: 1
+        Right: 1
+        Bottom: 1
+        Left: 1
+        UnitType: 1
+    <Enabled>k__BackingField: 1
   - Title: Hierarchy
     StyleRules:
     - ClassSelectors:
@@ -5870,7 +6028,7 @@ MonoBehaviour:
         Left: 1
         UnitType: 1
     <Enabled>k__BackingField: 1
-  - Title: Prefab.Label
+  - Title: Prefab Label
     StyleRules:
     - ClassSelectors:
       - PR-PrefabLabel
@@ -6682,7 +6840,7 @@ MonoBehaviour:
       - ExposablePopupMenu
       - ExposablePopupItem
       PseudoClasses: 02000000
-      PropertyMask: 2
+      PropertyMask: 130
       BackgroundTexture: {fileID: 0}
       BackgroundColor:
         serializedVersion: 2
@@ -6720,8 +6878,8 @@ MonoBehaviour:
     - ClassSelectors:
       - ExposablePopupMenu
       - ExposablePopupItem
-      PseudoClasses: 01000000
-      PropertyMask: 2
+      PseudoClasses: 010000001000000012000000
+      PropertyMask: 130
       BackgroundTexture: {fileID: 0}
       BackgroundColor:
         serializedVersion: 2
@@ -7486,4 +7644,4 @@ MonoBehaviour:
     StyleRules: []
     <Enabled>k__BackingField: 0
   selectionColor: {r: 1, g: 1, b: 1, a: 0.36862746}
-  recompileOnApply: 0
+  recompileOnApply: 1
