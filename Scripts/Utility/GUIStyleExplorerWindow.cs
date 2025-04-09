@@ -14,6 +14,23 @@ namespace Emp37.ET
             private static readonly Vector2 Padding = new(x: 15F, y: 5F);
 
 
+            private void OnGUI()
+            {
+                  searchText = GUILayout.TextField(searchText);
+                  DrawStyleList();
+                  EditorGUI.DrawRect(GUILayoutUtility.GetRect(default, 2F), EditorGUIUtility.isProSkin ? Color.white : Color.black);
+                  DrawStylePreview();
+            }
+
+            [MenuItem("Tools/Emp37/ET.GUI Style Explorer")]
+            private static void ShowWindow()
+            {
+                  GUIStyleExplorerWindow window = GetWindow<GUIStyleExplorerWindow>();
+                  window.titleContent = EditorGUIUtility.IconContent("scrollright");
+                  window.titleContent.text = "GUI Style Explorer";
+                  window.minSize = new(400F + 2F * Padding.x, 300F + PreviewHeight);
+                  window.Show();
+            }
             private void DrawStyleList()
             {
                   using GUILayout.ScrollViewScope scrollView = new(scrollPos);
@@ -58,30 +75,11 @@ namespace Emp37.ET
                         GUILayout.Space(Padding.y);
                   }
             }
-
-            private void OnGUI()
-            {
-                  searchText = GUILayout.TextField(searchText);
-                  DrawStyleList();
-                  EditorGUI.DrawRect(GUILayoutUtility.GetRect(default, 2F), EditorGUIUtility.isProSkin ? Color.white : Color.black);
-                  DrawStylePreview();
-            }
-
             private static void CopyStyleName(string styleName)
             {
                   string formattedName = styleName.Replace(' ', '-');
                   EditorGUIUtility.systemCopyBuffer = formattedName;
                   Debug.Log($"'{formattedName}' copied to clipboard.");
-            }
-
-            [MenuItem("Tools/Emp37/ET.GUI Style Explorer")]
-            private static void ShowWindow()
-            {
-                  GUIStyleExplorerWindow window = GetWindow<GUIStyleExplorerWindow>();
-                  window.titleContent = EditorGUIUtility.IconContent("scrollright");
-                  window.titleContent.text = "GUI Style Explorer";
-                  window.minSize = new(400F + 2F * Padding.x, 300F + PreviewHeight);
-                  window.Show();
             }
       }
 }

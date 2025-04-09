@@ -42,7 +42,6 @@ namespace Emp37.ET
 
                   string path = Path.Combine(DIRECTORY, ThemeType + FILE_EXTENSION);
                   File.WriteAllText(path, ToString());
-                  ApplySettings();
                   AssetDatabase.Refresh();
 
                   if (ShouldSwitchSkin(ThemeType))
@@ -58,6 +57,7 @@ namespace Emp37.ET
                         }
                   }
 
+                  ApplySettings();
                   EditorPrefs.SetString(Key, name);
             }
             private bool ShouldSwitchSkin(Type themeType) => (themeType == Type.Dark) ^ EditorGUIUtility.isProSkin;
