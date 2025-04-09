@@ -42,7 +42,6 @@ namespace Emp37.ET
 
                   string path = Path.Combine(DIRECTORY, ThemeType + FILE_EXTENSION);
                   File.WriteAllText(path, ToString());
-                  ApplySettings();
                   AssetDatabase.Refresh();
 
                   if (ShouldSwitchSkin(ThemeType))
@@ -57,13 +56,13 @@ namespace Emp37.ET
                               CompilationPipeline.RequestScriptCompilation();
                         }
                   }
-
-                  EditorPrefs.SetString(Key, name);
+                  ApplySettings();
             }
             private bool ShouldSwitchSkin(Type themeType) => (themeType == Type.Dark) ^ EditorGUIUtility.isProSkin;
             private void ApplySettings()
             {
                   GUI.skin.settings.selectionColor = selectionColor;
+                  EditorPrefs.SetString(Key, name);
             }
 
 
