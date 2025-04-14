@@ -1288,7 +1288,7 @@ MonoBehaviour:
       BackgroundTexture: {fileID: 0}
       BackgroundColor:
         serializedVersion: 2
-        rgba: 4288115420
+        rgba: 4294111999
       BorderColor:
         serializedVersion: 2
         rgba: 4288115420
@@ -1641,7 +1641,7 @@ MonoBehaviour:
   - Title: Editor.Background
     StyleRules:
     - ClassSelectors:
-      - ScrollView
+      - 
       - ScrollViewAlt
       - TabWindowBackground
       PseudoClasses: 00000000
@@ -1757,54 +1757,16 @@ MonoBehaviour:
         Left: 0
         UnitType: 0
     - ClassSelectors:
-      - ScrollView
-      PseudoClasses: 00000000
-      PropertyMask: 256
-      BackgroundTexture: {fileID: 0}
-      BackgroundColor:
-        serializedVersion: 2
-        rgba: 4294111999
-      BorderColor:
-        serializedVersion: 2
-        rgba: 4288115420
-      BorderTopColor:
-        serializedVersion: 2
-        rgba: 0
-      BorderRightColor:
-        serializedVersion: 2
-        rgba: 0
-      BorderBottomColor:
-        serializedVersion: 2
-        rgba: 0
-      BorderLeftColor:
-        serializedVersion: 2
-        rgba: 0
-      TextColor:
-        serializedVersion: 2
-        rgba: 0
-      BorderRadius:
-        Top: 10
-        Right: 10
-        Bottom: 0
-        Left: 0
-        UnitType: 2
-      BorderWidth:
-        Top: 0
-        Right: 0
-        Bottom: 1
-        Left: 0
-        UnitType: 1
-    - ClassSelectors:
       - ScrollViewAlt
       PseudoClasses: 00000000
       PropertyMask: 128
       BackgroundTexture: {fileID: 0}
       BackgroundColor:
         serializedVersion: 2
-        rgba: 4294111999
+        rgba: 0
       BorderColor:
         serializedVersion: 2
-        rgba: 4288115420
+        rgba: 0
       BorderTopColor:
         serializedVersion: 2
         rgba: 0
@@ -8035,7 +7997,7 @@ MonoBehaviour:
       BackgroundTexture: {fileID: 0}
       BackgroundColor:
         serializedVersion: 2
-        rgba: 4288115420
+        rgba: 4294111999
       BorderColor:
         serializedVersion: 2
         rgba: 4288115420
