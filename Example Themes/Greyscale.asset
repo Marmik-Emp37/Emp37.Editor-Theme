@@ -748,7 +748,7 @@ MonoBehaviour:
       BackgroundTexture: {fileID: 0}
       BackgroundColor:
         serializedVersion: 2
-        rgba: 4279900698
+        rgba: 4281545523
       BorderColor:
         serializedVersion: 2
         rgba: 4279900698
@@ -946,7 +946,6 @@ MonoBehaviour:
   - Title: "\u2022 E D I T O R \u2022"
     StyleRules:
     - ClassSelectors:
-      - ScrollView
       - ScrollViewAlt
       - TabWindowBackground
       PseudoClasses: 00000000
@@ -1034,6 +1033,82 @@ MonoBehaviour:
       BorderColor:
         serializedVersion: 2
         rgba: 0
+      BorderTopColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRightColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderBottomColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderLeftColor:
+        serializedVersion: 2
+        rgba: 0
+      TextColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRadius:
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
+      BorderWidth:
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
+    - ClassSelectors:
+      - ScrollView
+      PseudoClasses: 00000000
+      PropertyMask: 2
+      BackgroundTexture: {fileID: 0}
+      BackgroundColor:
+        serializedVersion: 2
+        rgba: 645955712
+      BorderColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderTopColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRightColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderBottomColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderLeftColor:
+        serializedVersion: 2
+        rgba: 0
+      TextColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRadius:
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
+      BorderWidth:
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
+    - ClassSelectors:
+      - ProjectBrowserIconAreaBg
+      PseudoClasses: 00000000
+      PropertyMask: 6
+      BackgroundTexture: {fileID: 0}
+      BackgroundColor:
+        serializedVersion: 2
+        rgba: 4280690214
+      BorderColor:
+        serializedVersion: 2
+        rgba: 4279900698
       BorderTopColor:
         serializedVersion: 2
         rgba: 0

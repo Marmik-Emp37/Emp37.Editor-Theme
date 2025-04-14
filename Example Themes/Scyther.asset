@@ -240,10 +240,10 @@ MonoBehaviour:
         Left: 0
         UnitType: 2
       BorderWidth:
-        Top: 1
-        Right: 1
-        Bottom: 1
-        Left: 1
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
         UnitType: 1
     - ClassSelectors:
       - ScriptText
@@ -278,9 +278,9 @@ MonoBehaviour:
         Left: 0
         UnitType: 2
       BorderWidth:
-        Top: 2
+        Top: 1
         Right: 0
-        Bottom: 2
+        Bottom: 1
         Left: 0
         UnitType: 1
     - ClassSelectors:
@@ -969,6 +969,7 @@ MonoBehaviour:
         UnitType: 1
     - ClassSelectors:
       - MultiColumnHeader
+      - MultiColumnHeaderCenter
       PseudoClasses: 00000000
       PropertyMask: 512
       BackgroundTexture: {fileID: 0}
@@ -1324,10 +1325,9 @@ MonoBehaviour:
         Left: 0
         UnitType: 0
     - ClassSelectors:
-      - ScrollView
       - ScrollViewAlt
       PseudoClasses: 00000000
-      PropertyMask: 6
+      PropertyMask: 134
       BackgroundTexture: {fileID: 0}
       BackgroundColor:
         serializedVersion: 2
@@ -1351,16 +1351,16 @@ MonoBehaviour:
         serializedVersion: 2
         rgba: 0
       BorderRadius:
-        Top: 0
+        Top: 15
         Right: 0
-        Bottom: 0
+        Bottom: 15
         Left: 0
-        UnitType: 0
+        UnitType: 2
       BorderWidth:
-        Top: 0
-        Right: 0
-        Bottom: 0
-        Left: 0
+        Top: 1
+        Right: 1
+        Bottom: 1
+        Left: 1
         UnitType: 0
     - ClassSelectors:
       - WhiteBackground
@@ -1439,13 +1439,13 @@ MonoBehaviour:
         Left: 0
         UnitType: 1
     - ClassSelectors:
-      - ScrollView
+      - ProjectBrowserIconAreaBg
       PseudoClasses: 00000000
-      PropertyMask: 256
+      PropertyMask: 6
       BackgroundTexture: {fileID: 0}
       BackgroundColor:
         serializedVersion: 2
-        rgba: 4289255603
+        rgba: 4293589241
       BorderColor:
         serializedVersion: 2
         rgba: 4286221629
@@ -1465,15 +1465,53 @@ MonoBehaviour:
         serializedVersion: 2
         rgba: 0
       BorderRadius:
-        Top: 0
+        Top: 15
         Right: 0
         Bottom: 0
         Left: 0
-        UnitType: 0
+        UnitType: 2
+      BorderWidth:
+        Top: 1
+        Right: 0
+        Bottom: 1
+        Left: 1
+        UnitType: 1
+    - ClassSelectors:
+      - ScrollView
+      PseudoClasses: 00000000
+      PropertyMask: 258
+      BackgroundTexture: {fileID: 0}
+      BackgroundColor:
+        serializedVersion: 2
+        rgba: 651618513
+      BorderColor:
+        serializedVersion: 2
+        rgba: 4286221629
+      BorderTopColor:
+        serializedVersion: 2
+        rgba: 4294440951
+      BorderRightColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderBottomColor:
+        serializedVersion: 2
+        rgba: 4294440951
+      BorderLeftColor:
+        serializedVersion: 2
+        rgba: 0
+      TextColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRadius:
+        Top: 15
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 2
       BorderWidth:
         Top: 0
         Right: 0
-        Bottom: 1
+        Bottom: 0
         Left: 0
         UnitType: 1
     <Enabled>k__BackingField: 1
@@ -1846,7 +1884,7 @@ MonoBehaviour:
       BackgroundTexture: {fileID: 0}
       BackgroundColor:
         serializedVersion: 2
-        rgba: 3871070634
+        rgba: 2160193749
       BorderColor:
         serializedVersion: 2
         rgba: 4286221629
@@ -2014,7 +2052,7 @@ MonoBehaviour:
       BackgroundTexture: {fileID: 0}
       BackgroundColor:
         serializedVersion: 2
-        rgba: 4290900181
+        rgba: 4290501034
       BorderColor:
         serializedVersion: 2
         rgba: 0
@@ -2910,7 +2948,7 @@ MonoBehaviour:
       - DD-ItemStyle
       - DD-LargeItemStyle
       PseudoClasses: 00000000
-      PropertyMask: 2
+      PropertyMask: 130
       BackgroundTexture: {fileID: 0}
       BackgroundColor:
         serializedVersion: 2
@@ -2934,11 +2972,11 @@ MonoBehaviour:
         serializedVersion: 2
         rgba: 0
       BorderRadius:
-        Top: 0
+        Top: 15
         Right: 0
-        Bottom: 0
+        Bottom: 15
         Left: 0
-        UnitType: 0
+        UnitType: 2
       BorderWidth:
         Top: 0
         Right: 0
@@ -2956,7 +2994,7 @@ MonoBehaviour:
         rgba: 2160193749
       BorderColor:
         serializedVersion: 2
-        rgba: 0
+        rgba: 4294440951
       BorderTopColor:
         serializedVersion: 2
         rgba: 0
@@ -2979,11 +3017,11 @@ MonoBehaviour:
         Left: 0
         UnitType: 0
       BorderWidth:
-        Top: 0
-        Right: 0
-        Bottom: 0
-        Left: 0
-        UnitType: 0
+        Top: 1
+        Right: 1
+        Bottom: 1
+        Left: 1
+        UnitType: 1
     <Enabled>k__BackingField: 1
   - Title: Dropdown Header
     StyleRules:
@@ -3020,11 +3058,11 @@ MonoBehaviour:
         Left: 10
         UnitType: 2
       BorderWidth:
-        Top: 0
-        Right: 0
-        Bottom: 0
-        Left: 0
-        UnitType: 0
+        Top: 1
+        Right: 1
+        Bottom: 1
+        Left: 1
+        UnitType: 1
     - ClassSelectors:
       - DD-HeaderStyle
       PseudoClasses: 02000000
@@ -3058,11 +3096,11 @@ MonoBehaviour:
         Left: 10
         UnitType: 2
       BorderWidth:
-        Top: 0
-        Right: 0
-        Bottom: 0
-        Left: 0
-        UnitType: 0
+        Top: 1
+        Right: 1
+        Bottom: 1
+        Left: 1
+        UnitType: 1
     <Enabled>k__BackingField: 1
   - Title: Exposable Items
     StyleRules:
@@ -3109,7 +3147,7 @@ MonoBehaviour:
       - ExposablePopupMenu
       - ExposablePopupItem
       PseudoClasses: 02000000
-      PropertyMask: 2
+      PropertyMask: 130
       BackgroundTexture: {fileID: 0}
       BackgroundColor:
         serializedVersion: 2
@@ -3148,7 +3186,7 @@ MonoBehaviour:
       - ExposablePopupMenu
       - ExposablePopupItem
       PseudoClasses: 0100000010000000
-      PropertyMask: 2
+      PropertyMask: 130
       BackgroundTexture: {fileID: 0}
       BackgroundColor:
         serializedVersion: 2
@@ -4572,6 +4610,45 @@ MonoBehaviour:
         Bottom: 0
         Left: 0
         UnitType: 0
+    - ClassSelectors:
+      - ObjectPickerResultsEven
+      - ObjectPickerResultsOdd
+      PseudoClasses: 10000000
+      PropertyMask: 130
+      BackgroundTexture: {fileID: 0}
+      BackgroundColor:
+        serializedVersion: 2
+        rgba: 4292274385
+      BorderColor:
+        serializedVersion: 2
+        rgba: 4286221629
+      BorderTopColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRightColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderBottomColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderLeftColor:
+        serializedVersion: 2
+        rgba: 0
+      TextColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRadius:
+        Top: 15
+        Right: 0
+        Bottom: 15
+        Left: 0
+        UnitType: 2
+      BorderWidth:
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
     <Enabled>k__BackingField: 1
   - Title: OL Elements
     StyleRules:
@@ -4963,7 +5040,7 @@ MonoBehaviour:
         rgba: 0
       TextColor:
         serializedVersion: 2
-        rgba: 4294967295
+        rgba: 4291522063
       BorderRadius:
         Top: 0
         Right: 0
@@ -5066,7 +5143,7 @@ MonoBehaviour:
       BackgroundTexture: {fileID: 0}
       BackgroundColor:
         serializedVersion: 2
-        rgba: 1084807347
+        rgba: 3220699127
       BorderColor:
         serializedVersion: 2
         rgba: 4294440951
@@ -5092,10 +5169,10 @@ MonoBehaviour:
         Left: 0
         UnitType: 2
       BorderWidth:
-        Top: 2
-        Right: 0
-        Bottom: 2
-        Left: 0
+        Top: 1
+        Right: 1
+        Bottom: 1
+        Left: 1
         UnitType: 1
     - ClassSelectors:
       - ProjectBrowserTopBarBg
@@ -5133,7 +5210,7 @@ MonoBehaviour:
         Top: 1
         Right: 0
         Bottom: 0
-        Left: 0
+        Left: 1
         UnitType: 1
     - ClassSelectors:
       - ProjectBrowserBottomBarBg
@@ -5169,7 +5246,7 @@ MonoBehaviour:
         UnitType: 2
       BorderWidth:
         Top: 0
-        Right: 0
+        Right: 1
         Bottom: 1
         Left: 0
         UnitType: 1
@@ -5451,7 +5528,7 @@ MonoBehaviour:
     - ClassSelectors:
       - RL-Element
       PseudoClasses: 00000000
-      PropertyMask: 2
+      PropertyMask: 130
       BackgroundTexture: {fileID: 0}
       BackgroundColor:
         serializedVersion: 2
@@ -5475,11 +5552,11 @@ MonoBehaviour:
         serializedVersion: 2
         rgba: 0
       BorderRadius:
-        Top: 0
+        Top: 15
         Right: 0
-        Bottom: 0
+        Bottom: 15
         Left: 0
-        UnitType: 0
+        UnitType: 2
       BorderWidth:
         Top: 1
         Right: 1
@@ -6735,7 +6812,7 @@ MonoBehaviour:
       BackgroundTexture: {fileID: 0}
       BackgroundColor:
         serializedVersion: 2
-        rgba: 2160719865
+        rgba: 4291426297
       BorderColor:
         serializedVersion: 2
         rgba: 4286221629
@@ -8083,4 +8160,4 @@ MonoBehaviour:
     StyleRules: []
     <Enabled>k__BackingField: 0
   selectionColor: {r: 0.2392157, g: 0.5529412, b: 0.4784314, a: 0.36862746}
-  recompileOnApply: 1
+  recompileOnApply: 0
