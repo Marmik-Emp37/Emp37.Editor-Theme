@@ -56,14 +56,13 @@ namespace Emp37.ET
                               CompilationPipeline.RequestScriptCompilation();
                         }
                   }
-
                   ApplySettings();
-                  EditorPrefs.SetString(Key, name);
             }
             private bool ShouldSwitchSkin(Type themeType) => (themeType == Type.Dark) ^ EditorGUIUtility.isProSkin;
             private void ApplySettings()
             {
                   GUI.skin.settings.selectionColor = selectionColor;
+                  EditorPrefs.SetString(Key, name);
             }
 
 

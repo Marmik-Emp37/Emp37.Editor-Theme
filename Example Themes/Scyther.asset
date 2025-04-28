@@ -2052,7 +2052,7 @@ MonoBehaviour:
       BackgroundTexture: {fileID: 0}
       BackgroundColor:
         serializedVersion: 2
-        rgba: 4290900181
+        rgba: 4290501034
       BorderColor:
         serializedVersion: 2
         rgba: 0
@@ -8121,4 +8121,4 @@ MonoBehaviour:
     StyleRules: []
     <Enabled>k__BackingField: 0
   selectionColor: {r: 0.2392157, g: 0.5529412, b: 0.4784314, a: 0.36862746}
-  recompileOnApply: 1
+  recompileOnApply: 0
