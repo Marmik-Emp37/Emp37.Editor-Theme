@@ -22,6 +22,7 @@ namespace Emp37.ET
                   {
                         GUI.backgroundColor = color;
                   }
+
                   protected override void CloseScope()
                   {
                         GUI.backgroundColor = original;
