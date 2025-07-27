@@ -1,3 +1,4 @@
+using System;
 using System.IO;
 using System.Linq;
 using System.Collections.Generic;
@@ -64,7 +65,12 @@ namespace Emp37.ET
                   GUI.skin.settings.selectionColor = selectionColor;
                   EditorPrefs.SetString(Key, name);
             }
-
+            [ContextMenu("Sort by Title")]
+            private void Sort()
+            {
+                  Undo.RecordObject(this, $"Sort {nameof(StyleRuleGroups)} by Title");
+                  Array.Sort(StyleRuleGroups, (a, b) => a.Title.CompareTo(b.Title));
+            }
 
             /// <summary>
             /// Generates a finalised USS code representation for this theme.

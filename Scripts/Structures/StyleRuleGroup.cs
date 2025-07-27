@@ -15,6 +15,6 @@ namespace Emp37.ET
             private readonly IEnumerable<string> WriteRules => from style in StyleRules let value = style.ToString() where !string.IsNullOrEmpty(value) select value;
 
 
-            public readonly override string ToString() => Enabled ? $"/*<{Title}>*/\n{string.Join('\n', WriteRules)}" : null;
+            public readonly override string ToString() => Enabled ? $"/* {Title} */\n{string.Join('\n', WriteRules)}" : null;
       }
 }
