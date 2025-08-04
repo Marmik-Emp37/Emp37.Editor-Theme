@@ -1426,7 +1426,7 @@ MonoBehaviour:
       BackgroundTexture: {fileID: 0}
       BackgroundColor:
         serializedVersion: 2
-        rgba: 4284900966
+        rgba: 4281545523
       BorderColor:
         serializedVersion: 2
         rgba: 4279900698
