@@ -735,6 +735,44 @@ MonoBehaviour:
         Bottom: 0
         Left: 0
         UnitType: 1
+    - ClassSelectors:
+      - CN-Message
+      PseudoClasses: 00000000
+      PropertyMask: 262
+      BackgroundTexture: {fileID: 0}
+      BackgroundColor:
+        serializedVersion: 2
+        rgba: 4282400832
+      BorderColor:
+        serializedVersion: 2
+        rgba: 4279900698
+      BorderTopColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRightColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderBottomColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderLeftColor:
+        serializedVersion: 2
+        rgba: 0
+      TextColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRadius:
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
+      BorderWidth:
+        Top: 1
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 1
     <Enabled>k__BackingField: 1
   - Title: 
     StyleRules: []
@@ -1426,7 +1464,7 @@ MonoBehaviour:
       BackgroundTexture: {fileID: 0}
       BackgroundColor:
         serializedVersion: 2
-        rgba: 4284900966
+        rgba: 4281545523
       BorderColor:
         serializedVersion: 2
         rgba: 4279900698

@@ -8056,4 +8056,4 @@ MonoBehaviour:
     StyleRules: []
     <Enabled>k__BackingField: 0
   selectionColor: {r: 0.2392157, g: 0.5529412, b: 0.4784314, a: 0.36862746}
-  recompileOnApply: 0
+  recompileOnApply: 1
