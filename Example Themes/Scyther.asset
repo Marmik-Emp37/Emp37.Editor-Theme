@@ -3018,6 +3018,7 @@ MonoBehaviour:
       - IN-LockButton
       - PaneOptions
       - StaticDropdown
+      - WindowMenuButton
       PseudoClasses: 00000000
       PropertyMask: 130
       BackgroundTexture: {fileID: 0}
@@ -3060,6 +3061,7 @@ MonoBehaviour:
       - IN-LockButton
       - PaneOptions
       - StaticDropdown
+      - WindowMenuButton
       PseudoClasses: 02000000
       PropertyMask: 2
       BackgroundTexture: {fileID: 0}
@@ -7198,6 +7200,7 @@ MonoBehaviour:
       - TextFieldDropDownText
       - ToolbarSliderTextField
       - ToolbarTextField
+      - PR-TextField
       PseudoClasses: 00000000
       PropertyMask: 398
       BackgroundTexture: {fileID: 0}
@@ -7247,6 +7250,7 @@ MonoBehaviour:
       - TextFieldDropDownText
       - ToolbarSliderTextField
       - ToolbarTextField
+      - PR-TextField
       PseudoClasses: 02000000
       PropertyMask: 12
       BackgroundTexture: {fileID: 0}
@@ -7296,6 +7300,7 @@ MonoBehaviour:
       - TextFieldDropDownText
       - ToolbarSliderTextField
       - ToolbarTextField
+      - PR-TextField
       PseudoClasses: 0100000004000000050000000600000007000000
       PropertyMask: 270
       BackgroundTexture: {fileID: 0}

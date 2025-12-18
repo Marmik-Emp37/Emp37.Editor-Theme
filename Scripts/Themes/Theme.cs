@@ -37,6 +37,13 @@ namespace Emp37.ET
                   }
             }
 
+            [ContextMenu("Sort/Title")]
+            private void Sort()
+            {
+                  Undo.RecordObject(this, $"Sort {nameof(StyleRuleGroups)} by Title");
+                  Array.Sort(StyleRuleGroups, (a, b) => a.Title.CompareTo(b.Title));
+            }
+
             public void WriteTheme()
             {
                   Directory.CreateDirectory(DIRECTORY);
@@ -64,12 +71,6 @@ namespace Emp37.ET
             {
                   GUI.skin.settings.selectionColor = selectionColor;
                   EditorPrefs.SetString(Key, name);
-            }
-            [ContextMenu("Sort by Title")]
-            private void Sort()
-            {
-                  Undo.RecordObject(this, $"Sort {nameof(StyleRuleGroups)} by Title");
-                  Array.Sort(StyleRuleGroups, (a, b) => a.Title.CompareTo(b.Title));
             }
 
             /// <summary>
