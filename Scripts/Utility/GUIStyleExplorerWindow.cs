@@ -1,26 +1,25 @@
-﻿using UnityEditor;
+﻿using System;
 
 using UnityEngine;
+
+using UnityEditor;
 
 namespace Emp37.ET
 {
       public class GUIStyleExplorerWindow : EditorWindow
       {
-            private Vector2 scrollPos;
-            private GUIStyle activeStyle;
-            private string searchText = string.Empty;
+            private Vector2 scrollPosition;
+            private GUIStyle active;
+            private string searchQuery = string.Empty;
 
-            private const float PreviewHeight = 50F;
-            private static readonly Vector2 Padding = new(x: 15F, y: 5F);
+            private const float PreviewHeight = 70F;
+            private static readonly Vector2 Padding = new(15F, 5F);
 
+            private GUIStyle[] cachedStyles;
 
-            private void OnGUI()
-            {
-                  searchText = GUILayout.TextField(searchText);
-                  DrawStyleList();
-                  EditorGUI.DrawRect(GUILayoutUtility.GetRect(default, 2F), EditorGUIUtility.isProSkin ? Color.white : Color.black);
-                  DrawStylePreview();
-            }
+            private readonly GUIContent previewContent = new("Sample Text");
+            private bool simulateFocus, simulateHover, simulateActive;
+
 
             [MenuItem("Tools/Emp37/ET.GUI Style Explorer")]
             private static void ShowWindow()
@@ -31,55 +30,64 @@ namespace Emp37.ET
                   window.minSize = new(400F + 2F * Padding.x, 300F + PreviewHeight);
                   window.Show();
             }
-            private void DrawStyleList()
-            {
-                  using GUILayout.ScrollViewScope scrollView = new(scrollPos);
-                  scrollPos = scrollView.scrollPosition;
 
-                  foreach (GUIStyle style in GUI.skin.customStyles)
-                  {
-                        if (style.name.Contains(searchText, System.StringComparison.OrdinalIgnoreCase) && GUILayout.Button(style.name, EditorStyles.label))
-                        {
-                              if (activeStyle == style)
-                              {
-                                    CopyStyleName(style.name);
-                              }
-                              else
-                              {
-                                    activeStyle = style;
-                              }
-                        }
-                  }
-            }
-            private void DrawStylePreview()
+            private void OnGUI()
             {
-                  GUILayout.Label("Preview:", EditorStyles.boldLabel);
-                  if (activeStyle == null)
+                  cachedStyles ??= GUI.skin.customStyles;
+
+                  EditorGUI.BeginChangeCheck();
+                  searchQuery = EditorGUILayout.TextField(searchQuery);
+                  if (EditorGUI.EndChangeCheck())
+                  {
+                        cachedStyles = Array.FindAll(GUI.skin.customStyles, style => style.name.Contains(searchQuery, StringComparison.OrdinalIgnoreCase));
+                  }
+
+                  using (GUILayout.ScrollViewScope view = new(scrollPosition))
+                  {
+                        scrollPosition = view.scrollPosition;
+
+                        foreach (GUIStyle style in cachedStyles)
+                              if (GUILayout.Button(style.name, EditorStyles.label))
+                              {
+                                    if (active != style) active = style;
+                                    else CopyToClipboard(style);
+                              }
+                  }
+
+                  DrawSeparator(1F);
+
+                  if (active == null)
                   {
                         GUILayout.Label("No style selected.", EditorStyles.centeredGreyMiniLabel);
                         return;
                   }
-                  GUILayout.Space(-2F);
-                  EditorGUILayout.LabelField(activeStyle.name);
-                  using (new GUILayout.VerticalScope())
+                  GUILayout.Label("Preview: " + active.name, EditorStyles.boldLabel);
+                  GUILayout.Space(2F);
+
+                  using (new GUILayout.HorizontalScope())
                   {
-                        GUILayout.Space(Padding.y);
-                        using (new GUILayout.HorizontalScope(GUILayout.Height(PreviewHeight)))
-                        {
-                              GUILayout.Space(Padding.x);
-                              Vector2 size = new(activeStyle.fixedWidth, activeStyle.fixedHeight);
-                              GUILayoutOption[] options = { size.x > 0F ? GUILayout.Width(size.x) : GUILayout.ExpandWidth(true), size.y > 0F ? GUILayout.Height(size.y) : GUILayout.ExpandHeight(true) };
-                              GUILayout.Button("Sample Text", activeStyle, options);
-                              GUILayout.Space(Padding.x);
-                        }
-                        GUILayout.Space(Padding.y);
+                        simulateFocus = GUILayout.Toggle(simulateFocus, "Focused"); simulateHover = GUILayout.Toggle(simulateHover, "Hover"); simulateActive = GUILayout.Toggle(simulateActive, "Active");
+                        GUILayout.FlexibleSpace();
                   }
+                  previewContent.text = EditorGUILayout.TextField(string.Empty, previewContent.text);
+                  GUILayout.Space(2F);
+
+                  DrawSeparator(1F);
+
+                  GUILayout.Space(Padding.y);
+                  Rect previewRect = GUILayoutUtility.GetRect(18F, PreviewHeight, GUILayout.ExpandWidth(true));
+                  previewRect.xMin += Padding.x; previewRect.xMax -= Padding.x;
+                  if (Event.current.type == EventType.Repaint) active.Draw(previewRect, previewContent, simulateHover, simulateActive, false, simulateFocus);
+                  GUILayout.Space(Padding.y);
             }
-            private static void CopyStyleName(string styleName)
+
+            private static void DrawSeparator(float height) => EditorGUI.DrawRect(GUILayoutUtility.GetRect(default, height), EditorGUIUtility.isProSkin ? Color.white : Color.black);
+            private static void CopyToClipboard(GUIStyle style)
             {
-                  string formattedName = styleName.Replace(' ', '-');
-                  EditorGUIUtility.systemCopyBuffer = formattedName;
-                  Debug.Log($"'{formattedName}' copied to clipboard.");
+                  string content = style.name.Replace(' ', '-');
+                  EditorGUIUtility.systemCopyBuffer = content;
+
+                  Debug.Log($"'{content}' copied to clipboard.");
             }
       }
 }
