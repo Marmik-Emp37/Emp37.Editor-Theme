@@ -1,8 +1,6 @@
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text.RegularExpressions;
-
 using UnityEngine;
 
 namespace Emp37.ET
@@ -10,7 +8,7 @@ namespace Emp37.ET
       [Serializable]
       public struct StyleRule
       {
-            public string[] ClassSelectors;
+            public string[] Selectors;
             public PseudoClasses[] PseudoClasses;
             public StyleAttributes PropertyMask;
 
@@ -18,7 +16,7 @@ namespace Emp37.ET
             public Color32 BackgroundColor, BorderColor, BorderTopColor, BorderRightColor, BorderBottomColor, BorderLeftColor, TextColor;
             public StyleOffset BorderRadius, BorderWidth;
 
-            public static (StyleAttributes Flag, string Name)[] PropertyMap =
+            public static readonly (StyleAttributes Flag, string Name)[] AttributeMap =
             {
                   (StyleAttributes.BackgroundImage, nameof(BackgroundTexture)),
                   (StyleAttributes.BackgroundColor, nameof(BackgroundColor)),
@@ -32,65 +30,49 @@ namespace Emp37.ET
                   (StyleAttributes.Color, nameof(TextColor))
             };
 
-            private readonly IEnumerable<string> WriteSelectorList
-            {
-                  get
-                  {
-                        foreach (string classType in ClassSelectors.Where(item => !string.IsNullOrWhiteSpace(item)))
-                        {
-                              foreach (PseudoClasses pseudoClass in PseudoClasses)
-                              {
-                                    string chain = pseudoClass == 0 ? string.Empty : ':' + pseudoClass.ToString().Replace(", ", ":").ToLower();
-                                    yield return $".{classType}{chain}";
-                              }
-                        }
-                  }
-            }
-            private readonly IEnumerable<string> WriteStyleBlock
-            {
-                  get
-                  {
-                        foreach ((StyleAttributes property, _) in PropertyMap)
-                        {
-                              if (!PropertyMask.HasFlag(property)) continue;
-
-                              string expression = property switch
-                              {
-                                    StyleAttributes.BackgroundImage => USSTools.Format(BackgroundTexture),
-                                    StyleAttributes.BackgroundColor => USSTools.Format(BackgroundColor),
-                                    StyleAttributes.BorderColor => USSTools.Format(BorderColor),
-                                    StyleAttributes.BorderTopColor => USSTools.Format(BorderTopColor),
-                                    StyleAttributes.BorderRightColor => USSTools.Format(BorderRightColor),
-                                    StyleAttributes.BorderBottomColor => USSTools.Format(BorderBottomColor),
-                                    StyleAttributes.BorderLeftColor => USSTools.Format(BorderLeftColor),
-                                    StyleAttributes.BorderRadius => USSTools.Format(BorderRadius),
-                                    StyleAttributes.BorderWidth => USSTools.Format(BorderWidth),
-                                    StyleAttributes.Color => USSTools.Format(TextColor),
-                                    _ => null
-                              };
-
-                              if (string.IsNullOrEmpty(expression)) continue;
-
-                              string name = Regex.Replace(property.ToString(), "(?<!^)([A-Z])", "-$1").ToLower();
-                              yield return $"\t{name}: {expression};";
-                        }
-                  }
-            }
-
-
             public readonly override string ToString()
             {
-                  IEnumerable<string> selectorList = WriteSelectorList;
-                  if (!selectorList.Any())
+                  #region S E L E C T O R S
+                  List<string> classes = new();
+                  foreach (var selector in Selectors)
                   {
-                        return null;
+                        if (string.IsNullOrWhiteSpace(selector)) continue;
+                        foreach (var value in PseudoClasses)
+                        {
+                              string chain = value == 0 ? string.Empty : ":" + value.ToString().Replace(", ", ":").ToLowerInvariant();
+                              classes.Add($".{selector}{chain}");
+                        }
                   }
-                  IEnumerable<string> propertiesReference = WriteStyleBlock;
-                  if (!propertiesReference.Any())
+                  if (classes.Count == 0) return null;
+                  #endregion
+
+                  #region P R O P E R T I E S
+                  List<string> properties = new();
+                  foreach ((var property, _) in AttributeMap)
                   {
-                        return null;
+                        if (!PropertyMask.HasFlag(property)) continue;
+                        string expression = property switch
+                        {
+                              StyleAttributes.BackgroundImage => USSWriter.Format(BackgroundTexture),
+                              StyleAttributes.BackgroundColor => USSWriter.Format(BackgroundColor),
+                              StyleAttributes.BorderColor => USSWriter.Format(BorderColor),
+                              StyleAttributes.BorderTopColor => USSWriter.Format(BorderTopColor),
+                              StyleAttributes.BorderRightColor => USSWriter.Format(BorderRightColor),
+                              StyleAttributes.BorderBottomColor => USSWriter.Format(BorderBottomColor),
+                              StyleAttributes.BorderLeftColor => USSWriter.Format(BorderLeftColor),
+                              StyleAttributes.BorderRadius => USSWriter.Format(BorderRadius),
+                              StyleAttributes.BorderWidth => USSWriter.Format(BorderWidth),
+                              StyleAttributes.Color => USSWriter.Format(TextColor),
+                              _ => null
+                        };
+                        if (string.IsNullOrEmpty(expression)) continue;
+                        string name = Regex.Replace(property.ToString(), "(?<!^)([A-Z])", "-$1").ToLowerInvariant();
+                        properties.Add($"\t{name}: {expression};");
                   }
-                  return $"{string.Join(",\n", selectorList)} {{\n{string.Join('\n', propertiesReference)}\n}}";
+                  if (properties.Count == 0) return null;
+                  #endregion
+
+                  return $"{string.Join(",\n", classes)} {{\n{string.Join('\n', properties)}\n}}";
             }
       }
 }

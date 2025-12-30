@@ -15,7 +15,7 @@ MonoBehaviour:
   StyleRuleGroups:
   - Title: "\u2022 A N I M A T I O N \u2022"
     StyleRules:
-    - ClassSelectors:
+    - Selectors:
       - AnimLeftPaneSeparator
       PseudoClasses: 00000000
       PropertyMask: 2
@@ -56,7 +56,7 @@ MonoBehaviour:
     <Enabled>k__BackingField: 1
   - Title: Row
     StyleRules:
-    - ClassSelectors:
+    - Selectors:
       - AnimationRowEven
       PseudoClasses: 00000000
       PropertyMask: 2
@@ -94,7 +94,7 @@ MonoBehaviour:
         Bottom: 0
         Left: 0
         UnitType: 0
-    - ClassSelectors:
+    - Selectors:
       - AnimationRowOdd
       PseudoClasses: 00000000
       PropertyMask: 2
@@ -135,7 +135,7 @@ MonoBehaviour:
     <Enabled>k__BackingField: 1
   - Title: Toolbar
     StyleRules:
-    - ClassSelectors:
+    - Selectors:
       - AnimPlayToolbar
       - AnimClipToolbar
       PseudoClasses: 00000000
@@ -177,7 +177,7 @@ MonoBehaviour:
     <Enabled>k__BackingField: 1
   - Title: Toolbar Button
     StyleRules:
-    - ClassSelectors:
+    - Selectors:
       - AnimClipToolbarButton
       - AnimClipToolbarPopup
       - TimeScrubberButton
@@ -217,7 +217,7 @@ MonoBehaviour:
         Bottom: 1
         Left: 1
         UnitType: 1
-    - ClassSelectors:
+    - Selectors:
       - AnimClipToolbarButton
       - AnimClipToolbarPopup
       - TimeScrubberButton
@@ -257,7 +257,7 @@ MonoBehaviour:
         Bottom: 1
         Left: 1
         UnitType: 1
-    - ClassSelectors:
+    - Selectors:
       - AnimClipToolbarButton
       - AnimClipToolbarPopup
       - TimeScrubberButton
@@ -300,7 +300,7 @@ MonoBehaviour:
     <Enabled>k__BackingField: 1
   - Title: Transition
     StyleRules:
-    - ClassSelectors:
+    - Selectors:
       - MeTransitionHead
       PseudoClasses: 00000000
       PropertyMask: 390
@@ -338,7 +338,7 @@ MonoBehaviour:
         Bottom: 0
         Left: 1
         UnitType: 1
-    - ClassSelectors:
+    - Selectors:
       - MeTransitionBack
       PseudoClasses: 00000000
       PropertyMask: 390
@@ -376,7 +376,7 @@ MonoBehaviour:
         Bottom: 1
         Left: 1
         UnitType: 1
-    - ClassSelectors:
+    - Selectors:
       - MeTransitionSelectHead
       - MeTransitionSelect
       PseudoClasses: 00000000
@@ -421,7 +421,7 @@ MonoBehaviour:
     <Enabled>k__BackingField: 0
   - Title: "\u2022 C O N S O L E \u2022"
     StyleRules:
-    - ClassSelectors:
+    - Selectors:
       - CN-CountBadge
       PseudoClasses: 00000000
       PropertyMask: 130
@@ -462,7 +462,7 @@ MonoBehaviour:
     <Enabled>k__BackingField: 1
   - Title: Entry Background
     StyleRules:
-    - ClassSelectors:
+    - Selectors:
       - CN-EntryBackOdd
       PseudoClasses: 00000000
       PropertyMask: 2
@@ -500,7 +500,7 @@ MonoBehaviour:
         Bottom: 0
         Left: 0
         UnitType: 0
-    - ClassSelectors:
+    - Selectors:
       - CN-EntryBackEven
       PseudoClasses: 00000000
       PropertyMask: 2
@@ -538,7 +538,7 @@ MonoBehaviour:
         Bottom: 0
         Left: 0
         UnitType: 0
-    - ClassSelectors:
+    - Selectors:
       - CN-EntryBackEven
       - CN-EntryBackOdd
       PseudoClasses: 10000000
@@ -580,7 +580,7 @@ MonoBehaviour:
     <Enabled>k__BackingField: 1
   - Title: Entry Icon
     StyleRules:
-    - ClassSelectors:
+    - Selectors:
       - CN-EntryInfoIcon
       PseudoClasses: 00000000
       PropertyMask: 1
@@ -618,7 +618,7 @@ MonoBehaviour:
         Bottom: 0
         Left: 0
         UnitType: 0
-    - ClassSelectors:
+    - Selectors:
       - CN-EntryWarnIcon
       PseudoClasses: 00000000
       PropertyMask: 1
@@ -656,7 +656,7 @@ MonoBehaviour:
         Bottom: 0
         Left: 0
         UnitType: 0
-    - ClassSelectors:
+    - Selectors:
       - CN-EntryErrorIcon
       PseudoClasses: 00000000
       PropertyMask: 1
@@ -697,7 +697,7 @@ MonoBehaviour:
     <Enabled>k__BackingField: 1
   - Title: Message
     StyleRules:
-    - ClassSelectors:
+    - Selectors:
       - CN-Box
       PseudoClasses: 00000000
       PropertyMask: 262
@@ -735,7 +735,7 @@ MonoBehaviour:
         Bottom: 0
         Left: 0
         UnitType: 1
-    - ClassSelectors:
+    - Selectors:
       - CN-Message
       PseudoClasses: 00000000
       PropertyMask: 262
@@ -779,7 +779,7 @@ MonoBehaviour:
     <Enabled>k__BackingField: 0
   - Title: "\u2022 D R O P D O W N \u2022"
     StyleRules:
-    - ClassSelectors:
+    - Selectors:
       - DD-Background
       PseudoClasses: 00000000
       PropertyMask: 6
@@ -820,7 +820,7 @@ MonoBehaviour:
     <Enabled>k__BackingField: 1
   - Title: Header
     StyleRules:
-    - ClassSelectors:
+    - Selectors:
       - DD-HeaderStyle
       PseudoClasses: 00000000
       PropertyMask: 6
@@ -858,7 +858,7 @@ MonoBehaviour:
         Bottom: 1
         Left: 1
         UnitType: 1
-    - ClassSelectors:
+    - Selectors:
       - DD-HeaderStyle
       PseudoClasses: 02000000
       PropertyMask: 2
@@ -899,7 +899,7 @@ MonoBehaviour:
     <Enabled>k__BackingField: 1
   - Title: Item
     StyleRules:
-    - ClassSelectors:
+    - Selectors:
       - DD-ItemStyle
       - DD-LargeItemStyle
       PseudoClasses: 00000000
@@ -938,7 +938,7 @@ MonoBehaviour:
         Bottom: 0
         Left: 0
         UnitType: 0
-    - ClassSelectors:
+    - Selectors:
       - DD-ItemStyle
       - DD-LargeItemStyle
       PseudoClasses: 10000000
@@ -983,7 +983,7 @@ MonoBehaviour:
     <Enabled>k__BackingField: 0
   - Title: "\u2022 E D I T O R \u2022"
     StyleRules:
-    - ClassSelectors:
+    - Selectors:
       - ScrollViewAlt
       - TabWindowBackground
       PseudoClasses: 00000000
@@ -1022,7 +1022,7 @@ MonoBehaviour:
         Bottom: 1
         Left: 1
         UnitType: 1
-    - ClassSelectors:
+    - Selectors:
       - grey_border
       PseudoClasses: 00000000
       PropertyMask: 4
@@ -1060,7 +1060,7 @@ MonoBehaviour:
         Bottom: 0
         Left: 0
         UnitType: 0
-    - ClassSelectors:
+    - Selectors:
       - PreBackground
       PseudoClasses: 00000000
       PropertyMask: 2
@@ -1098,7 +1098,7 @@ MonoBehaviour:
         Bottom: 0
         Left: 0
         UnitType: 0
-    - ClassSelectors:
+    - Selectors:
       - ScrollView
       PseudoClasses: 00000000
       PropertyMask: 2
@@ -1136,7 +1136,7 @@ MonoBehaviour:
         Bottom: 0
         Left: 0
         UnitType: 0
-    - ClassSelectors:
+    - Selectors:
       - ProjectBrowserIconAreaBg
       PseudoClasses: 00000000
       PropertyMask: 6
@@ -1177,7 +1177,7 @@ MonoBehaviour:
     <Enabled>k__BackingField: 1
   - Title: App Toolbar
     StyleRules:
-    - ClassSelectors:
+    - Selectors:
       - AppToolbar
       PseudoClasses: 00000000
       PropertyMask: 2
@@ -1218,7 +1218,7 @@ MonoBehaviour:
     <Enabled>k__BackingField: 1
   - Title: Dock
     StyleRules:
-    - ClassSelectors:
+    - Selectors:
       - dockarea
       PseudoClasses: 00000000
       PropertyMask: 2
@@ -1256,7 +1256,7 @@ MonoBehaviour:
         Bottom: 1
         Left: 1
         UnitType: 1
-    - ClassSelectors:
+    - Selectors:
       - dockHeader
       PseudoClasses: 00000000
       PropertyMask: 130
@@ -1297,7 +1297,7 @@ MonoBehaviour:
     <Enabled>k__BackingField: 1
   - Title: Dragtab
     StyleRules:
-    - ClassSelectors:
+    - Selectors:
       - dragtab
       - dragtab-first
       PseudoClasses: 00000000
@@ -1336,7 +1336,7 @@ MonoBehaviour:
         Bottom: 2
         Left: 0
         UnitType: 1
-    - ClassSelectors:
+    - Selectors:
       - dragtab
       - dragtab-first
       PseudoClasses: 02000000
@@ -1375,7 +1375,7 @@ MonoBehaviour:
         Bottom: 2
         Left: 0
         UnitType: 1
-    - ClassSelectors:
+    - Selectors:
       - dragtab
       - dragtab-first
       PseudoClasses: 010000001000000011000000
@@ -1417,7 +1417,7 @@ MonoBehaviour:
     <Enabled>k__BackingField: 1
   - Title: Dragtab Scroller
     StyleRules:
-    - ClassSelectors:
+    - Selectors:
       - dragtab-scroller-next
       - dragtab-scroller-prev
       PseudoClasses: 00000000
@@ -1456,7 +1456,7 @@ MonoBehaviour:
         Bottom: 1
         Left: 0
         UnitType: 1
-    - ClassSelectors:
+    - Selectors:
       - dragtab-scroller-next
       - dragtab-scroller-prev
       PseudoClasses: 02000000
@@ -1498,7 +1498,7 @@ MonoBehaviour:
     <Enabled>k__BackingField: 1
   - Title: Selection Rect
     StyleRules:
-    - ClassSelectors:
+    - Selectors:
       - SelectionRect
       PseudoClasses: 00000000
       PropertyMask: 390
@@ -1539,7 +1539,7 @@ MonoBehaviour:
     <Enabled>k__BackingField: 1
   - Title: Status Icon
     StyleRules:
-    - ClassSelectors:
+    - Selectors:
       - StatusBarIcon
       PseudoClasses: 00000000
       PropertyMask: 262
@@ -1577,7 +1577,7 @@ MonoBehaviour:
         Bottom: 1
         Left: 1
         UnitType: 1
-    - ClassSelectors:
+    - Selectors:
       - StatusBarIcon
       PseudoClasses: 02000000
       PropertyMask: 2
@@ -1615,7 +1615,7 @@ MonoBehaviour:
         Bottom: 2
         Left: 1
         UnitType: 1
-    - ClassSelectors:
+    - Selectors:
       - StatusBarIcon
       PseudoClasses: 01000000
       PropertyMask: 2
@@ -1656,7 +1656,7 @@ MonoBehaviour:
     <Enabled>k__BackingField: 1
   - Title: Toolbar
     StyleRules:
-    - ClassSelectors:
+    - Selectors:
       - MultiColumnHeader
       - MultiColumnTopBar
       - PreToolbar
@@ -1699,7 +1699,7 @@ MonoBehaviour:
         Bottom: 0
         Left: 0
         UnitType: 0
-    - ClassSelectors:
+    - Selectors:
       - PreToolbar
       - PreToolbar2
       PseudoClasses: 00000000
@@ -1741,7 +1741,7 @@ MonoBehaviour:
     <Enabled>k__BackingField: 1
   - Title: Toolbar Button
     StyleRules:
-    - ClassSelectors:
+    - Selectors:
       - PreDropDown
       - TE-ToolbarDropDown
       - toolbarbutton
@@ -1795,7 +1795,7 @@ MonoBehaviour:
         Bottom: 1
         Left: 1
         UnitType: 1
-    - ClassSelectors:
+    - Selectors:
       - PreDropDown
       - TE-ToolbarDropDown
       - toolbarbutton
@@ -1849,7 +1849,7 @@ MonoBehaviour:
         Bottom: 1
         Left: 1
         UnitType: 1
-    - ClassSelectors:
+    - Selectors:
       - PreDropDown
       - TE-ToolbarDropDown
       - toolbarbutton
@@ -1906,7 +1906,7 @@ MonoBehaviour:
     <Enabled>k__BackingField: 1
   - Title: Toolbar Button*
     StyleRules:
-    - ClassSelectors:
+    - Selectors:
       - ToolbarCreateAddNewDropDown
       PseudoClasses: 00000000
       PropertyMask: 256
@@ -1944,7 +1944,7 @@ MonoBehaviour:
         Bottom: 0
         Left: 1
         UnitType: 1
-    - ClassSelectors:
+    - Selectors:
       - toolbarbuttonRight
       PseudoClasses: 000000000100000010000000
       PropertyMask: 256
@@ -1985,7 +1985,7 @@ MonoBehaviour:
     <Enabled>k__BackingField: 1
   - Title: Toolbar Search
     StyleRules:
-    - ClassSelectors:
+    - Selectors:
       - SearchTextField
       - ToolbarSearchTextField
       - ToolbarSearchTextFieldPopup
@@ -2031,7 +2031,7 @@ MonoBehaviour:
         Bottom: 0
         Left: 0
         UnitType: 0
-    - ClassSelectors:
+    - Selectors:
       - SearchTextField
       - ToolbarSearchTextField
       - ToolbarSearchTextFieldPopup
@@ -2077,7 +2077,7 @@ MonoBehaviour:
         Bottom: 1
         Left: 1
         UnitType: 1
-    - ClassSelectors:
+    - Selectors:
       - SearchTextField
       - ToolbarSearchTextField
       - ToolbarSearchTextFieldPopup
@@ -2126,7 +2126,7 @@ MonoBehaviour:
     <Enabled>k__BackingField: 1
   - Title: Toolbar Search Button
     StyleRules:
-    - ClassSelectors:
+    - Selectors:
       - ToolbarSearchTextFieldJumpButton
       PseudoClasses: 00000000
       PropertyMask: 390
@@ -2164,7 +2164,7 @@ MonoBehaviour:
         Bottom: 1
         Left: 0
         UnitType: 1
-    - ClassSelectors:
+    - Selectors:
       - ToolbarSearchTextFieldJumpButton
       PseudoClasses: 02000000
       PropertyMask: 2
@@ -2202,7 +2202,7 @@ MonoBehaviour:
         Bottom: 1
         Left: 0
         UnitType: 1
-    - ClassSelectors:
+    - Selectors:
       - ToolbarSearchTextFieldJumpButton
       PseudoClasses: 01000000
       PropertyMask: 262
@@ -2246,7 +2246,7 @@ MonoBehaviour:
     <Enabled>k__BackingField: 0
   - Title: "\u2022 G U I \u2022"
     StyleRules:
-    - ClassSelectors:
+    - Selectors:
       - Tooltip
       PseudoClasses: 00000000
       PropertyMask: 6
@@ -2287,7 +2287,7 @@ MonoBehaviour:
     <Enabled>k__BackingField: 1
   - Title: Box
     StyleRules:
-    - ClassSelectors:
+    - Selectors:
       - Box
       - FrameBox
       - GroupBox
@@ -2328,7 +2328,7 @@ MonoBehaviour:
         Bottom: 0
         Left: 0
         UnitType: 0
-    - ClassSelectors:
+    - Selectors:
       - GroupBox
       PseudoClasses: 00000000
       PropertyMask: 256
@@ -2369,7 +2369,7 @@ MonoBehaviour:
     <Enabled>k__BackingField: 1
   - Title: Button
     StyleRules:
-    - ClassSelectors:
+    - Selectors:
       - AC-Button
       - AppCommand
       - Button
@@ -2419,7 +2419,7 @@ MonoBehaviour:
         Bottom: 1
         Left: 1
         UnitType: 1
-    - ClassSelectors:
+    - Selectors:
       - AC-Button
       - AppCommand
       - Button
@@ -2469,7 +2469,7 @@ MonoBehaviour:
         Bottom: 1
         Left: 1
         UnitType: 1
-    - ClassSelectors:
+    - Selectors:
       - AC-Button
       - AppCommand
       - Button
@@ -2519,7 +2519,7 @@ MonoBehaviour:
         Bottom: 1
         Left: 1
         UnitType: 1
-    - ClassSelectors:
+    - Selectors:
       - AC-Button
       - AppCommand
       - Button
@@ -2572,7 +2572,7 @@ MonoBehaviour:
     <Enabled>k__BackingField: 1
   - Title: Button Group
     StyleRules:
-    - ClassSelectors:
+    - Selectors:
       - AppCommandLeft
       - AppCommandMid
       - AppCommandRight
@@ -2627,7 +2627,7 @@ MonoBehaviour:
         Bottom: 1
         Left: 1
         UnitType: 1
-    - ClassSelectors:
+    - Selectors:
       - AppCommandLeft
       - AppCommandMid
       - AppCommandRight
@@ -2682,7 +2682,7 @@ MonoBehaviour:
         Bottom: 1
         Left: 1
         UnitType: 1
-    - ClassSelectors:
+    - Selectors:
       - AppCommandLeft
       - AppCommandMid
       - AppCommandRight
@@ -2737,7 +2737,7 @@ MonoBehaviour:
         Bottom: 1
         Left: 1
         UnitType: 1
-    - ClassSelectors:
+    - Selectors:
       - AppCommandLeft
       - AppCommandMid
       - AppCommandRight
@@ -2795,7 +2795,7 @@ MonoBehaviour:
     <Enabled>k__BackingField: 1
   - Title: Button Header
     StyleRules:
-    - ClassSelectors:
+    - Selectors:
       - HeaderButton
       PseudoClasses: 00000000
       PropertyMask: 390
@@ -2833,7 +2833,7 @@ MonoBehaviour:
         Bottom: 1
         Left: 0
         UnitType: 1
-    - ClassSelectors:
+    - Selectors:
       - HeaderButton
       PseudoClasses: 02000000
       PropertyMask: 2
@@ -2874,7 +2874,7 @@ MonoBehaviour:
     <Enabled>k__BackingField: 1
   - Title: Field (Color)
     StyleRules:
-    - ClassSelectors:
+    - Selectors:
       - ColorField
       - ColorPickerBox
       PseudoClasses: 00000000
@@ -2913,7 +2913,7 @@ MonoBehaviour:
         Bottom: 0
         Left: 0
         UnitType: 0
-    - ClassSelectors:
+    - Selectors:
       - ColorField
       - ColorPickerBox
       PseudoClasses: 02000000
@@ -2952,7 +2952,7 @@ MonoBehaviour:
         Bottom: 0
         Left: 0
         UnitType: 0
-    - ClassSelectors:
+    - Selectors:
       - ColorField
       - ColorPickerBox
       PseudoClasses: 0400000006000000
@@ -2994,7 +2994,7 @@ MonoBehaviour:
     <Enabled>k__BackingField: 1
   - Title: Field (Object, Text)
     StyleRules:
-    - ClassSelectors:
+    - Selectors:
       - AnimationSelectionTextField
       - BoldTextField
       - IN-TextField
@@ -3042,7 +3042,7 @@ MonoBehaviour:
         Bottom: 1
         Left: 1
         UnitType: 1
-    - ClassSelectors:
+    - Selectors:
       - AnimationSelectionTextField
       - BoldTextField
       - IN-TextField
@@ -3090,7 +3090,7 @@ MonoBehaviour:
         Bottom: 1
         Left: 1
         UnitType: 1
-    - ClassSelectors:
+    - Selectors:
       - AnimationSelectionTextField
       - BoldTextField
       - IN-TextField
@@ -3138,7 +3138,7 @@ MonoBehaviour:
         Bottom: 1
         Left: 1
         UnitType: 1
-    - ClassSelectors:
+    - Selectors:
       - ObjectField
       - ShurikenObjectField
       PseudoClasses: 10000000
@@ -3180,7 +3180,7 @@ MonoBehaviour:
     <Enabled>k__BackingField: 1
   - Title: Field (Object) Button
     StyleRules:
-    - ClassSelectors:
+    - Selectors:
       - ObjectFieldButton
       PseudoClasses: 00000000
       PropertyMask: 130
@@ -3218,7 +3218,7 @@ MonoBehaviour:
         Bottom: 0
         Left: 0
         UnitType: 1
-    - ClassSelectors:
+    - Selectors:
       - ObjectFieldButton
       PseudoClasses: 02000000
       PropertyMask: 2
@@ -3259,7 +3259,7 @@ MonoBehaviour:
     <Enabled>k__BackingField: 1
   - Title: Foldout
     StyleRules:
-    - ClassSelectors:
+    - Selectors:
       - Foldout
       - IN-Foldout
       - Titlebar-Foldout
@@ -3302,7 +3302,7 @@ MonoBehaviour:
     <Enabled>k__BackingField: 1
   - Title: Foldout Header
     StyleRules:
-    - ClassSelectors:
+    - Selectors:
       - FoldoutHeader
       PseudoClasses: 00000000
       PropertyMask: 390
@@ -3340,7 +3340,7 @@ MonoBehaviour:
         Bottom: 1
         Left: 1
         UnitType: 1
-    - ClassSelectors:
+    - Selectors:
       - FoldoutHeader
       PseudoClasses: 04000000
       PropertyMask: 512
@@ -3378,7 +3378,7 @@ MonoBehaviour:
         Bottom: 0
         Left: 0
         UnitType: 0
-    - ClassSelectors:
+    - Selectors:
       - FoldoutHeader
       PseudoClasses: 02000000060000001200000016000000
       PropertyMask: 2
@@ -3416,7 +3416,7 @@ MonoBehaviour:
         Bottom: 0
         Left: 0
         UnitType: 0
-    - ClassSelectors:
+    - Selectors:
       - FoldoutHeader
       PseudoClasses: 01000000110000001500000005000000
       PropertyMask: 2
@@ -3457,7 +3457,7 @@ MonoBehaviour:
     <Enabled>k__BackingField: 1
   - Title: Label
     StyleRules:
-    - ClassSelectors:
+    - Selectors:
       - BoldLabel
       PseudoClasses: 00000000
       PropertyMask: 512
@@ -3495,7 +3495,7 @@ MonoBehaviour:
         Bottom: 0
         Left: 0
         UnitType: 0
-    - ClassSelectors:
+    - Selectors:
       - BoldLabel
       PseudoClasses: 04000000
       PropertyMask: 512
@@ -3533,7 +3533,7 @@ MonoBehaviour:
         Bottom: 0
         Left: 0
         UnitType: 0
-    - ClassSelectors:
+    - Selectors:
       - ControlLabel
       - ShurikenLabel
       PseudoClasses: 0400000014000000
@@ -3572,7 +3572,7 @@ MonoBehaviour:
         Bottom: 0
         Left: 0
         UnitType: 0
-    - ClassSelectors:
+    - Selectors:
       - ControlLabel
       PseudoClasses: 01000000
       PropertyMask: 512
@@ -3613,7 +3613,7 @@ MonoBehaviour:
     <Enabled>k__BackingField: 1
   - Title: Object Field Thumb
     StyleRules:
-    - ClassSelectors:
+    - Selectors:
       - ObjectFieldThumb
       PseudoClasses: 00000000
       PropertyMask: 390
@@ -3651,7 +3651,7 @@ MonoBehaviour:
         Bottom: 1
         Left: 1
         UnitType: 1
-    - ClassSelectors:
+    - Selectors:
       - ObjectFieldThumb
       PseudoClasses: 0200000004000000
       PropertyMask: 2
@@ -3689,7 +3689,7 @@ MonoBehaviour:
         Bottom: 1
         Left: 1
         UnitType: 1
-    - ClassSelectors:
+    - Selectors:
       - ObjectFieldThumb
       PseudoClasses: 10000000
       PropertyMask: 2
@@ -3727,7 +3727,7 @@ MonoBehaviour:
         Bottom: 1
         Left: 1
         UnitType: 1
-    - ClassSelectors:
+    - Selectors:
       - ObjectFieldThumbOverlay2
       PseudoClasses: 00000000
       PropertyMask: 512
@@ -3768,7 +3768,7 @@ MonoBehaviour:
     <Enabled>k__BackingField: 1
   - Title: Popup
     StyleRules:
-    - ClassSelectors:
+    - Selectors:
       - MiniPopup
       - MiniPullDown
       - Popup
@@ -3809,7 +3809,7 @@ MonoBehaviour:
         Bottom: 0
         Left: 0
         UnitType: 0
-    - ClassSelectors:
+    - Selectors:
       - MiniPopup
       - MiniPullDown
       - Popup
@@ -3850,7 +3850,7 @@ MonoBehaviour:
         Bottom: 0
         Left: 0
         UnitType: 0
-    - ClassSelectors:
+    - Selectors:
       - MiniPopup
       - MiniPullDown
       - Popup
@@ -3891,7 +3891,7 @@ MonoBehaviour:
         Bottom: 1
         Left: 1
         UnitType: 1
-    - ClassSelectors:
+    - Selectors:
       - MiniPopup
       - MiniPullDown
       - Popup
@@ -3935,7 +3935,7 @@ MonoBehaviour:
     <Enabled>k__BackingField: 1
   - Title: Scrollbar
     StyleRules:
-    - ClassSelectors:
+    - Selectors:
       - HorizontalScrollbar
       - VerticalScrollbar
       PseudoClasses: 00000000
@@ -3977,7 +3977,7 @@ MonoBehaviour:
     <Enabled>k__BackingField: 1
   - Title: Scrollbar Button
     StyleRules:
-    - ClassSelectors:
+    - Selectors:
       - HorizontalScrollbarLeftButton
       - HorizontalScrollbarRightButton
       - VerticalScrollbarDownButton
@@ -4018,7 +4018,7 @@ MonoBehaviour:
         Bottom: 0
         Left: 0
         UnitType: 1
-    - ClassSelectors:
+    - Selectors:
       - HorizontalScrollbarLeftButton
       - HorizontalScrollbarRightButton
       - VerticalScrollbarDownButton
@@ -4059,7 +4059,7 @@ MonoBehaviour:
         Bottom: 0
         Left: 0
         UnitType: 2
-    - ClassSelectors:
+    - Selectors:
       - HorizontalScrollbarLeftButton
       - HorizontalScrollbarRightButton
       - VerticalScrollbarDownButton
@@ -4103,7 +4103,7 @@ MonoBehaviour:
     <Enabled>k__BackingField: 1
   - Title: Scrollbar Thumb
     StyleRules:
-    - ClassSelectors:
+    - Selectors:
       - HorizontalMinMaxScrollbarThumb
       - HorizontalScrollbarThumb
       - VerticalScrollbarThumb
@@ -4143,7 +4143,7 @@ MonoBehaviour:
         Bottom: 0
         Left: 0
         UnitType: 0
-    - ClassSelectors:
+    - Selectors:
       - HorizontalMinMaxScrollbarThumb
       - HorizontalScrollbarThumb
       - VerticalScrollbarThumb
@@ -4186,7 +4186,7 @@ MonoBehaviour:
     <Enabled>k__BackingField: 1
   - Title: Scrollbar Thumb*
     StyleRules:
-    - ClassSelectors:
+    - Selectors:
       - VerticalScrollbarThumb
       PseudoClasses: 000000000200000001000000
       PropertyMask: 256
@@ -4224,7 +4224,7 @@ MonoBehaviour:
         Bottom: 1
         Left: 0
         UnitType: 1
-    - ClassSelectors:
+    - Selectors:
       - HorizontalScrollbarThumb
       PseudoClasses: 000000000200000001000000
       PropertyMask: 256
@@ -4262,7 +4262,7 @@ MonoBehaviour:
         Bottom: 1
         Left: 1
         UnitType: 1
-    - ClassSelectors:
+    - Selectors:
       - HorizontalMinMaxScrollbarThumb
       PseudoClasses: 000000000200000001000000
       PropertyMask: 256
@@ -4303,7 +4303,7 @@ MonoBehaviour:
     <Enabled>k__BackingField: 1
   - Title: Slider
     StyleRules:
-    - ClassSelectors:
+    - Selectors:
       - HorizontalSlider
       - PreSlider
       - ToolbarSlider
@@ -4346,7 +4346,7 @@ MonoBehaviour:
     <Enabled>k__BackingField: 1
   - Title: Slider Thumb
     StyleRules:
-    - ClassSelectors:
+    - Selectors:
       - HorizontalSliderThumb
       - MinMaxHorizontalSliderThumb
       - PreSliderThumb
@@ -4386,7 +4386,7 @@ MonoBehaviour:
         Bottom: 1
         Left: 1
         UnitType: 1
-    - ClassSelectors:
+    - Selectors:
       - HorizontalSliderThumb
       - MinMaxHorizontalSliderThumb
       - PreSliderThumb
@@ -4426,7 +4426,7 @@ MonoBehaviour:
         Bottom: 1
         Left: 1
         UnitType: 1
-    - ClassSelectors:
+    - Selectors:
       - HorizontalSliderThumb
       - MinMaxHorizontalSliderThumb
       - PreSliderThumb
@@ -4469,7 +4469,7 @@ MonoBehaviour:
     <Enabled>k__BackingField: 1
   - Title: Slider Thumb Extent
     StyleRules:
-    - ClassSelectors:
+    - Selectors:
       - HorizontalSliderThumbExtent
       - VerticalSliderThumbExtent
       PseudoClasses: 00000000
@@ -4508,7 +4508,7 @@ MonoBehaviour:
         Bottom: 0
         Left: 0
         UnitType: 0
-    - ClassSelectors:
+    - Selectors:
       - HorizontalSliderThumbExtent
       - VerticalSliderThumbExtent
       PseudoClasses: 0100000004000000
@@ -4550,7 +4550,7 @@ MonoBehaviour:
     <Enabled>k__BackingField: 1
   - Title: Toggle
     StyleRules:
-    - ClassSelectors:
+    - Selectors:
       - ShurikenToggle
       - Toggle
       PseudoClasses: 0000000040000000
@@ -4589,7 +4589,7 @@ MonoBehaviour:
         Bottom: 0
         Left: 0
         UnitType: 0
-    - ClassSelectors:
+    - Selectors:
       - ShurikenToggle
       - Toggle
       PseudoClasses: 0200000006000000
@@ -4628,7 +4628,7 @@ MonoBehaviour:
         Bottom: 0
         Left: 0
         UnitType: 0
-    - ClassSelectors:
+    - Selectors:
       - ShurikenToggle
       - Toggle
       PseudoClasses: 010000000400000005000000
@@ -4667,7 +4667,7 @@ MonoBehaviour:
         Bottom: 0
         Left: 0
         UnitType: 0
-    - ClassSelectors:
+    - Selectors:
       - ShurikenToggle
       - Toggle
       - ToggleMixed
@@ -4707,7 +4707,7 @@ MonoBehaviour:
         Bottom: 0
         Left: 0
         UnitType: 0
-    - ClassSelectors:
+    - Selectors:
       - ShurikenToggle
       - Toggle
       - ToggleMixed
@@ -4747,7 +4747,7 @@ MonoBehaviour:
         Bottom: 0
         Left: 0
         UnitType: 0
-    - ClassSelectors:
+    - Selectors:
       - ShurikenToggle
       - Toggle
       - ToggleMixed
@@ -4790,7 +4790,7 @@ MonoBehaviour:
     <Enabled>k__BackingField: 1
   - Title: Toggle Mixed
     StyleRules:
-    - ClassSelectors:
+    - Selectors:
       - ToggleMixed
       - ShurikenToggleMixed
       PseudoClasses: 00000000
@@ -4829,7 +4829,7 @@ MonoBehaviour:
         Bottom: 0
         Left: 0
         UnitType: 0
-    - ClassSelectors:
+    - Selectors:
       - ToggleMixed
       - ShurikenToggleMixed
       PseudoClasses: 0200000006000000
@@ -4868,7 +4868,7 @@ MonoBehaviour:
         Bottom: 0
         Left: 0
         UnitType: 0
-    - ClassSelectors:
+    - Selectors:
       - ToggleMixed
       - ShurikenToggleMixed
       PseudoClasses: 010000000400000005000000
@@ -4913,7 +4913,7 @@ MonoBehaviour:
     <Enabled>k__BackingField: 0
   - Title: "\u2022 I N S P E C T O R \u2022"
     StyleRules:
-    - ClassSelectors:
+    - Selectors:
       - IN-Footer
       PseudoClasses: 00000000
       PropertyMask: 6
@@ -4951,7 +4951,7 @@ MonoBehaviour:
         Bottom: 0
         Left: 0
         UnitType: 0
-    - ClassSelectors:
+    - Selectors:
       - InsertionMarker
       PseudoClasses: 00000000
       PropertyMask: 2
@@ -4992,7 +4992,7 @@ MonoBehaviour:
     <Enabled>k__BackingField: 1
   - Title: Big Title
     StyleRules:
-    - ClassSelectors:
+    - Selectors:
       - IN-BigTitle
       - IN-BigTitle-Post
       PseudoClasses: 00000000
@@ -5034,7 +5034,7 @@ MonoBehaviour:
     <Enabled>k__BackingField: 1
   - Title: Icon Button
     StyleRules:
-    - ClassSelectors:
+    - Selectors:
       - FloatFieldLinkButton
       - IconButton
       - IN-LockButton
@@ -5077,7 +5077,7 @@ MonoBehaviour:
         Bottom: 0
         Left: 0
         UnitType: 0
-    - ClassSelectors:
+    - Selectors:
       - FloatFieldLinkButton
       - IconButton
       - IN-LockButton
@@ -5123,7 +5123,7 @@ MonoBehaviour:
     <Enabled>k__BackingField: 1
   - Title: Title
     StyleRules:
-    - ClassSelectors:
+    - Selectors:
       - IN-Title
       PseudoClasses: 00000000
       PropertyMask: 262
@@ -5161,7 +5161,7 @@ MonoBehaviour:
         Bottom: 0
         Left: 0
         UnitType: 1
-    - ClassSelectors:
+    - Selectors:
       - IN-Title
       PseudoClasses: 02000000
       PropertyMask: 2
@@ -5199,7 +5199,7 @@ MonoBehaviour:
         Bottom: 0
         Left: 0
         UnitType: 0
-    - ClassSelectors:
+    - Selectors:
       - IN-Title
       PseudoClasses: 01000000
       PropertyMask: 2
@@ -5240,7 +5240,7 @@ MonoBehaviour:
     <Enabled>k__BackingField: 1
   - Title: Title Text
     StyleRules:
-    - ClassSelectors:
+    - Selectors:
       - IN-TitleText
       PseudoClasses: 00000000
       PropertyMask: 512
@@ -5278,7 +5278,7 @@ MonoBehaviour:
         Bottom: 0
         Left: 0
         UnitType: 0
-    - ClassSelectors:
+    - Selectors:
       - IN-TitleText
       PseudoClasses: 04000000
       PropertyMask: 512
@@ -5322,7 +5322,7 @@ MonoBehaviour:
     <Enabled>k__BackingField: 0
   - Title: "\u2022 M I S C \u2022"
     StyleRules:
-    - ClassSelectors:
+    - Selectors:
       - ScriptText
       PseudoClasses: 00000000
       PropertyMask: 2
@@ -5360,7 +5360,7 @@ MonoBehaviour:
         Bottom: 1
         Left: 0
         UnitType: 1
-    - ClassSelectors:
+    - Selectors:
       - Window
       PseudoClasses: 00000000
       PropertyMask: 390
@@ -5398,7 +5398,7 @@ MonoBehaviour:
         Bottom: 1
         Left: 1
         UnitType: 1
-    - ClassSelectors:
+    - Selectors:
       - TV-Ping
       - OL-Ping
       - OL-MiniPing
@@ -5438,7 +5438,7 @@ MonoBehaviour:
         Bottom: 0
         Left: 0
         UnitType: 1
-    - ClassSelectors:
+    - Selectors:
       - AvatarMappingBox
       PseudoClasses: 00000000
       PropertyMask: 134
@@ -5476,7 +5476,7 @@ MonoBehaviour:
         Bottom: 0
         Left: 0
         UnitType: 1
-    - ClassSelectors:
+    - Selectors:
       - AxisLabelNumberField
       PseudoClasses: 00000000
       PropertyMask: 130
@@ -5517,7 +5517,7 @@ MonoBehaviour:
     <Enabled>k__BackingField: 1
   - Title: Arrow Navigation
     StyleRules:
-    - ClassSelectors:
+    - Selectors:
       - ArrowNavigationLeft
       - ArrowNavigationRight
       PseudoClasses: 00000000
@@ -5556,7 +5556,7 @@ MonoBehaviour:
         Bottom: 0
         Left: 0
         UnitType: 0
-    - ClassSelectors:
+    - Selectors:
       - ArrowNavigationLeft
       - ArrowNavigationRight
       PseudoClasses: 02000000
@@ -5598,7 +5598,7 @@ MonoBehaviour:
     <Enabled>k__BackingField: 1
   - Title: Color Picker
     StyleRules:
-    - ClassSelectors:
+    - Selectors:
       - ColorPickerBackground
       PseudoClasses: 00000000
       PropertyMask: 130
@@ -5636,7 +5636,7 @@ MonoBehaviour:
         Bottom: 0
         Left: 0
         UnitType: 0
-    - ClassSelectors:
+    - Selectors:
       - ColorPickerSliderBackground
       PseudoClasses: 0000000004000000
       PropertyMask: 260
@@ -5677,7 +5677,7 @@ MonoBehaviour:
     <Enabled>k__BackingField: 1
   - Title: Grid List
     StyleRules:
-    - ClassSelectors:
+    - Selectors:
       - GridList
       - GridListText
       PseudoClasses: 00000000
@@ -5716,7 +5716,7 @@ MonoBehaviour:
         Bottom: 0
         Left: 0
         UnitType: 0
-    - ClassSelectors:
+    - Selectors:
       - GridList
       - GridListText
       PseudoClasses: 01000000
@@ -5755,7 +5755,7 @@ MonoBehaviour:
         Bottom: 0
         Left: 0
         UnitType: 0
-    - ClassSelectors:
+    - Selectors:
       - GridList
       - GridListText
       PseudoClasses: 10000000
@@ -5797,7 +5797,7 @@ MonoBehaviour:
     <Enabled>k__BackingField: 1
   - Title: Hierarchy
     StyleRules:
-    - ClassSelectors:
+    - Selectors:
       - SceneTopBarBg
       PseudoClasses: 00000000
       PropertyMask: 258
@@ -5835,7 +5835,7 @@ MonoBehaviour:
         Bottom: 0
         Left: 0
         UnitType: 1
-    - ClassSelectors:
+    - Selectors:
       - WhiteBackground
       PseudoClasses: 0000000002000000
       PropertyMask: 2
@@ -5876,7 +5876,7 @@ MonoBehaviour:
     <Enabled>k__BackingField: 1
   - Title: Invisible Button
     StyleRules:
-    - ClassSelectors:
+    - Selectors:
       - InvisibleButton
       PseudoClasses: 0000000010000000
       PropertyMask: 130
@@ -5914,7 +5914,7 @@ MonoBehaviour:
         Bottom: 0
         Left: 0
         UnitType: 0
-    - ClassSelectors:
+    - Selectors:
       - InvisibleButton
       PseudoClasses: 0100000011000000
       PropertyMask: 2
@@ -5955,7 +5955,7 @@ MonoBehaviour:
     <Enabled>k__BackingField: 1
   - Title: Menu Item
     StyleRules:
-    - ClassSelectors:
+    - Selectors:
       - MenuItem
       PseudoClasses: 00000000
       PropertyMask: 130
@@ -5993,7 +5993,7 @@ MonoBehaviour:
         Bottom: 0
         Left: 0
         UnitType: 0
-    - ClassSelectors:
+    - Selectors:
       - MenuItem
       PseudoClasses: 0200000001000000
       PropertyMask: 2
@@ -6031,7 +6031,7 @@ MonoBehaviour:
         Bottom: 0
         Left: 0
         UnitType: 0
-    - ClassSelectors:
+    - Selectors:
       - MenuItem
       PseudoClasses: 10000000
       PropertyMask: 1
@@ -6072,7 +6072,7 @@ MonoBehaviour:
     <Enabled>k__BackingField: 1
   - Title: Progress Bar
     StyleRules:
-    - ClassSelectors:
+    - Selectors:
       - ProgressBarBar
       PseudoClasses: 00000000
       PropertyMask: 262
@@ -6110,7 +6110,7 @@ MonoBehaviour:
         Bottom: 1
         Left: 1
         UnitType: 1
-    - ClassSelectors:
+    - Selectors:
       - ProgressBarBack
       PseudoClasses: 00000000
       PropertyMask: 262
@@ -6151,7 +6151,7 @@ MonoBehaviour:
     <Enabled>k__BackingField: 1
   - Title: Prefab Label
     StyleRules:
-    - ClassSelectors:
+    - Selectors:
       - PR-PrefabLabel
       PseudoClasses: 0000000004000000
       PropertyMask: 514
@@ -6192,7 +6192,7 @@ MonoBehaviour:
     <Enabled>k__BackingField: 1
   - Title: PR Label
     StyleRules:
-    - ClassSelectors:
+    - Selectors:
       - PR-Label
       PseudoClasses: 00000000
       PropertyMask: 2
@@ -6230,7 +6230,7 @@ MonoBehaviour:
         Bottom: 0
         Left: 0
         UnitType: 0
-    - ClassSelectors:
+    - Selectors:
       - PR-Label
       PseudoClasses: 1000000014000000
       PropertyMask: 514
@@ -6271,7 +6271,7 @@ MonoBehaviour:
     <Enabled>k__BackingField: 1
   - Title: Settings
     StyleRules:
-    - ClassSelectors:
+    - Selectors:
       - SettingsHeader
       PseudoClasses: 00000000
       PropertyMask: 512
@@ -6309,7 +6309,7 @@ MonoBehaviour:
         Bottom: 0
         Left: 0
         UnitType: 0
-    - ClassSelectors:
+    - Selectors:
       - SettingsTreeItem
       PseudoClasses: 1000000011000000
       PropertyMask: 512
@@ -6350,7 +6350,7 @@ MonoBehaviour:
     <Enabled>k__BackingField: 1
   - Title: TE
     StyleRules:
-    - ClassSelectors:
+    - Selectors:
       - TE-ElementBackground
       PseudoClasses: 00000000
       PropertyMask: 6
@@ -6388,7 +6388,7 @@ MonoBehaviour:
         Bottom: 1
         Left: 2
         UnitType: 1
-    - ClassSelectors:
+    - Selectors:
       - TE-DefaultTime
       PseudoClasses: 00000000
       PropertyMask: 6
@@ -6432,7 +6432,7 @@ MonoBehaviour:
     <Enabled>k__BackingField: 0
   - Title: "\u2022 O B J E C T  L I S T \u2022"
     StyleRules:
-    - ClassSelectors:
+    - Selectors:
       - OL-box-NoExpand
       PseudoClasses: 00000000
       PropertyMask: 390
@@ -6473,7 +6473,7 @@ MonoBehaviour:
     <Enabled>k__BackingField: 1
   - Title: Entry
     StyleRules:
-    - ClassSelectors:
+    - Selectors:
       - OL-EntryBackOdd
       PseudoClasses: 00000000
       PropertyMask: 2
@@ -6511,7 +6511,7 @@ MonoBehaviour:
         Bottom: 0
         Left: 0
         UnitType: 0
-    - ClassSelectors:
+    - Selectors:
       - OL-EntryBackEven
       PseudoClasses: 00000000
       PropertyMask: 2
@@ -6552,7 +6552,7 @@ MonoBehaviour:
     <Enabled>k__BackingField: 1
   - Title: Picker Tab
     StyleRules:
-    - ClassSelectors:
+    - Selectors:
       - ObjectPickerTab
       PseudoClasses: 00000000
       PropertyMask: 390
@@ -6590,7 +6590,7 @@ MonoBehaviour:
         Bottom: 1
         Left: 0
         UnitType: 1
-    - ClassSelectors:
+    - Selectors:
       - ObjectPickerTab
       PseudoClasses: 02000000
       PropertyMask: 2
@@ -6628,7 +6628,7 @@ MonoBehaviour:
         Bottom: 1
         Left: 0
         UnitType: 1
-    - ClassSelectors:
+    - Selectors:
       - ObjectPickerTab
       PseudoClasses: 01000000
       PropertyMask: 2
@@ -6666,7 +6666,7 @@ MonoBehaviour:
         Bottom: 1
         Left: 0
         UnitType: 1
-    - ClassSelectors:
+    - Selectors:
       - ObjectPickerTab
       PseudoClasses: 1000000011000000
       PropertyMask: 258
@@ -6707,7 +6707,7 @@ MonoBehaviour:
     <Enabled>k__BackingField: 1
   - Title: Picker Preview Background
     StyleRules:
-    - ClassSelectors:
+    - Selectors:
       - PopupCurveSwatchBackground
       PseudoClasses: 00000000
       PropertyMask: 262
@@ -6748,7 +6748,7 @@ MonoBehaviour:
     <Enabled>k__BackingField: 1
   - Title: Title
     StyleRules:
-    - ClassSelectors:
+    - Selectors:
       - OL-Title
       - OL-Title-TextRight
       PseudoClasses: 00000000
@@ -6787,7 +6787,7 @@ MonoBehaviour:
         Bottom: 1
         Left: 1
         UnitType: 1
-    - ClassSelectors:
+    - Selectors:
       - OL-Title
       - OL-Title-TextRight
       PseudoClasses: 0100000002000000
@@ -6832,7 +6832,7 @@ MonoBehaviour:
     <Enabled>k__BackingField: 0
   - Title: "\u2022 P R O F I L E R \u2022"
     StyleRules:
-    - ClassSelectors:
+    - Selectors:
       - ProfilerBadge
       PseudoClasses: 00000000
       PropertyMask: 130
@@ -6873,7 +6873,7 @@ MonoBehaviour:
     <Enabled>k__BackingField: 1
   - Title: Left Pane
     StyleRules:
-    - ClassSelectors:
+    - Selectors:
       - ProfilerLeftPane
       PseudoClasses: 00000000
       PropertyMask: 6
@@ -6911,7 +6911,7 @@ MonoBehaviour:
         Bottom: 0
         Left: 0
         UnitType: 0
-    - ClassSelectors:
+    - Selectors:
       - ProfilerLeftPane
       PseudoClasses: 10000000
       PropertyMask: 2
@@ -6955,7 +6955,7 @@ MonoBehaviour:
     <Enabled>k__BackingField: 0
   - Title: "\u2022 P R O J E C T \u2022"
     StyleRules:
-    - ClassSelectors:
+    - Selectors:
       - ProjectBrowserTopBarBg
       - ProjectBrowserBottomBarBg
       PseudoClasses: 00000000
@@ -6997,7 +6997,7 @@ MonoBehaviour:
     <Enabled>k__BackingField: 1
   - Title: Exposable Popup
     StyleRules:
-    - ClassSelectors:
+    - Selectors:
       - ExposablePopupMenu
       - ExposablePopupItem
       PseudoClasses: 00000000
@@ -7036,7 +7036,7 @@ MonoBehaviour:
         Bottom: 1
         Left: 1
         UnitType: 1
-    - ClassSelectors:
+    - Selectors:
       - ExposablePopupMenu
       - ExposablePopupItem
       PseudoClasses: 02000000
@@ -7075,7 +7075,7 @@ MonoBehaviour:
         Bottom: 1
         Left: 1
         UnitType: 1
-    - ClassSelectors:
+    - Selectors:
       - ExposablePopupMenu
       - ExposablePopupItem
       PseudoClasses: 010000001000000012000000
@@ -7117,7 +7117,7 @@ MonoBehaviour:
     <Enabled>k__BackingField: 1
   - Title: Selection
     StyleRules:
-    - ClassSelectors:
+    - Selectors:
       - OL-ResultLabel
       - ProjectBrowserGridLabel
       PseudoClasses: 10000000
@@ -7156,7 +7156,7 @@ MonoBehaviour:
         Bottom: 0
         Left: 0
         UnitType: 0
-    - ClassSelectors:
+    - Selectors:
       - OL-ResultLabel
       - ProjectBrowserGridLabel
       PseudoClasses: 14000000
@@ -7201,7 +7201,7 @@ MonoBehaviour:
     <Enabled>k__BackingField: 0
   - Title: "\u2022 R E O R D E R A B L E   L I S T \u2022"
     StyleRules:
-    - ClassSelectors:
+    - Selectors:
       - RL-Header
       PseudoClasses: 00000000
       PropertyMask: 134
@@ -7239,7 +7239,7 @@ MonoBehaviour:
         Bottom: 0
         Left: 0
         UnitType: 0
-    - ClassSelectors:
+    - Selectors:
       - RL-Background
       - RL-Empty-Header
       - RL-Footer
@@ -7282,7 +7282,7 @@ MonoBehaviour:
     <Enabled>k__BackingField: 1
   - Title: Element
     StyleRules:
-    - ClassSelectors:
+    - Selectors:
       - RL-Element
       PseudoClasses: 00000000
       PropertyMask: 2
@@ -7320,7 +7320,7 @@ MonoBehaviour:
         Bottom: 0
         Left: 0
         UnitType: 0
-    - ClassSelectors:
+    - Selectors:
       - RL-Element
       PseudoClasses: 1100000015000000
       PropertyMask: 2
@@ -7361,7 +7361,7 @@ MonoBehaviour:
     <Enabled>k__BackingField: 1
   - Title: Footer Button
     StyleRules:
-    - ClassSelectors:
+    - Selectors:
       - RL-FooterButton
       PseudoClasses: 00000000
       PropertyMask: 390
@@ -7399,7 +7399,7 @@ MonoBehaviour:
         Bottom: 1
         Left: 1
         UnitType: 1
-    - ClassSelectors:
+    - Selectors:
       - RL-FooterButton
       PseudoClasses: 02000000
       PropertyMask: 2
@@ -7437,7 +7437,7 @@ MonoBehaviour:
         Bottom: 0
         Left: 0
         UnitType: 0
-    - ClassSelectors:
+    - Selectors:
       - RL-FooterButton
       PseudoClasses: 01000000
       PropertyMask: 2
@@ -7481,7 +7481,7 @@ MonoBehaviour:
     <Enabled>k__BackingField: 0
   - Title: "\u2022 S H U R I K E N \u2022"
     StyleRules:
-    - ClassSelectors:
+    - Selectors:
       - ShurikenEffectBg
       PseudoClasses: 00000000
       PropertyMask: 2
@@ -7519,7 +7519,7 @@ MonoBehaviour:
         Bottom: 0
         Left: 0
         UnitType: 0
-    - ClassSelectors:
+    - Selectors:
       - ShurikenModuleBg
       PseudoClasses: 00000000
       PropertyMask: 390
@@ -7560,7 +7560,7 @@ MonoBehaviour:
     <Enabled>k__BackingField: 1
   - Title: Emitter Title
     StyleRules:
-    - ClassSelectors:
+    - Selectors:
       - ShurikenEmitterTitle
       PseudoClasses: 0000000010000000
       PropertyMask: 390
@@ -7598,7 +7598,7 @@ MonoBehaviour:
         Bottom: 1
         Left: 1
         UnitType: 1
-    - ClassSelectors:
+    - Selectors:
       - ShurikenEmitterTitle
       PseudoClasses: 01000000
       PropertyMask: 2
@@ -7639,7 +7639,7 @@ MonoBehaviour:
     <Enabled>k__BackingField: 1
   - Title: Module Title
     StyleRules:
-    - ClassSelectors:
+    - Selectors:
       - ShurikenModuleTitle
       PseudoClasses: 0000000010000000
       PropertyMask: 390
@@ -7677,7 +7677,7 @@ MonoBehaviour:
         Bottom: 1
         Left: 1
         UnitType: 1
-    - ClassSelectors:
+    - Selectors:
       - ShurikenModuleTitle
       PseudoClasses: 01000000
       PropertyMask: 2
@@ -7721,7 +7721,7 @@ MonoBehaviour:
     <Enabled>k__BackingField: 0
   - Title: "\u2022 T R E E   V I E W \u2022"
     StyleRules:
-    - ClassSelectors:
+    - Selectors:
       - TV-Line
       - TV-LineBold
       PseudoClasses: 14000000
@@ -7763,7 +7763,7 @@ MonoBehaviour:
     <Enabled>k__BackingField: 1
   - Title: Selection
     StyleRules:
-    - ClassSelectors:
+    - Selectors:
       - TV-Selection
       PseudoClasses: 00000000
       PropertyMask: 2
@@ -7801,7 +7801,7 @@ MonoBehaviour:
         Bottom: 0
         Left: 0
         UnitType: 0
-    - ClassSelectors:
+    - Selectors:
       - TV-Selection
       PseudoClasses: 1400000015000000
       PropertyMask: 2
@@ -7841,7 +7841,45 @@ MonoBehaviour:
         UnitType: 0
     <Enabled>k__BackingField: 1
   - Title: Empty
-    StyleRules: []
+    StyleRules:
+    - Selectors:
+      - 
+      PseudoClasses: 00000000
+      PropertyMask: 0
+      BackgroundTexture: {fileID: 0}
+      BackgroundColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderTopColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRightColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderBottomColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderLeftColor:
+        serializedVersion: 2
+        rgba: 0
+      TextColor:
+        serializedVersion: 2
+        rgba: 0
+      BorderRadius:
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
+      BorderWidth:
+        Top: 0
+        Right: 0
+        Bottom: 0
+        Left: 0
+        UnitType: 0
     <Enabled>k__BackingField: 0
-  selectionColor: {r: 1, g: 1, b: 1, a: 0.36862746}
+  SelectionColor: {r: 1, g: 1, b: 1, a: 0.36862746}
   recompileOnApply: 1

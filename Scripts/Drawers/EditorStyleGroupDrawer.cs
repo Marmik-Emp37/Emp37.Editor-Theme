@@ -1,12 +1,9 @@
 using UnityEditor;
-using static UnityEditor.EditorGUIUtility;
-
 using UnityEngine;
 
 namespace Emp37.ET
 {
       using static ETHelpers;
-      using static UnityEngine.UI.Image;
 
       // @r: == Redeem
       [CustomPropertyDrawer(typeof(StyleRuleGroup))]
@@ -41,7 +38,7 @@ namespace Emp37.ET
                         position.y += position.height + Spacing;  // - H : Footer
 
                         position.height = Spacing; // - H : Separator
-                        EditorGUI.DrawRect(position, ETStyles.ThemeAccent);
+                        EditorGUI.DrawRect(position, ETStyles.AccentTone);
                   }
 
                   EditorGUI.EndProperty();
@@ -68,9 +65,9 @@ namespace Emp37.ET
                   Rect original = position;
 
                   // Background
-                  EditorGUI.DrawRect(position, ETStyles.ThemeAccent);
+                  EditorGUI.DrawRect(position, ETStyles.AccentTone);
                   position.width = 3F;
-                  EditorGUI.DrawRect(position, ETStyles.ThemeTint);
+                  EditorGUI.DrawRect(position, ETStyles.BaseTone);
 
                   position.x += position.width + Spacing;
 

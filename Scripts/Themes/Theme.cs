@@ -17,25 +17,17 @@ namespace Emp37.ET
             public enum Type { Light, Dark }
 
             public const string DIRECTORY = "Assets/Editor/StyleSheets/Extensions", FILE_EXTENSION = ".uss";
-            private const string Key = "Emp37.ET.Theme.appliedValue";
 
             public StyleRuleGroup[] StyleRuleGroups;
-            [SerializeField] private Color selectionColor;
-            [field: Tooltip("Disable to preview changes immediately as they are applied.\n\n<b>Note: </b>Some changes may require a domain reload to take full effect.")]
+            public Color SelectionColor;
+
+            [Tooltip("Disable to preview changes immediately as they are applied.\n\n<b>Note: </b>Some changes may require a domain reload to take full effect.")]
             [SerializeField] private bool recompileOnApply;
 
             protected abstract Type ThemeType { get; }
 
             private IEnumerable<string> WriteStyleGroups => from @group in StyleRuleGroups let value = @group.ToString() where !string.IsNullOrEmpty(value) select value;
 
-
-            private void Awake()
-            {
-                  if (name == EditorPrefs.GetString(Key))
-                  {
-                        ApplySettings();
-                  }
-            }
 
             [ContextMenu("Sort/Title")]
             private void Sort()
@@ -52,7 +44,7 @@ namespace Emp37.ET
                   File.WriteAllText(path, ToString());
                   AssetDatabase.Refresh();
 
-                  if (ShouldSwitchSkin(ThemeType))
+                  if (RequiresSkinSwitch(ThemeType))
                   {
                         InternalEditorUtility.SwitchSkinAndRepaintAllViews();
                   }
@@ -64,14 +56,10 @@ namespace Emp37.ET
                               CompilationPipeline.RequestScriptCompilation();
                         }
                   }
-                  ApplySettings();
+
+                  GUI.skin.settings.selectionColor = SelectionColor;
             }
-            private bool ShouldSwitchSkin(Type themeType) => (themeType == Type.Dark) ^ EditorGUIUtility.isProSkin;
-            private void ApplySettings()
-            {
-                  GUI.skin.settings.selectionColor = selectionColor;
-                  EditorPrefs.SetString(Key, name);
-            }
+            private bool RequiresSkinSwitch(Type themeType) => (themeType == Type.Dark) ^ EditorGUIUtility.isProSkin;
 
             /// <summary>
             /// Generates a finalised USS code representation for this theme.

@@ -1,9 +1,7 @@
 using System;
 using System.Linq;
-
 using UnityEditor;
 using static UnityEditor.EditorGUIUtility;
-
 using UnityEngine;
 
 namespace Emp37.ET
@@ -12,7 +10,7 @@ namespace Emp37.ET
       [CustomPropertyDrawer(typeof(StyleRule))]
       internal class EditorStyleDrawer : PropertyDrawer
       {
-            private const string p_Selectors = nameof(StyleRule.ClassSelectors);
+            private const string p_Selectors = nameof(StyleRule.Selectors);
             private const string p_PseudoClasses = nameof(StyleRule.PseudoClasses);
             private const string p_Mask = nameof(StyleRule.PropertyMask);
 
@@ -50,7 +48,7 @@ namespace Emp37.ET
                         SerializedProperty mask = property.FindPropertyRelative(p_Mask);
 
                         position.height = TitleSectionHeight;
-                        ETStyles.DrawAccentTitle(position, mask.displayName);
+                        DrawHeader(position, mask.displayName);
 
                         position.y += position.height + standardVerticalSpacing; // - H : Mask Title
 
@@ -82,7 +80,7 @@ namespace Emp37.ET
                         // @r >> H : Attributes
                         StyleAttributes flags = (StyleAttributes) property.FindPropertyRelative(p_Mask).enumValueFlag;
                         value += flags is 0 ? EmptyStyleLineHeight :
-                              StyleRule.PropertyMap.Where(entry => flags.HasFlag(entry.Flag)).Sum(entry => EditorGUI.GetPropertyHeight(property.FindPropertyRelative(entry.Name)) + standardVerticalSpacing);
+                              StyleRule.AttributeMap.Where(entry => flags.HasFlag(entry.Flag)).Sum(entry => EditorGUI.GetPropertyHeight(property.FindPropertyRelative(entry.Name)) + standardVerticalSpacing);
 
                         return value;
                   }
@@ -95,9 +93,9 @@ namespace Emp37.ET
                   int count = property.arraySize;
 
                   position.height = TitleSectionHeight;
-                  ETStyles.DrawAccentTitle(position, property.displayName);
+                  DrawHeader(position, property.displayName);
 
-                  if (property.arrayElementType == "string" && GUI.Button(ETHelpers.Indent(ETHelpers.Inset(position, ETHelpers.Spacing * Vector2.one), new(x: position.width - 40F, y: 0F)), ETStyles.CustomSorting) && count > 1)
+                  if (property.arrayElementType == "string" && GUI.Button(ETHelpers.Indent(ETHelpers.Inset(position, ETHelpers.Spacing), position.width - 40F), ETStyles.CustomSorting) && count > 1)
                   {
                         SerializedProperty[] elements = Enumerable.Range(0, count).Select(i => property.GetArrayElementAtIndex(i)).ToArray();
                         int i = 0;
@@ -121,12 +119,12 @@ namespace Emp37.ET
                   }
 
                   Rect buttonRect = new(position) { size = new(x: position.width * 0.5F, y: EditorStyles.miniButton.fixedHeight) };
-                  if (GUI.Button(buttonRect, ETStyles.BoldPlus, EditorStyles.miniButtonLeft) || count == 0)
+                  if (GUI.Button(buttonRect, ETStyles.ToolbarPlus, EditorStyles.miniButtonLeft) || count == 0)
                   {
                         property.InsertArrayElementAtIndex(count++);
                   }
                   buttonRect.x += buttonRect.width;
-                  if (GUI.Button(buttonRect, ETStyles.BoldMinus, EditorStyles.miniButtonRight) && count > 0)
+                  if (GUI.Button(buttonRect, ETStyles.ToolbarMinus, EditorStyles.miniButtonRight) && count > 0)
                   {
                         property.DeleteArrayElementAtIndex(--count);
                   }
@@ -149,12 +147,12 @@ namespace Emp37.ET
                         if (flags is 0)
                         {
                               position.height = EmptyStyleLineHeight;
-                              EditorGUI.DrawRect(ETHelpers.Inset(position, new(x: 40F, y: 0F)), Color.red);
+                              EditorGUI.DrawRect(ETHelpers.Inset(position, 40F), Color.red);
                               position.y += position.height; // - [ H ] : Red Line
                         }
                         else
                         {
-                              foreach ((_, string name) in StyleRule.PropertyMap.Where(entry => flags.HasFlag(entry.Flag)))
+                              foreach ((_, string name) in StyleRule.AttributeMap.Where(entry => flags.HasFlag(entry.Flag)))
                               {
                                     SerializedProperty attribute = property.FindPropertyRelative(name);
                                     position.height = EditorGUI.GetPropertyHeight(attribute);
@@ -164,6 +162,11 @@ namespace Emp37.ET
                         }
                   }
                   return new(original) { y = position.y };
+            }
+            private static void DrawHeader(Rect position, string label)
+            {
+                  EditorGUI.DrawRect(position, ETStyles.AccentTone);
+                  EditorGUI.LabelField(position, label, ETStyles.centeredText);
             }
       }
 }
