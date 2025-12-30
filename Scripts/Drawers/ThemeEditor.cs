@@ -1,9 +1,10 @@
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
-
 using UnityEditor;
-
+using UnityEditor.Compilation;
+using UnityEditorInternal;
 using UnityEngine;
 
 namespace Emp37.ET
@@ -11,6 +12,8 @@ namespace Emp37.ET
       [CustomEditor(typeof(Theme), true)]
       internal class ThemeEditor : Editor
       {
+            private const string DIRECTORY = "Assets/Editor/StyleSheets/Extensions", FILE_EXTENSION = ".uss";
+
             private const float ButtonSize = 42F;
             private const float SearchFieldSize = 32F;
             private const int MaxSearchResults = 60;
@@ -23,19 +26,22 @@ namespace Emp37.ET
 
             private void OnEnable()
             {
-                  selectorHierarchy = Target.StyleRuleGroups.SelectMany((styleGroup, groupIdx) => styleGroup.StyleRules.SelectMany((style, styleIdx) => style.ClassSelectors.Select(selector =>
-                  (Name: selector, Path: $"Style Rule Group [{groupIdx}]: \"{styleGroup.Title}\" > Element [{styleIdx}]", Action: new Action(() =>
-                  {
-                        SerializedProperty styleRuleGroups = serializedObject.FindProperty(nameof(Target.StyleRuleGroups));
-                        SerializedProperty styleRuleGroupsElement = styleRuleGroups.GetArrayElementAtIndex(groupIdx);
-                        SerializedProperty styleRulesElement = styleRuleGroupsElement.FindPropertyRelative(nameof(styleGroup.StyleRules)).GetArrayElementAtIndex(styleIdx);
+                  selectorHierarchy = Target.StyleRuleGroups
+                        .SelectMany((styleGroup, groupIdx) => styleGroup.StyleRules
+                              .SelectMany((style, styleIdx) => style.Selectors
+                                    .Select(selector => (Name: selector, Path: $"Style Rule Group [{groupIdx}]: \"{styleGroup.Title}\" > Element [{styleIdx}]", Action: new Action(() =>
+                                    {
+                                          SerializedProperty
+                                                groups = serializedObject.FindProperty(nameof(Target.StyleRuleGroups)),
+                                                groupsElement = groups.GetArrayElementAtIndex(groupIdx),
+                                                rules = groupsElement.FindPropertyRelative(nameof(styleGroup.StyleRules)).GetArrayElementAtIndex(styleIdx);
 
-                        ExpandProperties(false);
-                        styleRuleGroups.isExpanded = styleRuleGroupsElement.isExpanded = styleRulesElement.isExpanded = true;
+                                          ExpandProperties(false);
+                                          groups.isExpanded = groupsElement.isExpanded = rules.isExpanded = true;
 
-                        queryText = string.Empty;
-                        GUIUtility.keyboardControl = default;
-                  })))));
+                                          queryText = string.Empty;
+                                          GUIUtility.keyboardControl = default;
+                                    })))));
             }
             public override void OnInspectorGUI()
             {
@@ -45,7 +51,10 @@ namespace Emp37.ET
 
                   if (string.IsNullOrWhiteSpace(queryText))
                   {
-                        DrawInspectorPanel();
+                        serializedObject.Update();
+                        DrawPropertiesExcluding(serializedObject, "m_Script");
+                        serializedObject.ApplyModifiedProperties();
+                        DrawOptions();
                   }
                   else
                   {
@@ -70,18 +79,33 @@ namespace Emp37.ET
                               }
                         }
                   }
-                  EditorGUI.DrawRect(GUILayoutUtility.GetRect(default, 2F), ETStyles.ThemeTint);
+                  EditorGUI.DrawRect(GUILayoutUtility.GetRect(default, 2F), ETStyles.BaseTone);
             }
-            private void DrawInspectorPanel()
+            private void DrawOptions()
             {
-                  serializedObject.Update();
-                  DrawPropertiesExcluding(serializedObject, "m_Script");
-                  serializedObject.ApplyModifiedProperties();
-
                   GUILayout.Space(10F);
                   if (GUILayout.Button("Apply Theme", GUILayout.Height(ButtonSize)))
                   {
-                        Target.WriteTheme();
+                        Directory.CreateDirectory(DIRECTORY);
+
+                        string path = Path.Combine(DIRECTORY, Target.ThemeType + FILE_EXTENSION);
+                        File.WriteAllText(path, Target.ToString());
+                        AssetDatabase.Refresh();
+
+                        if ((Target.ThemeType == Theme.Type.Dark) ^ EditorGUIUtility.isProSkin)
+                        {
+                              InternalEditorUtility.SwitchSkinAndRepaintAllViews();
+                        }
+                        else
+                        {
+                              InternalEditorUtility.RepaintAllViews();
+                              if (Target.RecompileOnApply)
+                              {
+                                    CompilationPipeline.RequestScriptCompilation();
+                              }
+                        }
+
+                        GUI.skin.settings.selectionColor = Target.SelectionColor;
                   }
                   using (new EditorGUILayout.HorizontalScope())
                   {
@@ -106,7 +130,7 @@ namespace Emp37.ET
                               int i = 0;
                               foreach ((string name, string path, Action action) in results)
                               {
-                                    scope.BackgroundColor = ((i++ & 1) == 0) ? ETStyles.ThemeTint : ETStyles.ThemeAccent;
+                                    scope.BackgroundColor = ((i++ & 1) == 0) ? ETStyles.BaseTone : ETStyles.AccentTone;
 
                                     using (new EditorGUILayout.HorizontalScope())
                                     {
