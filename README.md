@@ -29,6 +29,8 @@ A balanced, professional theme with a carefully crafted color scheme.
 ### Scyther (Light)
 Sharp, modern styling with a bold visual language.
 
+<img width="1920" height="960" alt="{63A68D62-6A08-4D25-B9A8-76BCF98446F6}" src="https://github.com/user-attachments/assets/e8eba454-8d4b-478c-9e0c-76094cd253c9" />
+
 
 # Advanced
 ## Creating a New Theme

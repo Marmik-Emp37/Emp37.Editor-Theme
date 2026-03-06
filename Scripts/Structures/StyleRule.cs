@@ -1,5 +1,4 @@
 using System;
-using System.Linq;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
 
@@ -34,11 +33,9 @@ namespace Emp37.ET
 
             public readonly override string ToString()
             {
-                  #region S E L E C T O R S
-                  //List<string> classes2 = (from selector in Selectors where !string.IsNullOrWhiteSpace(selector) select selector).ToList();
-                  //List<PseudoClasses> pseudoes = from value in PseudoClasses let chain = value == 0 ? string.Empty : ":" + value.ToString().Replace(", ", ":").ToLowerInvariant() select chain).ToList();
+			#region S E L E C T O R S
+			List<string> classes = new();
 
-                  List<string> classes = new();
                   foreach (string selector in Selectors)
                   {
                         if (string.IsNullOrWhiteSpace(selector)) continue;
@@ -72,6 +69,7 @@ namespace Emp37.ET
                               _ => null
                         };
                         if (string.IsNullOrEmpty(expression)) continue;
+
                         string name = Regex.Replace(attribute.ToString(), "(?<!^)([A-Z])", "-$1").ToLowerInvariant();
                         properties.Add($"\t{name}: {expression};");
                   }
