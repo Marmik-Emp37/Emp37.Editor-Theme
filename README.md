@@ -1,60 +1,64 @@
-A complete Unity Editor theming toolkit with visual IMGUI inspectors and automatic USS generation.
+Editor-Theme is a high-level editor tool that simplifies the customization of IMGUI elements, allowing you to transform the look and feel of the Unity Editor with zero coding required. Design, organize, and apply custom themes to create a visually refreshing workspace and enhance your daily development experience.
 
-# Installation
+## Installation
 1. Download the latest .unitypackage from [Releases](https://github.com/Marmik-Emp37/Emp37.Editor-Theme/releases)
 2. Import it into your project
 3. Done!
 
+## Using Example Themes
+Building a theme from scratch requires familiarity with Unity’s USS selector system. To get started immediately, I recommend using one of the three production-ready templates included in this repository. They can be used out-of-the-box or tweaked to your preference.
 
-# Using Example Themes
-To get started quickly, use one of the included example themes as building a theme from scratch typically takes more time and requires deeper familiarity with Unity’s USS selector system. Three production-ready themes are provided in this repository and can be used out of the box or edited to your preference.
+### Quick Setup
+1. Locate the example themes in your project under `Assets/Emp37.Editor-Theme/Example Themes/`
+2. Select a theme asset in the Project window.
+3. In the Inspector, ensure **Recompile On Apply** is enabled.
+4. Click the **Apply Theme** button.
 
-| **Quick Setup** |
-1. Locate the themes in your project _`Assets/Emp37.Editor-Theme/Example Themes/`_
-2. Select a theme asset in the project window
-3. Navigate to the Inspector and make sure `Recompile On Apply` is set to true
-4. Click **Apply Theme** button
+### Available Themes
+1. **Greyscale (Dark)** A clean, minimalist monochrome design that is easy on the eyes during long coding sessions.  
+<img width="1920" height="960" alt="Greyscale Theme" src="https://github.com/user-attachments/assets/3e5ae99b-46da-4b3f-bd61-d2b71342342d"/>
 
-## Available Themes
-### Greyscale (Dark)
-A clean, minimalist monochrome design that's easy on the eyes during long coding sessions.
+2. **Penelope (Light)** A balanced, professional theme with a carefully crafted, warm color scheme.  
+<img width="1920" height="960" alt="Penelope Theme" src="https://github.com/user-attachments/assets/9ed26167-c6cc-4762-8be2-b06cdebe2f1e"/>
 
-<img width="1920" height="960" alt="{AF69BE20-D2C3-4D18-A1C2-2FFCE5464ABE}" src="https://github.com/user-attachments/assets/3e5ae99b-46da-4b3f-bd61-d2b71342342d"/>
+3. **Scyther (Light)** Sharp, modern styling featuring a bold visual language.  
+<img width="1920" height="960" alt="Scyther Theme" src="https://github.com/user-attachments/assets/e8eba454-8d4b-478c-9e0c-76094cd253c9" />
 
-### Penelope (Light)
-A balanced, professional theme with a carefully crafted color scheme.
+## Advanced: Creating a Custom Theme
+### 1. Create a Theme Asset
+Right-click in the Project window and navigate to:  
+`Create → Editor-Theme → (New Light Theme / New Dark Theme)`
 
-<img width="1920" height="960" alt="{91FD4779-95C8-4A45-BF3F-0A08C3FBB773}" src="https://github.com/user-attachments/assets/9ed26167-c6cc-4762-8be2-b06cdebe2f1e"/>
+### 2. Add Style Rules
+Construct your theme by stacking rules. Each rule consists of:
+* **Selectors:** Target specific elements (e.g., `button`, `label`, `toolbar`).
+* **Pseudo-Classes:** Define interaction states (e.g., `:hover`, `:active`, `:focus`).
+* **Property Mask:** Expose only the properties you want to change, keeping the inspector clean:
+  * Background image & color
+  * Border colors (unified or per-side)
+  * Border radius & width (`px` or `%`)
+  * Text color
 
-### Scyther (Light)
-Sharp, modern styling with a bold visual language.
+### 3. Organize with Style Groups
+Keep your theme asset maintainable as it grows:
+* Group related UI elements together.
+* Add descriptive titles for quick navigation.
+* Collapse or enable/disable entire groups with a single click to isolate changes.
 
-<img width="1920" height="960" alt="{63A68D62-6A08-4D25-B9A8-76BCF98446F6}" src="https://github.com/user-attachments/assets/e8eba454-8d4b-478c-9e0c-76094cd253c9" />
+### 4. Apply & Generate
+When you click **Apply Theme**, the tool automatically handles the heavy lifting:
+* Generates a compiled `.uss` file under `Assets/Editor/StyleSheets/Extensions/`.
+* Switches the Unity Editor to the appropriate Light/Dark skin mode.
+* Updates the global selection color.
+* Triggers a safe script recompilation (if enabled) to apply changes flawlessly.
 
+## Built-in Utilities: GUI Style Explorer
+Finding the exact internal names of Unity's UI elements (like `MeTransitionHead` or `RL Header`) to use as selectors can be a frustrating with IMGUI Debugger. To solve this, Editor-Theme includes a built-in discovery tool.
 
-# Advanced
-## Creating a New Theme
-1. **Create a Theme asset**  
-   Right-click in the Project window: `Create → Editor-Theme → (New Light Theme / New Dark Theme)`
+**Open it via:** `Tools → Emp37 → ET.GUI Style Explorer`
 
-2. **Add Style Rules**  
-   Each rule consists of:
-   - **Selectors**: class names like `button`, `label`, `toolbar`
-   - **Pseudo Classes**: states like `:hover`, `:active`, `:focus`, etc.
-   - **Property Mask**: choose which CSS properties to define from **property values** as:
-      - Background image & color
-      - Border colors (unified or per-side)
-      - Border radius & width (px or %)
-      - Text color
+<img width="453" height="558" alt="GUIStyleExplorer Example" src="https://github.com/user-attachments/assets/317c85e7-4aa6-45c7-8e74-b1ef26931d3c"/>
 
-3. **Organize with Style Groups**
-   - Group related rules together
-   - Enable/disable entire groups
-   - Add descriptive titles
-   - Collapse groups to reduce clutter
-
-4. **Apply your theme to automatically -**
-   - Generate a `.uss` file under `Assets/Editor/StyleSheets/Extensions/`
-   - Switch Unity to the selected skin mode
-   - Update the selection color
-   - Optionally trigger a script recompilation
+* **Search & Discover:** Instantly filter through hundreds of hidden internal GUIStyles available in your current Unity skin.
+* **Live Preview:** View exactly how a style renders. Toggle `Focus`, `Hover`, and `Active` states, and test it with custom sample text.
+* **One-Click Copy:** Double-click any style in the list to automatically copy its exact, formatted internal name to your clipboard-ready to be pasted straight into your Theme's **Selectors** list.

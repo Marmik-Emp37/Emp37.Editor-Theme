@@ -1,165 +1,147 @@
 using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
+
 using UnityEditor;
 using UnityEditor.Compilation;
 using UnityEditorInternal;
+
 using UnityEngine;
 
 namespace Emp37.ET
 {
-      [CustomEditor(typeof(Theme), true)]
-      internal class ThemeEditor : Editor
-      {
-            private const string DIRECTORY = "Assets/Editor/StyleSheets/Extensions", FILE_EXTENSION = ".uss";
+        using static EditorGUIUtility;
 
-            private const float ButtonSize = 42F;
-            private const float SearchFieldSize = 32F;
-            private const int MaxSearchResults = 60;
+        [CustomEditor(typeof(Theme), true)]
+        internal class ThemeEditor : Editor
+        {
+                private const string ExportDirectory = "Assets/Editor/StyleSheets/Extensions", FileExtension = ".uss";
 
-            private string queryText = string.Empty;
-            private IEnumerable<(string Name, string Path, Action Action)> selectorHierarchy;
+                private const float SearchFieldHeight = 32F, ActionButtonSize = 42F;
+                private static readonly GUIContent ApplyThemeLabel = new("Apply Theme"), ExpandLabel = new("Expand"), CollapseLabel = new("Collapse");
 
-            private Theme Target => target as Theme;
+                private string searchQuery = string.Empty;
+
+                private SerializedProperty property_StyleRuleGroups;
+
+                private Theme Target => target as Theme;
 
 
-            private void OnEnable()
-            {
-                  selectorHierarchy = Target.StyleRuleGroups
-                        .SelectMany((styleGroup, groupIdx) => styleGroup.StyleRules
-                              .SelectMany((style, styleIdx) => style.Selectors
-                                    .Select(selector => (Name: selector, Path: $"Style Rule Group [{groupIdx}]: \"{styleGroup.Title}\" > Element [{styleIdx}]", Action: new Action(() =>
-                                    {
-                                          SerializedProperty
-                                                groups = serializedObject.FindProperty(nameof(Target.StyleRuleGroups)),
-                                                groupsElement = groups.GetArrayElementAtIndex(groupIdx),
-                                                rules = groupsElement.FindPropertyRelative(nameof(styleGroup.StyleRules)).GetArrayElementAtIndex(styleIdx);
+                private void OnEnable()
+                {
+                        property_StyleRuleGroups = serializedObject.FindProperty(nameof(Theme.StyleRuleGroups));
+                }
 
-                                          ExpandProperties(false);
-                                          groups.isExpanded = groupsElement.isExpanded = rules.isExpanded = true;
-
-                                          queryText = string.Empty;
-                                          GUIUtility.keyboardControl = default;
-                                    })))));
-            }
-            public override void OnInspectorGUI()
-            {
-                  DrawSearchField();
-
-                  GUILayout.Space(EditorGUIUtility.standardVerticalSpacing);
-
-                  if (string.IsNullOrWhiteSpace(queryText))
-                  {
-                        serializedObject.Update();
-                        DrawPropertiesExcluding(serializedObject, "m_Script");
-                        serializedObject.ApplyModifiedProperties();
-                        DrawOptions();
-                  }
-                  else
-                  {
-                        DrawSearchResults();
-                  }
-            }
-
-            private void DrawSearchField()
-            {
-                  EditorGUILayout.LabelField("Search Selector", EditorStyles.largeLabel);
-                  using (new GUILayout.HorizontalScope(GUILayout.Height(SearchFieldSize)))
-                  {
-                        queryText = EditorGUILayout.TextField(queryText, ETStyles.largeTextField, GUILayout.Height(SearchFieldSize)).Trim();
-
-                        using (new EditorGUI.DisabledGroupScope(string.IsNullOrEmpty(queryText)))
-                        using (new ETHelpers.BackgroundColorScope(Color.red))
+                public override void OnInspectorGUI()
+                {
+                        #region Search Field
+                        EditorGUILayout.LabelField("Search Selectors", EditorStyles.largeLabel);
+                        using (new EditorGUILayout.HorizontalScope(GUILayout.Height(SearchFieldHeight)))
                         {
-                              if (GUILayout.Button(ETStyles.Clear, GUILayout.Width(SearchFieldSize), GUILayout.ExpandHeight(true)))
-                              {
-                                    queryText = string.Empty;
-                                    GUIUtility.keyboardControl = default;
-                              }
-                        }
-                  }
-                  EditorGUI.DrawRect(GUILayoutUtility.GetRect(default, 2F), ETStyles.BaseTone);
-            }
-            private void DrawOptions()
-            {
-                  GUILayout.Space(10F);
-                  if (GUILayout.Button("Apply Theme", GUILayout.Height(ButtonSize)))
-                  {
-                        Directory.CreateDirectory(DIRECTORY);
+                                searchQuery = EditorGUILayout.TextField(searchQuery, ETStyles.largeTextField, GUILayout.Height(SearchFieldHeight)).Trim();
 
-                        string path = Path.Combine(DIRECTORY, Target.ThemeType + FILE_EXTENSION);
+                                using (new EditorGUI.DisabledGroupScope(string.IsNullOrEmpty(searchQuery)))
+                                using (new ETHelpers.BackgroundColorScope(Color.red))
+                                {
+                                        if (GUILayout.Button(ETStyles.Clear, GUILayout.Width(SearchFieldHeight), GUILayout.ExpandHeight(true)))
+                                        {
+                                                ClearSearch();
+                                        }
+                                }
+                        }
+                        #endregion
+
+                        if (string.IsNullOrWhiteSpace(searchQuery))
+                        {
+                                serializedObject.Update();
+                                DrawPropertiesExcluding(serializedObject, "m_Script");
+                                serializedObject.ApplyModifiedProperties();
+
+                                EditorGUILayout.Space(10F);
+                                if (GUILayout.Button(ApplyThemeLabel, GUILayout.Height(ActionButtonSize)))
+                                {
+                                        ExportTheme();
+                                }
+                                using (new EditorGUILayout.HorizontalScope())
+                                {
+                                        if (GUILayout.Button(ExpandLabel, EditorStyles.miniButtonLeft)) ExpandProperties(true);
+                                        if (GUILayout.Button(CollapseLabel, EditorStyles.miniButtonRight)) ExpandProperties(false);
+                                }
+                                return;
+                        }
+                        #region Search Results
+                        StyleRuleGroup[] groups = Target.StyleRuleGroups;
+                        for (int g = 0; g < groups.Length; g++)
+                        {
+                                ref StyleRuleGroup group = ref groups[g];
+
+                                StyleRule[] rules = group.StyleRules;
+                                for (int r = 0; r < rules.Length; r++)
+                                {
+                                        ref StyleRule rule = ref rules[r];
+
+                                        string[] selectors = rule.Selectors;
+                                        for (int s = 0; s < selectors.Length; s++)
+                                        {
+                                                string selector = selectors[s];
+                                                if (!selector.Contains(searchQuery, StringComparison.OrdinalIgnoreCase)) continue;
+
+                                                using (new EditorGUILayout.HorizontalScope())
+                                                {
+                                                        using (new EditorGUILayout.VerticalScope())
+                                                        {
+                                                                string displayPath = $"{group.Title} > [{r}] > {selector}";
+
+                                                                EditorGUILayout.LabelField(selector, ETStyles.largeHelpBox);
+                                                                EditorGUILayout.LabelField(displayPath, EditorStyles.helpBox);
+                                                        }
+                                                        if (GUILayout.Button(ETStyles.INFoldout, GUILayout.Width(ActionButtonSize), GUILayout.ExpandHeight(true)))
+                                                        {
+                                                                ExpandProperties(false);
+                                                                SerializedProperty groupProperty = property_StyleRuleGroups.GetArrayElementAtIndex(g), ruleProperty = groupProperty.FindPropertyRelative(nameof(group.StyleRules)).GetArrayElementAtIndex(r);
+
+                                                                property_StyleRuleGroups.isExpanded = groupProperty.isExpanded = ruleProperty.isExpanded = true;
+                                                                ClearSearch();
+                                                                GUIUtility.ExitGUI();
+                                                        }
+                                                }
+                                        }
+                                }
+                        }
+                        #endregion
+                }
+
+                private void ExportTheme()
+                {
+                        Directory.CreateDirectory(ExportDirectory);
+
+                        string path = Path.Combine(ExportDirectory, Target.ThemeType + FileExtension);
                         File.WriteAllText(path, Target.ToString());
+
                         AssetDatabase.Refresh();
 
-                        if ((Target.ThemeType == Theme.Type.Dark) ^ EditorGUIUtility.isProSkin)
+                        if ((Target.ThemeType == Theme.Type.Dark) ^ isProSkin)
                         {
-                              InternalEditorUtility.SwitchSkinAndRepaintAllViews();
+                                InternalEditorUtility.SwitchSkinAndRepaintAllViews();
                         }
                         else
                         {
-                              InternalEditorUtility.RepaintAllViews();
-                              if (Target.RecompileOnApply)
-                              {
-                                    CompilationPipeline.RequestScriptCompilation();
-                              }
+                                InternalEditorUtility.RepaintAllViews();
+                                if (Target.RecompileOnApply)
+                                {
+                                        CompilationPipeline.RequestScriptCompilation();
+                                }
                         }
-
                         GUI.skin.settings.selectionColor = Target.SelectionColor;
-                  }
-                  using (new EditorGUILayout.HorizontalScope())
-                  {
-                        if (GUILayout.Button("Expand", EditorStyles.miniButtonLeft))
-                        {
-                              ExpandProperties(true);
-                        }
-                        if (GUILayout.Button("Collapse", EditorStyles.miniButtonRight))
-                        {
-                              ExpandProperties(false);
-                        }
-                  }
-            }
-            private void DrawSearchResults()
-            {
-                  IEnumerable<(string, string, Action)> results = selectorHierarchy.Where(entry => entry.Name.Contains(queryText, StringComparison.OrdinalIgnoreCase)).Take(MaxSearchResults);
-                  int count = results.Count();
-                  if (count > 0)
-                  {
-                        using (ETHelpers.BackgroundColorScope scope = new())
-                        {
-                              int i = 0;
-                              foreach ((string name, string path, Action action) in results)
-                              {
-                                    scope.BackgroundColor = ((i++ & 1) == 0) ? ETStyles.BaseTone : ETStyles.AccentTone;
-
-                                    using (new EditorGUILayout.HorizontalScope())
-                                    {
-                                          using (new EditorGUILayout.VerticalScope())
-                                          {
-                                                EditorGUILayout.LabelField(name, ETStyles.largeHelpBox);
-                                                EditorGUILayout.LabelField(path, EditorStyles.helpBox);
-                                          }
-                                          if (GUILayout.Button(ETStyles.INFoldout, GUILayout.Width(25F), GUILayout.ExpandHeight(true)))
-                                          {
-                                                action?.Invoke();
-                                          }
-                                    }
-                              }
-                        }
-                        if (count == MaxSearchResults)
-                        {
-                              EditorGUILayout.HelpBox($"Showing the first {MaxSearchResults} results out of {selectorHierarchy.Count()}. More matches may exist, refine your search for precise results.", MessageType.Info);
-                        }
-                  }
-                  else
-                  {
-                        EditorGUILayout.HelpBox("No matching properties found.", MessageType.Info);
-                  }
-            }
-            private void ExpandProperties(bool expand)
-            {
-                  SerializedProperty iterator = serializedObject.GetIterator();
-                  while (iterator.NextVisible(true)) if (iterator.depth < 4) iterator.isExpanded = expand;
-            }
-      }
+                }
+                private void ExpandProperties(bool expand)
+                {
+                        SerializedProperty iterator = serializedObject.GetIterator();
+                        while (iterator.NextVisible(true)) if (iterator.depth < 4) iterator.isExpanded = expand;
+                }
+                private void ClearSearch()
+                {
+                        searchQuery = string.Empty;
+                        GUIUtility.keyboardControl = default;
+                }
+        }
 }
