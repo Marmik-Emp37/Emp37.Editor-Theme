@@ -10,7 +10,6 @@ namespace Emp37.ET
 	  {
 			public enum Type { Light, Dark }
 
-			public abstract Type ThemeType { get; }
 
 			public StyleRuleGroup[] StyleRuleGroups;
 			public Color SelectionColor;
@@ -18,11 +17,22 @@ namespace Emp37.ET
 			[Tooltip("Disable to preview changes immediately as they are applied.\n\n<b>Note:</b> Some changes may require a domain reload to take full effect.")]
 			public bool RecompileOnApply;
 
+			public abstract Type ThemeType { get; }
+
+
 			[ContextMenu("Sort/Title")]
 			private void Sort()
 			{
 				  Undo.RecordObject(this, $"Sort {nameof(StyleRuleGroups)} by Title");
 				  Array.Sort(StyleRuleGroups, (a, b) => a.Title.CompareTo(b.Title));
+			}
+
+			[ContextMenu("Log Test Messages")]
+			private void GenerateSampleLogs()
+			{
+				  Debug.Log("This is a normal log.");
+				  Debug.LogWarning("This is a warning log.");
+				  Debug.LogError("This is an error log.");
 			}
 
 			/// <summary>
