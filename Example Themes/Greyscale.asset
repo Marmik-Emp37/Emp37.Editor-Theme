@@ -5784,7 +5784,7 @@ MonoBehaviour:
       BackgroundImage: {fileID: 0}
       BackgroundColor:
         serializedVersion: 2
-        rgba: 4279900698
+        rgba: 4286611584
       BorderColor:
         serializedVersion: 2
         rgba: 4283256141
@@ -5825,7 +5825,7 @@ MonoBehaviour:
       BackgroundImage: {fileID: 0}
       BackgroundColor:
         serializedVersion: 2
-        rgba: 4280690214
+        rgba: 4288256409
       BorderColor:
         serializedVersion: 2
         rgba: 0
@@ -5894,9 +5894,9 @@ MonoBehaviour:
         UnitType: 0
       BorderWidth:
         Top: 1
-        Right: 1
+        Right: 2
         Bottom: 1
-        Left: 0
+        Left: 1
         UnitType: 1
     - Selectors:
       - HorizontalScrollbarThumb
@@ -5932,9 +5932,9 @@ MonoBehaviour:
         Left: 0
         UnitType: 0
       BorderWidth:
-        Top: 0
+        Top: 1
         Right: 1
-        Bottom: 1
+        Bottom: 2
         Left: 1
         UnitType: 1
     <Enabled>k__BackingField: 1
