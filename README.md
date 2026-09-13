@@ -21,9 +21,6 @@ Building a theme from scratch requires familiarity with Unity’s USS selector s
 2. **Penelope (Light)** A balanced, professional theme with a carefully crafted, warm color scheme.  
 <img width="2560" height="1376" alt="image" src="https://github.com/user-attachments/assets/d16332eb-a278-4baa-85c3-c8fad70e709a"/>
 
-3. **Scyther (Light)** Sharp, modern styling featuring a bold visual language.  
-<img width="1920" height="960" alt="Scyther Theme" src="https://github.com/user-attachments/assets/e8eba454-8d4b-478c-9e0c-76094cd253c9"/>
-
 ## Advanced: Creating a Custom Theme
 ### 1. Create a Theme Asset
 Right-click in the Project window and navigate to:  
