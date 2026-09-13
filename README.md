@@ -16,13 +16,13 @@ Building a theme from scratch requires familiarity with Unity’s USS selector s
 
 ### Available Themes
 1. **Greyscale (Dark)** A clean, minimalist monochrome design that is easy on the eyes during long coding sessions.  
-<img width="1920" height="960" alt="Greyscale Theme" src="https://github.com/user-attachments/assets/3e5ae99b-46da-4b3f-bd61-d2b71342342d"/>
+<img width="2560" height="1376" alt="image" src="https://github.com/user-attachments/assets/44f3e477-177f-4327-b744-2c7db5c2928f"/>
 
 2. **Penelope (Light)** A balanced, professional theme with a carefully crafted, warm color scheme.  
-<img width="1920" height="960" alt="Penelope Theme" src="https://github.com/user-attachments/assets/9ed26167-c6cc-4762-8be2-b06cdebe2f1e"/>
+<img width="2560" height="1376" alt="image" src="https://github.com/user-attachments/assets/d16332eb-a278-4baa-85c3-c8fad70e709a"/>
 
 3. **Scyther (Light)** Sharp, modern styling featuring a bold visual language.  
-<img width="1920" height="960" alt="Scyther Theme" src="https://github.com/user-attachments/assets/e8eba454-8d4b-478c-9e0c-76094cd253c9" />
+<img width="1920" height="960" alt="Scyther Theme" src="https://github.com/user-attachments/assets/e8eba454-8d4b-478c-9e0c-76094cd253c9"/>
 
 ## Advanced: Creating a Custom Theme
 ### 1. Create a Theme Asset
@@ -61,4 +61,4 @@ Finding the exact internal names of Unity's UI elements (like `MeTransitionHead`
 
 * **Search & Discover:** Instantly filter through hundreds of hidden internal GUIStyles available in your current Unity skin.
 * **Live Preview:** View exactly how a style renders. Toggle `Focus`, `Hover`, and `Active` states, and test it with custom sample text.
-* **One-Click Copy:** Double-click any style in the list to automatically copy its exact, formatted internal name to your clipboard-ready to be pasted straight into your Theme's **Selectors** list.
+* **One-Click Copy:** Double-click any style in the list to automatically copy its exact, formatted internal name to your clipboard-ready to be sent into the **Selectors** list.
