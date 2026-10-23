@@ -39,7 +39,7 @@ namespace Emp37.ET
 		/// </summary>
 		public sealed override string ToString()
 		{
-			return $"/*----------\n[ Theme: {ThemeType}-{name} ]\n----------*/\n\n{string.Join("\n\n", from @group in StyleRuleGroups let value = @group.ToString() where !string.IsNullOrEmpty(value) select value)}";
+			return $"/*----------\n[Emp37.Theme: {ThemeType} - {name}]\n----------*/\n\n{string.Join("\n\n", from @group in StyleRuleGroups let value = @group.ToString() where !string.IsNullOrEmpty(value) select value)}";
 		}
 	}
 }
