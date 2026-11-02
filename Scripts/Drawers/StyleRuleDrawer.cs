@@ -132,7 +132,7 @@ namespace Emp37.ET
                 }
                 private ReorderableList GetList(SerializedProperty property)
                 {
-                        string key = $"{property.serializedObject.targetObject.GetInstanceID()}:{property.propertyPath}";
+                        string key = $"{property.serializedObject.targetObject.GetEntityId()}:{property.propertyPath}";
 
                         if (lists.TryGetValue(key, out ReorderableList list)) return list;
 
